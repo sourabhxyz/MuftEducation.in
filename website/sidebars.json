@@ -4,7 +4,9 @@
     "Algebra": [
       "upsc/mathematics_optional/algebra/intro",
       "upsc/mathematics_optional/algebra/basic",
-      "upsc/mathematics_optional/algebra/groups"
+      "upsc/mathematics_optional/algebra/groups",
+      "upsc/mathematics_optional/algebra/subgroups",
+      "upsc/mathematics_optional/algebra/cyclic_groups"
     ]
   }
 }

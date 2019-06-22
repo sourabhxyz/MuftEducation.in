@@ -35,11 +35,16 @@ const siteConfig = {
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
-
+  editUrl:
+    "https://github.com/sourabh2311/mufteducation-docusaurus/tree/master/docs/",
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     { doc: "courses", label: "Courses" },
-    { href: "https://github.com/sourabh2311", label: "GitHub" },
+    {
+      href: "https://github.com/sourabh2311/mufteducation-docusaurus",
+      label: "GitHub"
+    },
+    { doc: "courses", label: "How To Contribute" },
     { search: true }
   ],
 
@@ -103,7 +108,7 @@ const siteConfig = {
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
-  //   repoUrl: 'https://github.com/facebook/test-site',
+  repoUrl: "https://github.com/sourabh2311/mufteducation-docusaurus",
   markdownPlugins: [function(md) {}]
 };
 
