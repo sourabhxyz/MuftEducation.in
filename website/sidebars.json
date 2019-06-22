@@ -1,0 +1,10 @@
+{
+  "docs": {},
+  "upsc_mop_algebra": {
+    "Algebra": [
+      "upsc/mathematics_optional/algebra/intro",
+      "upsc/mathematics_optional/algebra/basic",
+      "upsc/mathematics_optional/algebra/groups"
+    ]
+  }
+}
