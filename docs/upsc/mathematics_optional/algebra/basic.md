@@ -139,14 +139,14 @@ integer n $>$ 32, S contains all integers k with 28 $\leq$ k $<$ n. We
 must show that n $\in$ S. Since n - 5 $\in$ S, there are nonnegative
 integers a and b such that n - 5 = a \* 5 + b \* 8. But then n = (a + 1) \* 5 + b \* 8. Thus n is in S.
 
-![image](basic_2.png)
+![image](assets/upsc/mathematics_optional/algebra/basic_2.png)
 
-![image](basic_3.png)
+![image](assets/upsc/mathematics_optional/algebra/basic_3.png)
 
 **Definition:** A partition of a set S is a collection of nonempty
 disjoint subsets of S whose union is S
 
-![image](basic_4.png)
+![image](assets/upsc/mathematics_optional/algebra/basic_4.png)
 
 **Definition:** A function (or mapping) $\phi$ from a set A to a set B
 is a rule that assigns to each element a of A exactly one element b of
@@ -160,9 +160,9 @@ every a1, a2 $\in$ A, f(a1) = f(a2) implies a1 = a2.
 
 Alternatively f is one-to-one if a1 $\neq$ a2 implies f(a1) $\neq$ f(a2)
 
-![image](basic_5.png)
+![image](assets/upsc/mathematics_optional/algebra/basic_5.png)
 
-![image](basic_6.png)
+![image](assets/upsc/mathematics_optional/algebra/basic_6.png)
 
 _Note that 2nd and 3rd are very easy and straight forward to proof so
 don't worry_

@@ -1,8 +1,8 @@
-+++
-title = "Cyclic Groups"
-weight = 6
-pre = "<b> </b>"
-+++
+---
+id: cyclic_groups
+title: Cyclic Groups
+sidebar_label: Cyclic Groups
+---
 
 **Example** The set $Z\_n = \\{0, 1, . . . , n - 1\\}$ for $n \geq 1$ is a cyclic group under addition modulo $n$. Again (was in case for group $Z$), 1 and -1 = n - 1 are generators.
 

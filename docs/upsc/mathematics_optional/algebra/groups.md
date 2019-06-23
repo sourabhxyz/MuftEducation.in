@@ -1,7 +1,7 @@
 ---
 id: groups
-title: Groups 
-sidebar_label: Groups 
+title: Groups
+sidebar_label: Groups
 ---
 
 **Definition:** Let G be a set. A binary operation on G is a function
@@ -12,7 +12,7 @@ The binary operations addition modulo n and multiplication modulo n on
 the set {0, 1, 2, . . . , n - 1}, which we denote by $Z_n$, play an
 extremely important role in abstract algebra.
 
-![image](/upsc/mathematics-optional/algebra/groups_1.png)
+![image](assets/upsc/mathematics_optional/algebra/groups_1.png)
 
 Suppose we remove a square region from a plane, move it in some way,
 then put the square back into the space it originally occupied. Our goal
@@ -81,7 +81,7 @@ under multiplication satisfies the three properties given in the
 definition of a group but is not a group. Indeed,
 $\sqrt{2} * \sqrt{2} = 2$, so S is not closed under multiplication.
 
-![image](/upsc/mathematics-optional/algebra/groups_2.png)
+![image](assets/upsc/mathematics_optional/algebra/groups_2.png)
 
 **Example:** By Exercise 11 in Chapter 0, an integer a has a
 multiplicative inverse modulo n if and only if a and n are relatively
@@ -96,25 +96,25 @@ that this set is closed under this operation (Proof: $at\_1 + nt\_2 = 1, bt\_3 +
 **Example:** The set of integers under subtraction is not a group, since
 the operation is not associative.
 
-![image](/upsc/mathematics-optional/algebra/groups_4.png)
+![image](assets/upsc/mathematics_optional/algebra/groups_4.png)
 
-![image](/upsc/mathematics-optional/algebra/groups_5.png)
+![image](assets/upsc/mathematics_optional/algebra/groups_5.png)
 
-![image](/upsc/mathematics-optional/algebra/groups_6.png)
+![image](assets/upsc/mathematics_optional/algebra/groups_6.png)
 
 **Example:** The set {1, 2, . . . , n - 1} is a group under
 multiplication modulo n if and only if n is prime (as each element must
 possess an inverse).
 
-![image](/upsc/mathematics-optional/algebra/groups_7.png)
+![image](assets/upsc/mathematics_optional/algebra/groups_7.png)
 
 The following three theorems were very easy to prove for me.
 
-![image](/upsc/mathematics-optional/algebra/groups_8.png)
+![image](assets/upsc/mathematics_optional/algebra/groups_8.png)
 
-![image](/upsc/mathematics-optional/algebra/groups_9.png)
+![image](assets/upsc/mathematics_optional/algebra/groups_9.png)
 
-![image](/upsc/mathematics-optional/algebra/groups_10.png)
+![image](assets/upsc/mathematics_optional/algebra/groups_10.png)
 
 A consequence of the cancellation property is the fact that in a Cayley
 table for a group, each group element occurs exactly once in each row
@@ -123,15 +123,15 @@ doesn't occur in column of $R$, its not possible as we have
 $R^{-1}M =$ something (binary composition). Now to prove at most 1, we
 have $RM = K$ and $RN = K \Rightarrow RM = RN \Rightarrow M = N$.
 
-![image](/upsc/mathematics-optional/algebra/groups_11.png)
+![image](assets/upsc/mathematics_optional/algebra/groups_11.png)
 
 So we will unambiguously denote the inverse by $g^{-1}$
 
-![image](/upsc/mathematics-optional/algebra/groups_12.png)
+![image](assets/upsc/mathematics_optional/algebra/groups_12.png)
 
-![image](/upsc/mathematics-optional/algebra/groups_13.png)
+![image](assets/upsc/mathematics_optional/algebra/groups_13.png)
 
-![image](/upsc/mathematics-optional/algebra/groups_14.png)
+![image](assets/upsc/mathematics_optional/algebra/groups_14.png)
 
 _Note: $ax = b \Rightarrow x = a^{-1}b$ which is unique as inverse is
 unique_
@@ -140,13 +140,13 @@ Also, one must be careful with this notation when dealing with a
 specific group whose binary operation is addition and is denoted by
 "+"
 
-![image](/upsc/mathematics-optional/algebra/groups_15.png)
+![image](assets/upsc/mathematics_optional/algebra/groups_15.png)
 
 So, $g^{-3}$ means $(-g) + (-g) + (-g)$ and is written as $-3g$.
 
 As is the case for real numbers, we use a - b as an abbreviation for a +
 (-b).
 
-![image](/upsc/mathematics-optional/algebra/groups_16.png)
+![image](assets/upsc/mathematics_optional/algebra/groups_16.png)
 
-![image](/upsc/mathematics-optional/algebra/groups_17.png)
+![image](assets/upsc/mathematics_optional/algebra/groups_17.png)
