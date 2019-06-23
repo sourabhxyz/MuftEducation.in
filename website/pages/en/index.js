@@ -134,7 +134,7 @@ class Index extends React.Component {
         {[
           {
             content:
-              "Better than 100 people having their own different write ups would be 100 people contributing to a single write up.",
+              "Better than 100 people having their own different write ups would be 100 people contributing to a single write up, thus making the content more logical and removing staggered printing errors found in books.",
             image: `${baseUrl}img/undraw_coll.svg`,
             imageAlign: "right",
             title: "Collaborate and learn!"

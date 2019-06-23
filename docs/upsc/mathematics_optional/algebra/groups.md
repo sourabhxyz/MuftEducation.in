@@ -8,10 +8,6 @@ sidebar_label: Groups
 that assigns each ordered pair of elements of G an element of G. This
 condition is called _closure_.
 
-The binary operations addition modulo n and multiplication modulo n on
-the set {0, 1, 2, . . . , n - 1}, which we denote by $Z_n$, play an
-extremely important role in abstract algebra.
-
 ![image](assets/upsc/mathematics_optional/algebra/groups_1.png)
 
 Suppose we remove a square region from a plane, move it in some way,
@@ -32,6 +28,8 @@ together with the operation composition, form a mathematical system
 called the dihedral group of order 8. _Note: Inverse of $R\_\alpha$, L is
 $R\_{360 - \alpha}$, L resp. (L is a reflection)_
 
+**Cayley Table for $D\_4$**
+![image](assets/upsc/mathematics_optional/algebra/groups_cayley.png)
 The analysis carried out above for a square can similarly be done for an
 equilateral triangle or regular pentagon or, indeed, any regular $n$-gon
 ($n \geq 3$). The corresponding group is denoted by $D_n$ and is called

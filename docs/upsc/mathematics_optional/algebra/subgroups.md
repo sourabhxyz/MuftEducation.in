@@ -22,14 +22,18 @@ Let $G$ be a group and $H$ a nonempty subset of $G$. If $ab^{-1}$ is in $H$ when
 
 **Proof:** Since the operation of $H$ is the same as that of $G$, it is clear that this operation is associative. Next, we show that $e$ is in $H$. Since $H$ is nonempty, we may pick some $x$ in H. Then, letting $a = x$ and $b = x$ in the hypothesis, we have $e = xx^{-1} = ab^{-1}$ is in $H$. To verify that $x^{-1}$ is in $H$ whenever $x$ is in $H$, all we need to do is to choose $a = e$ and $b = x$ in the statement of the theorem. Finally, the proof will be complete when we show that $H$ is closed; that is, if $x, y$ belong to $H$, we must show that $xy$ is in $H$ also. Well, we have already shown that $y^{-1}$ is in $H$ whenever $y$ is; so, letting $a = x$ and $b = y^{-1}$, we have $xy = x(y^{-1})^{-1} = ab^{-1}$ is in $H$.
 
-{{% notice note %}}
-To apply the above theorem, follow these steps:-\\
+<aside class="notice">
+You must replace `meowmeowmeow` with your personal API key.
+</aside>
 
-1. Identify the property $P$ that distinguishes the elements of $H$; that is, identify a defining condition.\\
-2. Prove that the identity has property $P$. (This verifies that $H$ is nonempty.)\\
-3. Assume that two elements $a$ and $b$ have property $P$.\\
+**Note**
+
+To apply the above theorem, follow these steps:-
+
+1. Identify the property $P$ that distinguishes the elements of $H$; that is, identify a defining condition.
+2. Prove that the identity has property $P$. (This verifies that $H$ is nonempty.)
+3. Assume that two elements $a$ and $b$ have property $P$.
 4. Use the assumption that $a$ and $b$ have property $P$ to show that $ab^{-1}$ has property $P$.
-   {{% /notice %}}
 
 **Example (easy):** Let $G$ be an Abelian group under multiplication with identity $e$. Then $H = \\{x^2 \vert x \in G\\}$ is a subgroup of $G$. Since $e^2 = e$, the identity has the correct form. Next, we write two elements of $H$ in the correct form, say, $a^2$ and $b^2$. We must show that $a^2(b^2)^{-1}$ also has the correct form; that is, $a^2(b^2)^{-1}$ is the square of some element. Since $G$ is Abelian, we may write it as $(ab^{-1})^2$, which is the correct form. Thus, $H$ is a subgroup of $G$.
 
