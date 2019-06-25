@@ -121,7 +121,7 @@ class Index extends React.Component {
         {[
           {
             content: "Use this site on any device.",
-            image: `${baseUrl}img/undraw_note_list.svg`,
+            image: `${baseUrl}img/undraw_res.svg`,
             imageAlign: "right",
             title: "Responsive Design"
           }

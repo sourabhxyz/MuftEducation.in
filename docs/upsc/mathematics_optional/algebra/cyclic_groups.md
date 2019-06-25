@@ -19,7 +19,7 @@ What is important about Theorem 1 in the finite case is that it says that multip
 Thus, no matter what group $G$ is, or how the element $a$ is chosen, multiplication in $< a >$ works the same as addition in $Z\_n$ whenever $|a| = n$. Similarly, if $a$ has infinite order, then multiplication in $< a >$ works the same as addition in $Z$, since $a^ia^j = a^{i+j}$ and no modular arithmetic is done.
 For these reasons, the cyclic groups $Z\_n$ and $Z$ serve as prototypes for all cyclic groups, and algebraists say that there is essentially only one cyclic group of each order.
 
-**Theorem 4.2:** let $a$ be an element of order $n$ in a group and let $k$ be a positive integer. Then $< a^k > = < a^{gcd(n, k)} >$ and $|a^k| = n/gcd(n, k)$.
+**Theorem 4.2:** Let $a$ be an element of order $n$ in a group and let $k$ be a positive integer. Then $< a^k > = < a^{gcd(n, k)} >$ and $|a^k| = n/gcd(n, k)$.
 
 **Proof:** To simplify the notation, let $d = gcd(n, k)$ and let $k = dr$. Since $a^k = (a^d)^r$, we have by closure that $< a^k > \subseteq < a^d >$ _which is infact true for any divisor of k_. By Theorem 0.2 (the gcd theorem), there are integers $s$ and $t$ such that $d = ns + kt$. So, $a^d = a^{ns+kt} = a^{ns}a^{kt} = (a^n)^s(a^k)^t = e(a^k)^t = (a^k)^t \in < a^k >$. This proves $< a^d > \subseteq < a^k >$. So, we have verified that $< a^k > = < a^{gcd(n,k)} >$. We prove the second part of the theorem by showing first that $|a^d| = n/d$ for any divisor $d$ of $n$. Clearly, $(a^d)^{n/d} = a^n = e$, so that $|a^d| \leq n/d$. On the other hand, if $i$ is a positive integer less than $n/d$, then $(a^d)^i \neq e$ by definition of $|a|$.
 $\blacksquare$
@@ -28,6 +28,14 @@ $\blacksquare$
 
 **Corollory 2:** Let $|a| = n$. Then $< a^i > = < a^j >$ if and only if $gcd(n, i) = gcd(n, j)$, and $|a^i| = |a^j|$ if and only if $gcd(n, i) = gcd(n, j)$.
 
-**Corollory 3:** An integer $k$ in $Z\_n$ is a generator of $Z\_n$ if and only if $gcd(n, k) = 1$.
+**Corollory 3:**  Let $|a| = n$. Then $< a > = < a^j >$ if and only if $gcd(n, j) = 1$, and $|a| = |< a^j >|$ if and only if $gcd(n, j) = 1$.
 
-**Corollory 4:**
+**Corollory 4:** An integer $k$ in $Z\_n$ is a generator of $Z\_n$ if and only if $gcd(n, k) = 1$.
+
+The value of Corollary 3 is that once one generator of a cyclic group has been found, all generators of the cyclic group can easily be determined.
+
+let us use it to find all generators of the cyclic group $U(50)$. First, note that direct computations show that $|U(50)| = 20$ and that 3 is one of its generators. Thus, in view of Corollary 3, the complete list of generators for U(50) is
+$3 \bmod 50 = 3, 3^3 \bmod 50 = 27, 3^7 \bmod 50 = 37, 3^9 \bmod 50 = 33$,
+$3^{11} \bmod 50 = 47, 3^{13} \bmod 50 = 23, 3^{17} \bmod 50 = 13, 3^{19} \bmod 50 = 17$
+
+We should keep in mind that Theorem 4.2 and its corollaries apply only to elements of finite order.
