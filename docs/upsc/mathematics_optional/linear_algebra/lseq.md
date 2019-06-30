@@ -50,9 +50,7 @@ We now call a linear system $S_1$ row-equivalent to a linear system $S_2$ if $S_
 
 **Theorem**: Row-equivalent linear systems have the same set of solutions (Obviously as each of these operations when applied to equations doesn't change the soln set).
 
-A linear system is called overdetermined if it has more equations than unknowns, determined if $m = n$, and underdetermined if it has fewer equations than unknowns.
-
-Furthermore, a system is called consistent if it has at least one solution (thus, one solution or infinitely many solutions), but inconsistent if it has no solutions at all.
+A system is called consistent if it has at least one solution (thus, one solution or infinitely many solutions), but inconsistent if it has no solutions at all.
 
 ## Row Echelon Form
 
@@ -64,7 +62,7 @@ A matrix is in reduced row echelon form (also called row canonical form) if it s
 
 - It is in row echelon form.
 - The leading entry in each nonzero row is a 1 (called a leading 1).
-- Each column containing a leading 1 has zeros everywhere else.
+- Each column containing a leading 1 has zeros everywhere else (i.e. also in above).
 
 ## Gauss Elimination
 
@@ -104,7 +102,7 @@ Note further that $rank A = 0$ if and only if $A = 0$. This follows directly fro
 **Theorem**: The rank $r$ of a matrix $A$ equals the maximum number of linearly independent column vectors of $A$.
 Hence $A$ and its transpose $A^T$ have the same rank.
 
-**Proof**: Let $A$ be an $m x n$ matrix of $rank A = r$. Then by definition of rank, $A$ has $r$ linearly independent rows which we denote by $v_{(1)}, \dots , v_{(r)}$ (regardless of their position in $A$), and all the rows $a_{(1)}, \dots , a_{(m)}$ of $A$ are linear combinations of those, say,
+**Proof**: Let $A$ be an $m \cdot n$ matrix of $rank A = r$. Then by definition of rank, $A$ has $r$ linearly independent rows which we denote by $v_{(1)}, \dots , v_{(r)}$ (regardless of their position in $A$), and all the rows $a_{(1)}, \dots , a_{(m)}$ of $A$ are linear combinations of those, say,
 
 $a_{(1)} = c_{11}v_{(1)} + c_{12}v_{(2)} + \dots + c_{1r}v_{(r)}$
 
