@@ -16,5 +16,11 @@
       "upsc/mathematics_optional/linear_algebra/lseq",
       "upsc/mathematics_optional/linear_algebra/vector_spaces"
     ]
+  },
+  "upsc_mop_ode": {
+    "Ordinary Differential Equations": [
+      "upsc/mathematics_optional/ode/intro",
+      "upsc/mathematics_optional/ode/basic"
+    ]
   }
 }
