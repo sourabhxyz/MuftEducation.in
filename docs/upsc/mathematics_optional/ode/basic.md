@@ -132,7 +132,8 @@ To form the DE from a given eqn in $x$ and $y$, containing arbitrary constants:
 ## Soln of DE of the first order and first degree
 
 ---
-**Definition:** A DE of first order and first degree is an eqn of the form $\frac{dy}{dx} = \frac{f(x, y)}{g(x, y)}$ or $Mdx + Ndy = 0$ where $M$ and $N$ are functions of $x$ and $y$. 
+
+**Definition:** A DE of first order and first degree is an eqn of the form $\frac{dy}{dx} = \frac{f(x, y)}{g(x, y)}$ or $Mdx + Ndy = 0$ where $M$ and $N$ are functions of $x$ and $y$.
 
 ---
 
@@ -143,8 +144,9 @@ There are four methods to solve these eqn's:-
 If in an eqn it is possible to get all the functions of $x$ and $dx$ to one side and all the functions of $y$ and $dy$ to another side then the variables are said to be separable.
 
 #### Working rule
+
 1. Consider the eqn $\frac{dy}{dx} = XY$
-2. Modify to get $\frac{dy}{Y} = Xdx$ *(Now the variables have been seperated)*
+2. Modify to get $\frac{dy}{Y} = Xdx$ _(Now the variables have been seperated)_
 3. Integrate both sides and don't forget to add arbitrary constant (only to one side), soln without this arbitrary const is wrong as it is not the general soln.
 
 **Example:** $\frac{dy}{dx} = e^{x + y} + x^2e^y = e^{y}(e^x + x^2) \Rightarrow dye^{-y} = dx(e^x + x^2)$ solve and get $e^{-y} + e^{x} + x^3/3 + c = 0$
@@ -175,12 +177,12 @@ $\frac{dy}{dx} = \frac{(ax + by) + c}{m(ax + by) + c_1}$ or $\frac{dy}{dx} = \fr
 
 #### Homogenous function
 
-A function $f(x, y)$ is said to be a homogenous function of degree $'n'$ in $x \text{ and } y$ if $f(kx, ky) = k^n f(x, y)$ 
+A function $f(x, y)$ is said to be a homogenous function of degree $'n'$ in $x \text{ and } y$ if $f(kx, ky) = k^n f(x, y)$
 
-**Examples:** 
+**Examples:**
 
-* $f(x, y) = \frac{\sqrt[3]{x} + \sqrt[3]{y}}{x + y}$ $\Rightarrow f(kx, ky) = k^{1/3 - 1}\frac{\sqrt[3]{x} + \sqrt[3]{y}}{x + y}$ $\Rightarrow f(x, y) \text{ is homogenous of degree } -2/3$
-* $f(x, y) = \frac{\sqrt{x} + \sqrt{y}}{\sqrt{x} - \sqrt{y}}$ is homogenous of degree 0.
+- $f(x, y) = \frac{\sqrt[3]{x} + \sqrt[3]{y}}{x + y}$ $\Rightarrow f(kx, ky) = k^{1/3 - 1}\frac{\sqrt[3]{x} + \sqrt[3]{y}}{x + y}$ $\Rightarrow f(x, y) \text{ is homogenous of degree } -2/3$
+- $f(x, y) = \frac{\sqrt{x} + \sqrt{y}}{\sqrt{x} - \sqrt{y}}$ is homogenous of degree 0.
 
 :::tip Note
 If $f(x, y)$ is homogenous with degree 0 then $f(x, y)$ is a function of $y/x \text{ or } x/y$
@@ -192,14 +194,58 @@ A DE is said to be homogenous if it can be written in the form $\frac{dy}{dx} = 
 
 #### Working Rule
 
-1. Put $y = vx \Rightarrow \frac{dy}{dx} = v + x\frac{dv}{dx}$ 
+1. Put $y = vx \Rightarrow \frac{dy}{dx} = v + x\frac{dv}{dx}$
 2. Use this to separate variables
 
-**Examples:** 
-* $\frac{dy}{dx} = \frac{y}{x} + e^{\frac{y}{x}}$ just put $y = vx$ and solve.
+**Examples:**
+
+- $\frac{dy}{dx} = \frac{y}{x} + e^{\frac{y}{x}}$ just put $y = vx$ and solve.
 
 #### Non Homogenous DE or Eqns Reducible To Homo. Form
 
+Consider DE's of the form $\frac{dy}{dx} = \frac{ax + by + c}{a_1x + b_1y + c_1}$
+
+##### Case 1
+
+$\frac{a}{a_1} \neq \frac{b}{b_1} \text{ i.e. } ab_1 \neq ba_1$
+
+**Working rule:**
+
+Put $x = X + h, y = Y + k \text{ where } h \text{ and } k \text{ are constants }$
+
+$\Rightarrow dx = dX \text{ \& } dy = dY \Rightarrow \frac{dy}{dx} = \frac{dY}{dX} = \frac{a(X + h) + b(Y + k) + c}{a_1(X + h) + b_1(Y + k) + c_1}$
+
+$ = \frac{aX + bY + (ah + bk + c)}{{a_1X + b_1Y + (a_1h + b_1k + c_1)}}$
+
+Choosing $h$ and $k$ such that $ah + bk + c = a_1h + b_1k + c_1 = 0 \Rightarrow \frac{dY}{dX} = \frac{aX + bY}{a_1X + b_1Y}$ which is homogenous.
+
+##### Case 2
+
+$\frac{a}{a_1} = \frac{b}{b_1}$ then it reduces to a third form of variable separable.
 
 ### Exact Equations
+
+---
+
+**Definition:** The DE $M(x, y)dx + N(x, y)dy = 0$ is called an exact DE if $Mdx + Ndy = 0$ is an exact derivative of $x$ and $y$, i.e. $Mdx + Ndy = du = \frac{\partial u}{\partial x}dx + \frac{\partial u}{\partial y}dy$ where u is a function of $x$ and $y$
+
+---
+
+**Working Rule:**
+
+- The DE $Mdx + Ndy = 0$ is an exact DE if $\frac{\partial M}{\partial y} = \frac{\partial N}{\partial x} \text{ from } (u_{xy} = u_{yx})$
+- The GS is $\int Mdx \text{ (treat y as const)} + \int (\text{ terms in N not containing x})dy = c$
+
+**Examples:**
+
+1. $\frac{dy}{dx} + \frac{ax + hy + g}{hx + by + f} = 0$
+
+   Sol: $\frac{\partial M}{\partial y} = h = \frac{\partial N}{\partial x}$, Answer: $ax^2/2 + hyx + gx ( = \int Mdx) + by^2/2 + fy ( = \int Ndy ) = c$
+
+2. $(e^y + 1)cosxdx + e^ysinxdy = 0$, Answer: $(e^y + 1)sinx ( = \int Mdx) + 0 = c$
+
+#### Integrating Factor
+
+Sometimes $Mdx + Ndy = 0$ is not exact but can be made so by multiplying throughout by a suitable non zero $\mu(x, y)$. This multiplier is called the integrating factor.
+
 ### Linear Equations
