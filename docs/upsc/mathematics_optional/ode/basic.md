@@ -123,4 +123,83 @@ For different sets of real values of $c_1, \dots, c_n$ the eqn $\phi(x, y, c_1, 
 To form the DE from a given eqn in $x$ and $y$, containing arbitrary constants:
 
 1. Write down the given eq., differentiate wrt x successively till the count reaches the number of arbitrary constants.
-2. Eliminate the arbitrary constants from the given eqn's of the above step.
+2. Eliminate the arbitrary constants from the eqn's obtained in above step.
+
+**Example:** $y = ae^x + be^{-x} + c \cos{x} + d\sin{x}$ which arbitrary constants are $(a, b, c, d)$
+
+**Soln** is $y^{(4)} = y$
+
+## Soln of DE of the first order and first degree
+
+---
+**Definition:** A DE of first order and first degree is an eqn of the form $\frac{dy}{dx} = \frac{f(x, y)}{g(x, y)}$ or $Mdx + Ndy = 0$ where $M$ and $N$ are functions of $x$ and $y$. 
+
+---
+
+There are four methods to solve these eqn's:-
+
+### Variables separable
+
+If in an eqn it is possible to get all the functions of $x$ and $dx$ to one side and all the functions of $y$ and $dy$ to another side then the variables are said to be separable.
+
+#### Working rule
+1. Consider the eqn $\frac{dy}{dx} = XY$
+2. Modify to get $\frac{dy}{Y} = Xdx$ *(Now the variables have been seperated)*
+3. Integrate both sides and don't forget to add arbitrary constant (only to one side), soln without this arbitrary const is wrong as it is not the general soln.
+
+**Example:** $\frac{dy}{dx} = e^{x + y} + x^2e^y = e^{y}(e^x + x^2) \Rightarrow dye^{-y} = dx(e^x + x^2)$ solve and get $e^{-y} + e^{x} + x^3/3 + c = 0$
+
+#### Second Form
+
+Equations reducible to the form in which variables can be separated.
+
+Equations of the form $\frac{dy}{dx} = f(ax + by + c)$ can be reduced to the form in which the variables are separated.
+
+Put $ax + by + c = z \Rightarrow a + b\frac{dy}{dx} = \frac{dz}{dx} \Rightarrow \frac{dy}{dx} = \frac{1}{b} (\frac{dz}{dx} - a) \Rightarrow \frac{1}{b} (\frac{dz}{dx} - a) = f(z)$
+
+**Example:** $\frac{dy}{dx} = cos(x + y) + sin(x + y)$
+
+**Sol:** $x + y = z \Rightarrow 1 + y^{'} = z^{'}$
+
+$\Rightarrow z^{'} - 1 = cos(z) + sin(z) \Rightarrow z^{'} = 2cos^2(z/2) + 2sin(z/2)cos(z/2) = 2cos(z/2)(sin(z/2) + cos(z/2))$
+
+$\Rightarrow \frac{dz  sec^2(z/2)}{2(tan(z/2) + 1)} = dx$ integrate and get $log(1 + tan((x + y)/2)) = x + c$
+
+#### Third Form
+
+Differential eqns of the form
+
+$\frac{dy}{dx} = \frac{(ax + by) + c}{m(ax + by) + c_1}$ or $\frac{dy}{dx} = \frac{m(ax + by) + c}{ax + by + c_1}$ just put $ax + by = z$ and solve like second form.
+
+### Homogenous DE
+
+#### Homogenous function
+
+A function $f(x, y)$ is said to be a homogenous function of degree $'n'$ in $x \text{ and } y$ if $f(kx, ky) = k^n f(x, y)$ 
+
+**Examples:** 
+
+* $f(x, y) = \frac{\sqrt[3]{x} + \sqrt[3]{y}}{x + y}$ $\Rightarrow f(kx, ky) = k^{1/3 - 1}\frac{\sqrt[3]{x} + \sqrt[3]{y}}{x + y}$ $\Rightarrow f(x, y) \text{ is homogenous of degree } -2/3$
+* $f(x, y) = \frac{\sqrt{x} + \sqrt{y}}{\sqrt{x} - \sqrt{y}}$ is homogenous of degree 0.
+
+:::tip Note
+If $f(x, y)$ is homogenous with degree 0 then $f(x, y)$ is a function of $y/x \text{ or } x/y$
+:::
+
+#### Homogenous DE
+
+A DE is said to be homogenous if it can be written in the form $\frac{dy}{dx} = \frac{f(x, y)}{g(x, y)}$ where $f \text{ and } g$ are homogenous functions of some degree in $x \text{ \& } y$
+
+#### Working Rule
+
+1. Put $y = vx \Rightarrow \frac{dy}{dx} = v + x\frac{dv}{dx}$ 
+2. Use this to separate variables
+
+**Examples:** 
+* $\frac{dy}{dx} = \frac{y}{x} + e^{\frac{y}{x}}$ just put $y = vx$ and solve.
+
+#### Non Homogenous DE or Eqns Reducible To Homo. Form
+
+
+### Exact Equations
+### Linear Equations
