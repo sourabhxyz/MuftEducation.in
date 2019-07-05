@@ -227,14 +227,25 @@ $\frac{a}{a_1} = \frac{b}{b_1}$ then it reduces to a third form of variable sepa
 
 ---
 
-**Definition:** The DE $M(x, y)dx + N(x, y)dy = 0$ is called an exact DE if $Mdx + Ndy = 0$ is an exact derivative of $x$ and $y$, i.e. $Mdx + Ndy = du = \frac{\partial u}{\partial x}dx + \frac{\partial u}{\partial y}dy$ where u is a function of $x$ and $y$
+**Definition:** The DE $M(x, y)dx + N(x, y)dy = 0$ is called an exact DE if $Mdx + Ndy = 0$ is an exact derivative of $x$ and $y$, i.e. $Mdx + Ndy = du = \frac{\partial u}{\partial x}dx + \frac{\partial u}{\partial y}dy$ where u is a function of $x$ and $y$, from $du = 0$ we get by integrating $u(x, y) = c$.
 
 ---
 
 **Working Rule:**
 
-- The DE $Mdx + Ndy = 0$ is an exact DE if $\frac{\partial M}{\partial y} = \frac{\partial N}{\partial x} \text{ from } (u_{xy} = u_{yx})$
-- The GS is $\int Mdx \text{ (treat y as const)} + \int (\text{ terms in N not containing x})dy = c$
+- The DE $Mdx + Ndy = 0$ is an exact DE **iff** $\frac{\partial M}{\partial y} = \frac{\partial N}{\partial x} \text{ from } (u_{xy} = u_{yx})$ (Note that this will only hold true if $u$ is continuous and its first order derivatives are as well continuous)
+  This equality condition is not only necessary but also sufficient (proof omitted)
+- To obtaion GS either do
+  1.  $u = \int Mdx + k(y)$ and then using $u_y = N$ get an eqn in $\frac{dk}{dy}$ to solve for $k$.
+  2.  $u = \int Ndy + l(x)$ and solve like above.
+
+:::warning Warning
+As evident from this theory, we cannot solve by just doing $Mdx = -Ndy$ then integrating each side wrt $x, y$ resp. Also eqn may not even be exact! (wanted to mention this point in variable separation section)
+:::
+
+:::caution Caution
+The GS is **not** given by $\int Mdx \text{ (treat y as const)} + \int (\text{ terms in N not containing x})dy = c$
+:::
 
 **Examples:**
 
@@ -247,5 +258,9 @@ $\frac{a}{a_1} = \frac{b}{b_1}$ then it reduces to a third form of variable sepa
 #### Integrating Factor
 
 Sometimes $Mdx + Ndy = 0$ is not exact but can be made so by multiplying throughout by a suitable non zero $\mu(x, y)$. This multiplier is called the integrating factor.
+
+:::tip Note
+A DE can have more than one integrating factor
+:::
 
 ### Linear Equations
