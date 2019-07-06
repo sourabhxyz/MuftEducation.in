@@ -213,7 +213,7 @@ Here linear equation will of the form $\frac{dy}{dx} + P(x)y = Q(x)$.
 ### Working Rule
 
 1. Find IF = $e^{\int P(x)dx}$
-2. GS is y \cdot IF = $\int (Q \cdot IF) dx + c$
+2. GS is $y \cdot IF = \int (Q \cdot IF) dx + c$
 
 **Examples:**
 
@@ -245,4 +245,32 @@ Here linear equation will of the form $\frac{dy}{dx} + P(x)y = Q(x)$.
 
    **Working Rule:**
 
-   $y$
+   $y^{-n}dy/dx + P(x)y^{1 - n} = Q(x)$
+
+   put $y^{1 - n} = z$
+
+   $\Rightarrow (1 - n)y^{-n}dy/dx = dz/dx$
+
+   $\Rightarrow dz/dx + (1 - n)P(x)z = Q(x)$ Which is linear.
+
+   **Examples:**
+
+   - $dz/dx + zlog(z)/x = z(log(z))^2/x^2$
+
+     Put $log(z) = t \Rightarrow z = e^t$
+
+     $\Rightarrow e^tdt/dx + e^tt/x = e^tt^2/x^2 \Rightarrow dt/dx + t/x = t^2/x^2$
+
+     Now solve. Ans: $1/(xlog(z)) = 1/(2x^2) + c$
+
+   - $\frac{dy}{dx}(x^2y^3 + xy) = 1$
+
+     $\Rightarrow dx/dy = x^2y^3 + xy$
+
+     $\Rightarrow dx/dy - xy = x^2y^3$ Now solve.
+
+   - $dy/dx + 1/x = e^y/x^2$
+
+     $\Rightarrow e^{-y}dy/dx + e^{-y}/x = 1/x^2$ Put $e^{-y} = t$ and solve.
+
+     Ans: $e^{-y}/x = 1/2x^2 + c$
