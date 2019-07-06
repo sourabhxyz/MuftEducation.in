@@ -50,7 +50,7 @@ So, example 1 above is of degree 101 whereas example 2 doesn't satisfy our condi
 - $c = \frac{(\sqrt{x} + (\frac{dy}{dx})^2)^{3/2}}{\frac{d^2y}{dx^2}}$ --> Order = degree = 2
 - $(y^{'''})^{4/3} + sin(\frac{dy}{dx}) + xy = x$ --> Order = 3, degree = 4
 - $(y^{'''})^{1/2} - 2(y^{'})^{1/4} + xy = 0$ --> Take $(y^{'})^{1/4}$ to one side and take to the 4th power on both sides and then lhs would have remaining radicals like $4a^3b + 4ab^3 = 4ab(a^2 + b^2)$ (can be seen by doing $(a + b)^4 = (a^2 + b^2 + 2ab)(a^2 + b^2 + 2ab)$) which can now be removed by squaring both sides. --> Order = 3, degree = 4
-- $(y^{'''})^{4/3} + (y^{'})^{1/5} + 4 = 0$ Since $GCD(3, 5) = 1$ that implies, order = 3, degree = 60 (simply take $1/5$ power term to one side then raise to the 5th power then take $1/3$ term common on one side and raise to the third power)
+- $(y^{'''})^{4/3} + (y^{'})^{1/5} + 4 = 0$ Since $GCD(3, 5) = 1$ that implies, order = 3, degree = 20 (simply take $1/5$ power term to one side then raise to the 5th power then take $1/3$ term common on one side and raise to the third power)
 - $(y^{'''})^{3/2} + (y^{'''})^{2/3} = 0$ Order = 3 but don't say degree = 9 yet as both the terms are of same order and in the end we will have $l^9 = l^4 \Rightarrow l^5 = 0$ so degree equals 5 (?) (although it is still a subjective answer and in my opinion answer should be 9).
 
 ---
@@ -247,20 +247,58 @@ As evident from this theory, we cannot solve by just doing $Mdx = -Ndy$ then int
 The GS is **not** given by $\int Mdx \text{ (treat y as const)} + \int (\text{ terms in N not containing x})dy = c$
 :::
 
-**Examples:**
-
-1. $\frac{dy}{dx} + \frac{ax + hy + g}{hx + by + f} = 0$
-
-   Sol: $\frac{\partial M}{\partial y} = h = \frac{\partial N}{\partial x}$, Answer: $ax^2/2 + hyx + gx ( = \int Mdx) + by^2/2 + fy ( = \int Ndy ) = c$
-
-2. $(e^y + 1)cosxdx + e^ysinxdy = 0$, Answer: $(e^y + 1)sinx ( = \int Mdx) + 0 = c$
-
 #### Integrating Factor
 
 Sometimes $Mdx + Ndy = 0$ is not exact but can be made so by multiplying throughout by a suitable non zero $\mu(x, y)$. This multiplier is called the integrating factor.
 
 :::tip Note
-A DE can have more than one integrating factor
+A DE can have more than one integrating factor like $1/x^2, 1/y^2, 1/xy, 1/(x^2 + y^2)$ are all integrating factors of $ydx - xdy = 0$
 :::
+
+:::note Remember
+If we have situation like this $l(x)dx + m(y)dy + d(N(x, y)) = 0$ then we can simply do $L(x) + M(y) + N(x, y) = c$
+:::
+
+**Examples:**
+
+- $\frac{dy}{dx} + \frac{ax + hy + g}{hx + by + f} = 0$
+
+  Sol: $\frac{\partial M}{\partial y} = h = \frac{\partial N}{\partial x}$, Answer: $ax^2/2 + hyx + gx + by^2/2 + fy = c$
+
+- $\frac{xdy - ydx}{x^2 + y^2} = xdx \Rightarrow d(tan^{-1}(y/x) = xdx \Rightarrow tan^{-1}(y/x) = x^2/2 + c$
+
+- $ydx -xdy + (1 + x^2)dx + x^2sinydy = 0 \Rightarrow \frac{ydx - xdy}{x^2} + (1/x^2 + 1)dx + sinydy = 0$
+
+  Clubbing $dx$ and $dy$ terms together, we get $-y/x + -1/x + x + k(y) = u \Rightarrow -1/x + k^{'}y = -1/x + siny \Rightarrow k(y) = -cos(y) + c^*$
+
+  Now using $u = c$ we get $-y/x -1/x + x -cosy = c^{'}$
+
+- $xdy = (y + xcos^2(y/x))dx \Rightarrow \frac{xdy - ydx}{x^2} = \frac{cos^2(y/x)}{x}dx$
+
+  $\Rightarrow \frac{sec^2(y/x)(xdy - ydx)}{x^2} = dx/x \Rightarrow tan(y/x) = log(x) + c$
+
+- $(xy^2 + 2x^2y^3)dx + (x^2y - x^3y^2)dy = 0$
+
+  $\Rightarrow ydx + xdy + 2xy^2dx - x^2ydy = 0$
+
+  $\Rightarrow \frac{ydx + xdy}{x^2y^2} \text{ (this is now in exact form,}$
+
+  $ \text{can be verified thus it should be kept in mind that }$
+  $ x^2y^2 \text{ is an integrating factor of }ydx + xdy$)
+  $+ 2dx/x \text{ (wasn't able to do anything rather than making it free from y) } - dy/y = 0$
+
+  Now getting answer is easy, which is $-1/xy + 2log(x) - log(y) = c$
+
+- $xdx + ydy + (x^2 + y^2)dy = 0$
+
+  $\Rightarrow \frac{xdx + ydy}{x^2 + y^2} = -dy \Rightarrow log(x^2 + y^2)/2 + y = c$
+
+- $x^2dy/dx + xy = \sqrt{1 - x^2y^2}$
+
+  $\Rightarrow x\frac{xdy + ydx}{dx} = \sqrt{1 - (xy)^2}$
+
+  $\Rightarrow \frac{d(xy)}{\sqrt{1 - (xy)^2}} = dx/x$
+
+  $\Rightarrow sin^{-1}(xy) - log(x) = c$
 
 ### Linear Equations
