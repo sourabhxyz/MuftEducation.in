@@ -20,7 +20,8 @@
   "upsc_mop_ode": {
     "Ordinary Differential Equations": [
       "upsc/mathematics_optional/ode/intro",
-      "upsc/mathematics_optional/ode/basic"
+      "upsc/mathematics_optional/ode/basic",
+      "upsc/mathematics_optional/ode/first_order_first_degree"
     ]
   }
 }

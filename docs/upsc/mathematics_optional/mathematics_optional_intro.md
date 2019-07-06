@@ -133,6 +133,8 @@ Generalized coordinates; D’ Alembert’s principle and Lagrange’s equations;
 
 ## Topics
 
+- [Trigonometry Cheat Sheet](trigonometry/cheatsheet.md)
+- [Calculus Cheat Sheet](calculus/cheatsheet.md)
 - [Ordinary Differential Equations](ode/intro.md)
 - [Algebra](algebra/intro.md)
 - [Linear Algebra](linear_algebra/intro.md)
