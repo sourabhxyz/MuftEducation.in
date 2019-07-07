@@ -76,7 +76,7 @@ A DE is said to be homogenous if it can be written in the form $\frac{dy}{dx} = 
 
 ### Non Homogenous DE or Eqns Reducible To Homo. Form
 
-Consider DE's of the form $\frac{dy}{dx} = \frac{ax + by + c}{a_1x + b_1y + c_1}$
+Consider DE's of the form $$\frac{dy}{dx} = \frac{ax + by + c}{a_1x + b_1y + c_1}$$
 
 #### Case 1
 
@@ -88,7 +88,7 @@ Put $x = X + h, y = Y + k \text{ where } h \text{ and } k \text{ are constants }
 
 $\Rightarrow dx = dX \text{ \& } dy = dY \Rightarrow \frac{dy}{dx} = \frac{dY}{dX} = \frac{a(X + h) + b(Y + k) + c}{a_1(X + h) + b_1(Y + k) + c_1}$
 
-$ = \frac{aX + bY + (ah + bk + c)}{{a_1X + b_1Y + (a_1h + b_1k + c_1)}}$
+$$ = \frac{aX + bY + (ah + bk + c)}{{a_1X + b_1Y + (a_1h + b_1k + c_1)}}$$
 
 Choosing $h$ and $k$ such that $ah + bk + c = a_1h + b_1k + c_1 = 0 \Rightarrow \frac{dY}{dX} = \frac{aX + bY}{a_1X + b_1Y}$ which is homogenous.
 

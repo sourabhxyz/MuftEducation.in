@@ -108,3 +108,139 @@ $y = e^{\alpha x}[(A + Bx)cos(\beta x) + (C + Dx)sin(\beta x)]$
    $y = e^{\alpha x}[(A + Bx)cosh(\sqrt{\beta} x) + (C + Dx)sinh(\sqrt{\beta} x)]$
    
 :::
+
+## Find PI
+
+### Inverse Operator
+
+$\frac{1}{f(D)}X$ is that function of $x$, not containing arbitrary constants which when operated upon by $f(D)$ gives $X$
+
+i.e. $f(D)(\frac{1}{f(D)}X) = X$
+
+Thus $\frac{1}{f(D)}X$ is a PI.
+
+---
+
+$\frac{1}{D}X = \int Xdx$
+
+Proof: Let $\frac{1}{D}X = y$
+
+$\Rightarrow Dy = X \Rightarrow dy/dx = X$
+
+$\Rightarrow y = \int Xdx$ no constant being added because $y$ doesn't contain any constant.
+
+---
+
+$\frac{1}{D - a}X = e^{ax}\int Xe^{-ax}dx$
+
+Proof: Let $\frac{1}{D - a}X = y$
+
+$\Rightarrow (D - a)y = X$
+
+$\Rightarrow dy/dx - ay = X$
+
+$\Rightarrow y = e^{ax}\int Xe^{-ax}dx$
+
+### Case 1
+
+To find PI when $Q = e^{ax}$ and $f(a) \neq 0$
+
+Since $D^ke^{ax} = a^ke^{ax}$ therefore PI is $y = e^{ax}/f(a)$
+
+:::note If $f(a) = 0$
+Since $a$ is the root of AE, therefore $(D - a)$ is a factor of $f(D)$. Suppose $f(D) = (D - a)\phi(D)$, where $\phi(a) \neq 0$. Then
+
+$\frac{1}{f(D)}e^{ax} = \frac{1}{D - a}\frac{1}{\phi(D)}e^{ax} = \frac{1}{\phi(a)}\frac{1}{D - a}e^{ax}$
+
+$= \frac{1}{\phi(a)}e^{ax}\int e^{ax}e^{-ax}dx$ 
+
+$= xe^{ax}/phi(a) = xe^{ax}/f'(a)$
+
+$\because f'(D) = (D - a)\phi '(D) + 1 \cdot \phi(D)$
+
+$\therefore f'(a) = \phi(a)$
+
+If $f'(a) = 0$ then applying this procedure again we get $\frac{1}{f(D)}e^{ax} = x^2e^{ax}/f''(a)$
+
+Do take $f''(a)$ and not just ignoring $(D - a)^2$ in $(D - a)^2\phi(a)$
+:::
+
+**Examples:**
+
+* $(D + 2)(D - 1)^2y = e^{-2x} + 2sinh x$
+
+   $ = e^{-2x} + e^x - e^{-x}$
+
+   $\Rightarrow y = xe^{-2x}/f'(-2) + x^2e^{x}/f''(1) -e^{-x}/f(-1)$
+
+   $= xe^{-2x}/9 + x^2e^{x}/6 - e^{-x}/4$
+
+### Case 2
+
+$X = sin(ax + b) \text{ or } cos(ax + b)$
+
+$\Rightarrow (D^2)^r sin(ax + b) = (-a^2)^r sin(ax + b)$
+
+$\therefore f(D^2)sin(ax + b) = f(-a^2)sin(ax + b)$
+
+Operating on both sides by $\frac{1}{f(D^2)}$ and dividing both sides by $f(-a^2)$ we get
+
+$\frac{1}{f(D^2)}sin(ax + b) = \frac{1}{f(-a^2)}sin(ax + b)$ provided $f(-a^2) \neq 0$
+
+If $f(-a^2) = 0$ then we proceed further.
+
+$\frac{1}{D^2}sin(ax + b) =$ I.P. of $\frac{1}{D^2}e^{i(ax + b)}$
+
+= IP of $\frac{x}{f'(D^2)}e^{i(ax + b)}$
+
+= $x\frac{1}{f'(-a^2)}sin(ax + b)$
+
+If $f'(-a^2) = 0$, $\frac{1}{D^2}sin(ax + b) = x^2\frac{1}{f''(-a^2)}sin(ax + b)$ provided $f''(-a^2) \neq 0$ and so on.
+
+
+Similarly,
+
+* $\frac{1}{f(D^2)}cos(ax + b) = \frac{1}{f(-a^2)}cos(ax + b)$ provided $f(-a^2) \neq 0$
+
+* If $f(-a^2) = 0$ then, $\frac{1}{f(D^2)}cos(ax + b) = x\frac{1}{f'(-a^2)}cos(ax + b)$ provided $f'(-a^2) \neq 0$
+
+* If $f'(-a^2) = 0$ then, $\frac{1}{f(D^2)}cos(ax + b) = x^2\frac{1}{f''(-a^2)}cos(ax + b)$ provided $f''(-a^2) \neq 0$
+
+**Examples:**
+
+* $(D^3 + 1)y = cos(2x - 1)$
+
+  PI = $\frac{1}{D^3 + 1}cos(2x - 1)$ 
+
+  $= \frac{1}{-4D + 1}cos(2x - 1)$
+
+  $= \frac{1 + 4D}{(1 - 4D)(1 + 4D)}cos(2x - 1)$
+
+  $(1 + 4D)\frac{1}{1 - 16(-4)}cos(2x - 1)$
+
+  $= \frac{1}{65}[cos(2x - 1) + 4Dcos(2x - 1)]$
+
+  $= \frac{1}{65}[cos(2x - 1) + -8sin(2x - 1)]$
+* $\frac{d^3y}{dx^3} + 4\frac{dy}{dx} = sin(2x)$
+
+   PI = $\frac{1}{D(D^2 + 4)}sin(2x)$
+
+   $= x\frac{1}{3D^2 + 4}sin(2x)$
+
+   *Note:* We couldn't have just did $D(2D)$... as derivative should be applied to whole.
+
+   $= x\frac{1}{3(-4) + 4}sin(2x)$
+
+   $= -\frac{x}{8}sin(2x)$
+
+### Case 3
+
+$X = x^m$
+
+PI = $\frac{1}{f(D)}x^m = [f(D)]^{-1}x^m$
+
+Expand $[f(D)]^{-1}$ in ascending powers of D as far as the term in $D^m$ and operate on $x^m$ term by term. Since $(m + 1)th$ and higher derivatives of $x^m$ are zero, we need not consider terms beyond $D^m$
+
+**Examples:** 
+
+* $$\frac{d^2y}{dx^2} + \frac{dy}{dx} = x^2 + 2x + 4$$
