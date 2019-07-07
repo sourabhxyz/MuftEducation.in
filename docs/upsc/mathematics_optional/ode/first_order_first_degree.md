@@ -20,7 +20,7 @@ If in an eqn it is possible to get all the functions of $x$ and $dx$ to one side
 
 1. Consider the eqn $\frac{dy}{dx} = XY$
 2. Modify to get $\frac{dy}{Y} = Xdx$ _(Now the variables have been seperated)_
-3. Integrate both sides and don't forget to add arbitrary constant (only to one side), soln without this arbitrary const is wrong as it is not the general soln.
+3. Integrate both sides and don't forget to add arbitrary constant (only to one side as adding to both sides will ultimately lead to only one arbitrary constant), soln without this arbitrary const is wrong as it is not the general soln.
 
 **Example:** $\frac{dy}{dx} = e^{x + y} + x^2e^y = e^{y}(e^x + x^2) \Rightarrow dye^{-y} = dx(e^x + x^2)$ solve and get $e^{-y} + e^{x} + x^3/3 + c = 0$
 
@@ -142,7 +142,7 @@ If we have situation like this $l(x)dx + m(y)dy + d(N(x, y)) = 0$ then we can si
 
 - $ydx -xdy + (1 + x^2)dx + x^2sinydy = 0 \Rightarrow \frac{ydx - xdy}{x^2} + (1/x^2 + 1)dx + sinydy = 0$
 
-  Clubbing $dx$ and $dy$ terms together, we get $-y/x + -1/x + x + k(y) = u \Rightarrow -1/x + k^{'}y = -1/x + siny \Rightarrow k(y) = -cos(y) + c^*$
+  Clubbing $dx$ and $dy$ terms together (was of no use though), we get $-y/x + -1/x + x + k(y) = u \Rightarrow -1/x + k^{'}y = -1/x + siny \Rightarrow k(y) = -cos(y) + c^*$
 
   Now using $u = c$ we get $-y/x -1/x + x -cosy = c^{'}$
 
@@ -190,7 +190,7 @@ If $Mdx + Ndy = 0$ is such that $M = yf_1(x, y)$ and $N = xf_2(x, y)$ and $Mx - 
 
 #### Method 3
 
-If $Mdx + Ndy = 0$ is such that $\frac{\frac{\partial M}{\partial y} - \frac{\partial N}{\partial x}}{N} = f(x).$ ($f(x)$ can as well be a constant) then IF $= e^{\int f(x)dx}$
+If $Mdx + Ndy = 0$ is such that $\frac{\frac{\partial M}{\partial y} - \frac{\partial N}{\partial x}}{N} = f(x).$ (as usual $f(x)$ can as well be a constant) then IF $= e^{\int f(x)dx}$
 
 **Example:** $(y + y^3/3 + x^2/2)dx + (x + xy^2)dy/4 = 0$
 
@@ -200,7 +200,7 @@ $\Rightarrow IF = e^{3log(x)} = x^3$
 
 #### Method 4
 
-If $Mdx + Ndy = 0$ is such that $\frac{\frac{\frac{\partial N}{\partial x} - \partial M}{\partial y}}{M} = f(y).$ ($f(y)$ can as well be a constant) then IF $= e^{\int f(y)dy}$
+If $Mdx + Ndy = 0$ is such that $\frac{\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}}{M} = f(y).$ ($f(y)$ can as well be a constant) then IF $= e^{\int f(y)dy}$
 
 #### Method 5
 

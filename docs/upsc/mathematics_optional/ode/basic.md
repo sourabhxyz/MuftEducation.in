@@ -38,7 +38,7 @@ So an ODE of order $n$ involving 2 variables is of the form: $f(1, x, y, \frac{d
 **Definition:** The degree (i.e. power) of the highest order derivative involved in a DE, when the DE satisfies the following:
 
 - All derivatives have been made free from radicals (i.e. roots or fractional powers)
-- There is no involvement of the derivatives in any fraction.
+- There is no involvement of the derivatives in any denominator of a fraction.
 - There shouldn’t be involvement of highest order derivative as a transcendental function, trigonometric or exponential, etc. The coefficient of any term containing the highest order derivative should just be a function of $x$, $y$, or some lower order derivative.
 
 ---
@@ -62,7 +62,7 @@ So, example 1 above is of degree 101 whereas example 2 doesn't satisfy our condi
 
 So, in general a linear differential equation involving two variables and of $n$th order is of the form:-
 
-$y^{n} + P_1(x) * y^{n - 1} + \dots + P_n(x) * y = Q(x)$
+$y^{(n)} + P_1(x) * y^{(n - 1)} + \dots + P_n(x) * y = Q(x)$
 
 ---
 
@@ -84,7 +84,7 @@ $y^{n} + P_1(x) * y^{n - 1} + \dots + P_n(x) * y = Q(x)$
 
 ---
 
-**Definition: (Soln to a DE)** Any relation between the dependent and independent variables which when substitute in the DE reduces it to an identity is called a **soln** or **integral** or **primitive** of the DE.
+**Definition: (Soln to a DE)** Any relation between the dependent and independent variables which when substituted in the DE reduces it to an identity is called a **soln** or **integral** or **primitive** of the DE.
 
 ---
 

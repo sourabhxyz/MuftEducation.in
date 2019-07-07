@@ -44,7 +44,7 @@ const siteConfig = {
       href: "https://github.com/sourabh2311/mufteducation-docusaurus",
       label: "GitHub"
     },
-    { doc: "courses", label: "How To Contribute" },
+    { doc: "contribute", label: "How To Contribute" },
     { search: true }
   ],
 
