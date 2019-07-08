@@ -251,7 +251,7 @@ Here linear equation will of the form $\frac{dy}{dx} + P(x)y = Q(x)$.
 
    $\Rightarrow (1 - n)y^{-n}dy/dx = dz/dx$
 
-   $\Rightarrow dz/dx + (1 - n)P(x)z = Q(x)$ Which is linear.
+   $\Rightarrow dz/dx + (1 - n)P(x)z = (1 - n)Q(x)$ Which is linear.
 
    **Examples:**
 

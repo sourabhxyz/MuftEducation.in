@@ -199,7 +199,7 @@ Operating on both sides by $\frac{1}{f(D^2)}$ and dividing both sides by $f(-a^2
 
 $\frac{1}{f(D^2)}sin(ax + b) = \frac{1}{f(-a^2)}sin(ax + b)$ provided $f(-a^2) \neq 0$
 
-If $f(-a^2) = 0$ then we proceed further.
+If $f(-a^2) = 0$ [Note that if $f(a) = 0$ then it doesn't mean $f(-a^2) = 0$ thus be careful when checking this] then we proceed further.
 
 $\frac{1}{D^2}sin(ax + b) =$ I.P. of $\frac{1}{D^2}e^{i(ax + b)}$
 
@@ -265,6 +265,32 @@ Expand $[f(D)]^{-1}$ in ascending powers of D as far as the term in $D^m$ and op
 
   $= \int (x^2 + 4)dx = x^3/3 + 4x$
 
+- $\frac{1}{(D - 2)^2}x^2 = \frac{1}{4}(1 - D/2)^{-2}x^2$
+
+  $= \frac{1}{4}(1 + D + \frac{(-2)(-3)}{2!}(-D/2)^2 + \dots)x^2$
+
+  $= \frac{1}{4}(x^2 + 2x + 3/2)$
+
+- $\frac{1}{D^2 - 2D + 2}(x)$
+
+  $= \frac{1}{(D - (1 + i))(D - (1 - i))}$
+
+  $= \frac{1}{2(1 - (D/(1 + i))(1 - (D/(1 - i))))}x$
+
+  $= \frac{1}{2(1 - D/(1 + i))}(1 + D/(1 - i))x$
+
+  $= \frac{1}{2}(x + 1/(1 + i))(1 + D/(1 - i))$
+
+  $= \frac{1}{2}(x + 1/(1 - i) + 1/(1 + i))$
+
+  $= (x + 1)/2$
+
+  **Aliter**
+
+  $= \frac{1}{2}(1 - (D - D^2/2))^{-1}x$
+
+  $= \frac{1}{2}(1 + D - D^2/2)x$
+
 ### Case 4
 
 $X = e^{ax}V(x)$
@@ -296,3 +322,8 @@ $\Rightarrow 1/f(D) = \frac{A_1}{D - m_1} + \frac{A_2}{D - m_2} + \dots + \frac{
 $\therefore PI = A_1\frac{1}{D - m_1}X + A_2\frac{1}{D - m_2}X + \dots + A_2\frac{1}{D - m_n}X$
 
 $= A_1e^{m_1x}\int Xe^{-m_1x}dx + A_2e^{m_2x}\int Xe^{-m_2x}dx + \dots + A_ne^{m_nx}\int Xe^{-m_nx}dx$
+
+**Examples:**
+
+- 13.12
+- -- on 13.17
