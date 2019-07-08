@@ -123,6 +123,8 @@ i.e. $f(D)(\frac{1}{f(D)}X) = X$
 
 Thus $\frac{1}{f(D)}X$ is a PI.
 
+_Note:_ Say $X = c_1g_1(x) + c_2g_2(x)$ where $c_1, c_2$ are constants. Then $PI = c_1\frac{g_1(x)}{f(D)} + c_2\frac{g_2(x)}{f(D)}$ and each of these can be solved independently of the other as if other doesn't exist.
+
 ---
 
 $\frac{1}{D}X = \int Xdx$
@@ -132,6 +134,8 @@ Proof: Let $\frac{1}{D}X = y$
 $\Rightarrow Dy = X \Rightarrow dy/dx = X$
 
 $\Rightarrow y = \int Xdx$ no constant being added because $y$ doesn't contain any constant.
+
+**Corollary:** $\frac{1}{D^2}X = \int [\int Xdx]dx$
 
 ---
 
@@ -291,6 +295,14 @@ Expand $[f(D)]^{-1}$ in ascending powers of D as far as the term in $D^m$ and op
 
   $= \frac{1}{2}(1 + D - D^2/2)x$
 
+:::caution Caution
+In $\frac{x}{(D + 1)^2 - 4} = -\frac{1}{4}\frac{x}{1 - (\frac{D + 1}{2})^2}$
+
+Is not equal to $-\frac{1}{4}(1 + (\frac{D + 1}{2})^2)x$
+
+Solve it the way done in aliter above, i.e. in $(1 + x)^n$, $x$ should only contain $D's$ (not sure why $D's$ would be valid).
+:::
+
 ### Case 4
 
 $X = e^{ax}V(x)$
@@ -325,5 +337,58 @@ $= A_1e^{m_1x}\int Xe^{-m_1x}dx + A_2e^{m_2x}\int Xe^{-m_2x}dx + \dots + A_ne^{m
 
 **Examples:**
 
-- 13.12
-- -- on 13.17
+- $(D^2 + D + 1)y = (1 - e^x)^2 = 1 + e^{2x} - 2e^{x}$
+
+  $\Rightarrow y = CF + e^{0x}/(0 + 0 + 1) + e^{2x}/(4 + 2 + 1) - 2e^{x}/{3}$
+
+  $y = CF + 1 + e^{2x}/7 - 2e^x/3$
+
+- $(D^4 + 2D^2 + 1)y = x^2cos(x)$
+
+  $AE = (m^2 + 1)^2$
+
+  $\Rightarrow m = \pm i, \pm i$
+
+  $\Rightarrow CF = (c_1 + c_2x)cosx + (c_3 + c_4x)sinx$
+
+  $PI = Re[e^{ix}\frac{x^2}{((D + i)^2 + 1)^2}]$
+
+  $= Re[e^{ix}(-\frac{1}{4D^2}(1 - iD/2)^{-2}x^2)]$ (_Since_ $\frac{1}{i} = -i$)
+
+  $= Re[-\frac{e^{ix}}{4}\frac{1}{D^2}(1 + 2iD/2 + 3(iD/2)^2)x^2]$
+
+  $= Re[-\frac{e^{ix}}{4}\frac{1}{D^2}(x^2 + 2ix - 3/2)]$
+
+  $= Re[-\frac{e^{ix}}{4}\frac{1}{D}(x^3/3 + ix^2 - 3x/2)]$
+
+  $= Re[-\frac{e^{ix}}{4}(x^4/12 + ix^3/3 - 3x^2/4)]$
+
+  $= \frac{-1}{48}Re[(cosx + isinx)(x^4 + 4ix^3 - 9x^2)]$
+
+  $= \frac{-1}{48}[(x^4 - 9x^2)cosx - 4x^3sinx]$
+
+* $(D^2 - 4D + 4)y = 8x^2e^{2x}sin(2x)$
+
+  $y = CF + IM[8e^{2x(1 + i)}\frac{x^2}{(D + 2i)^2}$]
+
+  Now after a bit long calculation, you will arrive at answer. The better way is to always factorize $f(D)$ first so that we can see some structure. For example, in this case $f(D) = (D - 2)^2$, thus, $y = CF + 8e^{2x}\frac{x^2sin(2x)}{D^2}$ which is comparatively easy to compute.
+
+* $(D^2 + a^2)y = sec(ax)$
+
+  $\rightarrow D = \pm ai$
+
+  $CF = c_1cosax + c_2sinax$
+
+  $PI = \frac{1}{D^2 + a^2}secax = \frac{1}{2ia}[\frac{1}{D - ia} - \frac{1}{D + ia}]secax$
+
+  Now $\frac{1}{D - ia}secax = e^{iax}\int secaxe^{-iax}dx$
+
+  $= e^{iax}\int \frac{cosax - isinax}{cosax}dx = e^{iax}\int (1 - itanax)dx$
+
+  $= e^{iax}(x + \frac{i}{a}log(cosax))$
+
+  Changing $i$ to $-i$ we get
+
+  $\frac{1}{D + ia}secax = e^{-iax}(x - \frac{i}{a}log(cosax))$
+
+  $PI = \frac{1}{2ia}[e^{iax}(x + \frac{i}{a}log(cosax)) - e^{-iax}(x - \frac{i}{a}log(cosax))]$
