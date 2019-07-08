@@ -13,6 +13,8 @@ This eqn can be written as $f(D)y = Q \dots (1)$ where
 
 $f(D) = D^n + a_1D^{n - 1} + \dots + a_{n - 1}D + a_n$
 
+Note that these coefficients can be complex (imaginary).
+
 ---
 
 ## Homogeneous Eqn
@@ -171,6 +173,8 @@ $f(D) = (D - a)^2\phi(D)$
 $\Rightarrow f'(D) = 2(D - a)\phi(D) + (D - a)^2\phi '(D)$
 
 $\Rightarrow f''(a) = 2\phi (a)$
+
+Similarly $f^{(k)}(a) = k!\phi(a)$
 :::
 
 **Examples:**
