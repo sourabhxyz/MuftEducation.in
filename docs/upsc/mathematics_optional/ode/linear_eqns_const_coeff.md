@@ -91,6 +91,20 @@ If in Case 1 we have $\alpha \pm i\beta$ as a pair of complex roots then GS is
 
 $y = e^{\alpha x}[Acos(\beta x) + Bsin(\beta x)]$ (Ignoring other terms for now)
 
+Here $A$ and $B$ can be complex. This is simplified form, putting soln in form of Case 1 is as well valid.
+
+**Derivation:**
+
+$y = c_1e^{(\alpha + i\beta)x} + c_2e^{(\alpha - i\beta)x} + c_3e^{m_3x} + \dots$
+
+$= e^{\alpha x}(c_1e^{i\beta x} + c_2e^{-i\beta x}) + \dots$
+
+$= e^{\alpha x}(c_1(cos(\beta x) + isin(\beta x)) + c_2(cos(\beta x) + -sin(\beta x)) + \dots$
+
+$= e^{\alpha x}(Acos(\beta x) + Bsin(\beta x)) + \dots$
+
+Where $A = c_1 + c_2$ and $B = i(c_1 - c_2)$
+
 If the imaginary roots are repeated, say, $\alpha \pm i\beta$ occur twice then the soln would be
 
 $y = e^{\alpha x}[(A + Bx)cos(\beta x) + (C + Dx)sin(\beta x)]$
