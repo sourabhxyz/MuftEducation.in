@@ -19,7 +19,7 @@ Note that these coefficients can be complex (imaginary).
 
 ## Homogeneous Eqn
 
-If $Q = 0$ we get Homogeneous Eqn with constant coeff.
+If $Q = 0$ then the eqn obtained is called **Homogeneous Eqn** with constant coeff.
 
 ## Solving Linear Eqn
 
@@ -406,3 +406,76 @@ $= A_1e^{m_1x}\int Xe^{-m_1x}dx + A_2e^{m_2x}\int Xe^{-m_2x}dx + \dots + A_ne^{m
   $\frac{1}{D + ia}secax = e^{-iax}(x - \frac{i}{a}log(cosax))$
 
   $PI = \frac{1}{2ia}[e^{iax}(x + \frac{i}{a}log(cosax)) - e^{-iax}(x - \frac{i}{a}log(cosax))]$
+
+## Cauchy Euler Equation
+
+Is an eqn of the form:
+
+$(x^nD^n + a_1x^{n - 1}D^{n - 1} + \dots + a_{n - 1}x^{1}D + a_n)y = X$
+
+where $a_i$ are constants.
+
+### Method Of Solution
+
+Reduce this linear equation into linear equation with constant coefficients.
+
+Put $x = e^z \rightarrow z = log(x) (x > 0)$
+
+$\rightarrow \frac{dz}{dx} = 1/x$
+
+$dy/dx = dy/dx \cdot dz/dx = \frac{dy}{dz} \cdot \frac{1}{x}$
+
+$x\frac{dy}{dx} = D_zy$ where $D_z = \frac{d}{dz}$
+
+Now $\frac{d^2y}{dx^2} = \frac{d}{dx}[\frac{1}{x}\frac{dy}{dz}]$
+
+$= \frac{1}{x}\frac{d}{dx}(\frac{dy}{dz}) + \frac{dy}{dz}(\frac{d}{dx}(1/x))$
+
+$= \frac{1}{x}\frac{d}{dz}(\frac{dy}{dx}) + \frac{dy}{dz}(-1/x^2)$
+
+$= \frac{1}{x} \frac{d}{dz}(\frac{1}{x}\frac{dy}{dz}) + \frac{dy}{dz}(\frac{-1}{x^2})$
+
+$= \frac{1}{x^2}(D_z^2 - D_z)y$
+
+$= \frac{1}{x^2}D_z(D_z - 1)y$
+
+Similarly, $x^n\frac{d^ny}{dx^n} = D_z(D_z - 1)(D_z - 2)\dots (D_z - (n - 1))y$
+
+Thus using this we can reduce our eqn to linear eqn with constant coefficients for $y$ in terms of $z$. If $y = F(z)$ is its soln then putting $z = logx$ we get the required soln $y = F(logx)$
+
+**Examples:**
+
+- $x^2\frac{d^2y}{dx^2} + 4x\frac{dy}{dx} + 2y = x + sinx$
+
+  $\rightarrow (D(D - 1) + 4D + 2)y = e^z + sin(e^z)$
+
+  $\rightarrow PI = e^z/(D^2 + 3D + 2) + sin(e^z)/(D^2 + 3D + 2)$
+
+  $\rightarrow PI = e^z/6 + \frac{sin(e^z)}{D + 1} - \frac{sin(e^z)}{D + 2})$
+  Solving we get $y = c_1e^{-2z} + c_2e^{-z} + e^z/6 - e^{-2z}sin(e^z)$
+
+  $\rightarrow y = c_1x^{-2} + c_2x^{-1} + x/6 - x^{-2}sin(x)$
+
+## Legendre's Linear Equations
+
+Is an eqn of the form
+
+$(ax + b)^n\frac{d^ny}{dx^n} + k_1(ax + b)^{n - 1}\frac{d^{n - 1}y}{dx^{n - 1}} + \dots + k_ny = X$
+
+where $a, b, k_i$ are constants.
+
+### Method Of Soln
+
+Put $ax + b = e^z i.e., z = log(ax + b)$
+
+Now by similar procedure, we get:
+
+$(ax + b)^n\frac{d^ny}{dx^n} = a^3D_z(D_z - 1)(D_z - 2)\dots (D_z - (n - 1))$
+
+**Examples:**
+
+- $[(3x + 2)^2D^2 + 3(3x + 2)D - 36]y = 3x^2 + 4x + 1$
+
+  $[9D(D - 1) + 9D - 36]y = 3((e^z - 2)/3)^2 + 4(e^z - 2)/3 + 1$
+
+  Now easily solve and get the answer.
