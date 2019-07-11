@@ -108,7 +108,7 @@ $\frac{a}{a_1} = \frac{b}{b_1}$ then it reduces to a third form of variable sepa
 
 - The DE $Mdx + Ndy = 0$ is an exact DE **iff** $\frac{\partial M}{\partial y} = \frac{\partial N}{\partial x} \text{ from } (u_{xy} = u_{yx})$ (Note that this will only hold true if $u$ is continuous and its first order derivatives are as well continuous)
   This equality condition is not only necessary but also sufficient (proof omitted)
-- To obtaion GS either do
+- To obtain GS either do
   1.  $u = \int Mdx + k(y)$ and then using $u_y = N$ get an eqn in $\frac{dk}{dy}$ to solve for $k$.
   2.  $u = \int Ndy + l(x)$ and solve like above.
 
@@ -118,6 +118,8 @@ As evident from this theory, we cannot solve by just doing $Mdx = -Ndy$ then int
 
 :::caution Caution
 The GS is **not** given by $\int Mdx \text{ (treat y as const)} + \int (\text{ terms in N not containing x})dy = c$
+
+This might work in some cases only.
 :::
 
 ### Integrating Factor
@@ -125,7 +127,7 @@ The GS is **not** given by $\int Mdx \text{ (treat y as const)} + \int (\text{ t
 Sometimes $Mdx + Ndy = 0$ is not exact but can be made so by multiplying throughout by a suitable non zero $\mu(x, y)$. This multiplier is called the integrating factor.
 
 :::tip Note
-A DE can have more than one integrating factor like $1/x^2, 1/y^2, 1/xy, 1/(x^2 + y^2)$ are all integrating factors of $ydx - xdy = 0$
+A DE can have more than one integrating factor like $1/x^2, 1/y^2, 1/xy, 1/(x^2 + y^2), 1/(x^2 - y^2)$ are all integrating factors of $ydx - xdy = 0$
 :::
 
 :::note Remember

@@ -50,7 +50,7 @@ So, example 1 above is of degree 101 whereas example 2 doesn't satisfy our condi
 - $c = \frac{(\sqrt{x} + (\frac{dy}{dx})^2)^{3/2}}{\frac{d^2y}{dx^2}}$ --> Order = degree = 2
 - $(y^{'''})^{4/3} + sin(\frac{dy}{dx}) + xy = x$ --> Order = 3, degree = 4
 - $(y^{'''})^{1/2} - 2(y^{'})^{1/4} + xy = 0$ --> Take $(y^{'})^{1/4}$ to one side and take to the 4th power on both sides and then lhs would have remaining radicals like $4a^3b + 4ab^3 = 4ab(a^2 + b^2)$ (can be seen by doing $(a + b)^4 = (a^2 + b^2 + 2ab)(a^2 + b^2 + 2ab)$) which can now be removed by squaring both sides. --> Order = 3, degree = 4
-- $(y^{'''})^{4/3} + (y^{'})^{1/5} + 4 = 0$ Since $GCD(3, 5) = 1$ that implies, order = 3, degree = 20 (simply take $1/5$ power term to one side then raise to the 5th power then take $1/3$ term common on one side and raise to the third power)
+- $(y^{'''})^{4/3} + (y^{'})^{1/5} + 4 = 0$ ~~Since $GCD(3, 5) = 1$ that implies, order = 3, degree = 20 (simply take $1/5$ power term to one side then raise to the 5th power then take $1/3$ term common on one side and raise to the third power)~~ Tedious, yet to calculate.
 - $(y^{'''})^{3/2} + (y^{'''})^{2/3} = 0$ Order = 3 but don't say degree = 9 yet as both the terms are of same order and in the end we will have $l^9 = l^4 \Rightarrow l^5 = 0$ so degree equals 5 (?) (although it is still a subjective answer and in my opinion answer should be 9).
 
 ---
