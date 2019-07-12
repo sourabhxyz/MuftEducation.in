@@ -82,4 +82,64 @@ i.e. Reduce $y'' + P(x)y' + Q(x)y = R(x)$ to the form $\frac{d^2v}{dx^2} + Iv = 
 
 - Make use of the transformation $y(x) = v(x)sec(x)$ to obtain the soln of $y'' -2tanxy' + 5y = 0$, where $y(0) = 0, y'(0) = \sqrt{6}$
 
-  Here not that $e^{\frac{-1}{2}\int -2tanxdx} = e^{-log(cosx)} = secx$ which is our given $u$. This we can apply our method.
+  Here note that $e^{\frac{-1}{2}\int -2tanxdx} = e^{-log(cosx)} = secx$ which is our given $u$. Thus we can apply our method.
+
+## Soln by changing independent variable
+
+Let $z = f(x)$ then after a bit of work,
+
+$\frac{d^2y}{dz^2} + P_1\frac{dy}{dz} + Q_1y = R_1$ where:
+
+$P_1 = \frac{\frac{d^2z}{dx^2} + P\frac{dz}{dx}}{(\frac{dz}{dx})^2}$
+
+$Q_1 = \frac{Q}{(\frac{dz}{dx})^2}$
+
+$R_1 = \frac{R}{(\frac{dz}{dx})^2}$
+
+### Case 1
+
+Choose $z$ to make $P_1 = 0$ i.e., $\frac{d^2z}{dx^2} + P\frac{dz}{dx} = 0$
+
+$\rightarrow z = \int e^{-\int Pdx}dx$
+
+Now the eqn reduces to $\frac{d^2y}{dz^2} + Q_1y = R_1$
+
+which can be easily solved if $Q_1$ turns out to be a constant or a constant multiplied by $\frac{1}{z^2}$
+
+### Case 2
+
+Choose $z$ such that $Q_1 = a^2$
+
+$\rightarrow a\int dz = \int \sqrt{\pm Q}dx$
+
+Take appropriate sign to make expression under radical positive.
+
+Now the eqn reduces to $\frac{d^2y}{dz^2} + P_1\frac{dy}{dz} + a^2y = R_1$
+
+which can be easily solved provided $P_1$ comes out to be a constant.
+
+**Examples:**
+
+- $x\frac{d^2y}{dx^2} - \frac{dy}{dx} - 4x^3y = 8x^3sin(x^2)$
+
+  $\Rightarrow \frac{d^2y}{dx^2} - \frac{1}{x}\frac{dy}{dx} - 4x^2y = 8x^2sin(x^2)$
+
+  $\Rightarrow z = \int e^{-\int Pdx}dx = x^2/2$
+
+  $\Rightarrow Q_1 = -4, R_1 = 8sin(x^2) = 8sin(2z)$
+
+  $\Rightarrow PI = \frac{8sin(2z)}{D^2 - 4} = -sin(2z) = -sin(x^2)$
+
+  $\Rightarrow y = c_1e^{x^2} + c_2e^{-x^2} - sin(x^2)$
+
+- Transform the DE $xy'' -y' + 4x^3y = x^5$ into $z$ as independent variable where $z = x^2$ and solve it.
+
+  $\frac{dy}{dx} = \frac{dy}{dz}\frac{dz}{dx} = 2x\frac{dy}{dz}$
+
+  $\frac{d^2y}{dx^2} = 2\frac{dy}{dz} + 2x\frac{d^2y}{dz^2}\frac{dz}{dx}$
+
+  $= 2\frac{dy}{dz} + 4x^2\frac{d^2y}{dz^2}$
+
+  Now using this, it will reduce in a good solvable form.
+
+## Method of variation of parameters

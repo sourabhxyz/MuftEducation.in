@@ -64,6 +64,8 @@ So, in general a linear differential equation involving two variables and of $n$
 
 $y^{(n)} + P_1(x) * y^{(n - 1)} + \dots + P_n(x) * y = Q(x)$
 
+Also if $Q(x) = 0$ then it is called as **Homogeneous Linear DE** o/w **Non Homogeneous Linear DE**.
+
 ---
 
 **Examples:**
