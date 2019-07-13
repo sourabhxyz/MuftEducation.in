@@ -124,3 +124,11 @@ $a_{mk} = c_{m1}v_{1k} + c_{m2}v_{2k} + \dots + c_{mr}v_{rk}$
 Treat the LHS as a column vector and RHS as linear combination of $r$ column vectors ($[c_{1i}, c_{2i}, \dots, c_{mi}]$). Now the vector on the left is the $k$th column vector of $A$. We see that each of these $n$ columns is a linear combination of the same $r$ columns on the right. Hence $A$ cannot have more linearly independent columns than rows. Now rows of $A$ are columns of the transpose $A^T$. For $A^T$ our conclusion is that $A^T$ cannot have more linearly independent columns than rows, so that $A$ cannot have more linearly independent rows than columns. Together, the number of linearly independent columns of $A$ must be $r$, the rank of $A$. $\blacksquare$
 
 **Theorem**: From above two theorems, it follows that if we have $p$ vectors each having $n$ components. If $n < p$, then these vectors are linearly dependent.
+
+:::tip Info
+
+1. Rank of a matrix is same as the order of highest order non zero submatrix. Thus if rank = $n$ then any submatrix of higher order will have determinant = 0 and $|A| \neq 0 \iff rank = n$ .
+2. It is easily observable that if all minors of order k are zero then rank is certainly less than k as minor of higher order will use throughout its computation minors of smaller order.
+3. Every non zero matrix have rank $\geq 1$ (as we have non zero minor of order 1).
+4. From all this it follows that rank of a submatrix is $\leq$ rank of parent.
+   :::
