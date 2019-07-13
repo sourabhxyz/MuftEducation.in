@@ -143,3 +143,24 @@ which can be easily solved provided $P_1$ comes out to be a constant.
   Now using this, it will reduce in a good solvable form.
 
 ## Method of variation of parameters
+
+1. Write the given equation in the standard form $y'' + Py' + Qy = R$.
+2. Find the soln of corresponding homogeneous eqn. Let it be $y_c = c_1u(x) + c_2v(x)$ by using methods discussed before.
+3. Let the PI of the given eqn be $y_p = A(x)u + B(x)v$ where $A = -\int \frac{vR}{W(u, v)}dx$ and $B = \int \frac{uR}{W(u, v)}dx$ are functions of $x$.
+4. GS of the given eqn is $y = y_c + y_p$
+
+**Examples:**
+
+- $((x - 1)D^2 - xD + 1)y = (x - 1)^2$
+
+  $\rightarrow (D^2 - \frac{x}{x - 1}D + \frac{1}{x - 1})y = x - 1$
+
+  It can be seen by inspection that $y = e^x \text{ and } y = x$ are soln of corresponding homogeneous eqn. Therefore
+
+  $\rightarrow y_c = c_1e^x + c_2x$
+
+  And after some calculation
+
+  $y_p = -(1 + x + x^2)$
+
+  $GS = y_c + y_p$

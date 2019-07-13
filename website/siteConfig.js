@@ -23,7 +23,7 @@ const users = [
 const siteConfig = {
   title: "MuftEducation", // Title for your website.
   tagline: "Free Open Source Education",
-  url: "https://your-docusaurus-test-site.com", // Your website URL
+  url: "https://www.mufteducation.in", // Your website URL
   baseUrl: "/", // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',

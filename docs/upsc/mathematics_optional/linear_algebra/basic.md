@@ -87,3 +87,13 @@ $\bar{A} = [\bar{a_{ij}}]$
 Adjoint = $C^T$ where $C$ is the cofactor matrix.
 
 $(adj(A))A = A(adj(A)) = |A|I \rightarrow A^{-1} = adj(A)/|A|$, as evident inverse is defined only for square matrices and exists iff $|A| \neq 0$.
+
+- $(A^{\theta})^{-1} = (A^{-1})^{\theta}$
+
+  $A^{\theta}B = I \rightarrow B^{\theta}A = I$
+
+  $\rightarrow B^{\theta} = A^{-1} \rightarrow B = (A^{-1})^{\theta}$
+
+- $(A^{T})^{-1} = (A^{-1})^{T}$
+- $adj(A^T) = adj(A)^{T}$
+- If $A$ is symmetric then $adj(A)$ is symmetric.

@@ -23,7 +23,8 @@
       "upsc/mathematics_optional/ode/basic",
       "upsc/mathematics_optional/ode/first_order_first_degree",
       "upsc/mathematics_optional/ode/linear_eqns_const_coeff",
-      "upsc/mathematics_optional/ode/linear_eqns_variable_coeff"
+      "upsc/mathematics_optional/ode/linear_eqns_variable_coeff",
+      "upsc/mathematics_optional/ode/first_order_not_first_degree"
     ]
   }
 }

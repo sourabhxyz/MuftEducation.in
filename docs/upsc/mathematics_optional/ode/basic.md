@@ -96,17 +96,21 @@ Also if $Q(x) = 0$ then it is called as **Homogeneous Linear DE** o/w **Non Homo
 
 ---
 
-**Definition: (Particular Soln)** A solution obtained by giving particular values to the arbitrary constants in the general soln. So if we let $c = 1$ in the above example, we get a particular soln.
+**Definition: (Particular Soln)** A solution obtained by giving particular values to one or more of the $n$ arbitrary constants in the general soln. So if we let $c = 1$ in the above example, we get a particular soln.
 
 ---
 
-**Definition: (Singular Soln)** An eqn $\Psi(x, y) = 0$ is called **singular soln** of the DE $F(x, y, \frac{dy}{dx}, \dots, \frac{d^ny}{dx^n}) = 0$ if:-
+**Definition: (Singular Soln)**
+
+An eqn $\Psi(x, y) = 0$ is called **singular soln** of the DE $F(x, y, \frac{dy}{dx}, \dots, \frac{d^ny}{dx^n}) = 0$ if:-
 
 1. $\Psi(x, y) = 0$ is a soln of the given DE.
 2. $\Psi(x, y) = 0$ doesn't contain arbitrary constants.
-3. $\Psi(x, y) = 0$ is not obtained by giving particular values to arbitrary constants in the general soln.
+3. $\Psi(x, y) = 0$ cannot be obtained by giving particular values to arbitrary constants in the general soln.
 
-Note: The complete soln to a DE of the $n$th order contains exatcly $n$ arbitrary constants.
+Example: $y = (x + c)^2$ is the general soln of $(dy/dx)^2 - 4y = 0$, notice that $y = 0$ is as well the soln of this eqn which cannot be obtained by any choice of $c$. Hence $y = 0$ is a singular soln.
+
+Note: The complete soln to a DE of the $n$th order contains exactly $n$ arbitrary constants.
 
 ---
 
@@ -122,10 +126,10 @@ For different sets of real values of $c_1, \dots, c_n$ the eqn $\phi(x, y, c_1, 
 
 ### Working Rule
 
-To form the DE from a given eqn in $x$ and $y$, containing arbitrary constants:
+To form the DE from a given eqn in $x$ and $y$, containing $n$ arbitrary constants:
 
-1. Write down the given eq., differentiate wrt x successively till the count reaches the number of arbitrary constants.
-2. Eliminate the arbitrary constants from the eqn's obtained in above step.
+1. Write down the given eq., differentiate wrt x successively till the count reaches the number of arbitrary constants ($n$).
+2. Eliminate the arbitrary constants from the ($n + 1$) eqn's obtained in above step.
 
 **Example:** $y = ae^x + be^{-x} + c \cos{x} + d\sin{x}$ which arbitrary constants are $(a, b, c, d)$
 
