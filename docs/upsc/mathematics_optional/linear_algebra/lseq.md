@@ -131,6 +131,7 @@ Treat the LHS as a column vector and RHS as linear combination of $r$ column vec
 
 **Theorem**: From above two theorems, it follows that if we have $p$ vectors each having $n$ components. If $n < p$, then these vectors are linearly dependent.
 
+**Theorem**: Column-equivalent (defined analogousely) matrices have the same rank. As elementary column operations is row operations on the transpose.
 :::tip Info
 
 1. Rank of a matrix is same as the order of highest order non zero submatrix. Thus if rank = $n$ then any submatrix of higher order will have determinant = 0 and $|A| \neq 0 \iff rank = n$ .
@@ -155,3 +156,5 @@ If the system is consistent (either $r = m$, or $r < m$ and all the numbers $f_{
 ## Inverse of the matrix by Gauss-Jordan Method
 
 Task is to find $A^{-1}$. I.e. to find $X$ s.t. $AX = I$. Make an augmented matrix $\tilde{A} = [A \text{  } I]$ Now reduce it Reduced Row Echelon form to get $[I \text{  } H]$ since this corresponds to $IX = H$, thus $X = H$.
+
+From this analysis we observe that $A^{-1}$ is simply the result of elementary row operations and thus is product of elementary matrices therefore $A$ is as well the product of elementary matrices.
