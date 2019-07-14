@@ -154,4 +154,4 @@ If the system is consistent (either $r = m$, or $r < m$ and all the numbers $f_{
 
 ## Inverse of the matrix by Gauss-Jordan Method
 
-Task is to find $A^{-1}$.
+Task is to find $A^{-1}$. I.e. to find $X$ s.t. $AX = I$. Make an augmented matrix $\tilde{A} = [A \text{  } I]$ Now reduce it Reduced Row Echelon form to get $[I \text{  } H]$ since this corresponds to $IX = H$, thus $X = H$.
