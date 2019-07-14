@@ -151,3 +151,7 @@ If the system is consistent (either $r = m$, or $r < m$ and all the numbers $f_{
 
 2. Unique solution. If the system is consistent and $r = n$, there is exactly one solution, which can be found by back substitution.
 3. Infinitely many solutions. To obtain any of these solutions, choose values of $x_{r+1}, \dots , x_n$ arbitrarily. Then solve the $r$th equation for $x_r$ (in terms of those arbitrary values), then the $(r - 1)$st equation for $x_{r-1}$, and so on up the line.
+
+## Inverse of the matrix by Gauss-Jordan Method
+
+Task is to find $A^{-1}$.
