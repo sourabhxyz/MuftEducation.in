@@ -46,11 +46,30 @@ $\tilde{A} =
 - Addition of a constant multiple of one row to another row
 - Multiplication of a row by a **nonzero** constant c
 
+Similarly we have **Elementary Column Operations**
+
 We now call a linear system $S_1$ row-equivalent to a linear system $S_2$ if $S_1$ can be obtained from $S_2$ by (finitely many!) row operations.
 
 **Theorem**: Row-equivalent linear systems have the same set of solutions (Obviously as each of these operations when applied to equations doesn't change the soln set).
 
+Note well that we are dealing with row operations, No column operations on the augmented matrix are permitted in this context because they would generally alter the soln set.
+
 A system is called consistent if it has at least one solution (thus, one solution or infinitely many solutions), but inconsistent if it has no solutions at all.
+
+## Elementary Matrix
+
+Matrix which differs from Identity Matrix by one single elementary row operation. Left multiplication (pre-multiplication) by an elementary matrix represents elementary row operation, while right multiplication (post - multiplication) represents elementary column operations.
+
+- $E_{ij}$, $E_i(k)$ and $E_{ij}(k)$, denotes elementary matrix obtained by:
+  - swapping rows $i$ and $j$
+  - multiplying $i$th row with non zero $k$
+  - adding to the $i$th row the constant multiple ($k$) of the $j$th row, resp.
+  - Clearly $E_{ij}^{-1} = E_{ij}$, $E_i(k)^{-1} = E_i(\frac{1}{k})$ and $E_{ij}(k)^{-1} = E_{ij}(-k)$ thus inverse of an elementary matrix is also an elementary matrix.
+- $|E_{ij}| = -1$
+- $|E_{i}(k)| = k$
+- $|E_{ij}(k)| = 1$
+- Thus elementary matrix is always non singular
+-
 
 ## Row Echelon Form
 
@@ -63,19 +82,6 @@ A matrix is in reduced row echelon form (also called row canonical form) if it s
 - It is in row echelon form.
 - The leading entry in each nonzero row is a 1 (called a leading 1).
 - Each column containing a leading 1 has zeros everywhere else (i.e. also in above).
-
-## Gauss Elimination
-
-Is basically converting the augmented matrix into row echelon form, from $Ax = b$ to $Rx = f$ where $R$ is in row echelon form.
-
-The number of nonzero rows, $r$, in the row-reduced coefficient matrix $R$ is called the rank of $R$ and also the rank of $A$. Here is the method for determining whether $Ax = b$ has solutions and what they are:
-
-1. No solution. If $r$ is less than $m$ (meaning that $R$ actually has at least one row of all 0s) and at least one of the numbers $f_{r+1}, f_{r+2}, \dots , f_m$ is not zero, then the system $Rx = f$ is inconsistent: No solution is possible.
-
-If the system is consistent (either $r = m$, or $r < m$ and all the numbers $f_{r+1}, f_{r+2}, \dots , f_m$ are zero), then there are solutions.
-
-2. Unique solution. If the system is consistent and $r = n$, there is exactly one solution, which can be found by back substitution.
-3. Infinitely many solutions. To obtain any of these solutions, choose values of $x_{r+1}, \dots , x_n$ arbitrarily. Then solve the $r$th equation for $x_r$ (in terms of those arbitrary values), then the $(r - 1)$st equation for $x_{r-1}$, and so on up the line.
 
 ## Linear Independence and Dependence of Vectors
 
@@ -132,3 +138,16 @@ Treat the LHS as a column vector and RHS as linear combination of $r$ column vec
 3. Every non zero matrix have rank $\geq 1$ (as we have non zero minor of order 1).
 4. From all this it follows that rank of a submatrix is $\leq$ rank of parent.
    :::
+
+## Gauss Elimination
+
+Is basically converting the augmented matrix into row echelon form (using elementary row operations), from $Ax = b$ to $Rx = f$ where $R$ is in row echelon form.
+
+The number of nonzero rows, $r$, in $R$ is called the rank of $R$ and also the rank of $A$. Here is the method for determining whether $Ax = b$ has solutions and what they are:
+
+1. No solution. If $r$ is less than $m$ (meaning that $R$ actually has at least one row of all 0s) and at least one of the numbers $f_{r+1}, f_{r+2}, \dots , f_m$ is not zero, then the system $Rx = f$ is inconsistent: No solution is possible.
+
+If the system is consistent (either $r = m$, or $r < m$ and all the numbers $f_{r+1}, f_{r+2}, \dots , f_m$ are zero), then there are solutions.
+
+2. Unique solution. If the system is consistent and $r = n$, there is exactly one solution, which can be found by back substitution.
+3. Infinitely many solutions. To obtain any of these solutions, choose values of $x_{r+1}, \dots , x_n$ arbitrarily. Then solve the $r$th equation for $x_r$ (in terms of those arbitrary values), then the $(r - 1)$st equation for $x_{r-1}$, and so on up the line.
