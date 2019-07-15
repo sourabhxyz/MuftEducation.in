@@ -4,29 +4,28 @@ title: Vector Spaces
 sidebar_label: Vector Spaces
 ---
 
+## Field
+
+Field is a set $F$ together with two operations called addition and multiplication. An operation is a mapping that associates an element of the set to every pair of its elements. The result of the addition of $a$ and $b$ is called the sum of $a$ and $b$ and denoted $a + b$. Similarly, the result of the multiplication of $a$ and $b$ is called the product of $a$ and $b$, and denoted $ab$ or $a⋅b$. These operations are required to satisfy the following properties, referred to as field axioms. In these axioms, $a$, $b$ and $c$ are arbitrary elements of the field $F$.
+
+1. Associativity of addition and multiplication: $a + (b + c) = (a + b) + c$ and $a · (b · c) = (a · b) · c$.
+2. Commutativity of addition and multiplication: $a + b = b + a$ and $a · b = b · a$.
+3. Additive and multiplicative identity: there exist two different elements $0$ and $1$ in $F$ such that $a + 0 = a$ and $a · 1 = a$.
+4. Additive inverses: for every $a$ in $F$, there exists an element in $F$, denoted $−a$, called the additive inverse of $a$, such that $a + (−a) = 0$.
+5. Multiplicative inverses: for every $a ≠ 0$ in $F$, there exists an element in $F$, denoted by $a^{−1}, 1/a$, or $\frac{1}{a}$, called the multiplicative inverse of $a$, such that $a · a^{−1} = 1$.
+6. Distributivity of multiplication over addition: $a · (b + c) = (a · b) + (a · c)$.
+
+This may be summarized by saying: a field has two operations, called addition and multiplication; it is an abelian group under the addition, with $0$ as additive identity; the nonzero elements are an abelian group under the multiplication, with $1$ as multiplicative identity; the multiplication is distributive over the addition.
+
 ## Vector Spaces
 
----
+A set $V$ is said to be a vector space over a field $F$ if $V$ is an Abelian group under addition (denoted by $+$) and, if for each $a \in F$ and
+$v \in V$, there is an element $av$ in $V$ such that the following conditions hold for all $a, b$ in $F$ and all $u, v$ in $V$.
 
-**Real vector space:** A nonempty set $V$ of elements $a, b, \dots$ is called a real vector space (or real linear space), and these elements are called vectors, if, in $V$, there are defined two algebraic operations (called vector addition and scalar multiplication) as follows.
-
-1. Vector addition associates with every pair of vectors $a$ and $b$ of $V$ a unique vector **of** $V$, called the sum of $a$ and $b$ and denoted by $a + b$, such that the following axioms are satisfied.
-
-   1. Commutativity. For any two vectors $a$ and $b$ of $V$, $a + b = b + a$.
-   2. Associativity. For any three vectors $a, b, c$ of $V$, $(a + b) + c = a + (b + c)$ (written $a + b + c)$.
-   3. There is a unique vector in $V$, called the zero vector and denoted by $0$, such that for every $a$ in $V$, $a + 0 = a$.
-   4. For every $a$ in $V$ there is a unique vector in $V$ that is denoted by $-a$ and is such that $a + (-a) = 0$.
-
-2. Scalar multiplication. The real numbers are called scalars. Scalar multiplication associates with every $a$ in $V$ and every scalar $c$ a unique vector of $V$, called the product of $c$ and $a$ and denoted by $ca$ (or $ac$) such that the following axioms are satisfied.
-
-   1. Distributivity. For every scalar $c$ and vectors $a$ and $b$ in $V$, $c(a + b) = ca + cb$.
-   2. Distributivity. For all scalars $c$ and $k$ and every $a$ in $V$, $(c + k)a = ca + ka$.
-   3. Associativity. For all scalars $c$ and $k$ and every $a$ in $V$, $c(ka) = (ck)a$ (written $cka$).
-   4. For every $a$ in $V$, $1a = a$.
-
----
-
-If, in the above definition, we take complex numbers as scalars instead of real numbers, we obtain the axiomatic definition of a **complex vector space**.
+1. $a(v+u)=av+au$
+2. $(a+b)v=av+bv$
+3. $a(bv) = (ab)v$
+4. $1v=v$
 
 $V$ has dimension $n$, or is $n$-dimensional, if it contains a linearly independent set of $n$ vectors, whereas any set of more than $n$ vectors in $V$ is linearly dependent. That set of $n$ linearly independent vectors is called a basis for $V$. Then every vector in $V$ can be written as a linear combination of the basis vectors. Furthermore, for a given basis, this representation is unique.
 
