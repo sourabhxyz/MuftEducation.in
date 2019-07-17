@@ -95,7 +95,7 @@ Adjoint = $C^T$ where $C$ is the cofactor matrix.
 $(adj(A))A = A(adj(A)) = |A|I \rightarrow A^{-1} = adj(A)/|A|$, as evident inverse is defined only for square matrices and exists iff $|A| \neq 0$.
 
 - $adj(X) = |X|X^{-1}$
-- $adj(AB) = adj(B)adj(A)$ (follow from above)
+- $adj(AB) = adj(B)adj(A)$ (follows from above)
 - $(A^{\theta})^{-1} = (A^{-1})^{\theta}$
 
   $A^{\theta}B = I \rightarrow B^{\theta}A = I$

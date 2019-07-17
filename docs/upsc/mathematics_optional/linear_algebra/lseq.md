@@ -82,18 +82,6 @@ A matrix is in reduced row echelon form (also called row canonical form, row red
 - The leading entry in each nonzero row is a 1 (called a leading 1).
 - Each column containing a leading 1 has zeros everywhere else (i.e. also in above).
 
-## Linear Independence and Dependence of Vectors
-
-Given any set of $m$ vectors $a_{(1)}, \dots , a_{(m)}$ (with the same number of components), a linear combination of these vectors is an expression of the form
-
-$c_1a_{(1)} + c_2a_{(2)} + \dots + c_ma_{(m)}$ where $c_1, c_2, \dots , c_m$ are any scalars. Now consider the equation
-
-1. $c_1a_{(1)} + c_2a_{(2)} + \dots + c_ma_{(m)} = \textbf{0}$.
-
-Clearly, this vector equation (1) holds if we choose all $c_{j}'s$ zero, because then it becomes $\textbf{0} = \textbf{0}$. If this is the only $m$-tuple of scalars for which (1) holds, then our vectors $a_{(1)}, \dots , a_{(m)}$ are said to form a linearly independent set or, more briefly, we call them linearly independent. Otherwise, linear dependent, this means that we can express at least one of the vectors as a linear combination of the other vectors.
-
-Why is linear independence important? Well, if a set of vectors is linearly dependent, then we can get rid of at least one or perhaps more of the vectors until we get a linearly independent set. This set is then the smallest “truly essential” set with which we can work.
-
 ## Rank of a Matrix
 
 The rank of a matrix $A$ is the maximum number of linearly independent row vectors of $A$. It is denoted by rank $A$.

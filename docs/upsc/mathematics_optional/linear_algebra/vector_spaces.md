@@ -120,7 +120,7 @@ Analgously we have column span, $colsp(A) = rowsp(A^T)$
 
 - Suppose $M$ is the matrix obtained by applying elementary row operations on a matrix $A$. Then each row of $M$ is a row of $A$ or a linear combination of rows of $A$. Hence, the row space of $M$ is contained in the row space of $A$. On the other hand, we can apply the inverse elementary row operation on $M$ to obtain $A$; hence, the row space of $A$ is contained in the row space of $M$. Accordingly, $A$ and $M$ have the same row space. Thus, Row equivalent matrices have the same row space.
 
-**Theorem:** Suppose $A = [aij]$ and $B = [bij]$ are row equivalent echelon matrices with respective pivot entries $a_{1j_1},a_{2j_2},\dots ,a_{rj_r}$ and $b_{1k_1},b_{2k_2},\dots ,
+**Theorem:** Suppose $A = [a_{ij}]$ and $B = [b_{ij}]$ are row equivalent echelon matrices with respective pivot entries $a_{1j_1},a_{2j_2},\dots ,a_{rj_r}$ and $b_{1k_1},b_{2k_2},\dots ,
 b_{sk_s}$ Then $A$ and $B$ have the same number of nonzero rows—that is, $r = s$—and their
 pivot entries are in the same positions—that is, $j_{1}=k_{1}, j_{2}=k_{2}, \ldots, j_{r}=k_{r}$.
 
@@ -140,9 +140,9 @@ pivot entries are in the same positions—that is, $j_{1}=k_{1}, j_{2}=k_{2}, \l
 
   2. Form the matrix $A$ whose rows are $u_1, u_2, u_3$ and row reduce $A$ to row canonical form, and form the matrix $B$ whose rows are $w_1$ and $w_2$ and row reduce $B$ to row canonical form:
 
-  $A=\left[\begin{array}{rrrr}{1} & {2} & {-1} & {3} \\ {2} & {4} & {1} & {-2} \\ {3} & {6} & {3} & {-7}\end{array}\right] \sim\left[\begin{array}{rrrr}{1} & {2} & {-1} & {3} \\ {0} & {0} & {3} & {-8} \\ {0} & {0} & {6} & {-16}\end{array}\right] \sim\left[\begin{array}{rrrr}{1} & {2} & {0} & {\frac{1}{3}} \\ {0} & {0} & {1} & {-\frac{8}{3}} \\ {0} & {0} & {0} & {0}\end{array}\right]$
+  $A=\left[\begin{array}{rrrr}{1} & {2} & {-1} & {3} \\\ {2} & {4} & {1} & {-2} \\\ {3} & {6} & {3} & {-7}\end{array}\right] \sim\left[\begin{array}{rrrr}{1} & {2} & {-1} & {3} \\\ {0} & {0} & {3} & {-8} \\\ {0} & {0} & {6} & {-16}\end{array}\right] \sim\left[\begin{array}{rrrr}{1} & {2} & {0} & {\frac{1}{3}} \\\ {0} & {0} & {1} & {-\frac{8}{3}} \\\ {0} & {0} & {0} & {0}\end{array}\right]$
 
-  $B=\left[\begin{array}{rrrr}{1} & {2} & {-4} & {11} \\ {2} & {4} & {-5} & {14}\end{array}\right] \sim\left[\begin{array}{rrrr}{1} & {2} & {-4} & {11} \\ {0} & {0} & {3} & {-8}\end{array}\right] \sim\left[\begin{array}{cccc}{1} & {2} & {0} & {\frac{1}{3}} \\ {0} & {0} & {1} & {-\frac{8}{3}}\end{array}\right]$
+  $B=\left[\begin{array}{rrrr}{1} & {2} & {-4} & {11} \\\ {2} & {4} & {-5} & {14}\end{array}\right] \sim\left[\begin{array}{rrrr}{1} & {2} & {-4} & {11} \\\ {0} & {0} & {3} & {-8}\end{array}\right] \sim\left[\begin{array}{cccc}{1} & {2} & {0} & {\frac{1}{3}} \\\ {0} & {0} & {1} & {-\frac{8}{3}}\end{array}\right]$
 
   Because the nonzero rows of the matrices in row canonical form are identical, the row spaces of $A$ and $B$ are equal. Therefore, $U = W$.
 
@@ -156,7 +156,7 @@ Otherwise, we say that the vectors are linearly independent.
 
 A set $S = {v_1, \dots, v_m}$ of vectors in $V$ is linearly dependent or independent according to whether the vectors $v_1, \dots, v_m$ are linearly dependent or independent.
 
-An infinite set $S$ of vectors is linearly dependent or independent according to whether there do or do not exist vectors $v_1,v2,\dots,v_k$ in $S$ that are linearly dependent.
+An infinite set $S$ of vectors is linearly dependent or independent according to whether there do or do not exist vectors $v_1,v_2,\dots,v_k$ in $S$ that are linearly dependent.
 
 - Suppose 0 is one of the vectors $v_1, v_2, \dots , v_m$, say $v_1 = 0$. Then the vectors must be linearly dependent.
 - Suppose v is a nonzero vector. Then v, by itself, is linearly independent
@@ -171,26 +171,40 @@ Thus, in this equation, we choose appropriate values of $t$ to easily get $x = 0
 
 Thus $u, v$ and $w$ are LI.
 
-$V$ has dimension $n$, or is $n$-dimensional, if it contains a linearly independent set of $n$ vectors, whereas any set of more than $n$ vectors in $V$ is linearly dependent. That set of $n$ linearly independent vectors is called a basis for $V$. Then every vector in $V$ can be written as a linear combination of the basis vectors. Furthermore, for a given basis, this representation is unique.
+Why is linear independence important? Well, if a set of vectors is linearly dependent, then we can get rid of at least one or perhaps more of the vectors until we get a linearly independent set. This set is then the smallest “truly essential” set with which we can work.
 
----
+## Basis and Dimension
 
-**Example:** The real $2 \cdot 2$ matrices form a four-dimensional real vector space. A basis is
+A set $S = {u_1, u_2, \dots, u_n}$ of vectors is a basis of $V$ if it spans V and is linearly independent.
 
-$B_{11} = \begin{bmatrix}1 & 0\\\ 0 & 0\end{bmatrix},$
-$B_{12} = \begin{bmatrix}0 & 1\\\ 0 & 0\end{bmatrix},$
-$B_{21} = \begin{bmatrix}0 & 0\\\ 1 & 0\end{bmatrix},$
-$B_{22} = \begin{bmatrix}0 & 0\\\ 0 & 1\end{bmatrix}$
+**Theorem:** Let $V$ be a vector space such that one basis has $m$ elements and another basis has $n$ elements, then, $m = n$.
 
-Similarly, the real $m \cdot n$ matrices with fixed $m$ and $n$ form an $mn$-dimensional vector space.
+This theorem is the consequence of the following replacement lemma.
 
----
+**Lemma:** Suppose $\\{v_1, v_2, \dots, v_n\\}$ spans $V$, and suppose $\\{w_1, w_2, \dots, w_m\\}$ is linearly independent. Then $m \leq n$, and $V$ is spanned by a set of the form $\left\\{w_{1}, w_{2}, \ldots, w_{m}, v_{i_{1}}, v_{i_{2}}, \ldots, v_{i_{n-m}}\right\\}$. Thus, in particular, $n + 1$ or more vectors in $V$ are linearly dependent.
 
-**Example:** The set of all constant, linear, and quadratic polynomials in $x$ together is a vector space of dimension 3 with basis ${1, x, x^2}$ under the usual addition and multiplication by real numbers.
+A vector space $V$ is said to be of finite dimension $n$ or $n$-dimensional, written $dim(V) = n$ if $V$ has a basis with $n$ elements. The vector space $\\{0\\}$ is defined to have dimension 0.
 
----
+Suppose a vector space $V$ does not have a finite basis. Then $V$ is said to be of infinite dimension or to be infinite-dimensional.
 
-If a vector space $V$ contains a linearly independent set of n vectors for every $n$, no matter how large, then $V$ is called infinite dimensional, as opposed to a finite dimensional ($n$-dimensional) vector space just defined. An example of an infinite dimensional vector space is the space of all continuous functions on some interval $[a, b]$ of the $x$-axis, as we mention without proof.
+**Theorem:** Let $V$ be a vector space of finite dimension $n$.
+
+1. Any linearly independent set $S = \\{u_1, u_2, \dots, u_n\\}$ with $n$ elements is a basis of $V$.
+2. Any spanning set $T = \\{v_1, v_2, \dots, v_n\\} of $V$ with $n$ elements is a basis of $V\$.
+
+**Proof:**
+
+1. Suppose it does not $span(V)$ that means there exist a vector $v$ which is not a linear combination of $S$ thus $S \cup \\{v\\}$ is linearly independent which by above lemma is not possible.
+2. Suppose this set is not LI then its dimension is less than $n$, which we know is not possible as cardinality of basis is always the same.
+
+-> On page 125
+
+### Example of bases
+
+- Vector space $K^n$: $e_{1}=(1,0,0,0, \ldots, 0,0), e_{2}=(0,1,0,0, \ldots, 0,0), \ldots, e_{n}=(0,0,0,0, \ldots, 0,1)$ These vectors are linearly independent. (For example, they form a matrix in echelon form.) Accordingly, the vectors form a basis of $K^n$ called the usual or standard basis of $K^n$
+- Vector space $M = M_{r,s}$ of all $r \times s$ matrices, let $E_{ij}$ be the matrix with $ij$-entry 1 and 0's elsewhere. Then all such matrices (in total $rs$) form a basis of $M_{r,s}$ called the usual or standard basis of $M_{r,s}$. Accordingly, $dim (M_{r,s}) = rs$.
+- Vector space $P_n(t)$ of all polynomials of degree $\leq n$: The set $S = \\{1, t, t^2, \dots, t^n\\}$ of $n + 1$ polynomials is a basis of $P_n(t)$.
+- Vector space $P(t)$ of all polynomials: Consider any finite set $S = \\{f_1(t), f_2(t), \dots, f_m(t)\\}$ of polynomials in $P(t)$, and let $m$ denote the largest of the degrees of the polynomials. Then any polynomial $g(t)$ of degree exceeding $m$ cannot be expressed as a linear combination of the elements of $S$. Thus, $S$ cannot be a basis of $P(t)$. This means that the dimension of $P(t)$ is infinite. We note that the infinite set $S' = \\{1, t, t^2, t^3, \dots\\}$ consisting of all the powers of $t$, spans $P(t)$ and is linearly independent. Accordingly, $S'$ is an infinite basis of $P(t)\$.
 
 ## Inner Product Spaces
 
@@ -236,8 +250,3 @@ $F$ is called a **linear mapping** or **linear transformation** if, for all vect
 $F(v + x) = F(v) + F(x) \text{ and } F(cx) = cF(x)$.
 
 ---
-
-<!-- ## Linear Combination
-
-Let $V$ be a vector space over a field $K$. A vector $v$ in $V$ is a linear combination of vectors $u_1,u_2,\dots ,u_m$ in $V$ if there exist scalars $a_1, a_2, \dots, a_m$ in $K$ such that $v=a_{1} u_{1}+a_{2} u_{2}+\cdots+a_{m} u_{m}$
--->
