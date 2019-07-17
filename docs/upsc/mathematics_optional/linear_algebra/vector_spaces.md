@@ -173,6 +173,8 @@ Thus $u, v$ and $w$ are LI.
 
 Why is linear independence important? Well, if a set of vectors is linearly dependent, then we can get rid of at least one or perhaps more of the vectors until we get a linearly independent set. This set is then the smallest “truly essential” set with which we can work.
 
+**Lemma:** Suppose two or more nonzero vectors $v_1, v_2, \dots, v_m$ are linearly dependent. Then one of the vectors is a linear combination of the preceding vectors; that is, there exists $k > 1$ such that $v_{k}=c_{1} v_{1}+c_{2} v_{2}+\cdots+c_{k-1} v_{k-1}$
+
 ## Basis and Dimension
 
 A set $S = {u_1, u_2, \dots, u_n}$ of vectors is a basis of $V$ if it spans V and is linearly independent.
@@ -190,14 +192,12 @@ Suppose a vector space $V$ does not have a finite basis. Then $V$ is said to be 
 **Theorem:** Let $V$ be a vector space of finite dimension $n$.
 
 1. Any linearly independent set $S = \\{u_1, u_2, \dots, u_n\\}$ with $n$ elements is a basis of $V$.
-2. Any spanning set $T = \\{v_1, v_2, \dots, v_n\\} of $V$ with $n$ elements is a basis of $V\$.
+2. Any spanning set $T = \\{v_1, v_2, \dots, v_n\\}$ of $V$ with $n$ elements is a basis of $V\$.
 
 **Proof:**
 
 1. Suppose it does not $span(V)$ that means there exist a vector $v$ which is not a linear combination of $S$ thus $S \cup \\{v\\}$ is linearly independent which by above lemma is not possible.
 2. Suppose this set is not LI then its dimension is less than $n$, which we know is not possible as cardinality of basis is always the same.
-
--> On page 125
 
 ### Example of bases
 
@@ -205,6 +205,49 @@ Suppose a vector space $V$ does not have a finite basis. Then $V$ is said to be 
 - Vector space $M = M_{r,s}$ of all $r \times s$ matrices, let $E_{ij}$ be the matrix with $ij$-entry 1 and 0's elsewhere. Then all such matrices (in total $rs$) form a basis of $M_{r,s}$ called the usual or standard basis of $M_{r,s}$. Accordingly, $dim (M_{r,s}) = rs$.
 - Vector space $P_n(t)$ of all polynomials of degree $\leq n$: The set $S = \\{1, t, t^2, \dots, t^n\\}$ of $n + 1$ polynomials is a basis of $P_n(t)$.
 - Vector space $P(t)$ of all polynomials: Consider any finite set $S = \\{f_1(t), f_2(t), \dots, f_m(t)\\}$ of polynomials in $P(t)$, and let $m$ denote the largest of the degrees of the polynomials. Then any polynomial $g(t)$ of degree exceeding $m$ cannot be expressed as a linear combination of the elements of $S$. Thus, $S$ cannot be a basis of $P(t)$. This means that the dimension of $P(t)$ is infinite. We note that the infinite set $S' = \\{1, t, t^2, t^3, \dots\\}$ consisting of all the powers of $t$, spans $P(t)$ and is linearly independent. Accordingly, $S'$ is an infinite basis of $P(t)\$.
+- The following four vectors in $R^4$ form a matrix in echelon form: $(1,1,1,1),(0,1,1,1),(0,0,1,1),(0,0,0,1)$ Thus, the vectors are linearly independent, and, because $dim(R^4) = 4$, the four vectors form a basis of $R^4$.
+- Echelon matrix $B$ (whose pivots are circled) is an echelon form of $A$:
+
+  $A=\left[\begin{array}{cccccc}{1} & {2} & {1} & {3} & {1} & {2} \\\ {2} & {5} & {5} & {6} & {4} & {5} \\\ {3} & {7} & {6} & {11} & {6} & {9} \\\ {1} & {5} & {10} & {8} & {9} & {9} \\\ {2} & {6} & {8} & {11} & {9} & {12}\end{array}\right]$
+
+  $B=\left[\begin{array}{llllll}{0} & {2} & {1} & {3} & {1} & {2} \\\ {0} & {0} & {3} & {1} & {2} & {1} \\\ {0} & {0} & {0} & {0} & {1} & {2} \\\ {0} & {0} & {0} & {0} & {0} & {0} \\\ {0} & {0} & {0} & {0} & {0} & {0}\end{array}\right]$
+
+  Therefore basis of $rowsp(A) = \\{(1,2,1,3,1,2), \quad(0,1,3,1,2,1), \quad(0,0,0,1,1,2)\\}$
+
+  Now to find each column $C_k$ of $A$ that is a linear combination of preceding columns of $A$.
+
+  Let $M_k = [C_1, C_2, \dots, C_k]$ the submatrix of $A$ consisting of the first $k$ columns of $A$. Then $M_{k - 1}$ and $M_k$ are, respectively, the coefficient matrix and augmented matrix of the vector equation $x_{1} C_{1}+x_{2} C_{2}+\cdots+x_{k-1} C_{k-1}=C_{k}$ this system has a solution, or, equivalently, $C_k$ is a linear combination of the preceding columns of $A$ if and only if $rank(M_k) = rank(M_{k - 1})$. Now the first $k$ column of the echelon matrix $B$ is also an echelon form of $M_k$. Accordingly, $\operatorname{rank}\left(M_{2}\right)=\operatorname{rank}\left(M_{3}\right)=2$ and $\operatorname{rank}\left(M_{4}\right)=\operatorname{rank}\left(M_{5}\right)=\operatorname{rank}\left(M_{6}\right)=3$. Thus, $C_3, C_5, C_6$ are each a linear combination of the preceding columns of $A$.
+
+  Now to find basis of column space, the fact that the remaining columns $C_1, C_2, C_4$ are not linear combinations of their respective preceding columns also tells us that they are linearly independent. Thus, they form a basis of the column space of $A$. That is, $\text { basis of } \operatorname{colsp}(A) : \quad[1,2,3,1,2]^{T}, \quad[2,5,7,5,6]^{T}, \quad[3,6,11,8,11]^{T}$ Observe that $C_1, C_2, C_4$ may also be characterized as those columns of $A$ that contain the pivots in any echelon form of $A$.
+
+  From this exercise we have the following two methods to find basis of the subspace spanned by the vectors $u_1, \dots, u_r$.
+
+  **Algorithm 1**
+
+  1. Form the matrix M whose rows are the given vectors.
+  2. Row reduce M to echelon form.
+  3. Output the nonzero rows of the echelon matrix.
+
+  But sometimes we want to find a basis that only comes from the original given vectors.
+
+  **Algorithm 2**
+
+  1. Form the matrix $M$ whose columns are the given vectors.
+  2. Row reduce $M$ to echelon form.
+  3. For each column $C_k$ in the echelon matrix without a pivot, delete (cast out) the vector $u_k$ from the list $S$ of given vectors.
+  4. Output the remaining vectors in $S$ (which correspond to columns with pivots).
+
+  - **Example:** Let $W$ be the subspace of $R^5$ spanned by the following vectors:
+    $u_{1}=(1,2,1,3,2), \quad u_{2}=(1,3,3,5,3), \quad u_{3}=(3,8,7,13,8)$
+    $u_{4}=(1,4,6,9,7), \quad u_{5}=(5,13,13,25,19)$
+
+    Find a basis of $W$ consisting of the original given vectors, and find $dim (W)$.
+
+    $M=\left[\begin{array}{ccccc}{1} & {1} & {3} & {1} & {5} \\\ {2} & {3} & {8} & {4} & {13} \\\ {1} & {3} & {7} & {6} & {13} \\\ {3} & {5} & {13} & {9} & {25} \\\ {2} & {3} & {8} & {7} & {19}\end{array}\right] \sim\left[\begin{array}{ccccc}{1} & {1} & {3} & {1} & {5} \\\ {0} & {1} & {2} & {2} & {3} \\\ {0} & {0} & {0} & {1} & {2} \\\ {0} & {0} & {0} & {0} & {0} \\\ {0} & {0} & {0} & {0} & {0}\end{array}\right]$
+
+    The pivots in the echelon matrix appear in columns $C_1, C_2, C_4$. Accordingly, we 'cast out' the vectors $u_3$ and $u_5$ from the original five vectors. The remaining vectors $u_1, u_2, u_4$, which correspond to the columns in the echelon matrix with pivots, form a basis of $W$. Thus, in particular, $dim(W) = 3$
+
+**Theorem:** Let $W$ be a subspace of an $n$-dimensional vector space $V$. Then $dim(W) \leq n$. In particular, if $dim(W) = n$, then $W = V$.
 
 ## Inner Product Spaces
 
