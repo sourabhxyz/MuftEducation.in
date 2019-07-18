@@ -35,6 +35,12 @@ $v \in V$, there is an element $av$ in $V$ such that the following conditions ho
 3. $a(bv) = (ab)v$
 4. $1v=v$
 
+- $k0 = 0$ (easy)
+- $0u = 0$ (easy)
+- if $ku = 0 \rightarrow k = 0 \text{ or } u = 0$ (Suppose $k \neq 0 \rightarrow \exists k^{-1} \operatorname{s.t.} kk^{-1} = 1$ $\rightarrow u = 1u = (k^{-1}k)u = k^{-1}(ku) = 0$)
+- $(-k)u = -ku$
+- $k(-u) = -ku$ (As $k(u - u) = 0 = ku + k(-u) \rightarrow -ku = k(-u))$)
+- $u + u = 2u$ (As $1u + 1u = (1 + 1)u = 2u$)
 - Thus, an internal composition in $V$ is called vector addition and external composition in $V$ over the field $F$ is called scalar multiplication.
 
 - If $F = \mathbb{R}, \mathbb{Q}, \mathbb{C}, \dots$ then $V$ is resp. called Real vector space, Rational vector space, Complex vector space, ...
@@ -95,14 +101,14 @@ Suppose $u_1, u_2, \dots, u_m$ are any vectors in a vector space $V$. The collec
 
 It is easy to see that $span(u_i)$ is a subspace of $V$.
 
-More generally, for any subset $S$ of $V$, $span(S)$ consists of all linear combinations of vectors in $S$ or, when $S = \phi$, $span(S) = {0}$.
+More generally, for any subset $S$ of $V$, $span(S)$ consists of all linear combinations of vectors in $S$ or, when $S = \phi$, $span(S) = \\{0\\}$.
 
 Thus, in particular, S is a spanning set of $span(S)$.
 
 **Theorem:** Let $S$ be a subset of a vector space $V$.
 
-1. Then $span(S)$ is a subspace of $V$ that contains $S$.
-2. If $W$ is a subspace of $V$ containing $S$, then $span(S) \subseteq W$ (i.e. $span(S)$ is the 'smallest' subspace of $V$ containing $S$).
+1. Then $span(S)$ is a subspace of $V$ that contains $S$. (easy to prove)
+2. If $W$ is a subspace of $V$ containing $S$, then $span(S) \subseteq W$ (i.e. $span(S)$ is the 'smallest' subspace of $V$ containing $S$). (easy to prove, prove by contradiction)
 
 - Consider the vector space $V = R^3$
   - Let $u$ be any non zero vector in $R^3$. Then $span(u)$ consists of all scalar multiples of $u$. Geometrically, $span(u)$ is the line through the origin O and the endpoint of $u$
@@ -171,7 +177,7 @@ Thus, in this equation, we choose appropriate values of $t$ to easily get $x = 0
 
 Thus $u, v$ and $w$ are LI.
 
-Why is linear independence important? Well, if a set of vectors is linearly dependent, then we can get rid of at least one or perhaps more of the vectors until we get a linearly independent set. This set is then the smallest “truly essential” set with which we can work.
+Why is linear independence important? Well, if a set of vectors is linearly dependent, then we can get rid of at least one or perhaps more of the vectors until we get a linearly independent set. This set is then the smallest "truly essential" set with which we can work.
 
 **Lemma:** Suppose two or more nonzero vectors $v_1, v_2, \dots, v_m$ are linearly dependent. Then one of the vectors is a linear combination of the preceding vectors; that is, there exists $k > 1$ such that $v_{k}=c_{1} v_{1}+c_{2} v_{2}+\cdots+c_{k-1} v_{k-1}$
 
@@ -202,7 +208,7 @@ Suppose a vector space $V$ does not have a finite basis. Then $V$ is said to be 
 ### Example of bases
 
 - Vector space $K^n$: $e_{1}=(1,0,0,0, \ldots, 0,0), e_{2}=(0,1,0,0, \ldots, 0,0), \ldots, e_{n}=(0,0,0,0, \ldots, 0,1)$ These vectors are linearly independent. (For example, they form a matrix in echelon form.) Accordingly, the vectors form a basis of $K^n$ called the usual or standard basis of $K^n$
-- Vector space $M = M_{r,s}$ of all $r \times s$ matrices, let $E_{ij}$ be the matrix with $ij$-entry 1 and 0's elsewhere. Then all such matrices (in total $rs$) form a basis of $M_{r,s}$ called the usual or standard basis of $M_{r,s}$. Accordingly, $dim (M_{r,s}) = rs$.
+- Vector space $M = M_{r,s}$ of all $r \times s$ matrices, let $E_{ij}$ be the matrix with $ij$-entry 1 and 0's elsewhere. Then all such matrices (in total $rs$) form a basis of $M_{r,s}$ (As matrix need to be represented as a linear combination of matrices) called the usual or standard basis of $M_{r,s}$. Accordingly, $dim (M_{r,s}) = rs$.
 - Vector space $P_n(t)$ of all polynomials of degree $\leq n$: The set $S = \\{1, t, t^2, \dots, t^n\\}$ of $n + 1$ polynomials is a basis of $P_n(t)$.
 - Vector space $P(t)$ of all polynomials: Consider any finite set $S = \\{f_1(t), f_2(t), \dots, f_m(t)\\}$ of polynomials in $P(t)$, and let $m$ denote the largest of the degrees of the polynomials. Then any polynomial $g(t)$ of degree exceeding $m$ cannot be expressed as a linear combination of the elements of $S$. Thus, $S$ cannot be a basis of $P(t)$. This means that the dimension of $P(t)$ is infinite. We note that the infinite set $S' = \\{1, t, t^2, t^3, \dots\\}$ consisting of all the powers of $t$, spans $P(t)$ and is linearly independent. Accordingly, $S'$ is an infinite basis of $P(t)\$.
 - The following four vectors in $R^4$ form a matrix in echelon form: $(1,1,1,1),(0,1,1,1),(0,0,1,1),(0,0,0,1)$ Thus, the vectors are linearly independent, and, because $dim(R^4) = 4$, the four vectors form a basis of $R^4$.
@@ -247,7 +253,74 @@ Suppose a vector space $V$ does not have a finite basis. Then $V$ is said to be 
 
     The pivots in the echelon matrix appear in columns $C_1, C_2, C_4$. Accordingly, we 'cast out' the vectors $u_3$ and $u_5$ from the original five vectors. The remaining vectors $u_1, u_2, u_4$, which correspond to the columns in the echelon matrix with pivots, form a basis of $W$. Thus, in particular, $dim(W) = 3$
 
+- Extend $\\{u_1 = (1,1,1,1),u_2 = (2,2,3,4)\\}$ to a basis of $R^4$.
+
+  First form the matrix with rows $u_1$ and $u_2$, and reduce to echelon form:
+
+  $\left[\begin{array}{llll}{1} & {1} & {1} & {1} \\\ {2} & {2} & {3} & {4}\end{array}\right] \sim\left[\begin{array}{llll}{1} & {1} & {1} & {1} \\\ {0} & {0} & {1} & {2}\end{array}\right]$
+
+  Then $w_1 =(1,1,1,1)$ and $w_2 =(0,0,1,2)$ span the same set of vectors as spanned by $u_1$ and $u_2$. Let $u_3 = (0,1,0,0)$ and $u_4 = (0,0,0,1)$. Then $w_1, u_3, w_2, u_4$ form a matrix in echelon form. Thus, they are linearly independent, and they form a basis of $R^4$. Hence, $u_1, u_2, u_3, u_4$ also form a basis of $R^4$.
+
 **Theorem:** Let $W$ be a subspace of an $n$-dimensional vector space $V$. Then $dim(W) \leq n$. In particular, if $dim(W) = n$, then $W = V$.
+
+**Theorem:** The dimension of the solution space $W$ of a homogeneous system $AX = 0$ is $n - r$, where $n$ is the number of unknowns and $r$ is the rank of the coefficient matrix $A$.
+
+In the case where the system $AX = 0$ is in echelon form, it has precisely $n - r$ free variables, say $x_{i_1} , x_{i_2} , \dots , x_{i_{n-r}}$ . Let $v_j$ be the solution obtained by setting $x_{i_j} = 1$ (or any nonzero constant) and the remaining free variables equal to 0. We show (Problem 4.50) that the solutions $v_1, v_2, \dots , v_{n-r}$ are linearly independent; hence, they form a basis of the solution space $W$.
+
+## Sums and Direct Sums
+
+Let $U$ and $W$ be subsets of a vector space $V$. The sum of $U$ and $W$, written $U + W$, consists of all sums $u+w$ where $u \in U$ and $w \in W$. That is,
+
+$U+W=\\{v : v=u+w, \text { where } u \in U \text { and } w \in W\\}$
+
+Now suppose $U$ and $W$ are subspaces of $V$. Then one can easily show that $U + W$ is a subspace of $V$.
+
+**Theorem:** Suppose $U$ and $W$ are finite-dimensional subspaces of a vector space $V$. Then $U + W$ has finite dimension and
+
+$\operatorname{dim}(U+W)=\operatorname{dim} U+\operatorname{dim} W-\operatorname{dim}(U \cap W)$
+
+**Example:** Let $V = M_{2,2}$, the vector space of $2 \times 2$ matrices. Let $U$ consist of those matrices whose second
+row is zero, and let $W$ consist of those matrices whose second column is zero. Then
+
+$U=\left\\{\left[\begin{array}{ll}{a} & {b} \\\ {0} & {0}\end{array}\right]\right\\}, \quad W=\left\\{\left[\begin{array}{ll}{a} & {0} \\\ {c} & {0}\end{array}\right]\right\\}$ and
+
+$U+W=\left\\{\left[\begin{array}{ll}{a} & {b} \\\ {c} & {0}\end{array}\right]\right\\}, \quad U \cap W=\left\\{\left[\begin{array}{ll}{a} & {0} \\\ {0} & {0}\end{array}\right]\right\\}$
+
+$\operatorname{dim}(U+W)=\operatorname{dim} U+\operatorname{dim} V-\operatorname{dim}(U \cap W)=2+2-1=3$
+
+## Direct Sums
+
+The vector space $V$ is said to be the direct sum of its subspaces $U$ and $W$, denoted by
+
+$V=U \oplus W$
+
+if every $v \in V$ can be written in one and only one way as $v = u + w$ where $u \in U$ and $w \in W$.
+
+**Theorem:** The vector space $V$ is the direct sum of its subspaces $U$ and $W$ if and only if:
+
+$\text { (i) } V=U+W,(\text { ii) } U \cap W=\\{0\\}$
+
+## General Direct Sums
+
+$V$ is the direct sum of subspaces $W_1, W_2, \dots , W_r$, written $V=W_{1} \oplus W_{2} \oplus \cdots \oplus W_{r}$
+
+if every vector $v \in V$ can be written in one and only one way as
+
+$v=w_{1}+w_{2}+\cdots+w_{r}$
+
+$\text { where } w_{1} \in W_{1}, w_{2} \in W_{2}, \ldots, w_{r} \in W_{r}$
+
+**Theorem:** Suppose $V=W_{1} \oplus W_{2} \oplus \cdots \oplus W_{r}$. Also, for each $k$, suppose $S_k$ is a linearly independent subset of $W_k$. Then
+
+$\text { (a) The union } S=\cup_{k} S_{k} \text { is linearly independent in } V$
+
+$\text { (b) If each } S_{k} \text { is a basis of } W_{k}, \text { then } \bigcup_{k} S_{k} \text { is a basis of } V$
+
+$\text { (c) } \operatorname{dim} V=\operatorname{dim} W_{1}+\operatorname{dim} W_{2}+\cdots+\operatorname{dim} W_{r}$
+
+**Theorem:** $\text { Suppose } V=W_{1}+W_{2}+\cdots+W_{r} \text { and } \operatorname{dim} V=\sum_{k} \operatorname{dim} W_{k} . \text { Then }$
+
+$V=W_{1} \oplus W_{2} \oplus \cdots \oplus W_{r}$
 
 ## Inner Product Spaces
 

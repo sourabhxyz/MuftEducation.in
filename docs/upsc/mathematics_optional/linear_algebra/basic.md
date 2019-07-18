@@ -82,6 +82,7 @@ All these are defined solely for **square** matrices.
 - $|kA_{n}| = k^{n}|A_n|$
 - If 2 rows (or 2 columns) are identical, then determinant is zero.
 - Sum of the product of elements of any row (or column) with the cofactors of the corresponding elements of any other row (or column) is zero. Can be used to prove $Aadj(A) = |A|I$.
+- Adding a constant multiple of a row (or column) to another row (or colum) doesn't change the determinant.
 - $|\bar{A}| = \overline{|A|}$ (Can be easily shown by induction or even otherwise as $\overline{a + cb} = \bar{a} + \bar{b}\bar{c}$)
 - $|A^{\theta}| = \overline{|A|}$ ($|A^{\theta}| = |\bar{A^{T}}| = \overline{|A^T|} = \overline{|A|}$)
 - Determinant of Hermitian is always a real number. To show: $|A| = \overline{|A|}$ i.e., to show $|A^{\theta}| = \overline{|A|}$, which is true.
