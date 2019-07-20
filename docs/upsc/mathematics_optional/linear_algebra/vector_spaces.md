@@ -37,7 +37,7 @@ $v \in V$, there is an element $av$ in $V$ such that the following conditions ho
 
 - $k0 = 0$ (easy)
 - $0u = 0$ (easy)
-- if $ku = 0 \rightarrow k = 0 \text{ or } u = 0$ (Suppose $k \neq 0 \rightarrow \exists k^{-1} \operatorname{s.t.} kk^{-1} = 1$ $\rightarrow u = 1u = (k^{-1}k)u = k^{-1}(ku) = 0$)
+- if $ku = 0 \rightarrow k = 0 \text{ or } u = 0$ (Suppose $k \neq 0 \rightarrow \exists k^{-1} \operatorname{s.t.} kk^{-1} = 1$ $\rightarrow k^{-1}(ku) = 0 \rightarrow 1u = 0 \rightarrow u = 0$)
 - $(-k)u = -ku$
 - $k(-u) = -ku$ (As $k(u - u) = 0 = ku + k(-u) \rightarrow -ku = k(-u))$)
 - $u + u = 2u$ (As $1u + 1u = (1 + 1)u = 2u$)
