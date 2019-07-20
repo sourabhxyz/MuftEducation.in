@@ -38,8 +38,8 @@ $v \in V$, there is an element $av$ in $V$ such that the following conditions ho
 - $k0 = 0$ (easy)
 - $0u = 0$ (easy)
 - if $ku = 0 \rightarrow k = 0 \text{ or } u = 0$ (Suppose $k \neq 0 \rightarrow \exists k^{-1} \operatorname{s.t.} kk^{-1} = 1$ $\rightarrow k^{-1}(ku) = 0 \rightarrow 1u = 0 \rightarrow u = 0$)
-- $(-k)u = -ku$
 - $k(-u) = -ku$ (As $k(u - u) = 0 = ku + k(-u) \rightarrow -ku = k(-u))$)
+- $(-k)u = -ku$ (Proof similar as above)
 - $u + u = 2u$ (As $1u + 1u = (1 + 1)u = 2u$)
 - Thus, an internal composition in $V$ is called vector addition and external composition in $V$ over the field $F$ is called scalar multiplication.
 
@@ -47,7 +47,7 @@ $v \in V$, there is an element $av$ in $V$ such that the following conditions ho
 
 - A field $F$ is a vector space over any subfield $K$ of $F$.
 
-- Let $F$ be an arbitrary field, $K^n$ is used to denote the set of all $n$ tuples of elements in $K$. Here $K_n$ is a vector space over $K$ using the following operations:
+- Let $K$ be an arbitrary field, $K^n$ is used to denote the set of all $n$ tuples of elements in $K$. Here $K^n$ is a vector space over $K$ using the following operations:
   1. Vector Addition: $\left(a_{1}, a_{2}, \ldots, a_{n}\right)+\left(b_{1}, b_{2}, \dots, b_{n}\right)=\left(a_{1}+b_{1}, a_{2}+b_{2}, \ldots, a_{n}+b_{n}\right)$
   2. Scalar Multiplication: $k\left(a_{1}, a_{2}, \ldots, a_{n}\right)=\left(k a_{1}, k a_{2}, \ldots, k a_{n}\right)$
 - Let $P_n(t)$ denote the set of all polynomials $p(t)$ over a field $K$, where the degree of $p(t)$ is less than or equal to $n$; that is, $p(t)=a_{0}+a_{1} t+a_{2} t^{2}+\cdots+a_{s} t^{s}$ where $s \leq n$. Then $P_n(t)$ is a vector space over $K$ with respect to the usual operations of addition of polynomials and of multiplication of a polynomial by a constant. We include the zero polynomial 0 as an element of $P_n(t)$, even though its degree is undefined.
@@ -77,7 +77,7 @@ Both properties may be combined into the following equivalent single statement:
 
 $\text { For every } u, v \in W, a, b \in K, \text { the linear combination } a u+b v \in W$
 
-- Now let $V$ be any vector space. Then $V$ automatically contains two subspaces: the set ${0}$ consisting of the zero vector alone and the whole space $V$ itself. These are sometimes called the trivial subspaces of $V$.
+- Now let $V$ be any vector space. Then $V$ automatically contains two subspaces: the set $\\{0\\}$ consisting of the zero vector alone and the whole space $V$ itself. These are sometimes called the trivial subspaces of $V$.
 
 - Let $V$ be the vector space of real-valued functions. Then the collection $W_1$ of continuous functions and the collection $W_2$ of differentiable functions are subspaces of $V$.
 
