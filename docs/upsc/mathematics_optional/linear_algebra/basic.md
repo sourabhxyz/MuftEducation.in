@@ -81,7 +81,7 @@ All these are defined solely for **square** matrices.
 - $\begin{bmatrix} ka_1 & kb_1 & kc_1 \\\ a_2 & b_2 & c_2 \\\ a_3 & b_3 & c_3 \end{bmatrix} = k\begin{bmatrix} a_1 & b_1 & c_1 \\\ a_2 & b_2 & c_2 \\\ a_3 & b_3 & c_3 \end{bmatrix}$
 - $|kA_{n}| = k^{n}|A_n|$
 - If 2 rows (or 2 columns) are identical, then determinant is zero.
-- Sum of the product of elements of any row (or column) with the cofactors of the corresponding elements of any other row (or column) is zero. Can be used to prove $Aadj(A) = |A|I$.
+- Sum of the product of elements of any row (or column) with the cofactors of the corresponding elements of any other row (or column) is zero. Can be used to prove $Aadj(A) = |A|I$. (*Note*: Adjoint = $C^T$ where $C$ is the cofactor matrix)
 - Adding a constant multiple of a row (or column) to another row (or colum) doesn't change the determinant.
 - $|\bar{A}| = \overline{|A|}$ (Can be easily shown by induction or even otherwise as $\overline{a + cb} = \bar{a} + \bar{b}\bar{c}$)
 - $|A^{\theta}| = \overline{|A|}$ ($|A^{\theta}| = |\bar{A^{T}}| = \overline{|A^T|} = \overline{|A|}$)
@@ -90,8 +90,6 @@ All these are defined solely for **square** matrices.
 - Determinant of skew symmetric matrix of odd order is 0.
 
 ## Adjoint
-
-Adjoint = $C^T$ where $C$ is the cofactor matrix.
 
 $(adj(A))A = A(adj(A)) = |A|I \rightarrow A^{-1} = adj(A)/|A|$, as evident inverse is defined only for square matrices and exists iff $|A| \neq 0$.
 
@@ -107,7 +105,7 @@ $(adj(A))A = A(adj(A)) = |A|I \rightarrow A^{-1} = adj(A)/|A|$, as evident inver
 - $adj(kA) = k^{n - 1}adj(A)$ (as cofactor will consist of determinant of order $n - 1$)
 - $adj(A^T) = adj(A)^{T}$ (proof omitted)
 - If $A$ is symmetric then $adj(A)$ is symmetric.
-- $|A^{-1}| = |A|^{-1}$ (easy, thus from this it follow $adj(A) = |C| = |A|^{n - 1}$)
+- $|A^{-1}| = |A|^{-1}$ (easy, thus from this it follow $|adj(A)| = |C| = |A|^{n - 1}$)
 
 ## Side Problems
 
