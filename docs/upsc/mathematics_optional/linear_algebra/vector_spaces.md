@@ -68,6 +68,8 @@ $\begin{array}{l}{\text { Remark 2: Suppose } u_{1}, u_{2}, \ldots, u_{m} \text 
 
 Let $V$ be a vector space over a field $K$ and let $W$ be a subset of $V$. Then $W$ is a subspace of $V$ if $W$ is itself a vector space over $K$ with respect to the operations of vector addition and scalar multiplication on $V$.
 
+---
+
 **Theorem:** Suppose $W$ is a subset of a vector space $V$. Then $W$ is a subspace of $V$ if the following two conditions hold:
 
 1.  The zero vector $0$ belongs to $W$.
@@ -76,6 +78,8 @@ Let $V$ be a vector space over a field $K$ and let $W$ be a subset of $V$. Then 
 Both properties may be combined into the following equivalent single statement:
 
 $\text { For every } u, v \in W, a, b \in K, \text { the linear combination } a u+b v \in W$
+
+---
 
 - Now let $V$ be any vector space. Then $V$ automatically contains two subspaces: the set $\\{0\\}$ consisting of the zero vector alone and the whole space $V$ itself. These are sometimes called the trivial subspaces of $V$.
 
@@ -126,11 +130,21 @@ Analgously we have column span, $colsp(A) = rowsp(A^T)$
 
 - Suppose $M$ is the matrix obtained by applying elementary row operations on a matrix $A$. Then each row of $M$ is a row of $A$ or a linear combination of rows of $A$. Hence, the row space of $M$ is contained in the row space of $A$. On the other hand, we can apply the inverse elementary row operation on $M$ to obtain $A$; hence, the row space of $A$ is contained in the row space of $M$. Accordingly, $A$ and $M$ have the same row space. Thus, Row equivalent matrices have the same row space.
 
+---
+
 **Theorem:** Suppose $A = [a_{ij}]$ and $B = [b_{ij}]$ are row equivalent echelon matrices with respective pivot entries $a_{1j_1},a_{2j_2},\dots ,a_{rj_r}$ and $b_{1k_1},b_{2k_2},\dots ,
 b_{sk_s}$ Then $A$ and $B$ have the same number of nonzero rows—that is, $r = s$—and their
-pivot entries are in the same positions—that is, $j_{1}=k_{1}, j_{2}=k_{2}, \ldots, j_{r}=k_{r}$.
+pivot entries are in the same positions—that is, $j_{1}=k_{1}, j_{2}=k_{2}, \ldots, j_{r}=k_{r}$. (Easy as o/w row space is clearly different)
+
+---
+
+---
 
 **Theorem:** Suppose $A$ and $B$ are row canonical matrices. Then $A$ and $B$ have the same row space if and only if they have the same nonzero rows.
+
+**Proof:** Consider $i$th non zero row of $A$. Consider vectors belonging to its row space having only that pivot element set to 1 and rest all pivot elements set to 0. That means only this row is multiplied by 1 and rest all rows are multiplied by 0. So to get this vector in $B$, we would have to keep only this $i$th row multiplied by 1 and rest all zero. Thus the pivot elements are same.
+
+---
 
 **Corollary:** Every matrix $A$ is row equivalent to a unique matrix in row canonical form.
 
@@ -179,7 +193,7 @@ Thus $u, v$ and $w$ are LI.
 
 Why is linear independence important? Well, if a set of vectors is linearly dependent, then we can get rid of at least one or perhaps more of the vectors until we get a linearly independent set. This set is then the smallest "truly essential" set with which we can work.
 
-**Lemma:** Suppose two or more nonzero vectors $v_1, v_2, \dots, v_m$ are linearly dependent. Then one of the vectors is a linear combination of the preceding vectors; that is, there exists $k > 1$ such that $v_{k}=c_{1} v_{1}+c_{2} v_{2}+\cdots+c_{k-1} v_{k-1}$
+**Lemma:** Suppose two or more nonzero vectors $v_1, v_2, \dots, v_m$ are linearly dependent. Then one of the vectors is a linear combination of the preceding vectors; that is, there exists $k > 1$ such that $v_{k}=c_{1} v_{1}+c_{2} v_{2}+\cdots+c_{k-1} v_{k-1}$ (easy to prove)
 
 ## Basis and Dimension
 
@@ -190,6 +204,20 @@ A set $S = {u_1, u_2, \dots, u_n}$ of vectors is a basis of $V$ if it spans V an
 This theorem is the consequence of the following replacement lemma.
 
 **Lemma:** Suppose $\\{v_1, v_2, \dots, v_n\\}$ spans $V$, and suppose $\\{w_1, w_2, \dots, w_m\\}$ is linearly independent. Then $m \leq n$, and $V$ is spanned by a set of the form $\left\\{w_{1}, w_{2}, \ldots, w_{m}, v_{i_{1}}, v_{i_{2}}, \ldots, v_{i_{n-m}}\right\\}$. Thus, in particular, $n + 1$ or more vectors in $V$ are linearly dependent.
+
+**Proof:** Because $\\{v_i\\}$ spans $V$, we have $\left\\{w_{1}, v_{1}, \ldots, v_{n}\right\\} \label{1} \tag{1}$ is linearly dependent and also spans $V$. By previous Lemma, one of the vectors in is a linear combination of
+the preceding vectors. This vector cannot be $w_1$, so it must be one of the $v's$, say $v_j$: Thus we can delete $v_j$ from the spanning set and obtain the spanning set $\left\\{w_{1}, v_{1}, \ldots, v_{j-1}, \quad v_{j+1}, \ldots, v_{n}\right\\} \tag{2} \label{2}$ Now we repeat the argument with the vector $w_2$. That is, because $\eqref{2}$ spans $V$, the set $\left\\{w_{1}, w_{2}, v_{1}, \ldots, v_{j-1}, \quad v_{j+1}, \ldots, v_{n}\right\\} \label{3} \tag{3}$ is linearly dependent and also spans $V$. Again by previous Lemma, one of the vectors in $\eqref{3}$ is a linear
+combination of the preceding vectors. We emphasize that this vector cannot be $w_1$ or $w_2$, because
+$\\{w_1, \dots , w_m\\}$ is independent; hence, it must be one of the $v's$, say $v_k$. Thus, we can
+delete $v_k$ from the spanning set $\eqref{3}$ and obtain the spanning set
+$\left\\{w_{1}, w_{2}, v_{1}, \ldots, v_{j-1}, \quad v_{j+1}, \ldots, v_{k-1}, \quad v_{k+1}, \ldots, v_{n}\right\\}$
+We repeat the argument with $w_3$, and so forth. At each step, we are able to add one of the $w's$ and delete
+one of the $v's$ in the spanning set. If $m \leq n$, then we finally obtain a spanning set of the required form:
+$\left\\{w_{1}, \ldots, w_{m}, v_{i_{1}}, \ldots, v_{i_{n-m}}\right\\}$
+
+Finally, we show that $m > n$ is not possible. Otherwise, after $n$ of the above steps, we obtain the
+spanning set $\\{w_1, \dots , w_n\\}$. This implies that $w_{n+1}$ is a linear combination of $w_1, \dots , w_n$, which contradicts
+the hypothesis that $\\{w_i\\}$ is linearly independent.
 
 A vector space $V$ is said to be of finite dimension $n$ or $n$-dimensional, written $dim(V) = n$ if $V$ has a basis with $n$ elements. The vector space $\\{0\\}$ is defined to have dimension 0.
 
@@ -204,6 +232,25 @@ Suppose a vector space $V$ does not have a finite basis. Then $V$ is said to be 
 
 1. Suppose it does not $span(V)$ that means there exist a vector $v$ which is not a linear combination of $S$ thus $S \cup \\{v\\}$ is linearly independent which by above lemma is not possible.
 2. Suppose this set is not LI then its dimension is less than $n$, which we know is not possible as cardinality of basis is always the same.
+
+Similarly it is straight forward to prove the following theorems:
+
+---
+
+**Theorem:** that if $S$ spans a vector space $V$. Then,
+
+1. Any maximum number of linearly independent vectors in $S$ form a basis of $V$.
+2. Suppose one deletes from $S$ every vector that is a linear combination of preceding vectors in $S$. Then the remaining vectors form a basis of $V$.
+
+---
+
+---
+
+**Theorem:** Let $V$ be a vector space of finite dimension and let $S = \\{u_1, u_2, \dots , u_r\\}$ be a
+set of linearly independent vectors in $V$. Then $S$ is part of a basis of $V$; that is, $S$ may be extended
+to a basis of $V$
+
+---
 
 ### Example of bases
 
@@ -224,7 +271,7 @@ Suppose a vector space $V$ does not have a finite basis. Then $V$ is said to be 
 
   Let $M_k = [C_1, C_2, \dots, C_k]$ the submatrix of $A$ consisting of the first $k$ columns of $A$. Then $M_{k - 1}$ and $M_k$ are, respectively, the coefficient matrix and augmented matrix of the vector equation $x_{1} C_{1}+x_{2} C_{2}+\cdots+x_{k-1} C_{k-1}=C_{k}$ this system has a solution, or, equivalently, $C_k$ is a linear combination of the preceding columns of $A$ if and only if $rank(M_k) = rank(M_{k - 1})$. Now the first $k$ column of the echelon matrix $B$ is also an echelon form of $M_k$. Accordingly, $\operatorname{rank}\left(M_{2}\right)=\operatorname{rank}\left(M_{3}\right)=2$ and $\operatorname{rank}\left(M_{4}\right)=\operatorname{rank}\left(M_{5}\right)=\operatorname{rank}\left(M_{6}\right)=3$. Thus, $C_3, C_5, C_6$ are each a linear combination of the preceding columns of $A$.
 
-  Now to find basis of column space, the fact that the remaining columns $C_1, C_2, C_4$ are not linear combinations of their respective preceding columns also tells us that they are linearly independent. Thus, they form a basis of the column space of $A$. That is, $\text { basis of } \operatorname{colsp}(A) : \quad[1,2,3,1,2]^{T}, \quad[2,5,7,5,6]^{T}, \quad[3,6,11,8,11]^{T}$ Observe that $C_1, C_2, C_4$ may also be characterized as those columns of $A$ that contain the pivots in any echelon form of $A$.
+  Now to find basis of column space, the fact that the remaining columns $C_1, C_2, C_4$ are not linear combinations of their respective preceding columns also tells us that they are linearly independent. Thus, they form a basis of the column space of $A$. That is, $\text { basis of } \operatorname{colsp}(A) : \quad[1,2,3,1,2]^{T}, \quad[2,5,7,5,6]^{T}, \quad[3,6,11,8,11]^{T}$ Observe that $C_1, C_2, C_4$ may also be characterized as those columns of $A$ that contain the pivots in any echelon form of $A$. (thus, if it is asked to express a column in terms of basis columns, we can go with equation $$\sum_{i < k \text{ and } C_i \text{ is a part of basis found above }}x_{i} C_{i}=C_{k}$$ then form an augemented matrix and solve to find variables)
 
   From this exercise we have the following two methods to find basis of the subspace spanned by the vectors $u_1, \dots, u_r$.
 
@@ -261,11 +308,22 @@ Suppose a vector space $V$ does not have a finite basis. Then $V$ is said to be 
 
   Then $w_1 =(1,1,1,1)$ and $w_2 =(0,0,1,2)$ span the same set of vectors as spanned by $u_1$ and $u_2$. Let $u_3 = (0,1,0,0)$ and $u_4 = (0,0,0,1)$. Then $w_1, u_3, w_2, u_4$ form a matrix in echelon form. Thus, they are linearly independent, and they form a basis of $R^4$. Hence, $u_1, u_2, u_3, u_4$ also form a basis of $R^4$.
 
-**Theorem:** Let $W$ be a subspace of an $n$-dimensional vector space $V$. Then $dim(W) \leq n$. In particular, if $dim(W) = n$, then $W = V$.
+---
+
+**Theorem:** Let $W$ be a subspace of an $n$-dimensional vector space $V$. Then $dim(W) \leq n$. In particular, if $dim(W) = n$, then $W = V$. (easy to prove)
+
+---
+
+---
 
 **Theorem:** The dimension of the solution space $W$ of a homogeneous system $AX = 0$ is $n - r$, where $n$ is the number of unknowns and $r$ is the rank of the coefficient matrix $A$.
 
+---
+
 In the case where the system $AX = 0$ is in echelon form, it has precisely $n - r$ free variables, say $x_{i_1} , x_{i_2} , \dots , x_{i_{n-r}}$ . Let $v_j$ be the solution obtained by setting $x_{i_j} = 1$ (or any nonzero constant) and the remaining free variables equal to 0. We show (Problem 4.50) that the solutions $v_1, v_2, \dots , v_{n-r}$ are linearly independent; hence, they form a basis of the solution space $W$.
+
+- Find Basis of subspace $W$ of $R^3$ where $W = \\{(a, b, c) : a + b + c = 0\\}$
+  i.e. vectors of the form $(x, y, -x - y)$, clearly $(1, 0, -1) \text{ and } (0, 1, -1)$ spans $W\$ and are linearly independent and hence they form the basis.
 
 ## Sums and Direct Sums
 
@@ -366,3 +424,5 @@ $F$ is called a **linear mapping** or **linear transformation** if, for all vect
 $F(v + x) = F(v) + F(x) \text{ and } F(cx) = cF(x)$.
 
 ---
+
+On 4.48
