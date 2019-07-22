@@ -225,7 +225,7 @@ Suppose a vector space $V$ does not have a finite basis. Then $V$ is said to be 
 
 **Theorem:** Let $V$ be a vector space of finite dimension $n$.
 
-1. Any linearly independent set $S = \\{u_1, u_2, \dots, u_n\\}$ with $n$ elements is a basis of $V$.
+1. Any linearly independent set $S = \\{u_1, u_2, \dots, u_n\\}$ with $n$ elements is a basis of $V$. (Always use this fact if possible to prove that the given set form the basis)
 2. Any spanning set $T = \\{v_1, v_2, \dots, v_n\\}$ of $V$ with $n$ elements is a basis of $V\$.
 
 **Proof:**
@@ -325,17 +325,99 @@ In the case where the system $AX = 0$ is in echelon form, it has precisely $n - 
 - Find Basis of subspace $W$ of $R^3$ where $W = \\{(a, b, c) : a + b + c = 0\\}$
   i.e. vectors of the form $(x, y, -x - y)$, clearly $(1, 0, -1) \text{ and } (0, 1, -1)$ spans $W\$ and are linearly independent and hence they form the basis.
 
+- Find the dimension and a basis of the solution space W of each homogeneous system:
+
+  1. $x+2 y+2 z-s+3 t=0$
+
+     $x+2 y+3 z+s+t=0$
+
+     $3 x+6 y+8 z+s+5 t=0$
+
+     Form an augmented matrix, to get $\begin{bmatrix}1 & 2 & -1 & 3 & 0 \\\ 1 & 2 & 3 & 1 & 1 & 0 \\\ 3 & 6 & 8 & 1 & 5 & 0\end{bmatrix} \sim \begin{bmatrix} 1 & 2 & 2 & -1 & 3 & 0 \\\ 0 & 0 & 1 & 2 & -2 & 0 \\\ 0 & 0 & 0 & 0 & 0 & 0 \end{bmatrix}$
+
+     The system in echelon form has two (nonzero) equations in five unknowns. Hence, the system has
+     $5 - 2 = 3$ free variables, which are $y, s, t$. Thus, $\operatorname{dim} W = 3$. We obtain a basis for $W$:
+
+     1. Set $y=1, s=0, t=0 \quad$ to obtain the solution $\quad v_{1}=(-2,1,0,0,0)$
+     2. Set $y=0, s=1, t=0 \quad$ to obtain the solution $\quad v_{2}=(5,0,-2,1,0)$
+     3. Set $y=0, s=0, t=1 \quad$ to obtain the solution $\quad v_{3}=(-7,0,2,0,1)$
+
+     The set $\left\\{v_{1}, v_{2}, v_{3}\right\\}$ is a basis of the solution space $W$
+
+  2. $\begin{aligned} x+y+2 z &=0 \\\ 2 x+3 y+3 z &=0 \\\ x+3 y+5 z &=0 \end{aligned}$
+
+     Reduce the coefficient matrix $A$ to echelon form:
+
+     $A=\left[\begin{array}{lll}{1} & {1} & {2} \\\ {2} & {3} & {3} \\\ {1} & {3} & {5}\end{array}\right] \sim\left[\begin{array}{rrr}{1} & {1} & {2} \\\ {0} & {1} & {-1} \\\ {0} & {2} & {3}\end{array}\right] \sim\left[\begin{array}{rrr}{1} & {1} & {2} \\\ {0} & {1} & {-1} \\\ {0} & {0} & {5}\end{array}\right]$
+
+     This corresponds to a triangular system with no free variables. Thus, 0 is the only solution; that is, $W = \\{0\\}$. Hence, $\operatorname{dim} W = 0$.
+
+- Find a homogeneous system whose solution set $W$ is spanned by
+  $\left\\{u_{1}, u_{2}, u_{3}\right\\}=\{(1,-2,0,3), \quad(1,-1,-1,4), \quad(1,0,-2,5)\}$
+
+  Let $v = (x, y, z, t)$. Then $v \in W$ if and only if $v$ is a linear combination of the vectors $u_1, u_2, u_3$ that span
+  $W$. Thus, form the matrix $M$ whose first columns are $u_1, u_2, u_3$ and whose last column is $v$, and then row reduce $M$ to echelon form. This yields
+
+  $M=\left[\begin{array}{rrrr}{1} & {1} & {1} & {x} \\\ {-2} & {-1} & {0} & {y} \\\ {0} & {-1} & {-2} & {z} \\\ {3} & {4} & {5} & {t}\end{array}\right] \sim\left[\begin{array}{rrrr}{1} & {1} & {1} & {x} \\\ {0} & {1} & {2} & {2 x+y} \\\ {0} & {-1} & {-2} & {z} \\\ {0} & {1} & {2} & {-3 x+t}\end{array}\right] \sim\left[\begin{array}{cccc}{1} & {1} & {1} & {x} \\\ {0} & {1} & {2} & {2 x+y} \\\ {0} & {0} & {0} & {2 x+y+z} \\\ {0} & {0} & {0} & {-5 x-y+t}\end{array}\right]$
+
+  Then $v$ is a linear combination of $u_1, u_2, u_3$ if $rank(M) = rank(A)$, where $A$ is the submatrix without column $A$v. Thus, set the last two entries in the fourth column on the right equal to zero to obtain the required homogeneous system:
+
+  $2 x+y+z=0$
+
+  $5 x+y \quad-t=0$
+
 ## Sums and Direct Sums
 
 Let $U$ and $W$ be subsets of a vector space $V$. The sum of $U$ and $W$, written $U + W$, consists of all sums $u+w$ where $u \in U$ and $w \in W$. That is,
 
 $U+W=\\{v : v=u+w, \text { where } u \in U \text { and } w \in W\\}$
 
-Now suppose $U$ and $W$ are subspaces of $V$. Then one can easily show that $U + W$ is a subspace of $V$.
+Now suppose $U$ and $W$ are subspaces of $V$. Then one can easily show that
+
+1. $U + W$ is a subspace of $V$.
+2. $U$ and $W$ are contained in $U + W$.
+3. $U + W$ is the smallest subspace containing $U$ and $W$; that is, $U + W = span(U, W)$.
+4. $W + W = W$
+
+---
 
 **Theorem:** Suppose $U$ and $W$ are finite-dimensional subspaces of a vector space $V$. Then $U + W$ has finite dimension and
 
 $\operatorname{dim}(U+W)=\operatorname{dim} U+\operatorname{dim} W-\operatorname{dim}(U \cap W)$
+
+**Proof:** Observe that $U \cap W$ is a subspace of both $U$ and $W$. Suppose $dim (U) = m, dim (W) = n, dim(U \cap W) = r$. Suppose $\\{v_1, \dots , v_r\\}$ is a basis of $U \cap W$. Thus, we can extend $\\{v_i\\}$ to a basis of $U$ and to a basis of $W$; say
+
+$\left\\{v_{1}, \ldots, v_{r}, u_{1}, \dots, u_{m-r}\right\\} \quad$ and $\quad\left\\{v_{1}, \dots, v_{r}, w_{1}, \ldots, w_{n-r}\right\\}$
+
+are bases of $U$ and $W$, respectively. Let
+
+$B=\left\\{v_{1}, \ldots, v_{r}, u_{1}, \ldots, u_{m-r}, w_{1}, \ldots, w_{n-r}\right\\}$
+
+Note that $B$ has exactly $m + n - r$ elements. Thus, the theorem is proved if we can show that $B$ is a basis of $U + W$. Because $\\{v_i, u_j\\}$ spans $U$ and $\\{v_i, w_k\\}$ spans $W$, the union $B = \\{v_i, u_j, w_k\\}$ spans $U þ W$. Thus, it suffices to show that $B$ is independent. Suppose,
+
+$a_{1} v_{1}+\cdots+a_{r} v_{r}+b_{1} u_{1}+\cdots+b_{m-r} u_{m-r}+c_{1} w_{1}+\cdots+c_{n-r} w_{n-r}=0 \tag{1}$
+
+where $a_i, b_j, c_k$ are scalars. Let
+
+$v=a_{1} v_{1}+\cdots+a_{r} v_{r}+b_{1} u_{1}+\cdots+b_{m-r} u_{m-r} \tag{2}$
+
+By (1) we also have $v=-c_{1} w_{1}-\cdots-c_{n-r} w_{n-r} \tag{3}$
+
+Because $\\{v_i, u_j\\} \subseteq U, v \in U$ by (2); and as $\\{w_k\\} \subseteq W, v \in W$ by (3). Accordingly, $v \in U \cap W$. Now $\\{v_i\\}$ is a basis of $U \cap W$, and so there exist scalars $d_1, \dots , d_r$ for which $v = d_1v_1 + \dots + d_rv_r$. Thus, by (3), we have
+
+$d_{1} v_{1}+\cdots+d_{r} v_{r}+c_{1} w_{1}+\cdots+c_{n-r} w_{n-r}=0$
+
+But $\\{v_i, w_k\\}$ is a basis of $W$, and so is independent. Hence, the above equation forces $c_1 = 0, \dots , c_{n-r} = 0$. Substituting this into (1), we obtain
+
+$a_{1} v_{1}+\cdots+a_{r} v_{r}+b_{1} u_{1}+\cdots+b_{m-r} u_{m-r}=0$
+
+But $\\{v_i, u_j\\}$ is a basis of $U$, and so is independent. Hence, the above equation forces
+
+$a_1 = 0, \ldots, a_{r}=0, b_{1}=0, \ldots, b_{m-r}=0$
+
+Because (1) implies that the $a_i, b_j, c_k$ are all 0, $B = \\{v_i, u_j, w_k\\}$ is independent, and the theorem is proved.
+
+---
 
 **Example:** Let $V = M_{2,2}$, the vector space of $2 \times 2$ matrices. Let $U$ consist of those matrices whose second
 row is zero, and let $W$ consist of those matrices whose second column is zero. Then
@@ -345,6 +427,67 @@ $U=\left\\{\left[\begin{array}{ll}{a} & {b} \\\ {0} & {0}\end{array}\right]\righ
 $U+W=\left\\{\left[\begin{array}{ll}{a} & {b} \\\ {c} & {0}\end{array}\right]\right\\}, \quad U \cap W=\left\\{\left[\begin{array}{ll}{a} & {0} \\\ {0} & {0}\end{array}\right]\right\\}$
 
 $\operatorname{dim}(U+W)=\operatorname{dim} U+\operatorname{dim} V-\operatorname{dim}(U \cap W)=2+2-1=3$
+
+- Consider the following subspaces of $R^5$
+
+  $U=\operatorname{span}\left(u_{1}, u_{2}, u_{3}\right)=\operatorname{span}\{(1,3,-2,2,3), \quad(1,4,-3,4,2), \quad(2,3,-1,-2,9)\}$
+
+  $W=\operatorname{span}\left(w_{1}, w_{2}, w_{3}\right)=\operatorname{span}\{(1,3,0,2,1), \quad(1,5,-6,6,3), \quad(2,5,3,2,1)\}$
+
+  Find a basis and the dimension of (a) $U + W$, (b) $U \cap W$
+
+  ***
+
+  (a) $U + W$ is the space spanned by all six vectors. Hence, form the matrix whose rows are the given six
+  vectors, and then row reduce to echelon form:
+
+  $\left[\begin{array}{rrrrr}{1} & {3} & {-2} & {2} & {3} \\\ {1} & {4} & {-3} & {4} & {2} \\\ {2} & {3} & {-1} & {-2} & {9} \\\ {1} & {3} & {0} & {2} & {1} \\\ {1} & {5} & {-6} & {6} & {3} \\\ {2} & {5} & {3} & {2} & {1}\end{array}\right] \sim\left[\begin{array}{rrrrr}{1} & {3} & {-2} & {2} & {3} \\\ {0} & {1} & {-1} & {2} & {-1} \\\ {0} & {-3} & {3} & {-6} & {3} \\\ {0} & {0} & {2} & {0} & {-2} \\\ {0} & {2} & {-4} & {4} & {0} \\\ {0} & {-1} & {7} & {-2} & {-5}\end{array}\right] \sim\left[\begin{array}{rrrrr}{1} & {3} & {-2} & {2} & {3} \\\ {0} & {1} & {-1} & {2} & {-1} \\\ {0} & {0} & {1} & {0} & {-1} \\\ {0} & {0} & {0} & {0} & {0} \\\ {0} & {0} & {0} & {0} & {0} \\\ {0} & {0} & {0} & {0} & {0}\end{array}\right]$
+
+  The following three nonzero rows of the echelon matrix form a basis of $U \cap W$:
+
+  $(1,3,-2,2,2,3), \quad(0,1,-1,2,-1), \quad(0,0,1,0,-1)$
+
+  Thus, $\operatorname{dim}(U + W) = 3$
+
+  (b) Let $v = (x, y, z, s, t)$ denote an arbitrary element in $R^5$. First find, like before, homogeneous
+  systems whose solution sets are $U$ and $W$, respectively.
+  Let $M$ be the matrix whose columns are the $u_i \text{ and } v$, and reduce $M$ to echelon form:
+
+  $M=\left[\begin{array}{rrrr}{1} & {1} & {2} & {x} \\\ {3} & {4} & {3} & {y} \\\ {-2} & {-3} & {-1} & {z} \\\ {2} & {4} & {-2} & {s} \\\ {3} & {2} & {9} & {t}\end{array}\right] \sim\left[\begin{array}{rrrr}{1} & {1} & {2} & {x} \\\ {0} & {1} & {-3} & {-3 x+y} \\\ {0} & {0} & {0} & {-x+y+z} \\\ {0} & {0} & {0} & {4 x-2 y+s} \\\ {0} & {0} & {0} & {-6 x+y+t}\end{array}\right]$
+
+  That implies:
+
+  $-x+y+z=0, \quad 4 x-2 y+s=0, \quad-6 x+y+t=0$
+
+  Similarly,
+
+  $M^{\prime}=\left[\begin{array}{rrrr}{1} & {1} & {2} & {x} \\\ {3} & {5} & {5} & {y} \\\ {0} & {-6} & {3} & {z} \\\ {2} & {6} & {2} & {s} \\\ {1} & {3} & {1} & {t}\end{array}\right] \sim\left[\begin{array}{rrrr}{1} & {1} & {2} & {x} \\\ {0} & {2} & {-1} & {-3 x+y} \\\ {0} & {0} & {0} & {-9 x+3 y+z} \\\ {0} & {0} & {0} & {4 x-2 y+s} \\\ {0} & {0} & {0} & {2 x-y+t}\end{array}\right]$
+
+  That implies:
+
+  $-9+3+z=0, \quad 4 x-2 y+s=0, \quad 2 x-y+t=0$
+
+  Combine both of the above systems to obtain a homogeneous system, whose solution space is $U \cap W$, and
+  reduce the system to echelon form, yielding
+
+  $-x+y+z=0$
+  $2 y+4 z+s=0$
+  $8 z+5 s+2 t=0$
+  $s-2 t=0$
+
+  There is one free variable, which is $t$; hence, $dim(U \cap W) = 1$. Setting $t = 2$, we obtain the solution $u = (1, 4, -3, 4, 2)$, which forms our required basis of $U \cap W$
+
+  :::caution IMP Note
+  Here we can't just reduce $A = \begin{bmatrix} u_1 \\\ u_2 \\\ u_3 \end{bmatrix}$ to row canonical matrix $R_1$ and $B = \begin{bmatrix} w_1 \\\ w_2 \\\ w_3 \end{bmatrix}$ to row canonical matrix $R_2$ and take common rows in two to find basis of $U \cap W$ as common elements can be linear combination of the rows in $R_1$!
+  :::
+
+- Suppose $U$ and $W$ are distinct four-dimensional subspaces of a vector space $V$, where $\operatorname{dim} V = 6$. Find the possible dimensions of $U \cap W$.
+
+  Because $U$ and $W$ are distinct, $U + W$ properly contains $U$ and $W$; consequently, $dim(U + W) > 4$.
+  But $dim(U + W)$ cannot be greater than 6, as $\operatorname{dim} V = 6$. Hence, we have two possibilities:
+
+  1. $dim(U + W) = 5$ and thus $dim(U \cap W) = 3$
+  2. $dim(U + W) = 6$ and thus $dim(U \cap W) = 2$
 
 ## Direct Sums
 
@@ -356,7 +499,7 @@ if every $v \in V$ can be written in one and only one way as $v = u + w$ where $
 
 **Theorem:** The vector space $V$ is the direct sum of its subspaces $U$ and $W$ if and only if:
 
-$\text { (i) } V=U+W,(\text { ii) } U \cap W=\\{0\\}$
+$\text { (i) } V=U+W,(\text { ii) } U \cap W=\\{0\\}$ (easy to prove)
 
 ## General Direct Sums
 
@@ -379,6 +522,31 @@ $\text { (c) } \operatorname{dim} V=\operatorname{dim} W_{1}+\operatorname{dim} 
 **Theorem:** $\text { Suppose } V=W_{1}+W_{2}+\cdots+W_{r} \text { and } \operatorname{dim} V=\sum_{k} \operatorname{dim} W_{k} . \text { Then }$
 
 $V=W_{1} \oplus W_{2} \oplus \cdots \oplus W_{r}$
+
+## Coordinates
+
+Let $V$ be an $n$-dimensional vector space over $K$ with basis $S = \\{u_1, u2, \dots , u_n\\}$. Then any vector $v \in V$ can be expressed uniquely as a linear combination of the basis vectors in $S$ (this is a theorem for basis which is easy to prove), say $v = a_1u_1 + a_2u_2 + \dots + a_nu_n$ These $n$ scalars $a_1, a_2, \dots , a_n$ are called the coordinates of $v$ relative to the basis $S$, and they form a vector $[a_1, a_2, \dots , a_n]$ in $K^n$ called the coordinate vector of $v$ relative to $S$. We denote this vector by $[v]_S$, or
+simply $[v]$, when $S$ is understood.
+
+- In the space $M = M_{2,3}$, determine whether or not the following matrices are linearly dependent:
+
+  $A=\left[\begin{array}{lll}{1} & {2} & {3} \\\ {4} & {0} & {5}\end{array}\right], \quad B=\left[\begin{array}{lll}{2} & {4} & {7} \\\ {10} & {1} & {13}\end{array}\right], \quad C=\left[\begin{array}{lll}{1} & {2} & {5} \\\ {8} & {2} & {11}\end{array}\right]$
+
+  If the matrices are linearly dependent, find the dimension and a basis of the subspace $W$ of $M$ spanned by the matrices
+
+  The coordinate vectors of the above matrices relative to the usual basis of $M$ are as follows:
+
+  $[A]=[1,2,3,4,0,5], \quad[B]=[2,4,7,10,1,13], \quad[C]=[1,2,5,8,2,11]$
+
+  $M=\left[\begin{array}{cccccc}{1} & {2} & {3} & {4} & {0} & {5} \\\ {2} & {4} & {7} & {10} & {1} & {13} \\\ {1} & {2} & {5} & {8} & {2} & {11}\end{array}\right] \sim\left[\begin{array}{cccccc}{1} & {2} & {3} & {4} & {0} & {5} \\\ {0} & {0} & {1} & {2} & {1} & {3} \\\ {0} & {0} & {0} & {0} & {0} & {0}\end{array}\right]$
+
+  Because the echelon matrix has only two nonzero rows, the coordinate vectors $[A], [B], [C]$ span a space of
+  dimension two, and so they are linearly dependent. Thus, $A, B, C$ are linearly dependent. Furthermore,
+  $\operatorname{dim} W = 2$, and the matrices
+
+  $w_{1}=\left[\begin{array}{lll}{1} & {2} & {3} \\\ {4} & {0} & {5}\end{array}\right] \quad$ and $\quad w_{2}=\left[\begin{array}{lll}{0} & {0} & {1} \\\ {2} & {1} & {3}\end{array}\right]$
+
+  corresponding to the nonzero rows of the echelon matrix form a basis of $W$.
 
 ## Inner Product Spaces
 

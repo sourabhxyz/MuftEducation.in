@@ -187,7 +187,14 @@ From this analysis we observe that $A^{-1}$ is simply the result of elementary r
 
 Rank of product of matrices cannot exceed rank of either of them.
 
-Proof is simple, suppose we have two matrices $A$ and $B$ each of rank say $p, q$ resp. then it's possible to transform $A$ into $[G \text{  } O]$ where $G$ has only $p$ non zero rows at top, by left multiplication by $P$. Similarly it is possible to transform $B$ into $H$ where $H$ has only $q$ non zero columns at left, by right multiplication by $Q$. Now since $P, Q$ are result of elementary matrices that implies $rank(AB) = rank(PGHQ) = rank (GH)$ which is $\leq min(p, q)$
+**Proof:** Proof is simple, suppose we have two matrices $A$ and $B$ each of rank say $p, q$ resp. then it's possible to transform $A$ into $[G \text{  } O]$ where $G$ has only $p$ non zero rows at top, by left multiplication by $P$. Similarly it is possible to transform $B$ into $H$ where $H$ has only $q$ non zero columns at left, by right multiplication by $Q$. Now since $P, Q$ are result of elementary matrices that implies $rank(AB) = rank(PGHQ) = rank (GH)$ which is $\leq min(p, q)$
+
+**Aliter:**
+
+1. $RB$ is a linear combination of the rows of $B$, where $R$ is a row vector. (easy)
+2. The row space of $AB$ is contained in the row space of $B$. (follows from above)
+3. If $C$ is a column vector and $AC$ is defined, then $AC$ is a linear combination of the columns of $A$. (easy)
+4. The column space of $AB$ is contained in the column space of $A$. (follows from above) [Or $colsp(AB) = rowsp((AB)^T) = rowsp(B^TA^T) = rowsp(A^T) = colsp(A)$]
 
 ## Cramer's Rule
 
