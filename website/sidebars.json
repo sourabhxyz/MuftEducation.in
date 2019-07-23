@@ -13,8 +13,8 @@
     "Linear Algebra": [
       "upsc/mathematics_optional/linear_algebra/intro",
       "upsc/mathematics_optional/linear_algebra/basic",
-      "upsc/mathematics_optional/linear_algebra/lseq",
-      "upsc/mathematics_optional/linear_algebra/vector_spaces"
+      "upsc/mathematics_optional/linear_algebra/vector_spaces",
+      "upsc/mathematics_optional/linear_algebra/linear_mapping"
     ]
   },
   "upsc_mop_ode": {
