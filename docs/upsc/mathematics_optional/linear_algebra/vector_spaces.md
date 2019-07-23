@@ -1,7 +1,7 @@
 ---
 id: vector_spaces
-title: Vector Spaces
-sidebar_label: Vector Spaces
+title: Vector Spaces, LSEQ and Rank of a Matrix
+sidebar_label: Vector Spaces, LSEQ and Rank of a Matrix
 ---
 
 ## Field
@@ -112,7 +112,7 @@ Thus, in particular, S is a spanning set of $span(S)$.
 **Theorem:** Let $S$ be a subset of a vector space $V$.
 
 1. Then $span(S)$ is a subspace of $V$ that contains $S$. (easy to prove)
-2. If $W$ is a subspace of $V$ containing $S$, then $span(S) \subseteq W$ (i.e. $span(S)$ is the 'smallest' subspace of $V$ containing $S$). (easy to prove, prove by contradiction)
+2. If $W$ is a subspace of $V$ containing $S$, then $span(S) \subseteq W$ (i.e. $span(S)$ is the 'smallest' subspace of $V$ containing $S$). (easy to prove)
 
 - Consider the vector space $V = R^3$
   - Let $u$ be any non zero vector in $R^3$. Then $span(u)$ consists of all scalar multiples of $u$. Geometrically, $span(u)$ is the line through the origin O and the endpoint of $u$
@@ -130,6 +130,9 @@ Analgously we have column span, $colsp(A) = rowsp(A^T)$
 
 - Suppose $M$ is the matrix obtained by applying elementary row operations on a matrix $A$. Then each row of $M$ is a row of $A$ or a linear combination of rows of $A$. Hence, the row space of $M$ is contained in the row space of $A$. On the other hand, we can apply the inverse elementary row operation on $M$ to obtain $A$; hence, the row space of $A$ is contained in the row space of $M$. Accordingly, $A$ and $M$ have the same row space. Thus, Row equivalent matrices have the same row space.
 
+  In the context of lseq, this would mean that row equivalent matrices have the same set of solution because they span same set of equations.
+  (Note well that we are dealing with row operations, No column operations on the augmented matrix are permitted in this context because they would generally alter the soln set)
+
 ---
 
 **Theorem:** Suppose $A = [a_{ij}]$ and $B = [b_{ij}]$ are row equivalent echelon matrices with respective pivot entries $a_{1j_1},a_{2j_2},\dots ,a_{rj_r}$ and $b_{1k_1},b_{2k_2},\dots ,
@@ -142,7 +145,7 @@ pivot entries are in the same positions—that is, $j_{1}=k_{1}, j_{2}=k_{2}, \l
 
 **Theorem:** Suppose $A$ and $B$ are row canonical matrices. Then $A$ and $B$ have the same row space if and only if they have the same nonzero rows.
 
-**Proof:** Consider $i$th non zero row of $A$. Consider vectors belonging to its row space having only that pivot element set to 1 and rest all pivot elements set to 0. That means only this row is multiplied by 1 and rest all rows are multiplied by 0. So to get this vector in $B$, we would have to keep only this $i$th row multiplied by 1 and rest all zero. Thus the pivot elements are same.
+**Proof:** Consider $i$th non zero row of $A$. Consider vectors belonging to its row space having only that pivot element set to 1 and rest all pivot elements set to 0. That means only this row is multiplied by 1 and rest all rows are multiplied by 0. So to get this vector in $B$, we would have to keep only this $i$th row multiplied by 1 and rest all zero. Thus the rows are same.
 
 ---
 
@@ -225,7 +228,7 @@ Suppose a vector space $V$ does not have a finite basis. Then $V$ is said to be 
 
 **Theorem:** Let $V$ be a vector space of finite dimension $n$.
 
-1. Any linearly independent set $S = \\{u_1, u_2, \dots, u_n\\}$ with $n$ elements is a basis of $V$. (Always use this fact if possible to prove that the given set form the basis)
+1. Any linearly independent set $S = \\{u_1, u_2, \dots, u_n\\}$ with $n$ elements is a basis of $V$. (Always use this fact if possible to prove that the given $n$ element independent set form the basis)
 2. Any spanning set $T = \\{v_1, v_2, \dots, v_n\\}$ of $V$ with $n$ elements is a basis of $V\$.
 
 **Proof:**
@@ -252,7 +255,82 @@ to a basis of $V$
 
 ---
 
-### Example of bases
+
+---
+
+**Theorem:** Let $W$ be a subspace of an $n$-dimensional vector space $V$. Then $dim(W) \leq n$. In particular, if $dim(W) = n$, then $W = V$. (easy to prove)
+
+---
+
+## Rank of a Matrix
+
+The rank of a matrix $A$ is the maximum number of linearly independent row vectors of $A$. It is denoted by rank $A$.
+
+Note further that $rank A = 0$ if and only if $A = 0$. This follows directly from the definition.
+
+**Theorem**: Row-equivalent matrices have the same rank. So to find rank of the matrix, convert it into row echelon form and count the number of non zero rows.
+
+**Theorem**: Consider $p$ vectors that each have $n$ components. Then these vectors are linearly independent if the matrix formed, with these vectors as row vectors, has rank $p$. However, these vectors are linearly dependent if that matrix has rank less than $p$.
+
+**Theorem**: The rank $r$ of a matrix $A$ equals the maximum number of linearly independent column vectors of $A$.
+Hence $A$ and its transpose $A^T$ have the same rank.
+
+**Proof**: Let $A$ be an $m \cdot n$ matrix of $rank A = r$. Then by definition of rank, $A$ has $r$ linearly independent rows which we denote by $v_{(1)}, \dots , v_{(r)}$ (regardless of their position in $A$), and all the rows $a_{(1)}, \dots , a_{(m)}$ of $A$ are linear combinations of those, say,
+
+$a_{(1)} = c_{11}v_{(1)} + c_{12}v_{(2)} + \dots + c_{1r}v_{(r)}$
+
+$a_{(2)} = c_{21}v_{(1)} + \dots + c_{2r}v_{(r)}$
+
+$\vdots$
+
+$a_{(m)} = c_{m1}v_{(1)} + \dots + c_{mr}v_{(r)}$
+
+These are vector equations for rows. To switch to columns, we write in terms of
+components as $n$ such systems, with $k = 1, \dots , n$,
+
+$a_{1k} = c_{11}v_{1k} + c_{12}v_{2k} + \dots + c_{1r}v_{rk}$
+
+$\vdots$
+
+$a_{mk} = c_{m1}v_{1k} + c_{m2}v_{2k} + \dots + c_{mr}v_{rk}$
+
+Treat the LHS as a column vector and RHS as linear combination of $r$ column vectors ($[c_{1i}, c_{2i}, \dots, c_{mi}]$). Now the vector on the left is the $k$th column vector of $A$. We see that each of these $n$ columns is a linear combination of the same $r$ columns on the right. Hence $A$ cannot have more linearly independent columns than rows. Now rows of $A$ are columns of the transpose $A^T$. For $A^T$ our conclusion is that $A^T$ cannot have more linearly independent columns than rows, so that $A$ cannot have more linearly independent rows than columns. Together, the number of linearly independent columns of $A$ must be $r$, the rank of $A$. $\blacksquare$
+
+:::tip Info
+Therefore dimension of row space (aka row rank) is same as dimension of column space (aka column rank) which is same as rank of the matrix.
+:::
+
+**Theorem**: From above two theorems, it follows that if we have $p$ vectors each having $n$ components. If $n < p$, then these vectors are linearly dependent.
+
+**Theorem**: Column-equivalent (defined analogousely) matrices have the same rank. As elementary column operations is row operations on the transpose. Thus it follows that any combination of elementary row and column operations will not change the rank of the matrix and thus can be used to compute rank of it.
+
+:::tip Info
+
+1. Rank of a matrix is same as the order of highest order non zero submatrix. Thus if rank = $n$ then any submatrix of higher order will have determinant = 0 and $|A| \neq 0 \iff rank = n$ .
+2. It is easily observable that if all minors of order k are zero then rank is certainly less than k as minor of higher order will use throughout its computation minors of smaller order.
+3. Every non zero matrix have rank $\geq 1$ (as we have non zero minor of order 1).
+4. From all this it follows that rank of a submatrix is $\leq$ rank of parent.
+   :::
+
+## Gauss Elimination
+
+Is basically converting the augmented matrix into row echelon form (using elementary row operations), from $Ax = b$ to $Rx = f$ where $R$ is in row echelon form.
+
+The number of nonzero rows, $r$, in $R$ is called the rank of $R$ and also the rank of $A$. Here is the method for determining whether $Ax = b$ has solutions and what they are:
+
+1. No solution. If $r$ is less than $m$ (meaning that $R$ actually has at least one row of all 0s) and at least one of the numbers $f_{r+1}, f_{r+2}, \dots , f_m$ is not zero, then the system $Rx = f$ is inconsistent: No solution is possible.
+
+If the system is consistent (either $r = m$, or $r < m$ and all the numbers $f_{r+1}, f_{r+2}, \dots , f_m$ are zero), then there are solutions.
+
+2. Unique solution. If the system is consistent and $r = n$, there is exactly one solution, which can be found by back substitution.
+3. Infinitely many solutions. To obtain any of these solutions, choose values of $x_{r+1}, \dots , x_n$ arbitrarily. Then solve the $r$th equation for $x_r$ (in terms of those arbitrary values), then the $(r - 1)$st equation for $x_{r-1}$, and so on up the line.
+
+:::tip Info
+Thus it can be said that the system is consistent if the rank of $A$ and $[A | b]$ is same.
+:::
+
+
+## Example of basis
 
 - Vector space $K^n$: $e_{1}=(1,0,0,0, \ldots, 0,0), e_{2}=(0,1,0,0, \ldots, 0,0), \ldots, e_{n}=(0,0,0,0, \ldots, 0,1)$ These vectors are linearly independent. (For example, they form a matrix in echelon form.) Accordingly, the vectors form a basis of $K^n$ called the usual or standard basis of $K^n$
 - Vector space $M = M_{r,s}$ of all $r \times s$ matrices, let $E_{ij}$ be the matrix with $ij$-entry 1 and 0's elsewhere. Then all such matrices (in total $rs$) form a basis of $M_{r,s}$ (As matrix need to be represented as a linear combination of matrices) called the usual or standard basis of $M_{r,s}$. Accordingly, $dim (M_{r,s}) = rs$.
@@ -307,12 +385,8 @@ to a basis of $V$
   $\left[\begin{array}{llll}{1} & {1} & {1} & {1} \\\ {2} & {2} & {3} & {4}\end{array}\right] \sim\left[\begin{array}{llll}{1} & {1} & {1} & {1} \\\ {0} & {0} & {1} & {2}\end{array}\right]$
 
   Then $w_1 =(1,1,1,1)$ and $w_2 =(0,0,1,2)$ span the same set of vectors as spanned by $u_1$ and $u_2$. Let $u_3 = (0,1,0,0)$ and $u_4 = (0,0,0,1)$. Then $w_1, u_3, w_2, u_4$ form a matrix in echelon form. Thus, they are linearly independent, and they form a basis of $R^4$. Hence, $u_1, u_2, u_3, u_4$ also form a basis of $R^4$.
-
----
-
-**Theorem:** Let $W$ be a subspace of an $n$-dimensional vector space $V$. Then $dim(W) \leq n$. In particular, if $dim(W) = n$, then $W = V$. (easy to prove)
-
----
+- Find Basis of subspace $W$ of $R^3$ where $W = \\{(a, b, c) : a + b + c = 0\\}$
+  i.e. vectors of the form $(x, y, -x - y)$, clearly $(1, 0, -1) \text{ and } (0, 1, -1)$ spans $W\$ and are linearly independent and hence they form the basis.
 
 ---
 
@@ -320,10 +394,8 @@ to a basis of $V$
 
 ---
 
-In the case where the system $AX = 0$ is in echelon form, it has precisely $n - r$ free variables, say $x_{i_1} , x_{i_2} , \dots , x_{i_{n-r}}$ . Let $v_j$ be the solution obtained by setting $x_{i_j} = 1$ (or any nonzero constant) and the remaining free variables equal to 0. We show (Problem 4.50) that the solutions $v_1, v_2, \dots , v_{n-r}$ are linearly independent; hence, they form a basis of the solution space $W$.
+In the case where the system $AX = 0$ is in echelon form, it has precisely $n - r$ free variables, say $x_{i_1} , x_{i_2} , \dots , x_{i_{n-r}}$ . Let $v_j$ be the solution obtained by setting $x_{i_j} = 1$ (or any nonzero constant) and the remaining free variables equal to 0. Its straightforward to see that the solutions $v_1, v_2, \dots , v_{n-r}$ are linearly independent; hence, they form a basis (as they as well span all the solutions) of the solution space $W$.
 
-- Find Basis of subspace $W$ of $R^3$ where $W = \\{(a, b, c) : a + b + c = 0\\}$
-  i.e. vectors of the form $(x, y, -x - y)$, clearly $(1, 0, -1) \text{ and } (0, 1, -1)$ spans $W\$ and are linearly independent and hence they form the basis.
 
 - Find the dimension and a basis of the solution space W of each homogeneous system:
 
@@ -366,6 +438,64 @@ In the case where the system $AX = 0$ is in echelon form, it has precisely $n - 
 
   $5 x+y \quad-t=0$
 
+
+## Inverse of the matrix by Gauss-Jordan Method
+
+Task is to find $A^{-1}$. I.e. to find $X$ s.t. $AX = I$. Make an augmented matrix $\tilde{A} = [A \text{  } I]$ Now reduce it Reduced Row Echelon form to get $[I \text{  } H]$ since this corresponds to $IX = H$, thus $X = H$.
+
+From this analysis we observe that $A^{-1}$ is simply the result of elementary row operations and thus is product of elementary matrices therefore $A$ is as well the product of elementary matrices.
+
+**Examples:**
+
+- Find two non-singular matrices P and Q s.t. PAQ is in the normal (canonical) form (i.e. of the form $\begin{bmatrix} I_r & O \\\ O & O \end{bmatrix}$) where $A = \begin{bmatrix} 1 & 1 & 1 \\\ 1 & -1 & -1 \\\ 3 & 1 & 1\end{bmatrix}$
+
+  For series of row operations $r_1, r_2, ...$ applied, apply them to $I$ to get $R$, similarly for any column operation applied in between, apply it to another $I$ to get $C$, now $P = R, Q = C$. Obv. $P$ and $Q$ aren't unique.
+
+  :::tip Info
+  It is observed that authors club row and column equivalent together to define **equivalent** (which is of course an equivalence relation) matrices which are obtained from each other via combination of elementary row and column operations. Thus, above example shows that any matrix is equivalent to this **normal** form.
+
+  From above it follows that if $A$ and $B$ are of same order and of same rank then they are equivalent to each other.
+  :::
+
+- Is the matrix $\begin{bmatrix}1 & 2 & 1 \\\ -1 & 0 & 2 \\\ 2 & 1 & -3\end{bmatrix}$ equivalent to $I_3$
+
+  Here determinant of given matrix is non zero and hence it's rank is 3 and therefore it is equivalent to $I_3$.
+
+- Express $\begin{bmatrix} 1 & 3 & 3 \\\ 1 & 4 & 3 \\\ 1 & 3 & 4\end{bmatrix}$ as a product of elementary matrices.
+
+  Question is valid iff $|A| \neq 0$ which is true for the given case.
+
+  Let $A$ be reduced into $I$ by elementary row transformations $r_1, r_2, \dots, r_k \rightarrow (r_k)\dots (r_1)A = I$
+
+  $\rightarrow A = (r_k \dots r_1)^{-1}I = r_1^{-1}\dots r_k^{-1}I$
+
+  For the given case, $r_1 = E_{21}(-1), r_2 = E_{31}(-1), r_3 = E_{12}(-3), r_4 = E_{13}(-3)$
+
+  And thus answer is $E_{21}(1)E_{31}(1)E_{12}(3)E_{13}(3)$
+
+## Rank of product of matrices
+
+Rank of product of matrices cannot exceed rank of either of them.
+
+**Proof:** Proof is simple, suppose we have two matrices $A$ and $B$ each of rank say $p, q$ resp. then it's possible to transform $A$ into $[G \text{  } O]$ where $G$ has only $p$ non zero rows at top, by left multiplication by $P$. Similarly it is possible to transform $B$ into $H$ where $H$ has only $q$ non zero columns at left, by right multiplication by $Q$. Now since $P, Q$ are result of elementary matrices that implies $rank(AB) = rank(PGHQ) = rank (GH)$ which is $\leq min(p, q)$
+
+**Aliter:**
+
+1. $RB$ is a linear combination of the rows of $B$, where $R$ is a row vector. (easy)
+2. The row space of $AB$ is contained in the row space of $B$. (follows from above)
+3. If $C$ is a column vector and $AC$ is defined, then $AC$ is a linear combination of the columns of $A$. (easy)
+4. The column space of $AB$ is contained in the column space of $A$. (follows from above) [Or $colsp(AB) = rowsp((AB)^T) = rowsp(B^TA^T) = rowsp(A^T) = colsp(A)$]
+
+## Cramer's Rule
+
+Let the linear system $Ax = b$ have the same number of equations as the unknowns.
+
+Let $D = |A|$, as discussed before the system $Ax = b$ has unique soln iff $rank(A) = n$ i.e. iff $D \neq 0$ and in this case soln is given by $x_i = \frac{D_i}{D}$ where $D_i$ is the determinant obtained from $D$ by replacing in $D$ the $i$th column by the column with entries $b_1, \dots, b_n$.
+
+Hence if system is homogeneous and $D \neq 0$, it has only the trivial soln $x_i = 0$. If $D = 0$, the homogeneous system also has nontrivial solns.
+
+
+
 ## Sums and Direct Sums
 
 Let $U$ and $W$ be subsets of a vector space $V$. The sum of $U$ and $W$, written $U + W$, consists of all sums $u+w$ where $u \in U$ and $w \in W$. That is,
@@ -393,7 +523,7 @@ are bases of $U$ and $W$, respectively. Let
 
 $B=\left\\{v_{1}, \ldots, v_{r}, u_{1}, \ldots, u_{m-r}, w_{1}, \ldots, w_{n-r}\right\\}$
 
-Note that $B$ has exactly $m + n - r$ elements. Thus, the theorem is proved if we can show that $B$ is a basis of $U + W$. Because $\\{v_i, u_j\\}$ spans $U$ and $\\{v_i, w_k\\}$ spans $W$, the union $B = \\{v_i, u_j, w_k\\}$ spans $U þ W$. Thus, it suffices to show that $B$ is independent. Suppose,
+Note that $B$ has exactly $m + n - r$ elements. Thus, the theorem is proved if we can show that $B$ is a basis of $U + W$. Because $\\{v_i, u_j\\}$ spans $U$ and $\\{v_i, w_k\\}$ spans $W$, the union $B = \\{v_i, u_j, w_k\\}$ spans $U + W$. Thus, it suffices to show that $B$ is independent. Suppose,
 
 $a_{1} v_{1}+\cdots+a_{r} v_{r}+b_{1} u_{1}+\cdots+b_{m-r} u_{m-r}+c_{1} w_{1}+\cdots+c_{n-r} w_{n-r}=0 \tag{1}$
 
@@ -443,7 +573,7 @@ $\operatorname{dim}(U+W)=\operatorname{dim} U+\operatorname{dim} V-\operatorname
 
   $\left[\begin{array}{rrrrr}{1} & {3} & {-2} & {2} & {3} \\\ {1} & {4} & {-3} & {4} & {2} \\\ {2} & {3} & {-1} & {-2} & {9} \\\ {1} & {3} & {0} & {2} & {1} \\\ {1} & {5} & {-6} & {6} & {3} \\\ {2} & {5} & {3} & {2} & {1}\end{array}\right] \sim\left[\begin{array}{rrrrr}{1} & {3} & {-2} & {2} & {3} \\\ {0} & {1} & {-1} & {2} & {-1} \\\ {0} & {-3} & {3} & {-6} & {3} \\\ {0} & {0} & {2} & {0} & {-2} \\\ {0} & {2} & {-4} & {4} & {0} \\\ {0} & {-1} & {7} & {-2} & {-5}\end{array}\right] \sim\left[\begin{array}{rrrrr}{1} & {3} & {-2} & {2} & {3} \\\ {0} & {1} & {-1} & {2} & {-1} \\\ {0} & {0} & {1} & {0} & {-1} \\\ {0} & {0} & {0} & {0} & {0} \\\ {0} & {0} & {0} & {0} & {0} \\\ {0} & {0} & {0} & {0} & {0}\end{array}\right]$
 
-  The following three nonzero rows of the echelon matrix form a basis of $U \cap W$:
+  The following three nonzero rows of the echelon matrix form a basis of $U + W$:
 
   $(1,3,-2,2,2,3), \quad(0,1,-1,2,-1), \quad(0,0,1,0,-1)$
 
@@ -513,11 +643,11 @@ $\text { where } w_{1} \in W_{1}, w_{2} \in W_{2}, \ldots, w_{r} \in W_{r}$
 
 **Theorem:** Suppose $V=W_{1} \oplus W_{2} \oplus \cdots \oplus W_{r}$. Also, for each $k$, suppose $S_k$ is a linearly independent subset of $W_k$. Then
 
-$\text { (a) The union } S=\cup_{k} S_{k} \text { is linearly independent in } V$
+$\text { (a) The union } S=\cup_{k} S_{k} \text { is linearly independent in } V$ (easy to prove as, if they are linearly dependent then one side is a linear combination of $S_1$ (which would imply coefficients on left side are 0 and so on...))
 
-$\text { (b) If each } S_{k} \text { is a basis of } W_{k}, \text { then } \bigcup_{k} S_{k} \text { is a basis of } V$
+$\text { (b) If each } S_{k} \text { is a basis of } W_{k}, \text { then } \bigcup_{k} S_{k} \text { is a basis of } V$ (follows from (a))
 
-$\text { (c) } \operatorname{dim} V=\operatorname{dim} W_{1}+\operatorname{dim} W_{2}+\cdots+\operatorname{dim} W_{r}$
+$\text { (c) } \operatorname{dim} V=\operatorname{dim} W_{1}+\operatorname{dim} W_{2}+\cdots+\operatorname{dim} W_{r}$ (follows from (b))
 
 **Theorem:** $\text { Suppose } V=W_{1}+W_{2}+\cdots+W_{r} \text { and } \operatorname{dim} V=\sum_{k} \operatorname{dim} W_{k} . \text { Then }$
 
@@ -525,7 +655,7 @@ $V=W_{1} \oplus W_{2} \oplus \cdots \oplus W_{r}$
 
 ## Coordinates
 
-Let $V$ be an $n$-dimensional vector space over $K$ with basis $S = \\{u_1, u2, \dots , u_n\\}$. Then any vector $v \in V$ can be expressed uniquely as a linear combination of the basis vectors in $S$ (this is a theorem for basis which is easy to prove), say $v = a_1u_1 + a_2u_2 + \dots + a_nu_n$ These $n$ scalars $a_1, a_2, \dots , a_n$ are called the coordinates of $v$ relative to the basis $S$, and they form a vector $[a_1, a_2, \dots , a_n]$ in $K^n$ called the coordinate vector of $v$ relative to $S$. We denote this vector by $[v]_S$, or
+Let $V$ be an $n$-dimensional vector space over $K$ with basis $S = \\{u_1, u_2, \dots , u_n\\}$. Then any vector $v \in V$ can be expressed uniquely as a linear combination of the basis vectors in $S$ (this is a theorem for basis which is easy to prove), say $v = a_1u_1 + a_2u_2 + \dots + a_nu_n$ These $n$ scalars $a_1, a_2, \dots , a_n$ are called the coordinates of $v$ relative to the basis $S$, and they form a vector $[a_1, a_2, \dots , a_n]$ in $K^n$ called the coordinate vector of $v$ relative to $S$. We denote this vector by $[v]_S$, or
 simply $[v]$, when $S$ is understood.
 
 - In the space $M = M_{2,3}$, determine whether or not the following matrices are linearly dependent:
@@ -547,50 +677,3 @@ simply $[v]$, when $S$ is understood.
   $w_{1}=\left[\begin{array}{lll}{1} & {2} & {3} \\\ {4} & {0} & {5}\end{array}\right] \quad$ and $\quad w_{2}=\left[\begin{array}{lll}{0} & {0} & {1} \\\ {2} & {1} & {3}\end{array}\right]$
 
   corresponding to the nonzero rows of the echelon matrix form a basis of $W$.
-
-## Inner Product Spaces
-
-If $a$ and $b$ are vectors in $R^n$, regarded as column vectors, we can form the product $a^Tb$. This is a $1 \times 1$ matrix, which we can identify with its single entry, that is, with a number, called **inner product** or **dot product**) also denoted as $(a, b)$ or $a \cdot b$. $R^n$ with this inner product space is called $n$-dimensional Euclidean space and is denoted by $E^n$ or simply by $R^n$.
-
-We now extend this concept to general real vector spaces.
-
----
-
-**Definition: Real Inner Product Space**
-
-A real vector space $V$ is called a real inner product space (or real pre-Hilbert space) if it has the following property. With every pair of vectors $a$ and $b$ in $V$ there is associated a real number, which is denoted by $(a, b)$ and is called the inner product of $a$ and $b$, such that the following axioms are satisfied.
-
-1. (Linearity) For all scalars $q_1$ and $q_2$ and all vectors $a, b, c$ in $V$,$(q_1a + q_2b, c) = q_1(a, c) + q_2(b, c)$.
-2. (Symmetry) For all vectors $a$ and $b$ in $V$, $(a, b) = (b, a)$.
-3. (Positive-definiteness) For every $a$ in $V$, $(a, a) \geq 0$, $(a, a) = 0$ and $a = \textbf{0}$
-
----
-
-Vectors whose inner product is zero are called orthogonal.
-
-The length or norm of a vector $V$ is defined by $||a|| = \sqrt{(a, a)}$
-
-A vector of unit norm is called unit vector.
-
-From these axioms one can derive (omitted for now) the basic inequality
-
-- $|(a,b)| \leq ||a||||b||$ (Cauchy–Schwarz inequality). From this follows
-
-- $||a + b|| \leq ||a|| + ||b||$ (Triangle inequality) (just square both sides and you will arive at above ineq.)
-
-  A simple direct calculation gives
-
-- $||a + b||^2 + ||a - b||^2 = 2(||a||^2 + ||b||^2)$ (Parallelogram equality).
-
-## Linear Transformations
-
----
-
-Let $X$ and $Y$ be any vector spaces. To each vector $x$ in $X$ we assign a unique vector $y$ in $Y$. Then we say that a mapping (or transformation or operator) of $X$ into $Y$ is given. Such a mapping is denoted by a capital letter, say $F$. The vector $y$ in $Y$ assigned to a vector $x$ in $X$ is called the image of $x$ under $F$ and is denoted by $F(x)$ [or $Fx$, without parentheses].
-
-$F$ is called a **linear mapping** or **linear transformation** if, for all vectors $v$ and $x$ in$X$ and scalars $c$,
-$F(v + x) = F(v) + F(x) \text{ and } F(cx) = cF(x)$.
-
----
-
-On 4.48

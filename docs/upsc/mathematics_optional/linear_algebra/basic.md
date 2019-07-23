@@ -1,7 +1,7 @@
 ---
 id: basic
-title: Basics
-sidebar_label: Basics
+title: Basics and Linear System Of Equations (LSEQ) Intro
+sidebar_label: Basics and Linear System Of Equations (LSEQ) Intro
 ---
 
 If not mentioned, consider dimension of matrix $A$ to be $m$ x $n$
@@ -12,7 +12,7 @@ $c_{jk} = a_jb_k$, where $a_j$ is the $j$th row vector of $A$ and $b_k$ is the $
 
 Using this matrix multiplication can be computed parallelly (product is computed column wise)
 
-$AB = A[b_1 b_2 \dots b_p] = [Ab_1 Ab_2 \dots Ab_p]$
+$AB = A[B_1 B_2 \dots B_p] = [AB_1 AB_2 \dots AB_p] = \begin{bmatrix}A_1 \\\ \vdots \\\ A_m\end{bmatrix}B = \begin{bmatrix}A_1B \\\ \vdots \\\ A_mB\end{bmatrix}$
 
 - Matrix multiplication is associative.
 
@@ -107,6 +107,70 @@ $(adj(A))A = A(adj(A)) = |A|I \rightarrow A^{-1} = adj(A)/|A|$, as evident inver
 - If $A$ is symmetric then $adj(A)$ is symmetric.
 - $|A^{-1}| = |A|^{-1}$ (easy, thus from this it follow $|adj(A)| = |C| = |A|^{n - 1}$)
 
+## Linear System Of Equations Intro
+
+A linear system of $m$ equations in $n$ unknowns $x_1, \dots , x_n$ is a set of equations of the form
+
+$a_{11}x_1 + \dots + a_{1n}x_n = b_1$
+
+$a_{21}x_1 + \dots + a_{2n}x_n = b_2$
+
+$a_{m1}x_1 + \dots + a_{mn}x_n = b_m$
+
+The system is called linear because each variable $x_j$ appears in the first power only. If all the $b_j$ are zero, then this is called a homogeneous system o/w nonhomogeneous.
+
+For a homogeneous system we always have trivial soln: $x_i = 0$
+
+This system can be represented as $Ax = b$, $a_{ij}$ are called coefficients and thus $A$ is called coefficient matrix.
+
+$\tilde{A} = 
+\begin{bmatrix} 
+  a_{11} & \dots & a_{1n} & | & b_1 \\\ 
+  . & \dots & . & | & . \\\  
+  . & \dots & . & | & . \\\  
+  a_{m1} & \dots & a_{mn} & | & b_m 
+\end{bmatrix}$ _--> is called Augmented Matrix, it determines the system completely_
+
+## Elementary Row Operations
+
+- Interchange of two rows
+- Addition of a constant multiple of one row to another row
+- Multiplication of a row by a **nonzero** constant c
+
+Similarly we have **Elementary Column Operations**
+
+We now call a linear system $S_1$ row-equivalent to a linear system $S_2$ if $S_1$ can be obtained from $S_2$ by (finitely many!) row operations (observe that it is an equivalence relation).
+
+
+A system is called consistent if it has at least one solution (thus, one solution or infinitely many solutions), but inconsistent if it has no solutions at all.
+
+## Elementary Matrix
+
+Matrix which differs from Identity Matrix by one single elementary row operation. Left multiplication (pre-multiplication) by an elementary matrix represents elementary row operation, while right multiplication (post - multiplication) represents elementary column operations.
+
+- $E_{ij}$, $E_i(k)$ and $E_{ij}(k)$, denotes elementary matrix obtained by:
+  - swapping rows $i$ and $j$
+  - multiplying $i$th row with non zero $k$
+  - adding to the $i$th row the constant multiple ($k$) of the $j$th row, resp.
+  - Clearly $E_{ij}^{-1} = E_{ij}$, $E_i(k)^{-1} = E_i(\frac{1}{k})$ and $E_{ij}(k)^{-1} = E_{ij}(-k)$ thus inverse of an elementary matrix is also an elementary matrix.
+- $|E_{ij}| = -1$
+- $|E_{i}(k)| = k$
+- $|E_{ij}(k)| = 1$
+- Thus elementary matrix is always non singular
+
+## Row Echelon Form
+
+For each row in a matrix, if the row does not consist of only zeros, then the leftmost nonzero entry is called the leading coefficient (or pivot) of that row. So if two leading coefficients are in the same column, then a row operation of type 3 could be used to make one of those coefficients zero. Then by using the row swapping operation, one can always order the rows so that for every non-zero row, the leading coefficient is to the right of the leading coefficient of the row above. If this is the case, then matrix is said to be in row echelon form.
+
+## Reduced Row Echelon Form
+
+A matrix is in reduced row echelon form (also called row canonical form, row reduced echelon form) if it satisfies the following conditions:
+
+- It is in row echelon form.
+- The leading entry in each nonzero row is a 1 (called a leading 1).
+- Each column containing a leading 1 has zeros everywhere else (i.e. also in above).
+
+
 ## Side Problems
 
 - If $P$ and $Q$ are non singular matrices then show that $\begin{bmatrix} P & O \\\ O & Q\end{bmatrix}^{-1} = \begin{bmatrix} P^{-1} & O \\\ O & Q^{-1} \end{bmatrix}$
@@ -114,3 +178,4 @@ $(adj(A))A = A(adj(A)) = |A|I \rightarrow A^{-1} = adj(A)/|A|$, as evident inver
   Let inverse be $\begin{bmatrix}A & B \\\ C & D\end{bmatrix}$
 
   $\rightarrow \begin{bmatrix} PA & PB \\\ QC & QD\end{bmatrix} = \begin{bmatrix}I & O \\\ O & I \end{bmatrix} \blacksquare$
+
