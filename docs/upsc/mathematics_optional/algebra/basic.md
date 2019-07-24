@@ -118,42 +118,76 @@ Let $S$ be a set of integers containing $a$. Suppose $S$ has the property that $
   Mathematical Induction and one using the Second Principle. Let $S$ be the
   set of all integers greater than or equal to 28 of the form $a * 5 + b * 8$, where $a$ and $b$ are nonnegative. Obviously, $28 \in S$. Now assume
   that some integer $n \in S$, say, $n = a * 5 + b * 8$. We must show that
-  n + 1 $\in$ S. First, note that since n $\geq$ 28, we cannot have both a
-  and b less than 3. If a $\geq$ 3, then n + 1 = (a \* 5 + b \* 8) + (-3 \* 5 + 2 \* 8) = (a - 3) \* 5 + (b + 2) \* 8. (Regarding chips, this
-  last equation says that we may increase a bet from n to n 1 1 by
-  removing three blue chips from the pot and adding two red chips.) If b
-  $\geq$ 3, then n + 1 = (a \* 5 + b \* 8) + (5 \* 5 - 3 \* 8) = (a + 5) \* 5 + (b - 3) \* 8. (The bet can be increased by 1 by removing three
-  red chips and adding five blue chips.) This completes the proof. To
+  $n + 1 \in S$. First, note that since $n \geq 28$, we cannot have both $a$ and $b$ less than 3. If $a \geq 3$, then $n + 1 = (a * 5 + b * 8) + (-3 * 5 + 2 * 8) = (a - 3) * 5 + (b + 2) * 8$. If $b \geq 3$, then $n + 1 = (a * 5 + b * 8) + (5 * 5 - 3 * 8) = (a + 5) * 5 + (b - 3) * 8$. This completes the proof. To
   prove the same statement by the Second Principle, we note that each of
-  the integers 28, 29, 30, 31, and 32 is in S. Now assume that for some
-  integer n $>$ 32, S contains all integers k with 28 $\leq$ k $<$ n. We
-  must show that n $\in$ S. Since n - 5 $\in$ S, there are nonnegative
-  integers a and b such that n - 5 = a \* 5 + b \* 8. But then n = (a + 1) \* 5 + b \* 8. Thus n is in S.
+  the integers 28, 29, 30, 31, and 32 is in $S$. Now assume that for some
+  integer $n > 32$, S contains all integers $k$ with $28 \leq k < n$. We
+  must show that $n \in S$. Since $n - 5 \in S$, there are nonnegative
+  integers $a$ and $b$ such that $n - 5 = a * 5 + b * 8$. But then $n = (a + 1) * 5 + b * 8$. Thus $n$ is in $S$.
 
-![image](assets/upsc/mathematics_optional/algebra/basic_2.png)
+## Equivalence Relation
 
-![image](assets/upsc/mathematics_optional/algebra/basic_3.png)
+An equivalence relation on a set $S$ is a set $R$ of ordered pairs of
+elements of $S$ such that
 
-**Definition:** A partition of a set S is a collection of nonempty
-disjoint subsets of S whose union is S
+1. $(a, a) \in R$ for all $a \in S$
+2. $(a, b) \in R$ implies $(b, a) \in R$ (symmetric property).
+3. $(a, b) \in R$ and $(b, c) \in R$ imply $(a, c) \in R$ (transitive property).
 
-![image](assets/upsc/mathematics_optional/algebra/basic_4.png)
+When $R$ is an equivalence relation on a set $S$, it is customary to write
+$aRb$ instead of $(a, b) \in R$
 
-**Definition:** A function (or mapping) $\phi$ from a set A to a set B
-is a rule that assigns to each element a of A exactly one element b of
-B.
+If $\sim$ is an equivalence relation
+on a set $S$ and $a \in S$, then the set $[a] = \\{x \in S \mid x \sim a\\}$ is called the
+equivalence class of $S$ containing $a$.
 
-**Definition:** Let f: A → B and c: B → C. The composition cf is the
-mapping from A to C defined by (cf)(a) = c(f(a)) for all a in A
+**Examples:**
 
-**Definition:** A function f from a set A is called one-to-one if for
-every a1, a2 $\in$ A, f(a1) = f(a2) implies a1 = a2.
+- Let $S$ be the set of integers and let $n$ be a positive integer. If $a, b \in S$, define $a \equiv b$ if $a \bmod n = b \bmod n$ (that is, if $a - b$ is divisible by $n$). Then $\equiv$ is an equivalence relation on $S$ and $[a] = \\{a + kn \mid k \in S\\}$.
 
-Alternatively f is one-to-one if a1 $\neq$ a2 implies f(a1) $\neq$ f(a2)
+### Partition
 
-![image](assets/upsc/mathematics_optional/algebra/basic_5.png)
+A partition of a set $S$ is a collection of nonempty
+disjoint subsets of $S$ whose union is $S$.
 
-![image](assets/upsc/mathematics_optional/algebra/basic_6.png)
+**Theorem 1.4:** The equivalence classes of an equivalence relation on a set $S$
+constitute a partition of $S$ . Conversely, for any partition $P$ of $S$ , there
+is an equivalence relation on $S$ whose equivalence classes are the
+elements of $P$ . (First part is easy, for second part, Define $a \sim b$ if $a$ and $b$ belong to the
+same subset in the collection.)
 
-_Note that 2nd and 3rd are very easy and straight forward to proof so
-don't worry_
+## Functions
+
+**Definition:** A function (or mapping) $\phi$ from a set $A$ to a set $B$
+is a rule that assigns to each element $a$ of $A$ exactly one element $b$ of $B$.
+
+**Definition:** Let $\phi : A \rightarrow B$ and $\psi : B \rightarrow C .$ The composition $\psi \phi$ is the mapping from
+$A$ to $C$ defined by $(\psi \phi)(a)=\psi(\phi(a))$ for all $a$ in $A$ .
+
+**Definition:** A function $f$ from a set $A$ is called one-to-one if for
+every $a_1, a_2 \in A, f(a_1) = f(a_2)$ implies $a1 = a2$.
+
+Alternatively $f$ is one-to-one if $a1 \neq a2$ implies $f(a_1) \neq f(a_2)$
+
+**Definition:** In symbols, $\phi : A \rightarrow B$ is
+onto if for each $b$ in $B$ there is at least one $a$ in $A$ such that $\phi(a)=b$ .
+
+### Properties
+
+---
+
+Given functions $\alpha : A \rightarrow B, \beta : B \rightarrow C,$ and $\gamma : C \rightarrow D,$ then
+
+1. $\gamma(\beta \alpha)=(\gamma \beta) \alpha$ (associativity).
+2. If $\alpha$ and $\beta$ are one-to-one, then $\beta \alpha$ is one-to-one.
+3. If $\alpha$ and $\beta$ are onto, then $\beta \alpha$ is onto.
+4. If $\alpha$ is one-to-one and onto, then there is a function $\alpha^{-1}$ from $B$ onto $A$ such that $\left(\alpha^{-1} \alpha\right)(a)=a$ for all $a$ in $A$ and $\left(\alpha \alpha^{-1}\right)(b)=b$ for all $b$ in $B$ .
+
+**Proof:**
+
+1. Let $a \in A .$ Then $(\gamma(\beta \alpha))(a)=\gamma((\beta \alpha)(a))=\gamma(\beta(\alpha(a)))$ .
+   On the other hand, $((\gamma \beta) \alpha)(a)=(\gamma \beta)(\alpha(a))=\gamma(\beta(\alpha(a))) .$ So $, \gamma(\beta \alpha)=$
+   $(\gamma \beta) \alpha$
+2. Easy
+3. Easy
+4. Easy
