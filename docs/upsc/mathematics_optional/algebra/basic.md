@@ -191,3 +191,5 @@ Given functions $\alpha : A \rightarrow B, \beta : B \rightarrow C,$ and $\gamma
 2. Easy
 3. Easy
 4. Easy
+
+---
