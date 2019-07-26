@@ -41,8 +41,8 @@ some pair of elements $a$ and $b$ for which $ab \neq ba$.
 
 - Note: An integer $a$ has a multiplicative inverse modulo $n$ if and only if $a$ and $n$ are relatively prime (easy to prove, and a very important observation is that if integer $a$ has multiplicative inverse $b$, then we can as well say that $a$ is the multiplicative inverse of $b$ and therefore $b$ and $n$ are relatively prime). So, for each $n > 1$, we define $U(n)$ to be the set of all positive integers less than $n$ and relatively prime to $n$. Then $U(n)$ is a group under multiplication modulo $n$. (Note that this set is closed under this operation (Proof: $at\_1 + nt\_2 = 1, bt\_3 + nt\_4 = 1 \Rightarrow abt\_1t\_3 + at\_1nt\_4 + nt\_2bt\_3 + n^2t\_2t\_4 \Rightarrow ab(..) + n(..) = 1$).) For $n = 10$, we have $U(10) = \\{1, 3, 7, 9\\}$.
 
-**Example:** The set of integers under subtraction is not a group, since
-the operation is not associative.
+- The set of integers under subtraction is not a group, since
+  the operation is not associative.
 
 ![image](assets/upsc/mathematics_optional/algebra/groups_4.png)
 
