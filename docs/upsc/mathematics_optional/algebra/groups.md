@@ -107,11 +107,12 @@ have $RM = K$ and $RN = K \Rightarrow RM = RN \Rightarrow M = N$.
 
 So we will unambiguously denote the inverse by $g^{-1}$
 
-![image](assets/upsc/mathematics_optional/algebra/groups_12.png)
-
-![image](assets/upsc/mathematics_optional/algebra/groups_13.png)
-
-![image](assets/upsc/mathematics_optional/algebra/groups_14.png)
+Similarly, when $n$ is a positive integer, the associative law allows us to
+use $g^{n}$ to denote the unambiguous product
+We define $g^{0}=e .$ When $n$ is negative, we define $g^{n}=\left(g^{-1}\right)^{|n|}$ [for ex-
+ample, $g^{-3}=\left(g^{-1}\right)^{3} ] .$ 
+familiar laws of exponents hold for groups; that is, for all integers $m$ and
+$n$ and any group element $g,$ we have $g^{m} g^{n}=g^{m+n}$ and $\left(g^{m}\right)^{n}=g^{m n}$
 
 _Note: $ax = $b$ \Rightarrow x = a^{-1}b$ which is unique as inverse is
 unique_
@@ -120,16 +121,25 @@ Also, one must be careful with this notation when dealing with a
 specific group whose binary operation is addition and is denoted by
 "+"
 
-![image](assets/upsc/mathematics_optional/algebra/groups_15.png)
+---
+
+Multiplicative Group $\hspace{80pt}$ Additive Group
+<!-- {\text { Multiplicative Group }} & & {\text { Additive Group }} \\\ -->
+$\begin{array}{lllll}{ a \cdot b \text { or ab}} & {\text { Multiplication }} & {a+b} & {\text { Addition }} \\\  {e \text { or } 1} & {\text { Identity or one }} & {0} & {\text { Zero }} \\\ {a^{-1}} & {\text { Multiplicative inverse of } a} & {-a} & {\text { Additive inverse of } a} \\\ {a^{n}} & {\text { Power of } a} & {n a} & {\text { Multiple of } a} \\\ {a b^{-1}} & {\text { Quotient }} & {a-b} & {\text { Difference }}\end{array}$
+
+---
 
 So, $g^{-3}$ means $(-g) + (-g) + (-g)$ and is written as $-3g$.
 
-As is the case for real numbers, we use a - $b$ as an abbreviation for a +
-(-b).
+As is the case for real numbers, we use $a - b$ as an abbreviation for $a + (-b)$.
 
-![image](assets/upsc/mathematics_optional/algebra/groups_16.png)
+_Note:_ $a^{2}\left(b c d b^{2}\right)=a^{2} b(c d) b^{2}=\left(a^{2} b\right)(c d) b^{2}=a(a b c d b) b$
 
-![image](assets/upsc/mathematics_optional/algebra/groups_17.png)
+---
+
+**Theorem 2.4:** For group elements $a$ and $b,(a b)^{-1}=b^{-1} a^{-1}$ (easy to prove) 
+
+---
 
 ## Dihedral Group
 
