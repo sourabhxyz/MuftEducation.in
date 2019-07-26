@@ -39,30 +39,58 @@ some pair of elements $a$ and $b$ for which $ab \neq ba$.
   under addition modulo $n .$ For any $j>0$ in $Z_{n},$ the inverse of $j$ is $n-j$ .
   This group is usually referred to as the group of integers modulo $n .$
 
-- Note: An integer $a$ has a multiplicative inverse modulo $n$ if and only if $a$ and $n$ are relatively prime (easy to prove, and a very important observation is that if integer $a$ has multiplicative inverse $b$, then we can as well say that $a$ is the multiplicative inverse of $b$ and therefore $b$ and $n$ are relatively prime). So, for each $n > 1$, we define $U(n)$ to be the set of all positive integers less than $n$ and relatively prime to $n$. Then $U(n)$ is a group under multiplication modulo $n$. (Note that this set is closed under this operation (Proof: $at\_1 + nt\_2 = 1, bt\_3 + nt\_4 = 1 \Rightarrow abt\_1t\_3 + at\_1nt\_4 + nt\_2bt\_3 + n^2t\_2t\_4 \Rightarrow ab(..) + n(..) = 1$).) For $n = 10$, we have $U(10) = \\{1, 3, 7, 9\\}$.
+- Note: An integer $a$ has a multiplicative inverse modulo $n$ if and only if $a$ and $n$ are relatively prime (easy to prove, and a very important observation is that if $b$ is the multiplicative inverse of $a$ then $ab \bmod n = 1$ now if $b < 0$ then we have $ab \bmod n = ((a \bmod n) \times (-1 \bmod n) \times (|b| \bmod n)) \bmod n$ $= a(|b| \times (n - 1)) \bmod n$ Thus multiplicative inverse can be made positive and therefore the obtained inverse is relatively prime with $n$). So, for each $n > 1$, we define $U(n)$ to be the set of all positive integers less than $n$ and relatively prime to $n$. Then $U(n)$ is a group under multiplication modulo $n$. (Note that this set is closed under this operation (Proof: $at\_1 + nt\_2 = 1, bt\_3 + nt\_4 = 1 \Rightarrow abt\_1t\_3 + at\_1nt\_4 + nt\_2bt\_3 + n^2t\_2t\_4 \Rightarrow ab(..) + n(..) = 1$).) For $n = 10$, we have $U(10) = \\{1, 3, 7, 9\\}$.
 
 - The set of integers under subtraction is not a group, since
   the operation is not associative.
+- The set $\\{1, 2, \dots , n - 1\\}$ is a group under multiplication modulo $n$ if and only if $n$ is prime (as each element must possess an inverse).
+- The set of all $2 \times 2$ matrices with determinant 1 with entries from $Q$ (rationals), $\mathbf{R}(\text { reals }), \mathbf{C}(\text { complex numbers }),$ or $Z_{p}(p \text { a prime) }$
+is a non-Abelian group under matrix multiplication. This group is called
+the special linear group of $2 \times 2$ matrices over $Q, \mathbf{R},$ or $Z_{p},$ respectively.
+If the entries are from $F,$ where $F$ is any of the above, we denote this group
+by $S L(2, F) .$ For the group $S L(2, F),$ the formula for the inverse of $\left[\begin{array}{cc}{a} & {b} \\\ {c} & {d}\end{array}\right]$ simplifies to $\left[\begin{array}{rr}{d} & {-b} \\\ {-c} & {a}\end{array}\right] .$ When the matrix
+entries are from $Z_{p},$ we use modulo $p$ arithmetic to compute determinants, matrix products, and inverses. To illustrate the case $S L\left(2, Z_{5}\right)$ consider the element $A=\left[\begin{array}{cc}{3} & {4} \\\ {4} & {4}\end{array}\right] .$ Then det $A=(3 \cdot 4-4 \cdot 4) \bmod 5=$
+$-4 \bmod 5=1,$ and the inverse of $A$ is $\left[\begin{array}{rr}{4} & {-4} \\\ {-4} & {3}\end{array}\right]=\left[\begin{array}{rr}{4} & {1} \\\ {1} & {3}\end{array}\right] .$ Note that $\left[\begin{array}{ll}{3} & {4} \\\ {4} & {4}\end{array}\right]\left[\begin{array}{ll}{4} & {1} \\\ {1} & {3}\end{array}\right]=\left[\begin{array}{ll}{1} & {0} \\\ {0} & {1}\end{array}\right]$ when the arithmetic is done modulo 5
 
-![image](assets/upsc/mathematics_optional/algebra/groups_4.png)
+- Let $F$ be any of $Q, \mathbf{R}, \mathbf{C},$ or $Z_{p}(p \text { a prime). The set }$ $G L(2, F)$ of all $2 \times 2$ matrices with nonzero determinants and entries
+from $F$ is a non-Abelian group under matrix multiplication. When $F$ is $Z_{p},$ modulo $p$ arithmetic is used to calculate
+determinants, matrix products, and inverses. The usual formula for the inverse of $\left[\begin{array}{cc}{a} & {b} \\\ {c} & {d}\end{array}\right]$ remains valid for elements from
+$G L\left(2, Z_{p}\right),$ provided we interpret division by $a d-b c$ as multiplication
+by the inverse of $(a d-b c)$ modulo $p .$ For example, in $G L\left(2, Z_{7}\right)$
+consider $\left[\begin{array}{cc}{4} & {5} \\\ {6} & {3}\end{array}\right] .$ Then the determinant $(a d-b c) \bmod 7$ is $(12-30)$
+$\bmod 7=-18 \bmod 7=3$ and the inverse of 3 is 5$[\operatorname{since}(3 \cdot 5))$
+$\bmod 7=1 ] .$ So, the inverse of $\left[\begin{array}{cc}{4} & {5} \\\ {6} & {3}\end{array}\right]$ is $\left[\begin{array}{cc}{3 \cdot 5} & {2 \cdot 5} \\\ {1 \cdot 5} & {4 \cdot 5}\end{array}\right]=\left[\begin{array}{cc}{1} & {3} \\\ {5} & {6}\end{array}\right]$ [The reader should check that $\left[\begin{array}{cc}{4} & {5} \\\ {6} & {3}\end{array}\right]\left[\begin{array}{cc}{1} & {3} \\\ {5} & {6}\end{array}\right]=\left[\begin{array}{cc}{1} & {0} \\\ {0} & {1}\end{array}\right]$ in $G L\left(2, Z_{7}\right) ]$ The group $G L(n, F)$ is called the general linear group of $n \times n$
+matrices over $F .$
 
-![image](assets/upsc/mathematics_optional/algebra/groups_5.png)
-
-![image](assets/upsc/mathematics_optional/algebra/groups_6.png)
-
-**Example:** The set {1, 2, . . . , n - 1} is a group under
-multiplication modulo n if and only if n is prime (as each element must
-possess an inverse).
-
-![image](assets/upsc/mathematics_optional/algebra/groups_7.png)
+- The set of all symmetries of the infinite ornamental pattern in which arrowheads are spaced uniformly a unit apart along a line is an Abelian group under composition. Let $T$ denote a translation
+  to the right by one unit, $T^{-1}$ a translation to the left by one unit, and $H$
+  a reflection across the horizontal line of the figure. Then, every member
+  of the group is of the form $x_{1} x_{2} \cdots x_{n},$ where each $x_{i} \in$ $\left\\{T, T^{-1}, H\right\\} .$ In this case, we say that $T, T^{-1},$ and $H$ generate the group.
+  
+  ![image](assets/upsc/mathematics_optional/algebra/groups_arrow.png)
+  
+## Properties
 
 The following three theorems were very easy to prove for me.
 
-![image](assets/upsc/mathematics_optional/algebra/groups_8.png)
+---
+**Theorem 2.1** In a group $G$, there is only one identity element.
 
-![image](assets/upsc/mathematics_optional/algebra/groups_9.png)
+**Proof:** Suppose both $e$ and $e^{\prime}$ are identities of $G .$ Then
+1. $a e=a$ for all $a$ in $G,$ and
+2. $e^{\prime} a=a$ for all $a$ in $G .$
 
-![image](assets/upsc/mathematics_optional/algebra/groups_10.png)
+The choices of $a=e^{\prime}$ in (part 1$)$ and $a=e$ in (part 2$)$ yield $e^{\prime} e=e^{\prime}$
+and $e^{\prime} e=e .$ Thus, $e$ and $e^{\prime}$ are both equal.
+
+---
+
+---
+
+**Theorem 2.2:** In a group $G,$ the right and left cancellation laws hold; that is ,
+$b a=c a$ implies $b=c,$ and $a b=a c$ implies $b=c$ (easy to see)
+
+---
 
 A consequence of the cancellation property is the fact that in a Cayley
 table for a group, each group element occurs exactly once in each row
@@ -71,7 +99,11 @@ doesn't occur in column of $R$, its not possible as we have
 $R^{-1}M =$ something (binary composition). Now to prove at most 1, we
 have $RM = K$ and $RN = K \Rightarrow RM = RN \Rightarrow M = N$.
 
-![image](assets/upsc/mathematics_optional/algebra/groups_11.png)
+---
+
+**Theorem 2.3:** Inverse is unique (easy to prove)
+
+---
 
 So we will unambiguously denote the inverse by $g^{-1}$
 
