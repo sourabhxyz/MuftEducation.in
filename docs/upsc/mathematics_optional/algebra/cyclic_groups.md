@@ -4,7 +4,7 @@ title: Cyclic Groups
 sidebar_label: Cyclic Groups
 ---
 
-**Example** The set $Z\_n = \\{0, 1, . . . , n - 1\\}$ for $n \geq 1$ is a cyclic group under addition modulo $n$. Again (was in case for group $Z$), 1 and -1 = n - 1 are generators.
+**Example** The set $Z\_n = \\{0, 1, . . . , n - 1\\}$ for $n \geq 1$ is a cyclic group under addition modulo $n$. Again as was in case for group $Z$, 1 and -1 = n - 1 are generators.
 
 **Example** $Z\_8 = <1> = <3> = <5> = <7>$.
 
@@ -14,7 +14,7 @@ sidebar_label: Cyclic Groups
 
 **Corollary** $a^k = e$ Implies That $|a|$ Divides $k$.
 
-What is important about Theorem 1 in the finite case is that it says that multiplication in $< a >$ is essentially done by addition modulo $n$. That is, if $(i+j) \bmod n = k$, then $a^ia^j = a^k$.
+What is important about Theorem 4.1 in the finite case is that it says that multiplication in $< a >$ is essentially done by addition modulo $n$. That is, if $(i+j) \bmod n = k$, then $a^ia^j = a^k$.
 
 Thus, no matter what group $G$ is, or how the element $a$ is chosen, multiplication in $< a >$ works the same as addition in $Z\_n$ whenever $|a| = n$. Similarly, if $a$ has infinite order, then multiplication in $< a >$ works the same as addition in $Z$, since $a^ia^j = a^{i+j}$ and no modular arithmetic is done.
 For these reasons, the cyclic groups $Z\_n$ and $Z$ serve as prototypes for all cyclic groups, and algebraists say that there is essentially only one cyclic group of each order.
@@ -39,3 +39,9 @@ $3 \bmod 50 = 3, 3^3 \bmod 50 = 27, 3^7 \bmod 50 = 37, 3^9 \bmod 50 = 33$,
 $3^{11} \bmod 50 = 47, 3^{13} \bmod 50 = 23, 3^{17} \bmod 50 = 13, 3^{19} \bmod 50 = 17$
 
 We should keep in mind that Theorem 4.2 and its corollaries apply only to elements of finite order.
+
+## Classification of Subgroups of Cyclic Groups
+
+---
+
+**Theorem 4.3** Every subgroup of a cyclic group is cyclic. Moreover, if $|< a >| = n$, then the order of any subgroup of $< a >$ is a divisor of $n$; and, for each positive divisor $k$ of $n$, the group $< a >$ has exactly one subgroup of order $k$—namely, $< a^{n/k} >$.

@@ -57,7 +57,7 @@ is unique, except for the order in which the factors appear.
 
 ## LCM
 
-The least common multiple of two nonzero integers $a$ and $b$ is the smallest positive integer that is $a$ multiple of both $a$ and $b$.
+The least common multiple of two nonzero integers $a$ and $b$ is the smallest positive integer that is a multiple of both $a$ and $b$.
 
 ## Modulo Arithmetic
 
