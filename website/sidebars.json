@@ -1,5 +1,10 @@
 {
   "docs": {},
+  "btect_cs_compiler_project": {
+    "Compiler Project": [
+      "btect/cs/compiler_project/riscv/basic"
+    ]
+  },
   "upsc_mop_algebra": {
     "Algebra": [
       "upsc/mathematics_optional/algebra/intro",
