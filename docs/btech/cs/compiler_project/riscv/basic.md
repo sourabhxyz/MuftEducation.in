@@ -6,7 +6,9 @@ sidebar_label: Tutorial On RISC V
 
 ## Simulator
 
-Visit http://www.kvakil.me/venus/, Github repo: https://github.com/kvakil/venus
+* I'll be using [Rars](https://github.com/TheThirdOne/rars), also see description of system calls [here](https://github.com/TheThirdOne/rars/wiki/Environment-Calls).
+
+* Can try [Venus](http://www.kvakil.me/venus/), Github repo: https://github.com/kvakil/venus. Note that for system calls, their argument register is different, see [this](https://github.com/TheThirdOne/rars/issues/45). 
 
 ## Examples
 

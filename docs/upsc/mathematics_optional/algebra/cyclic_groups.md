@@ -45,3 +45,58 @@ We should keep in mind that Theorem 4.2 and its corollaries apply only to elemen
 ---
 
 **Theorem 4.3** Every subgroup of a cyclic group is cyclic. Moreover, if $|< a >| = n$, then the order of any subgroup of $< a >$ is a divisor of $n$; and, for each positive divisor $k$ of $n$, the group $< a >$ has exactly one subgroup of order $k$—namely, $< a^{n/k} >$.
+
+**Proof:** Let $G=\langle a\rangle$ and suppose that $H$ is a subgroup of $G .$ We must show that $H$ is cyclic. If it consists of the identity alone, then clearly $H$ is
+cyclic. So we may assume that $H \neq\{e\} .$ We now claim that $H$ contains an element of the form $a^{t},$ where $t$ is positive. since $G=\langle a\rangle,$ every
+element of $H$ has the form $a^{t} ;$ and when $a^{t}$ belongs to $H$ with $t<0,$ then
+$a^{-t}$ belongs to $H$ also and $-t$ is positive. Thus, our claim is verified. Now
+let $m$ be the least positive integer such that $a^{m} \in H .$ By closure, $\left\langle a^{m}\right\rangle \subseteq H .$
+We next claim that $H=\left\langle a^{m}\right\rangle .$ To prove this claim, it suffices to let $b$ be an arbitrary member of $H$ and show that $b$ is in $\left\langle a^{m}\right\rangle .$ since $ b \in G=\langle a\rangle,$ we
+have $ b=a^{k}$ for some $k .$ Now, apply the division algorithm to $k$ and $m$ to
+obtain integers $q$ and $r$ such that $k=m q+r$ where $0 \leq r<m .$ Then $a^{k}=$
+$a^{m q+r}=a^{m q} a^{r},$ so that $a^{r}=a^{-m q} a^{k} .$ since $a^{k}=b \in H$ and $a^{-m q}=$
+$\left(a^{m}\right)^{-q}$ is in $H$ also, $a^{r} \in H .$ But, $m$ is the least positive integer such that
+$a^{m} \in H,$ and $0 \leq r<m,$ so $r$ must be $0 .$ The theorem that every sub-
+group of a cyclic group is cyclic. 
+
+To prove the next portion of the theorem, suppose that $|\langle a\rangle|=n$ and
+$H$ is any subgroup of $\langle a\rangle .$ We have already shown that $ H=\left\langle a^{m}\right\rangle,$ where
+$m$ is the least positive integer such that $a^{m} \in H .$ Using $e=b=a^{n}$ as in
+the preceding paragraph, we have $n=m q .$
+
+Finally, let $k$ be any positive divisor of $n .$ We will show that $\left\langle a^{n / k}\right\rangle$ is
+the one and only subgroup of $\langle a\rangle$ of order $ k .$ From Theorem $4.2,$ we see
+that $\left\langle a^{n / k}\right\rangle$ has order $ n / \operatorname{gcd}(n, n / k)=n /(n / k)=k .$ Now let $H$ be any
+subgroup of $\langle a\rangle$ of order $ k .$ We have already shown above that $H=\left\langle a^{m}\right\rangle$ ,
+where $m$ is a divisor of $n .$ Then $m=\operatorname{gcd}(n, m)$ and $k=\left|a^{m}\right|=| a^{\operatorname{gcd}(n, m) |}=$ $n / \operatorname{gcd}(n, m)=n / m .$ Thus, $m=n / k$ and $H=\left\langle a^{n / k}\right\rangle$.
+
+---
+
+Taking the group in Theorem 4.3 to be $Z_n$ and $a$ to be 1, we obtain
+the following important special case.
+
+**Corollary:** For each positive divisor $k$ of $n,$ the set $\langle n / k\rangle$ is the unique subgroup
+of $ Z_{n}$ of order $k$ ; moreover, these are the only subgroups of $Z_{n}$ .
+
+**Examples:**
+
+- To find the generators of the subgroup of order 9 in $Z_{36},$ we observe that $36 / 9=4$ is one generator. To find the others, we
+  have from Corollary 3 of Theorem 4.2 that they are all elements of $Z_{36}$
+  of the form 4$j$ , where $\operatorname{gcd}(9, j)=1 .$ Thus,
+
+  $$
+  \langle 4 \cdot 1\rangle=\langle 4 \cdot 2\rangle=\langle 4 \cdot 4\rangle=\langle 4 \cdot 5\rangle=\langle 4 \cdot 7\rangle=\langle 4 \cdot 8\rangle
+  $$
+
+Let $\phi(1)=1,$ and for any integer $n>1,$ let $\phi(n)$ denote the number of positive integers less than $n$ and relatively prime to $n$
+
+---
+
+**Theorem 4.4:** If $d$ is a positive divisor of $n,$ the number of elements of order $d$ in $a$ cyclic group of order $n$ is $\phi(d)$. (Easy to see by above example)
+
+---
+
+Notice that for a finite cyclic group of order $n,$ the number of elements
+of order $d$ for any divisor $d$ of $n$ depends only on $d .$ Thus, $Z_{8}, Z_{640},$ and
+$Z_{8000}$ each have $\phi(8)=4$ elements of order $8 .$
+
