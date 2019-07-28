@@ -68,7 +68,7 @@ Finally, let $k$ be any positive divisor of $n .$ We will show that $\left\langl
 the one and only subgroup of $\langle a\rangle$ of order $ k .$ From Theorem $4.2,$ we see
 that $\left\langle a^{n / k}\right\rangle$ has order $ n / \operatorname{gcd}(n, n / k)=n /(n / k)=k .$ Now let $H$ be any
 subgroup of $\langle a\rangle$ of order $ k .$ We have already shown above that $H=\left\langle a^{m}\right\rangle$ ,
-where $m$ is a divisor of $n .$ Then $m=\operatorname{gcd}(n, m)$ and $k=\left|a^{m}\right|=| a^{\operatorname{gcd}(n, m) |}=$ $n / \operatorname{gcd}(n, m)=n / m .$ Thus, $m=n / k$ and $H=\left\langle a^{n / k}\right\rangle$.
+where $m$ is a divisor of $n .$ Then $m=\operatorname{gcd}(n, m)$ and $k=\left|a^{m}\right|=| a^{\operatorname{gcd}(n, m)}|=$ $n / \operatorname{gcd}(n, m)=n / m .$ Thus, $m=n / k$ and $H=\left\langle a^{n / k}\right\rangle$.
 
 ---
 
@@ -99,4 +99,20 @@ Let $\phi(1)=1,$ and for any integer $n>1,$ let $\phi(n)$ denote the number of p
 Notice that for a finite cyclic group of order $n,$ the number of elements
 of order $d$ for any divisor $d$ of $n$ depends only on $d .$ Thus, $Z_{8}, Z_{640},$ and
 $Z_{8000}$ each have $\phi(8)=4$ elements of order $8 .$
+
+
+---
+
+**Corollary:** In a finite group, the number of elements of order d is a multiple
+of $\phi(d)$
+
+**Proof:** If a finite group has no elements of order $d,$ the statement is true, since $\phi(d)$ divides $0 .$ Now suppose that $a \in G$ and $|a|=d .$ By
+Theorem $4.4,$ we know that $\langle a\rangle$ has $\phi(d)$ elements of order $d .$ If all
+elements of order $d$ in $G$ are in $\langle a\rangle,$ we are done. So, suppose that there
+is an element $b$ in $G$ of order $d$ that is not in $\langle a\rangle .$ Then, $\langle b\rangle$ also has $\phi(d)$
+elements of order $d .$ This means that we have found 2$\phi(d)$ elements of order $d$ in $G$ provided that $\langle a\rangle$ and $\langle b\rangle$ have no elements of order $d$ in
+common. If there is an element $c$ of order $d$ that belongs to both $\langle a\rangle$ and
+$\langle b\rangle,$ then we have $\langle a\rangle=\langle b\rangle=\langle b\rangle,$ so that $ b \in\langle a\rangle,$ which is a contradiction. Continuing in this fashion, we see that the number of elements of order $d$ in a finite group is a multiple of $\phi(d)$.
+
+---
 
