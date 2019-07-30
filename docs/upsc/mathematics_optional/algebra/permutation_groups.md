@@ -6,8 +6,7 @@ sidebar_label: Permutation Groups
 
 ---
 A permutation of a set $A$ is a function from $A$ to $A$ that is both one-
-to-one and onto. A permutation group of a set $A$ is a set of permuta-
-tions of $A$ that forms a group under function composition.
+to-one and onto. A permutation group of a set $A$ is a set of permutations of $A$ that forms a group under function composition.
 
 ---
 
@@ -56,8 +55,7 @@ Consider,
 $\beta=\left[\begin{array}{llllll}{1} & {2} & {3} & {4} & {5} & {6} \\\ {5} & {3} & {1} & {6} & {2} & {4}\end{array}\right]$
 
 In cycle notation, $\beta$ can be written $(2,3,1,5)(6,4)$ or $(4,6)(3,1,5,2),$
-since both of these unambiguously specify the function $\beta .$ An expres-
-sion of the form $\left(a_{1}, a_{2}, \ldots, a_{m}\right)$ is called a cycle of length $m$ or an
+since both of these unambiguously specify the function $\beta .$ An expression of the form $\left(a_{1}, a_{2}, \ldots, a_{m}\right)$ is called a cycle of length $m$ or an
 $m-c y c l e .$
 
 A multiplication of cycles can be introduced by thinking of a cycle
@@ -154,7 +152,7 @@ cycles. The general case involving more than two cycles can be handled in an ana
 
 - We determine the number of elements of $S_{7}$ of order 3. By Theorem $5.3,$ we need only count the number of permutations of
   the forms $\left(a_{1} a_{2} a_{3}\right)$ and $\left(a_{1} a_{2} a_{3}\right)\left(a_{4} a_{5} a_{6}\right) .$ In the first case consider the
-  triple $a_{1} a_{2} a_{3} .$ Clearly there are 7$\cdot 6 \cdot 5$ such triples. But this product counts the permutation $\left(a_{1} a_{2} a_{3}\right)$ three times (for example, it counts $134,$
+  triple $a_{1} a_{2} a_{3} .$ Clearly there are $7 \cdot 6 \cdot 5$ such triples. But this product counts the permutation $\left(a_{1} a_{2} a_{3}\right)$ three times (for example, it counts $134,$
   $341,413$ as distinct triples whereas the cycles $(134),(341),$ and $(413)$
   are the same group element). Thus, the number of permutations in $S_{7}$ for the form $\left(a_{1} a_{2} a_{3}\right)$ is $(7 \cdot 6 \cdot 5) / 3=70$ . For elements of $S_{7}$ of the form
   $\left(a_{1} a_{2} a_{3}\right)\left(a_{4} a_{5} a_{6}\right)$ there are $(7 \cdot 6 \cdot 5) / 3$ ways to create the first cycle and
@@ -174,5 +172,13 @@ $\left(a_{1} a_{k}\right)\left(a_{1} a_{k-1}\right) \cdots\left(a_{1} a_{2}\righ
 $\cdots\left(c_{1} c_{s}\right)\left(c_{1} c_{s-1}\right) \cdot \cdot \cdot\left(c_{1} c_{2}\right)$
 
 This completes the proof.
+
+---
+
+---
+
+**Lemma:** If $\varepsilon=\beta_{1} \beta_{2} \cdots \beta_{r},$ where the $\beta^{\prime}$ s are 2 -cycles, then $r$ is even.
+
+**Proof:** lkj
 
 ---

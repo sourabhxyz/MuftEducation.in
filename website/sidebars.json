@@ -12,7 +12,8 @@
       "upsc/mathematics_optional/algebra/groups",
       "upsc/mathematics_optional/algebra/subgroups",
       "upsc/mathematics_optional/algebra/cyclic_groups",
-      "upsc/mathematics_optional/algebra/permutation_groups"
+      "upsc/mathematics_optional/algebra/permutation_groups",
+      "upsc/mathematics_optional/algebra/coset_lagrange"
     ]
   },
   "upsc_mop_linear_algebra": {

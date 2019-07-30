@@ -78,6 +78,8 @@ the following important special case.
 **Corollary:** For each positive divisor $k$ of $n,$ the set $\langle n / k\rangle$ is the unique subgroup
 of $ Z_{n}$ of order $k$ ; moreover, these are the only subgroups of $Z_{n}$ .
 
+**Corollary:** Only subgroups of $\mathbb{Z}$ are $m\mathbb{Z}$ (i.e. multiples of $m$). (Can be proved in a similar way)
+
 **Examples:**
 
 - To find the generators of the subgroup of order 9 in $Z_{36},$ we observe that $36 / 9=4$ is one generator. To find the others, we
@@ -112,7 +114,7 @@ elements of order $d$ in $G$ are in $\langle a\rangle,$ we are done. So, suppose
 is an element $b$ in $G$ of order $d$ that is not in $\langle a\rangle .$ Then, $\langle b\rangle$ also has $\phi(d)$
 elements of order $d .$ This means that we have found 2$\phi(d)$ elements of order $d$ in $G$ provided that $\langle a\rangle$ and $\langle b\rangle$ have no elements of order $d$ in
 common. If there is an element $c$ of order $d$ that belongs to both $\langle a\rangle$ and
-$\langle b\rangle,$ then we have $\langle a\rangle=\langle b\rangle=\langle b\rangle,$ so that $ b \in\langle a\rangle,$ which is a contradiction. Continuing in this fashion, we see that the number of elements of order $d$ in a finite group is a multiple of $\phi(d)$.
+$\langle b\rangle,$ then we have $\langle a\rangle=\langle c\rangle=\langle b\rangle,$ so that $ b \in\langle a\rangle,$ which is a contradiction. Continuing in this fashion, we see that the number of elements of order $d$ in a finite group is a multiple of $\phi(d)$.
 
 ---
 
