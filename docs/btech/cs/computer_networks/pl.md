@@ -301,10 +301,8 @@ $$
 where $b_{i} \in\{0,1\} .$ To recover station $j^{\prime}$ s signal, the receiver will just take
 the inner product of $Y$ with $S_{j}$ . i.e.,
 
-$Y \bullet S_{j} =\sum_{i} b_{i} \cdot S_{i} \bullet S_{j}+(1-b_{i}) \cdot \overline{S}_{i} \bullet S_{j}$
-
 $$
-\begin{aligned} Y \bullet S_{j} & =\sum_{i} b_{i} \cdot S_{i} \bullet S_{j}+(1-b_{i}) \cdot \overline{S}_{i} \bullet S_{j} \\\ & = b_{j}+(1-b_{j}) \cdot-1=2 b_{j}-1 \end{aligned}
+\begin{aligned} Y \bullet S_{j} &=\sum_{i} b_{i} \cdot S_{i} \bullet S_{j}+\left(1-b_{i}\right) \cdot \overline{S_{i}} \bullet S_{j} \\\ &=b_{j}+\left(1-b_{j}\right) \cdot-1=2 b_{j}-1 \end{aligned}
 $$
 
 Equivalently, we have
