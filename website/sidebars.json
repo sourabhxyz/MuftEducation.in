@@ -1,8 +1,14 @@
 {
   "docs": {},
-  "btect_cs_compiler_project": {
+  "btech_cs_compiler_project": {
     "Compiler Project": [
-      "btect/cs/compiler_project/riscv/basic"
+      "btech/cs/compiler_project/riscv/basic"
+    ]
+  },
+  "btech_cs_computer_networks": {
+    "Computer Networks": [
+      "btech/cs/computer_networks/basic",
+      "btech/cs/computer_networks/pl"
     ]
   },
   "upsc_mop_algebra": {
