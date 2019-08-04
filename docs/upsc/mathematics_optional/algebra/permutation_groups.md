@@ -173,12 +173,73 @@ $\cdots\left(c_{1} c_{s}\right)\left(c_{1} c_{s-1}\right) \cdot \cdot \cdot\left
 
 This completes the proof.
 
+*Note: Many authors call two length cycles as transpositions*
+
 ---
 
 ---
 
 **Lemma:** If $\varepsilon=\beta_{1} \beta_{2} \cdots \beta_{r},$ where the $\beta^{\prime}$ s are 2 -cycles, then $r$ is even.
 
-**Proof:** lkj
+**Proof:** Clearly, $r \neq 1,$ since a 2 -cycle is not the identity. If $r=2,$ we are done. So, we suppose that $r>2,$ and we proceed by induction. Suppose that the rightmost 2 -cycle is $(a b) .$ Then, since $(i j)=(j i)$ , the
+product $\beta_{r-1} \beta_{r}$ can be expressed in one of the following forms shown
+on the right:
+
+$\begin{aligned} \varepsilon &=(a b)(a b) \\\ (a b)(b c) &=(a c)(a b) \\\ (a c)(c b) &=(b c)(a b) \\\ (a b)(c d) &=(c d)(a b) \end{aligned}$
+
+If the first case occurs, we may delete $\beta_{r-1} \beta_{r}$ from the original product
+to obtain $\varepsilon=\beta_{1} \beta_{2} \cdots \beta_{r-2},$ and therefore, by the Second Principle of
+Mathematical Induction, $r-2$ is even. In the other three cases, we
+replace the form of $\beta_{r-1} \beta_{r}$ on the right by its counterpart on the left to obtain a new product of $r $ 2-cycles that is still the identity, but where
+the rightmost occurrence of the integer $a$ is in the second-from-the-
+rightmost 2 -cycle of the product instead of the rightmost 2 -cycle. We now
+repeat the procedure just described with $\beta_{r-2} \beta_{r-1},$ and, as before, we obtain a product of $(r-2) 2$ -cycles equal to the identity or a new product
+of $r $ 2-cycles, where the rightmost occurrence of $a$ is in the third 2 -cycle
+from the right. Continuing this process, we must obtain a product of
+$(r-2)$ - -cycles equal to the identity, because otherwise we have a product equal to the identity in which the only occurrence of the integer $a$ is in the
+leftmost 2 -cycle, and such a product does not fix $a,$ whereas the identity
+does. Hence, by the Second Principle of Mathematical Induction, $r-2$ is even, and $r$ is even as well.
 
 ---
+
+---
+
+**Theorem 5.5:** If a permutation $\alpha$ can be expressed as a product of an even (odd) number of 2-cycles, then every decomposition of a into a product of
+2-cycles must have an even (odd) number of 2-cycles. In symbols, if $\alpha=\beta_{1} \beta_{2} \cdots \beta_{r} \quad$ and $\quad \alpha=\gamma_{1} \gamma_{2} \cdots \gamma_{s}$ where the $\beta$'s and the $\gamma$'s are 2-cycles, then $r$ and $s$ are both even or both odd.
+
+**Proof:** Observe that $\beta_{1} \beta_{2} \cdots \beta_{r}=\gamma_{1} \gamma_{2} \cdots \gamma_{s}$ implies
+
+$$
+\begin{array}{l}{\varepsilon=\gamma_{1} \gamma_{2} \cdots \gamma_{s} \beta_{r}^{-1} \ldots \beta_{2}^{-1} \beta_{1}^{-1}} \\\ {\quad=\gamma_{1} \gamma_{2} \cdots \gamma_{s} \beta_{r} \cdots \beta_{2} \beta_{1}}\end{array}
+$$
+
+since a 2-cycle is its own inverse. Thus, we have $s + r$ is even. It follows that $r$ and $s$ are both even or both odd.
+
+---
+
+A permutation that can be expressed as a product of an even number
+of 2-cycles is called an even permutation. A permutation that can
+be expressed as a product of an odd number of 2-cycles is called an
+odd permutation.
+
+---
+
+**Theorem 5.6:** The set of even permutations in $S_{n}$ forms a subgroup of $S_{n}$ (easy to prove)
+
+---
+
+The group of even permutations of $n$ symbols is denoted by $A_{n}$ and is
+called the alternating group of degree $n .$
+
+---
+
+**Theorem 5.7:** For $n>1, A_{n}$ has order $n ! / 2$
+
+**Proof:** For each odd permutation $\alpha,$ the permutation $(12) \alpha$ is even and, by the cancellation property in groups, $(12) \alpha \neq(12) \beta$ when $\alpha \neq \beta$ . Thus,
+there are at least as many even permutations as there are odd ones. On the
+other hand, for each even permutation $\alpha$ , the permutation $(12) \alpha$ is odd and
+$(12) \alpha \neq(12) \beta$ when $\alpha \neq \beta .$ Thus, there at least as many odd permutations as there are even ones. It follows that there are equal numbers of even and odd permutations. since $\left|S_{n}\right|=n !,$ we have $\left|A_{n}\right|=n ! / 2$
+
+---
+
+
