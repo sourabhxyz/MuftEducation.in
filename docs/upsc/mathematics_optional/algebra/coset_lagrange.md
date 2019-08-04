@@ -13,7 +13,7 @@ coset of $H$ in G containing a. In this case, the element $a$ is called the cose
 
 ### Properties of Cosets
 
-Let $H$ be a subgroup of $G,$ and let a and b belong to G. Then,
+Let $H$ be a subgroup of $G,$ and let $a$ and $b$ belong to $G$. Then,
 1. $a \in a H .$ (easy to see)
 2. $a H=H$ if and only if $a \in H .$ (easy to prove)
 3. $(a b) H=a(b H)$ and $H(a b)=(H a) b$ (easy to prove)
@@ -32,7 +32,7 @@ Let $H$ be a subgroup of $G,$ and let a and b belong to G. Then,
 
 Note that properties $1,5,$ and $7$ of the lemma guarantee that the left cosets of a subgroup $H$ of $G$ partition $G$ into blocks of equal size. Indeed, we may view the cosets of $H$ as a partitioning of $G$ into equivalence classes under the equivalence relation defined by $a \sim b$ if $a H=b H.$ (basically if they are in same partition then by 4 we have this)
 
-**Example:** (Use case of property 5) To find the cosets of $H=\{1,15\}$ in $G=U(32)=$ $\{1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31\},$ we begin with
+**Example:** (Use case of property 5) To find the cosets of $H=\{1,15\}$ in $G=U(32)=$ $\\{1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31\\},$ we begin with
 $H=\{1,15\} .$ We can find a second coset by choosing any element not
 in $H,$ say $3,$ as a coset representative. This gives the coset $3 H=\{3,13\} .$
 We find our next coset by choosing a representative not already appearing in the two previously chosen cosets, say $5 .$ This gives us the coset $5 H=$
@@ -83,7 +83,7 @@ is denoted by $|G : H| .$
 
 **Corollary 5:** Fermat's Little Theorem, For every integer a and every prime $p, a^{p} \bmod p=a \bmod p$ By the division algorithm, $a=p m+r,$ where $0 \leq r<p$ Thus, $a$ mod $p=r,$ and it suffices to prove that $r^{p}$ mod $p=r .$ If $r=0$
 the result is trivial, so we may assume that $r \in U(p) .$ [Recall that
-$U(p)=\{1,2, \ldots, p-1\}$ under multiplication modulo $p . ]$ Then, by the preceding corollary, $r^{p-1} \bmod p=1$ and, therefore, $r^{p} \bmod p=r$
+$U(p)=\\{1,2, \ldots, p-1\\}$ under multiplication modulo $p . ]$ Then, by the preceding corollary, $r^{p-1} \bmod p=1$ and, therefore, $r^{p} \bmod p=r$
 
 :::note Note
 1. It is relatively easy to prove that if $a, m$ are relatively prime then $a \bmod m (= r), m$ are relatively prime and by similar procedure, we arrive at $r^{\phi(m)} \bmod m = 1$.
