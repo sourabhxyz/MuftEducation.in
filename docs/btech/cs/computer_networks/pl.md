@@ -205,7 +205,7 @@ and satellite networks at a higher level of granularity.
 
 Here, the users take turns (in a round-robin fashion), each one periodically getting the entire bandwidth for a little burst of time. An example of three streams being multiplexed with TDM is shown in Fig. 2-6. Bits from each input stream are taken in a fixed time slot and output to the aggregate stream. This stream runs at the sum rate of the individual streams. For this to work, the streams must be synchronized in time. Small intervals of guard time analogous to a frequency guard band may be added to accommodate small timing variations.
 
-![TDM](../../../assets/btech/cs/computer_networks/p2.png)
+![TDM](../../../assets/btech/cs/computer_networks/p5.png)
 *Figure 2-6: [Tanenbaum] TDM*
 
 ## CDM
