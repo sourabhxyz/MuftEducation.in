@@ -12,16 +12,14 @@ $$
 g(t)=\frac{1}{2} c+\sum_{n=1}^{\infty} a_{n} \sin (2 \pi n f t)+\sum_{n=1}^{\infty} b_{n} \cos (2 \pi n f t)
 $$
 
-where $f=1 / T$ is the fundamental frequency, $a_{n}$ and $b_{n}$ are the sine and cosine am-
-plitudes of the $n$ th harmonics (terms), and $c$ is a constant. 
+where $f=1 / T$ is the fundamental frequency, $a_{n}$ and $b_{n}$ are the sine and cosine amplitudes of the $n$ th harmonics (terms), and $c$ is a constant. 
 
 The $a_{n}$ amplitudes can be computed for any given $g(t)$ by multiplying both
 sides of Eq. by $\sin (2 \pi k f t)$ and then integrating from 0 to $T .$ since
 
 $\int_{0}^{T} \sin (2 \pi k f t) \sin (2 \pi n f t) d t=\left\\{\begin{array}{l}{0 \text { for } k \neq n} \\\ {T / 2 \text { for } k=n}\end{array}\right.$
 
-only one term of the summation survives: $a_{n} .$ The $b_{n}$ summation vanishes com-
-pletely. Similarly, by multiplying Eq. by $\cos (2 \pi k f t)$ and integrating between 0 and $T,$ we can derive $b_{n} .$ By just integrating both sides of the equation as it
+only one term of the summation survives: $a_{n} .$ The $b_{n}$ summation vanishes completely. Similarly, by multiplying Eq. by $\cos (2 \pi k f t)$ and integrating between 0 and $T,$ we can derive $b_{n} .$ By just integrating both sides of the equation as it
 stands, we can find $c .$ The results of performing these operations are as follows:
 
 $a_{n}=\frac{2}{T} \int_{0}^{T} g(t) \sin (2 \pi n f t) d t \quad b_{n}=\frac{2}{T} \int_{0}^{T} g(t) \cos (2 \pi n f t) d t \quad c=\frac{2}{T} \int_{0}^{T} g(t) d t$
@@ -47,14 +45,10 @@ were so low that only the lowest frequencies were transmitted [i.e., if the func
 were being approximated by the first few terms of Eq. (2-1)]. Figure 2-1(b)
 shows the signal that results from a channel that allows only the first harmonic
 (the fundamental, $f$) to pass through. Similarly, Fig. 2-1(c)–(e) show the spectra
-and reconstructed functions for higher-bandwidth channels. For digital transmis-
-sion, the goal is to receive a signal with just enough fidelity to reconstruct the se-
-quence of bits that was sent. We can already do this easily in Fig. 2-1(e), so it is
+and reconstructed functions for higher-bandwidth channels. For digital transmission, the goal is to receive a signal with just enough fidelity to reconstruct the sequence of bits that was sent. We can already do this easily in Fig. 2-1(e), so it is
 wasteful to use more harmonics to receive a more accurate replica.
 
-Given a bit rate of b bits/sec, the time required to send the 8 bits in our ex-
-ample 1 bit at a time is 8/b sec, so the frequency of the first harmonic of this sig-
-nal is b /8 Hz. An ordinary telephone line, often called a voice-grade line, has an
+Given a bit rate of b bits/sec, the time required to send the 8 bits in our example 1 bit at a time is 8/b sec, so the frequency of the first harmonic of this signal is b /8 Hz. An ordinary telephone line, often called a voice-grade line, has an
 artificially introduced cutoff frequency just above 3000 Hz. The presence of this
 restriction means that the number of the highest harmonic passed through is
 roughly 3000/(b/8), or 24,000/b (the cutoff is not sharp).
@@ -62,13 +56,9 @@ For some data rates, the numbers work out as shown in Fig. 2-2. From these
 numbers, it is clear that trying to send at 9600 bps over a voice-grade telephone
 line will transform Fig. 2-1(a) into something looking like Fig. 2-1(c), making
 accurate reception of the original binary bit stream tricky. It should be obvious
-that at data rates much higher than 38.4 kbps, there is no hope at all for binary sig-
-nals, even if the transmission facility is completely noiseless. In other words, lim-
-iting the bandwidth limits the data rate, even for perfect channels. However, cod-
-ing schemes that make use of several voltage levels do exist and can achieve high-
-er data rates. We will discuss these later in this chapter.
+that at data rates much higher than 38.4 kbps, there is no hope at all for binary signals, even if the transmission facility is completely noiseless. In other words, limiting the bandwidth limits the data rate, even for perfect channels. However, coding schemes that make use of several voltage levels do exist and can achieve higher data rates. We will discuss these later in this chapter.
 
-| Bps (b) | T (msec) (8/b) | First Harmonic (Hz) (8/b) | # Harmonics sent |
+| Bps (b) | T (msec) (8/b) | First Harmonic (Hz) (b/8) | # Harmonics sent |
 | ------- | -------------- | ------------------------- | ---------------- |
 | 300     | 26.67          | 37.5                      | 80               |
 | 600     | 13.33          | 75                        | 40               |
@@ -82,8 +72,7 @@ er data rates. We will discuss these later in this chapter.
 
 ## The Maximum Data Rate of a Channel
 
-Nyquist proved that if an arbitrary signal has been run through a low-pass fil-
-ter of bandwidth B, the filtered signal can be completely reconstructed by making
+Nyquist proved that if an arbitrary signal has been run through a low-pass filter of bandwidth B, the filtered signal can be completely reconstructed by making
 only 2B (exact) samples per second. Sampling the line faster than 2B times per
 second is pointless because the higher-frequency components that such sampling
 could recover have already been filtered out. If the signal consists of V discrete
@@ -92,19 +81,15 @@ maximum data rate = 2B log2 V bits/sec
  (2-2)
 For example, a noiseless 3-kHz channel cannot transmit binary (i.e., two-level)
 signals at a rate exceeding 6000 bps.
-So far we have considered only noiseless channels. If random noise is pres-
-ent, the situation deteriorates rapidly. And there is always random (thermal) noise
+So far we have considered only noiseless channels. If random noise is present, the situation deteriorates rapidly. And there is always random (thermal) noise
 present due to the motion of the molecules in the system. The amount of thermal
-noise present is measured by the ratio of the signal power to the noise power, call-
-ed the SNR (Signal-to-Noise Ratio). If we denote the signal power by S and the
+noise present is measured by the ratio of the signal power to the noise power, called the SNR (Signal-to-Noise Ratio). If we denote the signal power by S and the
 noise power by N, the signal-to-noise ratio is S/N. Usually, the ratio is expressed
 on a log scale as the quantity 10 log10 S /N because it can vary over a tremendous
 range. The units of this log scale are called decibels (dB), with ‘‘deci’’ meaning
-10 and ‘‘bel’’ chosen to honor Alexander Graham Bell, who invented the tele-
-phone. An S /N ratio of 10 is 10 dB, a ratio of 100 is 20 dB, a ratio of 1000 is 30
+10 and ‘‘bel’’ chosen to honor Alexander Graham Bell, who invented the telephone. An S /N ratio of 10 is 10 dB, a ratio of 100 is 20 dB, a ratio of 1000 is 30
 dB, and so on. The manufacturers of stereo amplifiers often characterize the
-bandwidth (frequency range) over which their products are linear by giving the 3-
-dB frequency on each end. These are the points at which the amplification factor
+bandwidth (frequency range) over which their products are linear by giving the 3dB frequency on each end. These are the points at which the amplification factor
 has been approximately halved (because 10 log 10 0.5 ∼
  ∼ −3).
 Shannon’s major result is that the maximum data rate or capacity of a noisy
@@ -114,16 +99,12 @@ maximum number of bits/sec = B log2 (1 + S/N)
  (2-3)
 
 This tells us the best capacities that real channels can have. For example, ADSL
-(Asymmetric Digital Subscriber Line), which provides Internet access over nor-
-mal telephone lines, uses a bandwidth of around 1 MHz. The SNR depends
+(Asymmetric Digital Subscriber Line), which provides Internet access over normal telephone lines, uses a bandwidth of around 1 MHz. The SNR depends
 strongly on the distance of the home from the telephone exchange, and an SNR of
 around 40 dB for short lines of 1 to 2 km is very good. With these characteristics,
 the channel can never transmit much more than 13 Mbps ($4log_2(10) \approx 13$), no matter how many or
-how few signal levels are used and no matter how often or how infrequently sam-
-ples are taken. In practice, ADSL is specified up to 12 Mbps, though users often
-see lower rates. This data rate is actually very good, with over 60 years of com-
-munications techniques having greatly reduced the gap between the Shannon ca-
-pacity and the capacity of real systems.
+how few signal levels are used and no matter how often or how infrequently samples are taken. In practice, ADSL is specified up to 12 Mbps, though users often
+see lower rates. This data rate is actually very good, with over 60 years of communications techniques having greatly reduced the gap between the Shannon capacity and the capacity of real systems.
 
 ## Digital Modulation And Multiplexing
 
@@ -133,23 +114,18 @@ signals to represent bits. The process of converting between bits and signals th
 represent them is called digital modulation.
 
 We will start with schemes that directly convert bits into a signal. These
-schemes result in baseband transmission, in which the signal occupies frequen-
-cies from zero up to a maximum that depends on the signaling rate. It is common
+schemes result in baseband transmission, in which the signal occupies frequencies from zero up to a maximum that depends on the signaling rate. It is common
 for wires. Then we will consider schemes that regulate the amplitude, phase, or
 frequency of a carrier signal to convey bits. These schemes result in passband
-transmission, in which the signal occupies a band of frequencies around the fre-
-quency of the carrier signal. It is common for wireless and optical channels for
+transmission, in which the signal occupies a band of frequencies around the frequency of the carrier signal. It is common for wireless and optical channels for
 which the signals must reside in a given frequency band.
-Channels are often shared by multiple signals. After all, it is much more con-
-venient to use a single wire to carry several signals than to install a wire for every
+Channels are often shared by multiple signals. After all, it is much more convenient to use a single wire to carry several signals than to install a wire for every
 signal. This kind of sharing is called multiplexing. It can be accomplished in
-several different ways. We will present methods for time, frequency, and code di-
-vision multiplexing.
+several different ways. We will present methods for time, frequency, and code division multiplexing.
 
 ### Baseband Transmission
 
-The most straightforward form of digital modulation is to use a positive volt-
-age to represent a 1 and a negative voltage to represent a 0. This scheme is called NRZ (Non-Return-to-Zero). An example is shown in Fig. 2-20(b).
+The most straightforward form of digital modulation is to use a positive voltage to represent a 1 and a negative voltage to represent a 0. This scheme is called NRZ (Non-Return-to-Zero). An example is shown in Fig. 2-20(b).
 
 ![Line Codes](../../../assets/btech/cs/computer_networks/p2.png)
 *Figure 2-3. [Tanenbaum] Line codes: (a) Bits, (b) NRZ, (c) NRZI, (d) Manchester, (e) Bipolar or AMI.*
@@ -158,15 +134,12 @@ Once sent, the NRZ signal propagates down the wire. At the other end, the
 receiver converts it into bits by sampling the signal at regular intervals of time.
 
 This signal will not look exactly like the signal that was sent. It will be attenuated
-and distorted by the channel and noise at the receiver. To decode the bits, the re-
-ceiver maps the signal samples to the closest symbols. For NRZ, a positive volt-
-age will be taken to indicate that a 1 was sent and a negative voltage will be taken
+and distorted by the channel and noise at the receiver. To decode the bits, the receiver maps the signal samples to the closest symbols. For NRZ, a positive voltage will be taken to indicate that a 1 was sent and a negative voltage will be taken
 to indicate that a 0 was sent.
 
 One strategy for using limited bandwidth more efficiently is to use more than
 two signaling levels. By using four voltages, for instance, we can send 2 bits at
-once as a single symbol. This design will work as long as the signal at the re-
-ceiver is sufficiently strong to distinguish the four levels. The rate at which the
+once as a single symbol. This design will work as long as the signal at the receiver is sufficiently strong to distinguish the four levels. The rate at which the
 signal changes is then half the bit rate, so the needed bandwidth has been reduced.
 
 We call the rate at which the signal changes the symbol rate to distinguish it
@@ -189,8 +162,7 @@ lines in parallel, but it is wasteful for most network links since if we had ano
 line to send a signal we could use it to send data. A clever trick here is to mix the
 clock signal with the data signal by XORing them together so that no extra line is needed. The results are shown in Fig. 2-2(d). The clock makes a clock transition in every bit time, so it runs at twice the bit rate. This scheme is called Manchester encoding. The downside of Manchester encoding is that it requires twice as much band-width as NRZ because of the clock. A different strategy is based on the idea that we should code the data to
 ensure that there are enough transitions in the signal. Consider that NRZ will
-have clock recovery problems only for long runs of 0s and 1s. If there are fre-
-quent transitions, it will be easy for the receiver to stay synchronized with the incoming stream of symbols.
+have clock recovery problems only for long runs of 0s and 1s. If there are frequent transitions, it will be easy for the receiver to stay synchronized with the incoming stream of symbols.
 
 As a step in the right direction, we can simplify the situation by coding a 1 as
 a transition and a 0 as no transition, or vice versa. This coding is called NRZI
@@ -202,8 +174,7 @@ patterns that do not have too many consecutive 0s. A well-known code to do this 
 a5-bit pattern with a fixed translation table. The five bit patterns are chosen so
 that there will never be a run of more than three consecutive 0s. This scheme adds 25% overhead, which is better than the
 100% overhead of Manchester encoding. Since there are 16 input combinations
-and 32 output combinations, some of the output combinations are not used. Put-
-ting aside the combinations with too many successive 0s, there are still some
+and 32 output combinations, some of the output combinations are not used. Putting aside the combinations with too many successive 0s, there are still some
 codes left. As a bonus, we can use these nondata codes to represent physical layer
 control signals. For example, in some uses "11111" represents an idle line and
 "11000" represents the start of a frame.
@@ -213,17 +184,12 @@ control signals. For example, in some uses "11111" represents an idle line and
 
 ## FDM
 
-FDM (Frequency Division Multiplexing) takes advantage of passband trans-
-mission to share a channel. It divides the spectrum into frequency bands, with
+FDM (Frequency Division Multiplexing) takes advantage of passband transmission to share a channel. It divides the spectrum into frequency bands, with
 each user having exclusive possession of some band in which to send their signal.
 
-In Fig. 2-25 we show three voice-grade tele-
-phone channels multiplexed using FDM. Filters limit the usable bandwidth to
-about 3100 Hz per voice-grade channel. When many channels are multiplexed to-
-gether, 4000 Hz is allocated per channel. The excess is called a guard band. It
-keeps the channels well separated. First the voice channels are raised in frequen-
-cy, each by a different amount. Then they can be combined because no two chan-
-nels now occupy the same portion of the spectrum. Notice that even though there
+In Fig. 2-25 we show three voice-grade telephone channels multiplexed using FDM. Filters limit the usable bandwidth to
+about 3100 Hz per voice-grade channel. When many channels are multiplexed together, 4000 Hz is allocated per channel. The excess is called a guard band. It
+keeps the channels well separated. First the voice channels are raised in frequency, each by a different amount. Then they can be combined because no two channels now occupy the same portion of the spectrum. Notice that even though there
 are gaps between the channels thanks to the guard bands, there is some overlap
 between adjacent channels. The overlap is there because real filters do not have
 ideal sharp edges. This means that a strong spike at the edge of one channel will
@@ -251,15 +217,13 @@ than FDM and TDM. CDM (Code Division Multiplexing) is a form of spread
 spectrum communication in which a narrowband signal is spread out over a
 wider frequency band. This can make it more tolerant of interference, as well as
 allowing multiple signals from different users to share the same frequency band.
-Because code division multiplexing is mostly used for the latter purpose it is com-
-monly called CDMA (Code Division Multiple Access). CDMA allows each station to transmit over the entire frequency spectrum all
+Because code division multiplexing is mostly used for the latter purpose it is commonly called CDMA (Code Division Multiple Access). CDMA allows each station to transmit over the entire frequency spectrum all
 the time.
 
 In CDMA, each bit time is subdivided into m short intervals called chips.
 Typically, there are 64 or 128 chips per bit, but in the example given here we will
 use 8 chips/bit for simplicity. Each station is assigned a unique m-bit code called
-a chip sequence. It is convenient to use a bipolar nota-
-tion to write these codes as sequences of −1 and +1. We will show chip sequences in parentheses.
+a chip sequence. It is convenient to use a bipolar notation to write these codes as sequences of −1 and +1. We will show chip sequences in parentheses.
 
 To transmit a 1 bit, a station sends its chip sequence. To transmit a 0 bit, it
 sends the negation of its chip sequence. No other patterns are permitted. Thus,
@@ -269,8 +233,7 @@ can send a 1 bit by transmiting the chip sequence and a 0 by transmitting
 
 Increasing the amount of information to be sent from b bits/sec to mb
 chips/sec for each station means that the bandwidth needed for CDMA is greater
-by a factor of m than the bandwidth needed for a station not using CDMA (assum-
-ing no changes in the modulation or encoding techniques). If we have a 1-MHz
+by a factor of m than the bandwidth needed for a station not using CDMA (assuming no changes in the modulation or encoding techniques). If we have a 1-MHz
 band available for 100 stations, with FDM each one would have 10 kHz and could
 send at 10 kbps (assuming 1 bit per Hz). With CDMA, each station uses the full 1
 MHz, so the chip rate is 100 chips per bit to spread the station’s bit rate of 10 kbps across the channel.
@@ -279,9 +242,7 @@ stations and the signals that they represent. Each station has its own unique ch
 sequence. Let us use the symbol $S$ to indicate the $m$ -chip vector for station $S$ , and
 $\overline{S}$ for its negation. All chip sequences are pairwise orthogonal, by which we
 mean that the normalized inner product of any two distinct chip sequences, $\mathbf{S}$ and
-$\mathbf{T}$ (written as $\mathbf{S} \bullet \mathbf{T} ),$ is $0 .$ It is known how to generate such orthogonal chip se-
-quences using a method known as Walsh codes. In mathematical terms, ortho-
-gonality of the chip sequences can be expressed as follows:
+$\mathbf{T}$ (written as $\mathbf{S} \bullet \mathbf{T} ),$ is $0 .$ It is known how to generate such orthogonal chip sequences using a method known as Walsh codes. In mathematical terms, orthogonality of the chip sequences can be expressed as follows:
 
 $\mathbf{S} \bullet \mathbf{T} \equiv \frac{1}{m} \sum_{i=1}^{m} S_{i} T_{i}=0$
 

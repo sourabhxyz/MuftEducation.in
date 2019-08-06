@@ -196,3 +196,15 @@ Just as a reflection across a line is a plane symmetry that cannot be
 achieved by a physical motion of the plane in two dimensions, a
 reflection across a plane is a three-dimensional symmetry that cannot be
 achieved by a physical motion of three-dimensional space.
+
+### Another Representation of $D_n$
+
+Let $S = \mathbb{R}^2$ and $n \in \mathbb{N}; n > 2$
+
+Consider, 
+
+$f: S \rightarrow S$ s.t. $f(x, y) = (-x, y)$
+
+and $h: S \rightarrow S$ be a rotation by an angle of $2\pi/n$ in the counterclockwise dirn.
+
+Then $G = \\{f^kh^j \mid k = 0, 1 \text{ and } j = 0, 1, ..., n - 1\\} = D_n$

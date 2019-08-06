@@ -48,6 +48,28 @@ $=\left[\begin{array}{lllll}{1} & {2} & {3} & {4} & {5} \\\ {4} & {2} & {1} & {3
   are exactly $n-2$ possibilities for $\alpha(3)$ . Continuing along in this fashion,
   we see that $S_{n} \operatorname{has} n(n-1) \cdot \cdot 3 \cdot 2 \cdot 1=n !$ elements.
 
+- **Symmetries of a Square**, we associate each motion in D with the permutation of the locations of each
+  4of the four corners of a square. For example, if we label the four corner
+  positions as in the figure below and keep these labels fixed for reference,
+  we may describe a 90° counterclockwise rotation by the permutation
+
+  ![Squre](../../../assets/upsc/mathematics_optional/algebra/perm1.png) 
+
+  $\rho=\left[\begin{array}{llll}{1} & {2} & {3} & {4} \\\ {2} & {3} & {4} & {1}\end{array}\right]$
+
+  whereas a reflection across a horizontal axis yields
+
+  $$
+  \phi=\left[\begin{array}{llll}{1} & {2} & {3} & {4} \\\ {2} & {1} & {4} & {3}\end{array}\right]
+  $$
+
+  These two elements generate the entire group (that is, every element is
+  some combination of the $\rho^{\prime}$ 's and $\phi^{\prime} s ) .$
+
+  When $D_4$ is represented in this way, we see that it is a subgroup
+  of $S_4$.
+
+
 ## Cycle Notation
 
 Consider,

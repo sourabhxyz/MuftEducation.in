@@ -78,11 +78,67 @@ at time 0, at what time would the destination receive all the packets?
 ## Protocol Layering
 
 ![Protocol Layering OSI Model](../../../assets/btech/cs/computer_networks/basic2.png)
-*Figure: [Kurose and Ross] The Internet protocol stack (a) and OSI reference model (b).*
+*Figure: [Kurose and Ross] The Internet protocol stack (a) and OSI (Open Systems Interconnection) reference model (b).*
 
 Layer interacts with layers only next to it.
 
 Benefits of layering:
 * We can modify a layer freely, i.e. tweak it. 
 * Layer acts as a wrapper which can be unwrapped at the other end.
+
+### Application Layer
+
+The application layer is where network applications and their application-layer protocols reside. (Like HTTP, FTP, DNS, etc)
+An application-layer protocol is distributed over multiple end systems, with the
+application in one end system using the protocol to exchange packets of information
+with the application in another end system. We’ll refer to this packet of information
+at the application layer as a message.
+
+### Transport Layer
+
+The Internet’s transport layer transports application-layer messages between
+application endpoints. In the Internet there are two transport protocols, TCP and
+UDP, either of which can transport application-layer messages. TCP provides a
+connection-oriented service to its applications. This service includes guaranteed
+delivery of application-layer messages to the destination and flow control (that is,
+sender/receiver speed matching). TCP also breaks long messages into shorter segments and provides a congestion-control mechanism, so that a source throttles its
+transmission rate when the network is congested. The UDP protocol provides a connectionless service to its applications. This is a no-frills service that provides no
+reliability, no flow control, and no congestion control. We'll refer to a
+transport-layer packet as a segment.
+
+### Network Layer
+
+The Internet’s network layer is responsible for moving network-layer packets
+known as datagrams from one host to another. The Internet’s network layer includes the celebrated IP Protocol, which defines
+the fields in the datagram as well as how the end systems and routers act on these
+fields.
+
+### Link Layer
+
+The Internet’s network layer routes a datagram through a series of routers between
+the source and destination. To move a packet from one node (host or router) to the
+next node in the route, the network layer relies on the services of the link layer. In
+particular, at each node, the network layer passes the datagram down to the link
+layer, which delivers the datagram to the next node along the route. At this next
+node, the link layer passes the datagram up to the network layer.
+ Examples of linklayer protocols include Ethernet, WiFi. As datagrams typically need to traverse several links to travel from source to
+destination, a datagram may be handled by different link-layer protocols at different
+links along its route. We'll refer to the linklayer packets as frames.
+
+### Physical Layer
+
+While the job of the link layer is to move entire frames from one network element
+to an adjacent network element, the job of the physical layer is to move the individual bits within the frame from one node to the next. The protocols in this layer are
+again link dependent and further depend on the actual transmission medium of the
+link (for example, twisted-pair copper wire, single-mode fiber optics). 
+
+
+![Encapsulation](../../../assets/btech/cs/computer_networks/basic3.png)
+*[Kurose and Ross] Hosts, routers, and link-layer switches; each contains a different set of layers, reflecting their differences in functionality.*
+
+
+Thus, we see that at each layer, a packet has two types of
+fields: header fields and a payload field. The payload is typically a packet from
+the layer above.
+
 
