@@ -77,7 +77,7 @@ only 2B (exact) samples per second. Sampling the line faster than 2B times per
 second is pointless because the higher-frequency components that such sampling
 could recover have already been filtered out. If the signal consists of V discrete
 levels, Nyquist’s theorem states:
-maximum data rate = 2B log2 V bits/sec
+maximum data rate = $2B log_2 V$ bits/sec
  (2-2)
 For example, a noiseless 3-kHz channel cannot transmit binary (i.e., two-level)
 signals at a rate exceeding 6000 bps.
@@ -85,18 +85,16 @@ So far we have considered only noiseless channels. If random noise is present, t
 present due to the motion of the molecules in the system. The amount of thermal
 noise present is measured by the ratio of the signal power to the noise power, called the SNR (Signal-to-Noise Ratio). If we denote the signal power by S and the
 noise power by N, the signal-to-noise ratio is S/N. Usually, the ratio is expressed
-on a log scale as the quantity 10 log10 S /N because it can vary over a tremendous
+on a log scale as the quantity $10 \operatorname{log_{10}} S/N$ because it can vary over a tremendous
 range. The units of this log scale are called decibels (dB), with ‘‘deci’’ meaning
 10 and ‘‘bel’’ chosen to honor Alexander Graham Bell, who invented the telephone. An S /N ratio of 10 is 10 dB, a ratio of 100 is 20 dB, a ratio of 1000 is 30
 dB, and so on. The manufacturers of stereo amplifiers often characterize the
 bandwidth (frequency range) over which their products are linear by giving the 3dB frequency on each end. These are the points at which the amplification factor
-has been approximately halved (because 10 log 10 0.5 ∼
- ∼ −3).
+has been approximately halved (because $10 \operatorname{log_{10}} 0.5 \approx -3$).
 Shannon’s major result is that the maximum data rate or capacity of a noisy
 channel whose bandwidth is B Hz and whose signal-to-noise ratio is S/N, is given
 by:
-maximum number of bits/sec = B log2 (1 + S/N)
- (2-3)
+maximum number of bits/sec = $B \operatorname{log}_2 (1 + S/N)$ (2-3)
 
 This tells us the best capacities that real channels can have. For example, ADSL
 (Asymmetric Digital Subscriber Line), which provides Internet access over normal telephone lines, uses a bandwidth of around 1 MHz. The SNR depends
