@@ -4,7 +4,7 @@ title: Cyclic Groups
 sidebar_label: Cyclic Groups
 ---
 
-**Example** The set $Z\_n = \\{0, 1, . . . , n - 1\\}$ for $n \geq 1$ is a cyclic group under addition modulo $n$. Again as was in case for group $Z$, 1 and -1 = n - 1 are generators.
+**Example** The set $Z\_n = \\{0, 1, . . . , n - 1\\}$ for $n \geq 1$ is a cyclic group under addition modulo $n$. As it is in the case for group $Z$, 1 and -1 = n - 1 are generators.
 
 **Example** $Z\_8 = <1> = <3> = <5> = <7>$.
 
@@ -38,7 +38,7 @@ Let us use it to find all generators of the cyclic group $U(50)$. First, note th
 $3 \bmod 50 = 3, 3^3 \bmod 50 = 27, 3^7 \bmod 50 = 37, 3^9 \bmod 50 = 33$,
 $3^{11} \bmod 50 = 47, 3^{13} \bmod 50 = 23, 3^{17} \bmod 50 = 13, 3^{19} \bmod 50 = 17$
 
-We should keep in mind that Theorem 4.2 and its corollaries apply only to elements of finite order.
+We should keep in mind that Theorem 4.2 and its corollaries apply only to elements of finite order. Also, $U(n)$ need *not* be cyclic in general.
 
 ## Classification of Subgroups of Cyclic Groups
 

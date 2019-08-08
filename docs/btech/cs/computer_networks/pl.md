@@ -236,7 +236,7 @@ band available for 100 stations, with FDM each one would have 10 kHz and could
 send at 10 kbps (assuming 1 bit per Hz). With CDMA, each station uses the full 1
 MHz, so the chip rate is 100 chips per bit to spread the station’s bit rate of 10 kbps across the channel.
 
-stations and the signals that they represent. Each station has its own unique chip
+Each station has its own unique chip
 sequence. Let us use the symbol $S$ to indicate the $m$ -chip vector for station $S$ , and
 $\overline{S}$ for its negation. All chip sequences are pairwise orthogonal, by which we
 mean that the normalized inner product of any two distinct chip sequences, $\mathbf{S}$ and

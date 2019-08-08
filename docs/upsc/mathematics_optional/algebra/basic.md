@@ -130,7 +130,7 @@ Let $S$ be a set of integers containing $a$. Suppose $S$ has the property that $
 An equivalence relation on a set $S$ is a set $R$ of ordered pairs of
 elements of $S$ such that
 
-1. $(a, a) \in R$ for all $a \in S$
+1. $(a, a) \in R$ for all $a \in S$ (reflexive property).
 2. $(a, b) \in R$ implies $(b, a) \in R$ (symmetric property).
 3. $(a, b) \in R$ and $(b, c) \in R$ imply $(a, c) \in R$ (transitive property).
 
@@ -165,9 +165,9 @@ is a rule that assigns to each element $a$ of $A$ exactly one element $b$ of $B$
 $A$ to $C$ defined by $(\psi \phi)(a)=\psi(\phi(a))$ for all $a$ in $A$ .
 
 **Definition:** A function $f$ from a set $A$ is called one-to-one if for
-every $a_1, a_2 \in A, f(a_1) = f(a_2)$ implies $a1 = a2$.
+every $a_1, a_2 \in A, f(a_1) = f(a_2)$ implies $a_1 = a_2$.
 
-Alternatively $f$ is one-to-one if $a1 \neq a2$ implies $f(a_1) \neq f(a_2)$
+Alternatively $f$ is one-to-one if $a_1 \neq a_2$ implies $f(a_1) \neq f(a_2)$
 
 **Definition:** In symbols, $\phi : A \rightarrow B$ is
 onto if for each $b$ in $B$ there is at least one $a$ in $A$ such that $\phi(a)=b$ .

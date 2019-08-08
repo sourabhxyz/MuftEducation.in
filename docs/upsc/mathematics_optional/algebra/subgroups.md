@@ -5,7 +5,7 @@ sidebar_label: SubGroups
 ---
 **Definition: (Order of a group)**  The number of elements of a group (finite or infinite) is called its order. We will use $\vert G \vert$ to denote the order of $G$ (Also denoted as $o(G)$).
 
-**Definition: (Order of an element)** The order of an element $g$ (denoted as $o(h)$) in a group $G$ is the smallest positive integer $n$ such that $g^n = e$. (In additive notation, this would mean $ng = 0$.) If no such integer exists, we say that $g$ has infinite order. The order of an element $g$ is denoted by $\vert g \vert$
+**Definition: (Order of an element)** The order of an element $g$ (denoted as $o(h)$) in a group $G$ is the smallest positive integer $n$ such that $g^n = e$. (In additive notation, this would mean $ng = 0$.) If no such integer exists, we say that $g$ has infinite order. The order of an element $g$ is denoted by $\vert g \vert$.
 
 **Example:** Consider U(15) = {1, 2, 4, 7, 8, 11, 13, 14} under multiplication modulo 15. This group has order 8. $\vert 13 \vert$? Soln: Compute $13^1, 13^2, 13^3, 13^4$ to get answer as 4, however there is trick: $13 = -2 \bmod 15 \Rightarrow 13^2 = (-2)^2 = 4, 13^3 = -2 \cdot 4 = -8, 13^4 = (-2)(-8) = 1.$
 
@@ -39,7 +39,8 @@ Let $G$ be a group and let $H$ be a nonempty subset of $G$. If $ab$ is in $H$ wh
 By Theorem 1, it suffices to show that $a, b \in H$ implies $ab^{-1} \in H$. So, we suppose that $a, b \in H$. Since $H$ is closed under taking inverses, we also have $b^{-1} \in H$. Thus, $ab^{-1} \in H$ by closure under multiplication.
 
 :::note Note
-Let $G$ be an Abelian group and $H$ and $K$ be subgroups of $G$. Then $HK = \\{hk \mid h \in H, k \in K\\}$ is a subgroup of $G$. (Easy to show.)
+1. Let $G$ be an Abelian group and $H$ and $K$ be subgroups of $G$. Then $HK = \\{hk \mid h \in H, k \in K\\}$ is a subgroup of $G$. (Easy to show.)
+2. Intersection of subgroups is a subgroup (easy to show).
 :::
 
 How do you prove that a subset of a group is not a subgroup? Here are three possible ways, any one of which guarantees that the subset is not a subgroup:
