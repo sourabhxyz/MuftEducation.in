@@ -60,6 +60,8 @@ $\phi$ is operation-preserving. To this end, let $a$ and $b$ belong to $G .$ The
 
 ---
 
+**Corollary:** Another way to say Cayley's theorem is that, for finite group $G$, $n = |G|$, there exist a homomorphism $\phi: G \rightarrow S_n$ which is injective.
+
 The group $\overline{G}$ constructed previously is called the left regular repre-
 sentation of $G$.
 
@@ -108,7 +110,7 @@ of $G$.
 ---
 
 Let $G$ be a group, and let $a \in G .$ The function $\phi_{a}$ defined by $\phi_{a}(x)=$
-$a x a^{-1}$ for all $x$ in $G$ is called the inner automorphism of $G$ induced by $a$ (It is easy to see that it is actually an automorphism of $G$).
+$a x a^{-1}$ for all $x$ in $G$ is called the inner automorphism of $G$ induced by $a$ (It is easy to see that it is actually an automorphism of $G$, it is also denoted as $L_a$).
 
 ---
 

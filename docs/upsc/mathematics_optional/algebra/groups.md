@@ -29,7 +29,7 @@ some pair of elements $a$ and $b$ for which $ab \neq ba$.
 
 - The set of integers under ordinary multiplication is not a
   group. Since property 3 fails (number 1 is the identity).
-
+- The set $A(S)$ of all one to one mappings of a non empty set $S$ onto itself is a group wrt the product of mappings (i.e. function compositions).
 - The set $S$ of positive irrational numbers together with 1
   under multiplication satisfies the three properties given in the
   definition of a group but is not a group. Indeed,
@@ -167,7 +167,7 @@ observe that the eight motions are functions and the operation is
 function composition. Then, since function composition is associative,
 we do not have to check the equations.
 
-**Cayley Table (i.e. operation table) for $D\_4$**
+**Cayley Table (i.e. operation table, aka composition table) for $D\_4$**
 
 $\begin{array}{l|llllllll}{} & {R_{0}} & {R_{90}} & {R_{180}} & {R_{270}} & {H} & {V} & {D} & {D^{\prime}} \\\ \hline R_{0} & {R_{0}} & {R_{90}} & {R_{180}} & {R_{270}} & {H} & {V} & {D} & {D^{\prime}} \\\ {R_{90}} & {R_{90}} & {R_{180}} & {R_{270}} & {R_{0}} & {D^{\prime}} & {D} & {H} & {V} \\\ {R_{180}} & {R_{180}} & {R_{270}} & {R_{0}} & {R_{90}} & {V} & {H} & {D^{\prime}} & {H} \\\ {R_{270}} & {R_{270}} & {R_{0}} & {R_{90}} & {R_{180}} & {D} & {D^{\prime}} & {V} & {H} \\\ {H} & {H} & {D} & {V} & {D^{\prime}} & {R_{0}} & {R_{180}} & {R_{90}} & {R_{270}} \\\ {V} & {V} & {D^{\prime}} & {H} & {D} & {R_{180}} & {R_{0}} & {R_{270}} & {R_{90}} \\\ {D} & {D} & {V} & {D^{\prime}} & {H} & {R_{270}} & {R_{90}} & {R_{0}} & {R_{180}} \\\ {D^{\prime}} & {D^{\prime}} & {H} & {D} & {V} & {R_{90}} & {R_{270}} & {R_{180}} & {R_{0}}\end{array}$
 

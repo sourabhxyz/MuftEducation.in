@@ -20,7 +20,8 @@
       "upsc/mathematics_optional/algebra/cyclic_groups",
       "upsc/mathematics_optional/algebra/permutation_groups",
       "upsc/mathematics_optional/algebra/isomorphism",
-      "upsc/mathematics_optional/algebra/coset_lagrange"
+      "upsc/mathematics_optional/algebra/coset_lagrange",
+      "upsc/mathematics_optional/algebra/normal_factor"
     ]
   },
   "upsc_mop_linear_algebra": {

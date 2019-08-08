@@ -127,6 +127,8 @@ Let $S$ be a set of integers containing $a$. Suppose $S$ has the property that $
 
 ## Equivalence Relation
 
+*Note*: If $A$ is any non empty set, then a subset $R$ of $A \times A$ is defined as a relation on $A$.
+
 An equivalence relation on a set $S$ is a set $R$ of ordered pairs of
 elements of $S$ such that
 
