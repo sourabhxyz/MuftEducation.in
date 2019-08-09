@@ -21,6 +21,7 @@
       "upsc/mathematics_optional/algebra/permutation_groups",
       "upsc/mathematics_optional/algebra/isomorphism",
       "upsc/mathematics_optional/algebra/coset_lagrange",
+      "upsc/mathematics_optional/algebra/edp",
       "upsc/mathematics_optional/algebra/normal_factor"
     ]
   },
