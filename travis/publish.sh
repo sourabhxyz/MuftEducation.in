@@ -9,7 +9,7 @@ cd /tmp
 git clone https://${GH_OAUTH_TOKEN}@github.com/${GH_USER_NAME}/${GH_PROJECT_NAME} pdfs 2>&1
 cd pdfs
 
-echo '---- Switch to gh-pages branch ----'
+echo '---- Switch to pdfs branch ----'
 git checkout pdfs
 
 echo '---- Copy latest PDF build ----'
