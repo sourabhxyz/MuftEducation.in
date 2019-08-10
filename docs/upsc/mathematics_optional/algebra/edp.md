@@ -24,12 +24,12 @@ with the operation of $G_{i} .$ Note that in the case that each $G_{i}$ is finit
 have by properties of sets that $\left|G_{1} \oplus G_{2} \oplus \cdots \oplus G_{n}\right|=\left|G_{1}\right|\left|G_{2}\right| \cdots\left|G_{n}\right|$
 
 It is easy to see that external direct product of
-groups is itself a group.
+groups is itself a group. And external direct product of abelian groups is an abelion group.
 
 **Examples:**
 
 - A group of order 4 is isomorphic to $Z_{4}$ or $Z_{2} \oplus Z_{2} .$ To verify this, let $G=$
-  $\{e, a, b, a b\} .$ If $G$ is not cyclic, then it follows from Lagrange's Theorem
+  $\\{e, a, b, a b\\} .$ If $G$ is not cyclic, then it follows from Lagrange's Theorem
   that $|a|=|b|=|a b|=2 .$ Then the mapping $e \rightarrow(0,0), a \rightarrow(1,0)$ $b \rightarrow(0,1),$ and $a b \rightarrow(1,1)$ is an isomorphism from $G$ onto $Z_{2} \oplus Z_{2}$
 
 ---

@@ -68,7 +68,7 @@ Finally, since $\left|a_{i} H\right|=|H|$ for each $i,$ we have $|G|=r|H|$
 The converse of Lagrange’s Theorem is false. For example, a group of order 12 need not have a subgroup of order 6.
 :::
 
-The index of a subgroup $H$ in $G$ is the number of distinct left cosets of $H$ in $G .$ This number
+The **index** of a subgroup $H$ in $G$ is the number of distinct left cosets of $H$ in $G .$ This number
 is denoted by $|G : H| .$
 
 **Corollary 1:** If $G$ is a finite group and $H$ is a subgroup of $G,$ then $|G : H|=|G| / H |$ .
