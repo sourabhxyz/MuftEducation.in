@@ -209,7 +209,7 @@ $U(m) = U_{m/n_1}(m) \times U_{m/n_2}(m) \times \cdots  U_{m/n_k}(m)$
 
 $\approx U(n_1) \oplus U(n_2) \oplus \cdots \oplus U(n_k)$.
 
-::note Note
-$U_{m/n_i}(m) \cap U_{m/n_j}(m) = \\{e\\} \forall i \neq j$ as $x = mk/n_1 + 1 = mk'/n_2 + 1 \rightarrow n_1k' = n_2k \rightarrow k' = n_2, k = n_1$ $\rightarrow x = m + 1$ which is absurd.
+:::note Note
+$U_{m/n_i}(m) \cap U_{m/n_j}(m) = \\{e\\} \\;\forall i \neq j$ as $x = mk/n_1 + 1 = mk'/n_2 + 1 \rightarrow n_1k' = n_2k \rightarrow k' = n_2, k = n_1$ $\rightarrow x = m + 1$ which is absurd.
 :::
 
