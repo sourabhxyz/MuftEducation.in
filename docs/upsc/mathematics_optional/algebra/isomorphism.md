@@ -37,6 +37,10 @@ Easy to prove that $\phi^{-1}$ is as well an isomorphism.
   under multiplication. If $\phi$ were such a mapping, there would be a ra-
   tional number $a$ such that $\phi(a)=-1 .$ But then $-1=\phi(a)=\phi\left(\frac{1}{2} a+\frac{1}{2} a\right)=\phi\left(\frac{1}{2} a\right) \phi\left(\frac{1}{2} a\right)=\left[\phi\left(\frac{1}{2} a\right)\right]^{2}$ However, no rational number squared is $-1$
   
+* A cyclic group $\langle g \rangle$ which is not finite is isomorphic to $(\mathbb{Z}, +)$ (easy, $\phi(g^n) = n$) 
+
+* Any two cyclic group of order $m$ are isomorphic. (easy)
+
 ## Cayley's Theorem
 
 ---

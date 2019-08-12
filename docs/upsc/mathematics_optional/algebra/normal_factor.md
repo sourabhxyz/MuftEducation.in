@@ -19,18 +19,21 @@ for all $x$ in $G .$  (Weaker version of what was shown in 7th chapter)
 
 ---
 
+A group is called Hamiltonian if it is non-abelian and all its subgroups are normal.
 
 **Examples:**
 
 *Unless proof is given, assume it was easy*
 
 - Every subgroup of an Abelian group is normal.
+  - But the converse is not true as consider for example Quaternion group $Q_8 = \langle \overline{e}, i, j, k \mid \overline{e}^2 = e, i^2 = j^2 = k^2 = ijk = \overline{e}\rangle$ where $e$ is the identity element and $\overline{e}$ commutes with the other elements of the group (can be derived). All its subgroups are $\\{e\\}, \\{e, \overline{e}\\}, \\{e, \overline{e}, i, \overline{e}i\\}, \\{e, \overline{e}, j, \overline{e}j\\}, \\{e, \overline{e}, k, \overline{e}k\\}, Q_8$ all of which are normal (easy to verify).
 - The center $Z(G)$ of a group is always normal.
 - The alternating group $A_n$ of even permutations is a normal subgroup of $S_n$.
--  Every subgroup of $D_n$ consisting solely of rotations is normal in $D_n$. 
--  Let $H$ be a normal subgroup of a group $G$ and $K$ be any subgroup of $G .$ Then $H K=\\{h k | h \in H, k \in K\\}$ is a subgroup of $G$.
--  If a group $G$ has a unique subgroup $H$ of some finite
+- Every subgroup of $D_n$ consisting solely of rotations is normal in $D_n$. 
+- Let $H$ be a normal subgroup of a group $G$ and $K$ be any subgroup of $G .$ Then $H K=\\{h k | h \in H, k \in K\\}$ is a subgroup of $G$.
+- If a group $G$ has a unique subgroup $H$ of some finite
   order, then $H$ is normal in $G$. To see that this is so, observe that for any $g \in G, g H g^{-1}$ is a subgroup of $G$ and $|g H g^{-1}|=| H |$.
+- Let $G$ be a finite group, $|G| = pm$ where $p$ is a prime and $p \not | m$ and $H \triangleleft G$ of order $p$. Show that for any autmorphism $\phi:G \rightarrow G, \phi(H) = H$ (easy, if $\phi(H) \neq H \rightarrow \because \phi(H) \cap H = \\{e\\}$ $, H\phi(H)$ is a subgroup of order $p^2 \Rightarrow \Leftarrow$
 
 ## Factor Groups or Quotient Groups
 
@@ -47,8 +50,7 @@ Converse of
 Theorem 9.2 is also true; that is, if the correspondence $aHbH = abH$ defines a group operation on the set of left cosets of $H$ in $G$, then $H$ is
 normal in $G$.
 
-It is crucial to understand that when we factor out by a normal sub-
-group H, what we are essentially doing is defining every element in H
+It is crucial to understand that when we factor out by a normal subgroup H, what we are essentially doing is defining every element in H
 to be the identity.
 
 Also remember that the order of the factor group is $|G|/|H|$
@@ -90,13 +92,13 @@ Also remember that the order of the factor group is $|G|/|H|$
     group of even order has exactly one element of order 2 (Theorem 4.4$)$ .
     This proves that $U(32) / U_{16}(32) \approx Z_{4} \oplus Z_{2},$ which (not so incidentally!) is isomorphic to $U(16)$.
 
-  - Let $G=U(32)$ and $K=\{1,15\} .$ Then $|G / K|=8$ and we ask, which of the three Abelian groups of order 8 is $G/K$? Since $(3 K)^{4}=81 K=17 K \neq K,|3 K|=8 .$ Thus, $G / K \approx Z_{8}$
+  - Let $G=U(32)$ and $K=\\{1,15\\} .$ Then $|G / K|=8$ and we ask, which of the three Abelian groups of order 8 is $G/K$? Since $(3 K)^{4}=81 K=17 K \neq K,|3 K|=8 .$ Thus, $G / K \approx Z_{8}$
 
-- If $H$ has index 2 in $G$, then $H$ is normal in $G$. **Proof:** Let $a \not\in H \rightarrow aH \neq H and Ha \neq H$ but since we only have two cosets $\rightarrow aH = Ha$.
+- If $H$ has index 2 in $G$, then $H$ is normal in $G$. **Proof:** Let $a \not\in H \rightarrow aH \neq H \text{ and } Ha \neq H$ but since we only have two cosets $\rightarrow aH = Ha$.
 
 ## Applications of Factor Groups
 
-- The group $A_4$ of even permutations on the set $\\{1, 2, 3, 4\\}$ has no subgroup $H$ of order 6. To see this, suppose that $A_4$ does have a subgroup $H$ of order 6. By above example, we know that $H \triangleleft A_4$. Thus, the factor group $A_4 / H$ exists and has order 2. We have for all $\alpha in A_4$ that $\alpha^2H = (\alpha H)^2 = H$. Thus, $\alpha^2 \in H$ for all $\alpha \in A_4$. Referring to the main diagonal of the group table for $A_4$ however, we observe that $A_4$ has nine different elements of the form $\alpha^2$, all of which must belong to $H$, a subgroup of order 6. This is clearly impossible, so a subgroup of order 6 cannot exist in $A_4$.
+- The group $A_4$ of even permutations on the set $\\{1, 2, 3, 4\\}$ has no subgroup $H$ of order 6. To see this, suppose that $A_4$ does have a subgroup $H$ of order 6. By above example, we know that $H \triangleleft A_4$. Thus, the factor group $A_4 / H$ exists and has order 2. We have for all $\alpha \in A_4$ that $\alpha^2H = (\alpha H)^2 = H$. Thus, $\alpha^2 \in H$ for all $\alpha \in A_4$. Referring to the main diagonal of the group table for $A_4$ however, we observe that $A_4$ has nine different elements of the form $\alpha^2$, all of which must belong to $H$, a subgroup of order 6. This is clearly impossible, so a subgroup of order 6 cannot exist in $A_4$.
 
 ---
 
@@ -114,7 +116,7 @@ $Z(G)$, then $G$ is Abelian. Second, in practice, it is the contrapositive of
 the theorem that is most often used—that is, if $G$ is non-Abelian, then
 $G/Z(G)$ is not cyclic. For example, it follows immediately from this
 statement and Lagrange’s Theorem that a non-Abelian group of order
-$pq$, where $p$ and $q$ are primes, must have a trivial center. Third, if $G/Z(G)$ is cyclic, it must be trivial.
+$pq$, where $p$ and $q$ are primes, must have a trivial center (suppose center is not trivial, that implies its order is either $p \text{ or} q$. Say it is $p \rightarrow$ order of $G / Z(G) = q$ and hence it must be cyclic. Third, if $G/Z(G)$ is cyclic, it must be trivial.
 
 ---
 
@@ -140,7 +142,7 @@ elements of prime order, for if $|x| = m$ and $m = qn$, where $q$ is prime,
 then $|x^n| = q$. So let $x$ be an element of $G$ of some prime order $q$, say. If
 $q = p$, we are finished; so assume that $q \neq p$. Since every subgroup of
 an Abelian group is normal, we may construct the factor group $\overline{G} = G/< x >$. Then $G$ is Abelian and $p$ divides $|G|$, since $|\overline{G}| = |G|/q$. By
-induction, then, $G$ has an element—call it $y < x >$—of order $p$.
+induction, then, $\overline{G}$ has an element—call it $y < x >$—of order $p$.
 Then, $(y < x >)^p = y^p < x > = < x >$ and therefore $y^p \in < x >$. If $y^p = e$, we are
 done. If not, then $y^p$ has order $q$ and $y^q$ has order $p$.
 
@@ -157,7 +159,7 @@ We say that $G$ is the internal direct product of $H$ and $K$ and write $G = H \
 Let $H_1, H_2, ..., H_n$ be a finite collection of normal subgroups of $G$. We say that $G$ is the internal direct product of $H_1, H_2, ..., H_n$ and write
 $G = H_1 \times H_2 \times ... \times H_n$, if
 1. $G=H_{1} H_{2} \cdots H_{n}=\left\\{h_{1} h_{2} \cdots h_{n} | h_{i} \in H_{i}\right\\}$
-2. $\left(H_{1} H_{2} \cdots H_{i}\right) \cap H_{i+1}=\{e\}$ for $i=1,2, \ldots, n-1$ 
+2. $\left(H_{1} H_{2} \cdots H_{i}\right) \cap H_{i+1}=\\{e\\}$ for $i=1,2, \ldots, n-1$ 
 
 ---
  
@@ -190,8 +192,8 @@ element of order $p^2$, then $G$ is isomorphic to $Z_{p^2}$. So, by Corollary 2 
 Lagrange’s Theorem, we may assume that every nonidentity element of
 $G$ has order $p$. First we show that for any element $a$, the subgroup $< a >$ is
 normal in $G$. If this is not the case, then there is an element $b$ in $G$ such
-that $bab^{-1}$ is not in $< a >$. Then $< a >$ and $<bab^{-1}>$ are distinct subgroups of order $p$. Since $< a > \cap < bab^{-1}>$ is a subgroup of both $< a >$ and $<bab^{-1}>$, we have that $< a > \cap < bab^{-1}> = \\{e\\}$ (Note if there is a comman element other than $e$ then it will generate a subgroup of order $p$ and thus would be equal to $< a >$). From this it follows that the distinct
-left cosets of $< bab^{-1} >$ are $< bab^{-1} >, a< bab^{-1} >, a^2< bab^{-1} >, \dots, a^{p - 1}< bab^{-1} >$. Since $b^{-1}$ must lie in one of these cosets, we may write
+that $bab^{-1}$ is not in $< a >$. Then $< a >$ and $<bab^{-1}>$ are distinct subgroups of order $p$. Since $< a > \cap < bab^{-1}>$ is a subgroup of both $< a >$ and $<bab^{-1}>$, we have that $< a > \cap < bab^{-1}> = \\{e\\}$. From this it follows that the distinct
+left cosets of $< bab^{-1} >$ are $< bab^{-1} >, a< bab^{-1} >, a^2< bab^{-1} >, \dots, a^{p - 1}< bab^{-1} >$ (as if $a^i \in a^j\langle bab^{-1} \rangle \rightarrow a^{i - j} \in \langle bab^{-1} \rangle$). Since $b^{-1}$ must lie in one of these cosets, we may write
 $b^{-1}$ in the form $b^{-1} = a^i (bab^{-1})^j = a^iba^jb^{-1}$ for some $i$ and $j$. Canceling the $b^{-1}$ terms, we obtain $e = a^iba^j$ and therefore $b = a^{-i-j} \in < a >$.
 This contradiction verifies our assertion that every subgroup of the form
 $< a >$ is normal in $G$. To complete the proof, let $x$ be any nonidentity element in $G$ and $y$ be any element of $G$ not in $< x >$. Then, by comparing orders and using Theorem 9.6, we see that $G = < x > \times < y > \approx Z_p \oplus Z_p$.

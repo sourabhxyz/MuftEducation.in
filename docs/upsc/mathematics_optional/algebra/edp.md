@@ -78,8 +78,7 @@ if and only if $n_{i}$ and $n_{j}$ are relatively prime when $i \neq j$ .
 ---
 
 By using the results above in an iterative fashion, one can express
-the same group (up to isomorphism) in many different forms. For ex-
-ample, we have
+the same group (up to isomorphism) in many different forms. For example, we have
 
 $Z_{2} \oplus Z_{2} \oplus Z_{3} \oplus Z_{5} \approx Z_{2} \oplus Z_{6} \oplus Z_{5} \approx Z_{2} \oplus Z_{30}$
 

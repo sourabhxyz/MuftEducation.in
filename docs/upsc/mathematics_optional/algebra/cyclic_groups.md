@@ -38,7 +38,7 @@ Let us use it to find all generators of the cyclic group $U(50)$. First, note th
 $3 \bmod 50 = 3, 3^3 \bmod 50 = 27, 3^7 \bmod 50 = 37, 3^9 \bmod 50 = 33$,
 $3^{11} \bmod 50 = 47, 3^{13} \bmod 50 = 23, 3^{17} \bmod 50 = 13, 3^{19} \bmod 50 = 17$
 
-We should keep in mind that Theorem 4.2 and its corollaries apply only to elements of finite order. Also, $U(n)$ need *not* be cyclic in general.
+We should keep in mind that Theorem 4.2 and its corollaries apply only to elements of finite order. Also, $U(n)$ need *not* be cyclic in general for example $U(8)$.
 
 ## Classification of Subgroups of Cyclic Groups
 
