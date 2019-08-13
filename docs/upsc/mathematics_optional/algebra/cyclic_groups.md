@@ -44,7 +44,9 @@ We should keep in mind that Theorem 4.2 and its corollaries apply only to elemen
 
 ---
 
-**Theorem 4.3** Every subgroup of a cyclic group is cyclic. Moreover, if $|< a >| = n$, then the order of any subgroup of $< a >$ is a divisor of $n$; and, for each positive divisor $k$ of $n$, the group $< a >$ has exactly one subgroup of order $k$—namely, $< a^{n/k} >$.
+### Theorem 4.3
+
+Every subgroup of a cyclic group is cyclic. Moreover, if $|< a >| = n$, then the order of any subgroup of $< a >$ is a divisor of $n$; and, for each positive divisor $k$ of $n$, the group $< a >$ has exactly one subgroup of order $k$—namely, $< a^{n/k} >$.
 
 **Proof:** Let $G=\langle a\rangle$ and suppose that $H$ is a subgroup of $G .$ We must show that $H$ is cyclic. If it consists of the identity alone, then clearly $H$ is
 cyclic. So we may assume that $H \neq\{e\} .$ We now claim that $H$ contains an element of the form $a^{t},$ where $t$ is positive. since $G=\langle a\rangle,$ every
@@ -91,6 +93,17 @@ of $ Z_{n}$ of order $k$ ; moreover, these are the only subgroups of $Z_{n}$ .
   $$
 
 Let $\phi(1)=1,$ and for any integer $n>1,$ let $\phi(n)$ denote the number of positive integers less than $n$ and relatively prime to $n$
+
+---
+
+### Converse of Theorem 4.3 is true
+
+I.e., if a group $G$ of finite order $n$ has a unique subgroup for every order $d | n$ then $G$ is cyclic.
+
+**Proof:** Let $G = \{a_1, a_2, \dots, a_n\}$, define $H = (a_1, a_2, \dots, a_n)$. Then starting from each element from left in $H$, we compute $|\langle a_i \rangle| (= k \text{ say})$, then, since we have unique subgroup of order $k$, we have $\phi(k)$ such elements in total in $G$, we will remove such elements from $H$ and continue towards right. Now since order of a subgroup always divides order of the group and the fact that $\sum_{d | n}\phi(d) = n$, we **must** exaust all the divisors of $n$ and thus we will have an element of order $n$.   
+
+---
+
 
 ---
 

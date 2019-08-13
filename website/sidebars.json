@@ -24,7 +24,8 @@
       "upsc/mathematics_optional/algebra/coset_lagrange",
       "upsc/mathematics_optional/algebra/edp",
       "upsc/mathematics_optional/algebra/normal_factor",
-      "upsc/mathematics_optional/algebra/homo"
+      "upsc/mathematics_optional/algebra/homo",
+      "upsc/mathematics_optional/algebra/ring"
     ]
   },
   "upsc_mop_linear_algebra": {
