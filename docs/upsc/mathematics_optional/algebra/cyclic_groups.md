@@ -94,16 +94,6 @@ of $ Z_{n}$ of order $k$ ; moreover, these are the only subgroups of $Z_{n}$ .
 
 Let $\phi(1)=1,$ and for any integer $n>1,$ let $\phi(n)$ denote the number of positive integers less than $n$ and relatively prime to $n$
 
----
-
-### Converse of Theorem 4.3 is true
-
-I.e., if a group $G$ of finite order $n$ has a unique subgroup for every order $d | n$ then $G$ is cyclic.
-
-**Proof:** Let $G = \\{a_1, a_2, \dots, a_n\\}$, define $H = G$. Then taking any element in $H$, we compute $|\langle a_i \rangle| (= k \text{ say})$, then, since we have unique subgroup of order $k$, we have $\phi(k)$ such elements in total in $G$, we will remove such elements from $H$ and continue like this until $H$ becomes empty. Now since order of a subgroup always divides order of the group and the fact that $\sum_{d | n}\phi(d) = n$, we **must** exaust all the divisors of $n$ and thus we will have an element of order $n$.   
-
----
-
 
 ---
 
@@ -115,6 +105,15 @@ Notice that for a finite cyclic group of order $n,$ the number of elements
 of order $d$ for any divisor $d$ of $n$ depends only on $d .$ Thus, $Z_{8}, Z_{640},$ and
 $Z_{8000}$ each have $\phi(8)=4$ elements of order $8 .$
 
+---
+
+### Converse of Theorem 4.3 is true
+
+I.e., if a group $G$ of finite order $n$ has a unique subgroup for every order $d | n$ then $G$ is cyclic.
+
+**Proof:** Let $G = \\{a_1, a_2, \dots, a_n\\}$, define $H = G$. Then taking any element in $H$, we compute $|\langle a_i \rangle| (= k \text{ say})$, then, since we have unique subgroup of order $k$, we have $\phi(k)$ such elements in total in $G$, we will remove such elements from $H$ and continue like this until $H$ becomes empty. Now since order of a subgroup always divides order of the group and the fact that $\sum_{d | n}\phi(d) = n$, we **must** exaust all the divisors of $n$ and thus we will have an element of order $n$.   
+
+---
 
 ---
 
