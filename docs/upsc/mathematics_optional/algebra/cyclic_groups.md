@@ -100,7 +100,7 @@ Let $\phi(1)=1,$ and for any integer $n>1,$ let $\phi(n)$ denote the number of p
 
 I.e., if a group $G$ of finite order $n$ has a unique subgroup for every order $d | n$ then $G$ is cyclic.
 
-**Proof:** Let $G = \\{a_1, a_2, \dots, a_n\\}$, define $H = (a_1, a_2, \dots, a_n)$. Then taking any element in $H$, we compute $|\langle a_i \rangle| (= k \text{ say})$, then, since we have unique subgroup of order $k$, we have $\phi(k)$ such elements in total in $G$, we will remove such elements from $H$ and continue like this until $H$ becomes empty. Now since order of a subgroup always divides order of the group and the fact that $\sum_{d | n}\phi(d) = n$, we **must** exaust all the divisors of $n$ and thus we will have an element of order $n$.   
+**Proof:** Let $G = \\{a_1, a_2, \dots, a_n\\}$, define $H = G$. Then taking any element in $H$, we compute $|\langle a_i \rangle| (= k \text{ say})$, then, since we have unique subgroup of order $k$, we have $\phi(k)$ such elements in total in $G$, we will remove such elements from $H$ and continue like this until $H$ becomes empty. Now since order of a subgroup always divides order of the group and the fact that $\sum_{d | n}\phi(d) = n$, we **must** exaust all the divisors of $n$ and thus we will have an element of order $n$.   
 
 ---
 
