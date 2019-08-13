@@ -25,7 +25,8 @@
       "upsc/mathematics_optional/algebra/edp",
       "upsc/mathematics_optional/algebra/normal_factor",
       "upsc/mathematics_optional/algebra/homo",
-      "upsc/mathematics_optional/algebra/ring"
+      "upsc/mathematics_optional/algebra/ring",
+      "upsc/mathematics_optional/algebra/advance_groups"
     ]
   },
   "upsc_mop_linear_algebra": {
