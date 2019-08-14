@@ -28,7 +28,7 @@ while i < len(pasteInfoLines):
 
   os.system("mkdir -p " + dir)
 
-  os.system("cp $TRAVIS_BUILD_DIR/" + fileName + " ./" + dir + "/")
+  os.system("cp $TRAVIS_BUILD_DIR/" + fileName + " ./" + dir + "/" + fileName)
   i += 2
 
 
