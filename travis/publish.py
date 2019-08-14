@@ -13,7 +13,10 @@ while i < len(pasteInfoLines):
   if (i + 1 >= len(pasteInfoLines)):
     break
   fileName = pasteInfoLines[i + 1]
+  print("Copying filename: ", fileName, " to the directory: ", dir, "\n")
+
   os.system("mkdir -p " + dir)
+
   os.system("cp $TRAVIS_BUILD_DIR/" + fileName + " " + dir + "/")
   i += 2
 

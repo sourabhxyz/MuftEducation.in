@@ -25,7 +25,7 @@ Easy to prove that $\phi^{-1}$ is as well an isomorphism.
   the mappings are onto. That the mappings are operation-preserving
   follows from Exercise 9 in Chapter 0 in the finite case and from the
   definitions in the infinite case.
-* $U(10) \neq U(12) .$ This is a bit trickier to prove. First, note that $x^{2}=1$ for all $x$ in $U(12) .$ Now, suppose that $\phi$ is an isomorphism from $U(10)$ onto $U(12) .$ Then
+* $U(10) \not \approx U(12) .$ This is a bit trickier to prove. First, note that $x^{2}=1$ for all $x$ in $U(12) .$ Now, suppose that $\phi$ is an isomorphism from $U(10)$ onto $U(12) .$ Then
 
   $$
   \phi(9)=\phi(3 \cdot 3)=\phi(3) \phi(3)=1
@@ -37,9 +37,14 @@ Easy to prove that $\phi^{-1}$ is as well an isomorphism.
   under multiplication. If $\phi$ were such a mapping, there would be a ra-
   tional number $a$ such that $\phi(a)=-1 .$ But then $-1=\phi(a)=\phi\left(\frac{1}{2} a+\frac{1}{2} a\right)=\phi\left(\frac{1}{2} a\right) \phi\left(\frac{1}{2} a\right)=\left[\phi\left(\frac{1}{2} a\right)\right]^{2}$ However, no rational number squared is $-1$
   
-* A cyclic group $\langle g \rangle$ which is not finite is isomorphic to $(\mathbb{Z}, +)$ (easy, $\phi(g^n) = n$) 
-
 * Any two cyclic group of order $m$ are isomorphic. (easy)
+
+The relation of being isomorphic is an equivalence relation on groups:
+
+* **Reflexivity:** The identity map is an isomorphism from any group to itself.
+* **Symmetry:** The inverse of an isomorphism is an isomorphism.
+* **Transitivity:** if $G$ is isomorphic to $H$ and $H$ is isomorphic to $K$, then $G$ is isomorphic to $K$, via the isomorphism obtained by composing the isomorphisms from $G$ to $H$ and from $H$ to $K$.
+
 
 ## Cayley's Theorem
 
