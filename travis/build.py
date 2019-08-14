@@ -23,7 +23,7 @@ def removeDoubleSlash(filename):
   for line in lines:
     filetmp.write(line.replace('\\\\', '\\'))
 
-sidebars = open("website/sidebars.tmp.json").readlines()
+sidebars = open("website/sidebars.json").readlines()
 pasteInfo = open("pasteInfo.txt", "w+")
 currentDir = os.getcwd()
 for i in range(len(sidebars)):
