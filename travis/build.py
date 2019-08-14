@@ -56,19 +56,19 @@ for i in range(len(sidebars)):
       inFile = dir + ".md.tmp"
       outFile = dir + ".pdf"
       # --------- To use built pypandoc ----------
-      # output = pypandoc.convert_file(inFile, format = 'md', to = 'pdf', outputfile = outFile)
-      # print("-------------\n")
-      # print(output)
-      # print("-------------\n")
-      # assert output == ""
+      output = pypandoc.convert_file(inFile, format = 'md', to = 'pdf', outputfile = outFile)
+      print("-------------\n")
+      print(output)
+      print("-------------\n")
+      assert output == ""
       # -------- To use standard terminal ------------
-      s = 'pandoc --pdf-engine=xelatex -s ' + inFile + " -o " + outFile 
-      print(s)
-      there = os.system(s)
-      print("---- Return Value ------- ", there)
+      # s = 'pandoc --pdf-engine=xelatex -s ' + inFile + " -o " + outFile 
+      # print(s)
+      # there = os.system(s)
+      # print("---- Return Value ------- ", there)
       if os.path.exists(inFile):
         os.remove(inFile)
-      assert there == 0
+      # assert there == 0
       merger.append(outFile)
       # print(os.getcwd())
       i += 1
