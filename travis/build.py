@@ -48,23 +48,21 @@ for i in range(len(sidebars)):
             while j < len(rdir):
               toPutNewPdfDir += rdir[j]
               j += 1
-          else:
-            fileToConvert += rdir[j]
           j += 1
-        fileToConvert = fileToConvert[::-1]
         toPutNewPdfDir = toPutNewPdfDir[::-1]
         print ("------- New Dir where file will be saved ------\n")
         print (toPutNewPdfDir, '\n')
         pasteInfo.write(toPutNewPdfDir + "\n")
-        print ("------- Converting file ------\n")
-        print (fileToConvert, '\n')
         os.chdir("docs/" + toPutNewPdfDir)
+      fileToConvert = dir.split('/')[-1]
+      print ("------- Converting file ------\n")
+      print (fileToConvert, '\n')
       # Replace double slash (\\) with single one (\).
       removeDoubleSlash(fileToConvert + ".md")
       inFile = fileToConvert + ".md.tmp"
       outFile = fileToConvert + ".pdf"
       # --------- To use built pypandoc ----------
-      output = pypandoc.convert_file(inFile, format = 'md', to = 'pdf', outputfile = outFile)
+      output = pypandoc.convert_file(inFile, format = 'md', to = 'pdf', outputfile = outFile, extra_args = ['--pdf-engine', 'xelatex'])
       print("------ Output Begin -------\n")
       print(output)
       print("------ Output End ------\n")
@@ -78,6 +76,7 @@ for i in range(len(sidebars)):
         os.remove(inFile)
       # assert there == 0
       merger.append(outFile)
+      os.remove(outFile)
       # print(os.getcwd())
       i += 1
     os.chdir(currentDir)
