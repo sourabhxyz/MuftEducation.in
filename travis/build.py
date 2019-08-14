@@ -23,20 +23,22 @@ def removeDoubleSlash(filename):
   for line in lines:
     filetmp.write(line.replace('\\\\', '\\'))
 
-sidebars = open("website/sidebars.json").readlines()
+sidebars = open("website/sidebars.tmp.json").readlines()
 pasteInfo = open("pasteInfo.txt", "w+")
+currentDir = os.getcwd()
 for i in range(len(sidebars)):
   line = sidebars[i]
   if ("[" in line):
     filename = removeQuotes(line)
     i += 1
-    print(filename)
+    print("Working on: ", filename, "\n")
     merger = PdfFileMerger()
     toPutNewPdfDir = ""
     while ("]" not in sidebars[i]):
       dir = removeQuotes(sidebars[i])
       noDocsDir = dir
       dir = "docs/" + dir
+      fileToConvert = ""
       if toPutNewPdfDir == "":
         rdir = noDocsDir[::-1]
         j = 0
@@ -46,20 +48,26 @@ for i in range(len(sidebars)):
             while j < len(rdir):
               toPutNewPdfDir += rdir[j]
               j += 1
+          else:
+            fileToConvert += rdir[j]
           j += 1
+        fileToConvert = fileToConvert[::-1]
         toPutNewPdfDir = toPutNewPdfDir[::-1]
-        print ("-------New Dir------\n")
+        print ("------- New Dir where file will be saved ------\n")
         print (toPutNewPdfDir, '\n')
         pasteInfo.write(toPutNewPdfDir + "\n")
+        print ("------- Converting file ------\n")
+        print (fileToConvert, '\n')
+        os.chdir("docs/" + toPutNewPdfDir)
       # Replace double slash (\\) with single one (\).
-      removeDoubleSlash(dir + ".md")
-      inFile = dir + ".md.tmp"
-      outFile = dir + ".pdf"
+      removeDoubleSlash(fileToConvert + ".md")
+      inFile = fileToConvert + ".md.tmp"
+      outFile = fileToConvert + ".pdf"
       # --------- To use built pypandoc ----------
       output = pypandoc.convert_file(inFile, format = 'md', to = 'pdf', outputfile = outFile)
-      print("-------------\n")
+      print("------ Output Begin -------\n")
       print(output)
-      print("-------------\n")
+      print("------ Output End ------\n")
       assert output == ""
       # -------- To use standard terminal ------------
       # s = 'pandoc --pdf-engine=xelatex -s ' + inFile + " -o " + outFile 
@@ -72,6 +80,7 @@ for i in range(len(sidebars)):
       merger.append(outFile)
       # print(os.getcwd())
       i += 1
-      merger.write(filename + ".pdf")
-      pasteInfo.write(filename + ".pdf" + "\n")
+    os.chdir(currentDir)
+    merger.write(filename + ".pdf")
+    pasteInfo.write(filename + ".pdf" + "\n")
     merger.close()
