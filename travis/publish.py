@@ -4,7 +4,8 @@ os.chdir('/tmp')
 os.system('git clone https://${GH_OAUTH_TOKEN}@github.com/${GH_USER_NAME}/${GH_PROJECT_NAME} pdfs 2>&1')
 os.chdir('pdfs/')
 
-pasteInfoLines = open("$TRAVIS_BUILD_DIR/pasteInfo.txt", "r").readlines()
+travisBuildDir = os.environ["TRAVIS_BUILD_DIR"]
+pasteInfoLines = open(travisBuildDir + "/pasteInfo.txt", "r").readlines()
 
 i = 0
 while i < len(pasteInfoLines):
