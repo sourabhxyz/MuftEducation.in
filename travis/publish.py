@@ -1,5 +1,15 @@
 import os
 
+def escapeSpace(fileName):
+  i = 0
+  retFileName = ""
+  while i < len(fileName):
+    if (fileName[i] == " "):
+      retFileName += "\\"
+    retFileName += fileName[i]
+    i += 1
+  return retFileName
+
 os.chdir('/tmp')
 os.system('git clone https://${GH_OAUTH_TOKEN}@github.com/${GH_USER_NAME}/${GH_PROJECT_NAME} pdfs 2>&1')
 os.chdir('pdfs/')
@@ -13,6 +23,7 @@ while i < len(pasteInfoLines):
   if (i + 1 >= len(pasteInfoLines)):
     break
   fileName = pasteInfoLines[i + 1]
+  fileName = escapeSpace(fileName)
   print("Copying filename: ", fileName, " to the directory: ", dir, "\n")
 
   os.system("mkdir -p " + dir)

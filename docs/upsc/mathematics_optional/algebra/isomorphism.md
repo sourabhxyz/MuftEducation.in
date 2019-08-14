@@ -144,8 +144,8 @@ phisms of $G$.
 
   *Evidently, computing $Inn(G)$ is straightforward unlike $Aut(G)$*
 
-- To compute Aut $\left(Z_{10}\right),$ we try to discover enough information about an
-element $\alpha$ of Aut $Z_{10}$ ) to determine how $\alpha$ must be defined. Because $Z_{10}$
+- To compute Aut ($Z_{10}$), we try to discover enough information about an
+element $\alpha$ of Aut ($Z_{10}$) to determine how $\alpha$ must be defined. Because $Z_{10}$
 is so simple, this is not difficult to do. To begin with, observe that once
 we know $\alpha(1),$ we know $\alpha(k)$ for any $k$ , because it is cyclic and also as $|\alpha(1)| = 10$, we have four candidates for $\alpha(1)$
 
