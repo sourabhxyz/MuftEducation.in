@@ -28,7 +28,7 @@ while i < len(pasteInfoLines):
 
   os.system("mkdir -p " + dir)
   print("------------\n")
-  print(os.listdir())
+  print(os.listdir(travisBuildDir))
   print("------------\n")
   if (os.path.exists(travisBuildDir + "/" + fileName)):
     print("Executing: ", "cp $TRAVIS_BUILD_DIR/" + fileName + " ./" + dir + "/" + fileName)
