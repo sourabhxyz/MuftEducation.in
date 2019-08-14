@@ -53,7 +53,7 @@ cyclic. So we may assume that $H \neq\{e\} .$ We now claim that $H$ contains an 
 element of $H$ has the form $a^{t} ;$ and when $a^{t}$ belongs to $H$ with $t<0,$ then
 $a^{-t}$ belongs to $H$ also and $-t$ is positive. Thus, our claim is verified. Now
 let $m$ be the least positive integer such that $a^{m} \in H .$ By closure, $\left\langle a^{m}\right\rangle \subseteq H .$
-We next claim that $H=\left\langle a^{m}\right\rangle .$ To prove this claim, it suffices to let $b$ be an arbitrary member of $H$ and show that $b$ is in $\left\langle a^{m}\right\rangle .$ since $ b \in G=\langle a\rangle,$ we
+We next claim that $H=\left \langle a^{m}\right \rangle .$ To prove this claim, it suffices to let $b$ be an arbitrary member of $H$ and show that $b$ is in $\left\langle a^{m}\right\rangle .$ since $b \in G=\langle a\rangle,$ we
 have $ b=a^{k}$ for some $k .$ Now, apply the division algorithm to $k$ and $m$ to
 obtain integers $q$ and $r$ such that $k=m q+r$ where $0 \leq r<m .$ Then $a^{k}=$
 $a^{m q+r}=a^{m q} a^{r},$ so that $a^{r}=a^{-m q} a^{k} .$ since $a^{k}=b \in H$ and $a^{-m q}=$
@@ -62,13 +62,13 @@ $a^{m} \in H,$ and $0 \leq r<m,$ so $r$ must be $0 .$ The theorem that every sub
 group of a cyclic group is cyclic. 
 
 To prove the next portion of the theorem, suppose that $|\langle a\rangle|=n$ and
-$H$ is any subgroup of $\langle a\rangle .$ We have already shown that $ H=\left\langle a^{m}\right\rangle,$ where
+$H$ is any subgroup of $\langle a\rangle .$ We have already shown that $H=\left\langle a^{m}\right\rangle,$ where
 $m$ is the least positive integer such that $a^{m} \in H .$ Using $e=b=a^{n}$ as in
 the preceding paragraph, we have $n=m q .$
 
 Finally, let $k$ be any positive divisor of $n .$ We will show that $\left\langle a^{n / k}\right\rangle$ is
 the one and only subgroup of $\langle a\rangle$ of order $ k .$ From Theorem $4.2,$ we see
-that $\left\langle a^{n / k}\right\rangle$ has order $ n / \operatorname{gcd}(n, n / k)=n /(n / k)=k .$ Now let $H$ be any
+that $\left\langle a^{n / k}\right\rangle$ has order $n / \operatorname{gcd}(n, n / k)=n /(n / k)=k .$ Now let $H$ be any
 subgroup of $\langle a\rangle$ of order $ k .$ We have already shown above that $H=\left\langle a^{m}\right\rangle$ ,
 where $m$ is a divisor of $n .$ Then $m=\operatorname{gcd}(n, m)$ and $k=\left|a^{m}\right|=| a^{\operatorname{gcd}(n, m)}|=$ $n / \operatorname{gcd}(n, m)=n / m .$ Thus, $m=n / k$ and $H=\left\langle a^{n / k}\right\rangle$.
 
@@ -126,7 +126,7 @@ elements of order $d$ in $G$ are in $\langle a\rangle,$ we are done. So, suppose
 is an element $b$ in $G$ of order $d$ that is not in $\langle a\rangle .$ Then, $\langle b\rangle$ also has $\phi(d)$
 elements of order $d .$ This means that we have found 2$\phi(d)$ elements of order $d$ in $G$ provided that $\langle a\rangle$ and $\langle b\rangle$ have no elements of order $d$ in
 common. If there is an element $c$ of order $d$ that belongs to both $\langle a\rangle$ and
-$\langle b\rangle,$ then we have $\langle a\rangle=\langle c\rangle=\langle b\rangle,$ so that $ b \in\langle a\rangle,$ which is a contradiction. Continuing in this fashion, we see that the number of elements of order $d$ in a finite group is a multiple of $\phi(d)$.
+$\langle b\rangle,$ then we have $\langle a\rangle=\langle c\rangle=\langle b\rangle,$ so that $b \in\langle a\rangle,$ which is a contradiction. Continuing in this fashion, we see that the number of elements of order $d$ in a finite group is a multiple of $\phi(d)$.
 
 ---
 

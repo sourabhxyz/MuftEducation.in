@@ -25,11 +25,11 @@ But our DE is of first order and thus should have only one arbitrary constant, t
 
 ## Solvable for x
 
-i.e., it can be put in the form $x = f(y, P) \tag{1} \label{1}$
+i.e., it can be put in the form $$x = f(y, P) \tag{1} \label{1}$$
 
-Differentiating wrt $y$ we get $1/P = F(y, P, \frac{dP}{dy}) \tag{2} \label{2}$
+Differentiating wrt $y$ we get $$1/P = F(y, P, \frac{dP}{dy}) \tag{2} \label{2}$$
 
-Let the soln of $\eqref{2}$ be $\phi(y, P, c) = 0 \label{3} \tag{3}$
+Let the soln of $\eqref{2}$ be $$\phi(y, P, c) = 0 \label{3} \tag{3}$$
 
 Eliminating $P$ between $\eqref{1} \text{ and } \eqref{3}$ gives the soln for the given eqn.
 

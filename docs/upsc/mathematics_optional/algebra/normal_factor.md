@@ -84,7 +84,7 @@ Also remember that the order of the factor group is $|G|/|H|$
     is it—$Z_8, Z_4 \oplus Z_2, Z_2 \oplus Z_2 \oplus Z_2$ ? To answer this question, we need
     only determine the elements of $G/H$ and their orders. Observe that the
     eight cosets
-    $\begin{array}{ll}{1 H=\\{1,17\\},} & {3 H=\\{3,19\\},  5 H=\\{5,21\\},  7 H=\\{7,23\\}} \\\ {9 H=\\{9,25\\},} & {11 H=\\{11,27\\},  13 H=\\{13,29\\},} & {15 H=\\{15,31\\}}\end{array}$
+    $\begin{array}{ll}{1 H=\\{1,17\\},} & {3 H=\\{3,19\\},  5 H=\\{5,21\\},  7 H=\\{7,23\\}} \\\ {9 H=\\{9,25\\},} & {11 H=\\{11,27\\},  13 H=\\{13,29\\},}\end{array}$ and $15 H=\\{15,31\\}$
 
     are all distinct, so that they form the factor group $G / H .$ Clearly,
     $(3 H)^{2}=9 H \neq H,$ and $\operatorname{so} 3 H$ has order at least $4 .$ Thus, $G / H$ is not
@@ -104,7 +104,7 @@ Also remember that the order of the factor group is $|G|/|H|$
 
 **Theorem 9.3:** Let $G$ be a group and let $Z(G)$ be the center of $G$. If $G/Z(G)$ is cyclic, then $G$ is Abelian.
 
-**Proof:** Since $G$ is Abelian is equivalent to $Z(G) = G$, it suffices to show that the only element of $G/Z(G)$ is the identity coset $Z(G)$. To this end, let $G / Z(G)=\langle g Z(G)\rangle$ and let $ a \in G .$ Then there exists an integer $i$ such that
+**Proof:** Since $G$ is Abelian is equivalent to $Z(G) = G$, it suffices to show that the only element of $G/Z(G)$ is the identity coset $Z(G)$. To this end, let $G / Z(G)=\langle g Z(G)\rangle$ and let $a \in G .$ Then there exists an integer $i$ such that
 $a Z(G)=(g Z(G))^{i}=g^{i} Z(G) .$ Thus, $a=g^{i} z$ for some $z$ in $Z(G)$ . Since both
 $g^{i}$ and $z$ belong to $C(g),$ so does $a$ . Because $a$ is an arbitrary element of $G$ this means that every element of $G$ commutes with $g$ so $g \in Z(G)$. Thus, $gZ(G) = Z(G)$ is the only element of $G/Z(G)$.
 

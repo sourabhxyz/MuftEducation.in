@@ -60,11 +60,11 @@ $v \in V$, there is an element $av$ in $V$ such that the following conditions ho
 
 Let $V$ be a vector space over $K$. Vectors $u_1, u_2, \dots, u_m$ in $V$ are said to span $V$ or to form a spanning set of $V$ if every $v$ in $V$ is a linear combination of the vectors $u_1, \dots, u_m$ that is, if there exist scalars $a_1, a_2, \dots, a_m$ in K such that $v=a_{1} u_{1}+a_{2} u_{2}+\cdots+a_{m} u_{m}$
 
-$\begin{array}{l}{\text { Remark 1: Suppose } u_{1}, u_{2}, \ldots, u_{m} \text { span } V \text { and suppose } u_{k} \\\ \text { is a linear combination of some of the }} \\\ {\text { other } u^{\prime} \text { s. Then the } u^{\prime} \text { s without } u_{k} \text { also span } V .}\end{array}$
+$\begin{array}{l}{\text{ Remark 1: Suppose } u_{1}, u_{2}, \ldots, u_{m} \text{ span } V \text{ and suppose } u_{k} \text{ is a linear combination of some of the }} \\\ {\text{ other } u^{\prime} \text{ s. Then the } u^{\prime} \text{ s without } u_{k} \text{ also span } V .}\end{array}$
 
-$\begin{array}{l}{\text { Remark 2: Suppose } u_{1}, u_{2}, \ldots, u_{m} \text { span } V \\\ \text { and suppose one of the } u^{\prime} \text { 's the zero vector. Then the }} \\\ {u^{\prime} \text { 's without the zero vector also span } V \text { . }}\end{array}$
+$\begin{array}{l}{\text{ Remark 2: Suppose } u_{1}, u_{2}, \ldots, u_{m} \text{ span } V \text{ and suppose one of the } u^{\prime} \text{ 's the zero vector. Then the }} \\\ {u^{\prime} \text{ 's without the zero vector also span } V \text{ . }}\end{array}$
 
-## Subspacees
+## Subspaces
 
 Let $V$ be a vector space over a field $K$ and let $W$ be a subset of $V$. Then $W$ is a subspace of $V$ if $W$ is itself a vector space over $K$ with respect to the operations of vector addition and scalar multiplication on $V$.
 
@@ -73,11 +73,11 @@ Let $V$ be a vector space over a field $K$ and let $W$ be a subset of $V$. Then 
 **Theorem:** Suppose $W$ is a subset of a vector space $V$. Then $W$ is a subspace of $V$ if the following two conditions hold:
 
 1.  The zero vector $0$ belongs to $W$.
-2.  For every $u, v \in W, k \in K : \text { (i) The sum } u+v \in W . \text { (ii) The multiple } k u \in W$
+2.  For every $u, v \in W, k \in K : \text{ (i) The sum } u+v \in W . \text{ (ii) The multiple } k u \in W$
 
 Both properties may be combined into the following equivalent single statement:
 
-$\text { For every } u, v \in W, a, b \in K, \text { the linear combination } a u+b v \in W$
+$\text{ For every } u, v \in W, a, b \in K, \text{ the linear combination } a u+b v \in W$
 
 ---
 
@@ -188,9 +188,9 @@ An infinite set $S$ of vectors is linearly dependent or independent according to
 
 Thus, in this equation, we choose appropriate values of $t$ to easily get $x = 0, y = 0, z = 0$.
 
-1. $\text { Substitute } t=0 \quad \text { to } \operatorname{obtain} x(0)+y(1)+z(0)=0 \quad \text { or } \quad y=0$
-2. $\text { Substitute } t=\pi \quad \text { to } \operatorname{obtain} x(0)+0\left(e^{\pi}\right)+z\left(\pi^{2}\right)=0 \quad \text { or } \quad \text { or } \quad z=0$
-3. $\text { Substitute } t=\pi / 2 \quad \text { to obtain } x(1)+0\left(e^{\pi / 2}\right)+0\left(\pi^{2} / 4\right)=0 \quad \text { or } \quad x=0$
+1. $\text{ Substitute } t=0 \quad \text{ to } \operatorname{obtain} x(0)+y(1)+z(0)=0 \quad \text{ or } \quad y=0$
+2. $\text{ Substitute } t=\pi \quad \text{ to } \operatorname{obtain} x(0)+0\left(e^{\pi}\right)+z\left(\pi^{2}\right)=0 \quad \text{ or } \quad \text{ or } \quad z=0$
+3. $\text{ Substitute } t=\pi / 2 \quad \text{ to obtain } x(1)+0\left(e^{\pi / 2}\right)+0\left(\pi^{2} / 4\right)=0 \quad \text{ or } \quad x=0$
 
 Thus $u, v$ and $w$ are LI.
 
@@ -208,8 +208,8 @@ This theorem is the consequence of the following replacement lemma.
 
 **Lemma:** Suppose $\\{v_1, v_2, \dots, v_n\\}$ spans $V$, and suppose $\\{w_1, w_2, \dots, w_m\\}$ is linearly independent. Then $m \leq n$, and $V$ is spanned by a set of the form $\left\\{w_{1}, w_{2}, \ldots, w_{m}, v_{i_{1}}, v_{i_{2}}, \ldots, v_{i_{n-m}}\right\\}$. Thus, in particular, $n + 1$ or more vectors in $V$ are linearly dependent.
 
-**Proof:** Because $\\{v_i\\}$ spans $V$, we have $\left\\{w_{1}, v_{1}, \ldots, v_{n}\right\\} \label{1} \tag{1}$ is linearly dependent and also spans $V$. By previous Lemma, one of the vectors in is a linear combination of
-the preceding vectors. This vector cannot be $w_1$, so it must be one of the $v's$, say $v_j$: Thus we can delete $v_j$ from the spanning set and obtain the spanning set $\left\\{w_{1}, v_{1}, \ldots, v_{j-1}, \quad v_{j+1}, \ldots, v_{n}\right\\} \tag{2} \label{2}$ Now we repeat the argument with the vector $w_2$. That is, because $\eqref{2}$ spans $V$, the set $\left\\{w_{1}, w_{2}, v_{1}, \ldots, v_{j-1}, \quad v_{j+1}, \ldots, v_{n}\right\\} \label{3} \tag{3}$ is linearly dependent and also spans $V$. Again by previous Lemma, one of the vectors in $\eqref{3}$ is a linear
+**Proof:** Because $\\{v_i\\}$ spans $V$, we have $$\left\\{w_{1}, v_{1}, \ldots, v_{n}\right\\} \label{1} \tag{1}$$ is linearly dependent and also spans $V$. By previous Lemma, one of the vectors in is a linear combination of
+the preceding vectors. This vector cannot be $w_1$, so it must be one of the $v's$, say $v_j$: Thus we can delete $v_j$ from the spanning set and obtain the spanning set $$\left\\{w_{1}, v_{1}, \ldots, v_{j-1}, \quad v_{j+1}, \ldots, v_{n}\right\\} \tag{2} \label{2}$$ Now we repeat the argument with the vector $w_2$. That is, because $\eqref{2}$ spans $V$, the set $$\left\\{w_{1}, w_{2}, v_{1}, \ldots, v_{j-1}, \quad v_{j+1}, \ldots, v_{n}\right\\} \label{3} \tag{3}$$ is linearly dependent and also spans $V$. Again by previous Lemma, one of the vectors in $\eqref{3}$ is a linear
 combination of the preceding vectors. We emphasize that this vector cannot be $w_1$ or $w_2$, because
 $\\{w_1, \dots , w_m\\}$ is independent; hence, it must be one of the $v's$, say $v_k$. Thus, we can
 delete $v_k$ from the spanning set $\eqref{3}$ and obtain the spanning set
@@ -349,7 +349,7 @@ Thus it can be said that the system is consistent if the rank of $A$ and $[A | b
 
   Let $M_k = [C_1, C_2, \dots, C_k]$ the submatrix of $A$ consisting of the first $k$ columns of $A$. Then $M_{k - 1}$ and $M_k$ are, respectively, the coefficient matrix and augmented matrix of the vector equation $x_{1} C_{1}+x_{2} C_{2}+\cdots+x_{k-1} C_{k-1}=C_{k}$ this system has a solution, or, equivalently, $C_k$ is a linear combination of the preceding columns of $A$ if and only if $rank(M_k) = rank(M_{k - 1})$. Now the first $k$ column of the echelon matrix $B$ is also an echelon form of $M_k$. Accordingly, $\operatorname{rank}\left(M_{2}\right)=\operatorname{rank}\left(M_{3}\right)=2$ and $\operatorname{rank}\left(M_{4}\right)=\operatorname{rank}\left(M_{5}\right)=\operatorname{rank}\left(M_{6}\right)=3$. Thus, $C_3, C_5, C_6$ are each a linear combination of the preceding columns of $A$.
 
-  Now to find basis of column space, the fact that the remaining columns $C_1, C_2, C_4$ are not linear combinations of their respective preceding columns also tells us that they are linearly independent. Thus, they form a basis of the column space of $A$. That is, $\text { basis of } \operatorname{colsp}(A) : \quad[1,2,3,1,2]^{T}, \quad[2,5,7,5,6]^{T}, \quad[3,6,11,8,11]^{T}$ Observe that $C_1, C_2, C_4$ may also be characterized as those columns of $A$ that contain the pivots in any echelon form of $A$. (thus, if it is asked to express a column in terms of basis columns, we can go with equation $$\sum_{i < k \text{ and } C_i \text{ is a part of basis found above }}x_{i} C_{i}=C_{k}$$ then form an augemented matrix and solve to find variables)
+  Now to find basis of column space, the fact that the remaining columns $C_1, C_2, C_4$ are not linear combinations of their respective preceding columns also tells us that they are linearly independent. Thus, they form a basis of the column space of $A$. That is, $\text{ basis of } \operatorname{colsp}(A) : \quad[1,2,3,1,2]^{T}, \quad[2,5,7,5,6]^{T}, \quad[3,6,11,8,11]^{T}$ Observe that $C_1, C_2, C_4$ may also be characterized as those columns of $A$ that contain the pivots in any echelon form of $A$. (thus, if it is asked to express a column in terms of basis columns, we can go with equation $$\sum_{i < k \text{ and } C_i \text{ is a part of basis found above }}x_{i} C_{i}=C_{k}$$ then form an augemented matrix and solve to find variables)
 
   From this exercise we have the following two methods to find basis of the subspace spanned by the vectors $u_1, \dots, u_r$.
 
@@ -500,7 +500,7 @@ Hence if system is homogeneous and $D \neq 0$, it has only the trivial soln $x_i
 
 Let $U$ and $W$ be subsets of a vector space $V$. The sum of $U$ and $W$, written $U + W$, consists of all sums $u+w$ where $u \in U$ and $w \in W$. That is,
 
-$U+W=\\{v : v=u+w, \text { where } u \in U \text { and } w \in W\\}$
+$U+W=\\{v : v=u+w, \text{ where } u \in U \text{ and } w \in W\\}$
 
 Now suppose $U$ and $W$ are subspaces of $V$. Then one can easily show that
 
@@ -525,13 +525,13 @@ $B=\left\\{v_{1}, \ldots, v_{r}, u_{1}, \ldots, u_{m-r}, w_{1}, \ldots, w_{n-r}\
 
 Note that $B$ has exactly $m + n - r$ elements. Thus, the theorem is proved if we can show that $B$ is a basis of $U + W$. Because $\\{v_i, u_j\\}$ spans $U$ and $\\{v_i, w_k\\}$ spans $W$, the union $B = \\{v_i, u_j, w_k\\}$ spans $U + W$. Thus, it suffices to show that $B$ is independent. Suppose,
 
-$a_{1} v_{1}+\cdots+a_{r} v_{r}+b_{1} u_{1}+\cdots+b_{m-r} u_{m-r}+c_{1} w_{1}+\cdots+c_{n-r} w_{n-r}=0 \tag{1}$
+$$a_{1} v_{1}+\cdots+a_{r} v_{r}+b_{1} u_{1}+\cdots+b_{m-r} u_{m-r}+c_{1} w_{1}+\cdots+c_{n-r} w_{n-r}=0 \tag{1}$$
 
 where $a_i, b_j, c_k$ are scalars. Let
 
-$v=a_{1} v_{1}+\cdots+a_{r} v_{r}+b_{1} u_{1}+\cdots+b_{m-r} u_{m-r} \tag{2}$
+$$v=a_{1} v_{1}+\cdots+a_{r} v_{r}+b_{1} u_{1}+\cdots+b_{m-r} u_{m-r} \tag{2}$$
 
-By (1) we also have $v=-c_{1} w_{1}-\cdots-c_{n-r} w_{n-r} \tag{3}$
+By (1) we also have $$v=-c_{1} w_{1}-\cdots-c_{n-r} w_{n-r} \tag{3}$$
 
 Because $\\{v_i, u_j\\} \subseteq U, v \in U$ by (2); and as $\\{w_k\\} \subseteq W, v \in W$ by (3). Accordingly, $v \in U \cap W$. Now $\\{v_i\\}$ is a basis of $U \cap W$, and so there exist scalars $d_1, \dots , d_r$ for which $v = d_1v_1 + \dots + d_rv_r$. Thus, by (3), we have
 
@@ -629,7 +629,7 @@ if every $v \in V$ can be written in one and only one way as $v = u + w$ where $
 
 **Theorem:** The vector space $V$ is the direct sum of its subspaces $U$ and $W$ if and only if:
 
-$\text { (i) } V=U+W,(\text { ii) } U \cap W=\\{0\\}$ (easy to prove)
+$\text{ (i) } V=U+W,(\text{ ii) } U \cap W=\\{0\\}$ (easy to prove)
 
 ## General Direct Sums
 
@@ -639,17 +639,17 @@ if every vector $v \in V$ can be written in one and only one way as
 
 $v=w_{1}+w_{2}+\cdots+w_{r}$
 
-$\text { where } w_{1} \in W_{1}, w_{2} \in W_{2}, \ldots, w_{r} \in W_{r}$
+$\text{ where } w_{1} \in W_{1}, w_{2} \in W_{2}, \ldots, w_{r} \in W_{r}$
 
 **Theorem:** Suppose $V=W_{1} \oplus W_{2} \oplus \cdots \oplus W_{r}$. Also, for each $k$, suppose $S_k$ is a linearly independent subset of $W_k$. Then
 
-$\text { (a) The union } S=\cup_{k} S_{k} \text { is linearly independent in } V$ (easy to prove as, if they are linearly dependent then one side is a linear combination of $S_1$ (which would imply coefficients on left side are 0 and so on...))
+$\text{ (a) The union } S=\cup_{k} S_{k} \text{ is linearly independent in } V$ (easy to prove as, if they are linearly dependent then one side is a linear combination of $S_1$ (which would imply coefficients on left side are 0 and so on...))
 
-$\text { (b) If each } S_{k} \text { is a basis of } W_{k}, \text { then } \bigcup_{k} S_{k} \text { is a basis of } V$ (follows from (a))
+$\text{ (b) If each } S_{k} \text{ is a basis of } W_{k}, \text{ then } \bigcup_{k} S_{k} \text{ is a basis of } V$ (follows from (a))
 
-$\text { (c) } \operatorname{dim} V=\operatorname{dim} W_{1}+\operatorname{dim} W_{2}+\cdots+\operatorname{dim} W_{r}$ (follows from (b))
+$\text{ (c) } \operatorname{dim} V=\operatorname{dim} W_{1}+\operatorname{dim} W_{2}+\cdots+\operatorname{dim} W_{r}$ (follows from (b))
 
-**Theorem:** $\text { Suppose } V=W_{1}+W_{2}+\cdots+W_{r} \text { and } \operatorname{dim} V=\sum_{k} \operatorname{dim} W_{k} . \text { Then }$
+**Theorem:** $\text{ Suppose } V=W_{1}+W_{2}+\cdots+W_{r} \text{ and } \operatorname{dim} V=\sum_{k} \operatorname{dim} W_{k} . \text{ Then }$
 
 $V=W_{1} \oplus W_{2} \oplus \cdots \oplus W_{r}$
 

@@ -8,7 +8,7 @@ sidebar_label: Cosets and Lagrange's Theorem
 
 Let $G$ be a group and let $H$ be a nonempty subset of $G .$ For any $a \in G,$
 the set $\\{a h | h \in H\\}$ is denoted by $a H .$ Analogisly, $H a=\\{h a | h \in H\\}$
-and $a H a^{-1}=\left\\\{a h a^{-1} | h \in H\right\\\} .$ When $H$ is a subgroup of $G,$ the set $a H$ (in additie notation $a + H$) is called the left coset of $H$ in $G$ containing $a,$ whereas $H a$ is called the right
+and $a H a^{-1}=\left \\{a h a^{-1} | h \in H\right \\} .$ When $H$ is a subgroup of $G,$ the set $a H$ (in additie notation $a + H$) is called the left coset of $H$ in $G$ containing $a,$ whereas $H a$ is called the right
 coset of $H$ in G containing a. In this case, the element $a$ is called the coset representative of $a H$ (or $H a ) .$ We use $|a H|$ to denote the number of elements in the set $a H,$ and $|H a|$ to denote the number of elements in $H a$.
 
 ### Properties of Cosets
@@ -128,7 +128,7 @@ we have that $|\langle a\rangle \cap\langle b\rangle|=1 .$ But then $|b|=2,$ for
 element of $G$ not in $\langle a\rangle$ has order $ 2 .$ Next consider ab. Since $a b \notin\langle a\rangle,$ our argument above shows that
 $|a b|=2 .$ Then $a b=(a b)^{-1}=b^{-1} a^{-1}=b a^{-1} .$ Moreover, this relation completely determines the multiplication table for $G .$ [For example,
 $a^{3}\left(b a^{4}\right)=a^{2}(a b) a^{4}=a^{2}\left(b a^{-1}\right) a^{4}=a(a b) a^{3}=a\left(b a^{-1}\right) a^{3}=(a b) a^{2}=$
-$\left(b a^{-1}\right) a^{2}=b a . ]$ since the multiplication table for all noncyclic groups
+$\left(b a^{-1}\right) a^{2}=b a$.] since the multiplication table for all noncyclic groups
 of order 2$p$ is uniquely determined by the relation $a b=b a^{-1},$ all
 noncyclic groups of order 2$p$ must be isomorphic to each other. But of course, $D_{p},$ the dihedral group of order $2 p,$ is one such group.
 

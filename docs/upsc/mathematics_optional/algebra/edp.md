@@ -65,7 +65,7 @@ $m$ and $n$ are relatively prime. Suppose that gcd $(m, n)=d$ and $(g, h)$ is a
 generator of $G \oplus H .$ since $(g, h)^{m n / d}=\left(\left(g^{m}\right)^{n / d},\left(h^{n}\right)^{m / d}\right)=(e, e),$ we
 have $m n=|(g, h)| \leq m n / d .$ Thus, $d=1$ 
 
-To prove the other half of the theorem, let $G=\langle g\rangle$ and $ H=\langle h\rangle$ and $\sup ^{-}$
+To prove the other half of the theorem, let $G=\langle g\rangle$ and $H=\langle h\rangle$ and $\sup ^{-}$
 pose $\operatorname{gcd}(m, n)=1 .$ Then $,|(g, h)|=\operatorname{lcm}(m, n)=m n=|G \oplus H|,$ so that $(g, h)$ is a generator of $G \oplus H$.
 
 **Corollary 1:** An external direct product $G_{1} \oplus G_{2} \oplus \cdots \oplus G_{n}$ of a finite number

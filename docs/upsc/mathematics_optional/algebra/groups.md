@@ -59,7 +59,7 @@ $G L\left(2, Z_{p}\right),$ provided we interpret division by $a d-b c$ as multi
 by the inverse of $(a d-b c)$ modulo $p .$ For example, in $G L\left(2, Z_{7}\right)$
 consider $\left[\begin{array}{cc}{4} & {5} \\\ {6} & {3}\end{array}\right] .$ Then the determinant $(a d-b c) \bmod 7$ is $(12-30)$
 $\bmod 7=-18 \bmod 7=3$ and the inverse of 3 is 5$[\operatorname{since}(3 \cdot 5))$
-$\bmod 7=1 ] .$ So, the inverse of $\left[\begin{array}{cc}{4} & {5} \\\ {6} & {3}\end{array}\right]$ is $\left[\begin{array}{cc}{3 \cdot 5} & {2 \cdot 5} \\\ {1 \cdot 5} & {4 \cdot 5}\end{array}\right]=\left[\begin{array}{cc}{1} & {3} \\\ {5} & {6}\end{array}\right]$ [The reader should check that $\left[\begin{array}{cc}{4} & {5} \\\ {6} & {3}\end{array}\right]\left[\begin{array}{cc}{1} & {3} \\\ {5} & {6}\end{array}\right]=\left[\begin{array}{cc}{1} & {0} \\\ {0} & {1}\end{array}\right]$ in $G L\left(2, Z_{7}\right) ] $ The group $G L(n, F)$ is called the general linear group of $n \times n$
+$\bmod 7=1 ] .$ So, the inverse of $\left[\begin{array}{cc}{4} & {5} \\\ {6} & {3}\end{array}\right]$ is $\left[\begin{array}{cc}{3 \cdot 5} & {2 \cdot 5} \\\ {1 \cdot 5} & {4 \cdot 5}\end{array}\right]=\left[\begin{array}{cc}{1} & {3} \\\ {5} & {6}\end{array}\right]$ [The reader should check that $\left[\begin{array}{cc}{4} & {5} \\\ {6} & {3}\end{array}\right]\left[\begin{array}{cc}{1} & {3} \\\ {5} & {6}\end{array}\right]=\left[\begin{array}{cc}{1} & {0} \\\ {0} & {1}\end{array}\right]$ in $G L\left(2, Z_{7}\right)$] The group $G L(n, F)$ is called the general linear group of $n \times n$
 matrices over $F .$
 
 - The set of all symmetries of the infinite ornamental pattern in which arrowheads are spaced uniformly a unit apart along a line is an Abelian group under composition. Let $T$ denote a translation
@@ -109,12 +109,11 @@ So we will unambiguously denote the inverse by $g^{-1}$
 
 Similarly, when $n$ is a positive integer, the associative law allows us to
 use $g^{n}$ to denote the unambiguous product
-We define $g^{0}=e .$ When $n$ is negative, we define $g^{n}=\left(g^{-1}\right)^{|n|}$ [for ex-
-ample, $g^{-3}=\left(g^{-1}\right)^{3} ] .$ 
+We define $g^{0}=e .$ When $n$ is negative, we define $g^{n}=\left(g^{-1}\right)^{|n|}$ [for example, $g^{-3}=\left(g^{-1}\right)^{3}.$] 
 familiar laws of exponents hold for groups; that is, for all integers $m$ and
 $n$ and any group element $g,$ we have $g^{m} g^{n}=g^{m+n}$ and $\left(g^{m}\right)^{n}=g^{m n}$
 
-_Note: $ax = $b$ \Rightarrow x = a^{-1}b$ which is unique as inverse is
+_Note: $ax = b \Rightarrow x = a^{-1}b$ which is unique as inverse is
 unique_
 
 Also, one must be careful with this notation when dealing with a

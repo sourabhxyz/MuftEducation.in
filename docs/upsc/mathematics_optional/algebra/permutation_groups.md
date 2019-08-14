@@ -29,8 +29,8 @@ $\sigma=\left[\begin{array}{lllll}{1} & {2} & {3} & {4} & {5} \\\ {2} & {4} & {3
 $\gamma=\left[\begin{array}{lllll}{1} & {2} & {3} & {4} & {5} \\\ {5} & {4} & {1} & {2} & {3}\end{array}\right]$
 
 $\gamma \sigma=$
-$\left[\begin{array}{cccc}{1} & {2} & {3} & {4} & {5} \\\ {} & {\downarrow} & {} & {} \\\ {5} & {4} & {1} & {2} & {3}\end{array}\right]$
-$\left[\begin{array}{llll}{1} & {2} & {3} & {4} & {5} \\\ {\downarrow} & {} & {} & {} & {} \\\ {2} & {4} & {3} & {5} & {1}\end{array}\right]$
+$\left[\begin{array}{ccccc}{1} & {2} & {3} & {4} & {5} \\\ {} & {\downarrow} & {} & {} & {} \\\ {5} & {4} & {1} & {2} & {3} \end{array}\right]$
+$\left[\begin{array}{lllll}{1} & {2} & {3} & {4} & {5} \\\ {\downarrow} & {} & {} & {} & {} \\\ {2} & {4} & {3} & {5} & {1}\end{array}\right]$
 
 $=\left[\begin{array}{lllll}{1} & {2} & {3} & {4} & {5} \\\ {4} & {2} & {1} & {3} & {5}\end{array}\right]$
 
@@ -44,7 +44,7 @@ $=\left[\begin{array}{lllll}{1} & {2} & {3} & {4} & {5} \\\ {4} & {2} & {1} & {3
 
   It is easy to compute the order of $S_{n} .$ There are $n$ choices of $\alpha(1)$ . Once
   $\alpha(1)$ has been determined, there are $n-1$ possibilities for $\alpha(2)$ [since
-  $\alpha$ is one-to-one, we must have $\alpha(1) \neq \alpha(2) ] .$ After choosing $\alpha(2),$ there
+  $\alpha$ is one-to-one, we must have $\alpha(1) \neq \alpha(2)$]. After choosing $\alpha(2),$ there
   are exactly $n-2$ possibilities for $\alpha(3)$ . Continuing along in this fashion,
   we see that $S_{n} \operatorname{has} n(n-1) \cdot \cdot 3 \cdot 2 \cdot 1=n !$ elements.
 
@@ -264,4 +264,10 @@ $(12) \alpha \neq(12) \beta$ when $\alpha \neq \beta .$ Thus, there at least as 
 
 ---
 
+$ x^2 = 3 $
 
+$ x^2 = 4 ] $
+
+$ x^2 = 4 ] . $
+
+[ $x^2 = 4 ] .$
