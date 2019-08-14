@@ -167,7 +167,7 @@ $\begin{array}{c|cccc}{\operatorname{Aut}\left(Z_{10}\right)} & {\boldsymbol{\al
 
 **Proof:** Any automorphism $\alpha$ is determined by the
 value of $\alpha(1)$, and $\alpha(1) \in U(n)$. Now consider the correspondence
-from $Aut(Zn) \text{ to } U(n)$ given by $T: \alpha → \alpha(1)$. Clearly it is one - one and onto. To see that it is operation preserving, we have, $T(\alpha \beta) = \alpha(\beta(1)) = \beta(1)\alpha(1) = \alpha(1)\beta(1) = T(\alpha)T(\beta)$. 
+from $Aut(Z_n) \text{ to } U(n)$ given by $T: \alpha → \alpha(1)$. Clearly it is one - one and onto. To see that it is operation preserving, we have, $T(\alpha \beta) = \alpha(\beta(1)) = \beta(1)\alpha(1) = \alpha(1)\beta(1) = T(\alpha)T(\beta)$. 
 
 ---
 

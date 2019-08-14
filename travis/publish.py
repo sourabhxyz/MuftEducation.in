@@ -27,8 +27,9 @@ while i < len(pasteInfoLines):
   print("Copying filename: ", fileName, " to the directory: ", dir, "\n")
 
   os.system("mkdir -p " + dir)
-
-  os.system("cp $TRAVIS_BUILD_DIR/" + fileName + " ./" + dir + "/" + fileName)
+  if (os.path.exists("travisBuildDir/" + fileName)):
+    print("Executing: ", "cp $TRAVIS_BUILD_DIR/" + fileName + " ./" + dir + "/" + fileName)
+    os.system("cp $TRAVIS_BUILD_DIR/" + fileName + " ./" + dir + "/" + fileName)
   i += 2
 
 
