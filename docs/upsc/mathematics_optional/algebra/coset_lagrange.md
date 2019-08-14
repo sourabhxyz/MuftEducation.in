@@ -87,7 +87,7 @@ $U(p)=\\{1,2, \ldots, p-1\\}$ under multiplication modulo $p . ]$ Then, by the p
 
 :::note Note
 1. It is relatively easy to prove that if $a, m$ are relatively prime then $a \bmod m (= r), m$ are relatively prime and by similar procedure, we arrive at $r^{\phi(m)} \bmod m = 1$.
-2. $U(p)$ for prime $p$ is also denoted as $\mathbb{Z}_p^{\times}$
+2. $U(p)$ for prime $p$ is also denoted as $\mathbb{Z}_p^{*}$
 :::
 
 ---
@@ -124,8 +124,8 @@ nonidentity element of $G$ must have order $2$ or $p$. Thus, to verify our asser
 Now let $b$ be any element not in $\langle a\rangle .$ Then by Lagrange's Theorem
 and our assumption that $G$ does not have an element of order $2 p,$ we
 have that $|b|=2$ or $p .$ Because $|\langle a\rangle \cap\langle b\rangle|$ divides $|\langle a\rangle|=p$ and $\langle a\rangle \neq\langle b\rangle$
-we have that $|\langle a\rangle \cap\langle b\rangle|=1 .$ But then $|b|=2,$ for otherwise, by Theorem $7.2 \mathrm{l}\langle a\rangle\langle b\rangle|=|\langle a\rangle| |\langle b\rangle\left|=p^{2}>2 p=\right| G |,$ which is impossible. So, any
-element of $G$ not in $\langle a\rangle$ has order $ 2 .$ Next consider ab. Since $a b \notin\langle a\rangle,$ our argument above shows that
+we have that $|\langle a\rangle \cap\langle b\rangle|=1 .$ But then $|b|=2,$ for otherwise, by Theorem 7.2 $|\langle a\rangle\langle b\rangle|=|\langle a\rangle| |\langle b\rangle\left|=p^{2}>2 p=\right| G |,$ which is impossible. So, any
+element of $G$ not in $\langle a\rangle$ has order $ 2 .$ Next consider $ab$. Since $a b \notin\langle a\rangle,$ our argument above shows that
 $|a b|=2 .$ Then $a b=(a b)^{-1}=b^{-1} a^{-1}=b a^{-1} .$ Moreover, this relation completely determines the multiplication table for $G .$ [For example,
 $a^{3}\left(b a^{4}\right)=a^{2}(a b) a^{4}=a^{2}\left(b a^{-1}\right) a^{4}=a(a b) a^{3}=a\left(b a^{-1}\right) a^{3}=(a b) a^{2}=$
 $\left(b a^{-1}\right) a^{2}=b a$.] since the multiplication table for all noncyclic groups
