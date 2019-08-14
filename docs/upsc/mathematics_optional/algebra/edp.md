@@ -102,7 +102,7 @@ $U(s t) \approx U(s) \oplus U(t)$
 
 Moreover, $U_{s}(s t)$ is isomorphic to $U(t)$ and $U_{t}(s t)$ is isomorphic to $U(s)$
 
-**Proof:**  An isomorphism from $U(st)$ to $U(s) \oplus U(t)$ is $x \rightarrow (x \bmod s, x \bmod t)$ (one-one, operation preserving is clear, for onto, consider $(l, m)$ to be in $U(s) \oplus U(t)$, define $x = ltt^{-1} + mss^{-1} - stq$ where $tt^{-1} \bmod s = 1, ss^{-1} \bmod t = 1$ and $-stq$ is added so that $x \in U(st)$ (although I am not sure)); an isomorphism from $U_s(st)$ to $U(t)$ is $x \rightarrow x \bmod t$; an isomorphism from $U_t (st)$ to $U(s)$ is $x \rightarrow x \bmod s$. We leave the verification that
+**Proof:**  An isomorphism from $U(st)$ to $U(s) \oplus U(t)$ is $x \rightarrow (x \bmod s, x \bmod t)$ (one-one and onto follows from [Chinese Remainder Theorem](mufteducation.in/docs/upsc/mathematics_optional/algebra/advance_groups#chinese-remainder-theorem), operation preserving is clear; an isomorphism from $U_s(st)$ to $U(t)$ is $x \rightarrow x \bmod t$; an isomorphism from $U_t (st)$ to $U(s)$ is $x \rightarrow x \bmod s$. We leave the verification that
 these mappings are operation-preserving, one-to-one, and onto to the
 reader.
 

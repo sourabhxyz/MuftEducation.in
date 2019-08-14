@@ -27,6 +27,7 @@ some pair of elements $a$ and $b$ for which $ab \neq ba$.
 
 **Examples:**
 
+- In a group if each element is equal to its inverse then it is abelian. (easy to show)
 - The set of integers under ordinary multiplication is not a
   group. Since property 3 fails (number 1 is the identity).
 - The set $A(S)$ of all one to one mappings of a non empty set $S$ onto itself is a group wrt the product of mappings (i.e. function compositions).

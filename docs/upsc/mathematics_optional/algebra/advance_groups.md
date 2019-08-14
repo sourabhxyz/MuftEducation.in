@@ -20,6 +20,8 @@ $(\prod_{j \neq i} a_j) \bmod a_i \in U(a_i)$ (as they are relatively prime) $\r
 
 $\rightarrow a = \sum b_i (c_i \prod_{j \neq i}a_j)$
 
+Mentioning without proof that such a solution is unique modulo $\prod a_j$
+
 ## Theorem AG.1:
 
 $U(m)$ is cyclic precisely if $m \in \\{2, 4, p^r, 2p^r\\}, \text{ where } p \neq 2$ and is prime. 
