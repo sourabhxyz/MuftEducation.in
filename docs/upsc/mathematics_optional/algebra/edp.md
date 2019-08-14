@@ -30,7 +30,7 @@ groups is itself a group. And external direct product of abelian groups is an ab
 
 - A group of order 4 is isomorphic to $Z_{4}$ or $Z_{2} \oplus Z_{2} .$ To verify this, let $G=$
   $\\{e, a, b, a b\\} .$ If $G$ is not cyclic, then it follows from Lagrange's Theorem
-  that $|a|=|b|=|a b|=2 .$ Then the mapping $e \rightarrow(0,0), a \rightarrow(1,0)$ $b \rightarrow(0,1),$ and $a b \rightarrow(1,1)$ is an isomorphism from $G$ onto $Z_{2} \oplus Z_{2}$
+  that $|a|=|b|=|a b|=2 .$ Then the mapping $e \rightarrow(0,0), a \rightarrow(1,0)$, $b \rightarrow(0,1),$ and $a b \rightarrow(1,1)$ is an isomorphism from $G$ onto $Z_{2} \oplus Z_{2}$
 
 ---
 
