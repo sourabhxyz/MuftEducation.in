@@ -16,7 +16,7 @@ then $p_i \begin{cases} \equiv 0 (\bmod a_j) \text{ if } j \neq i \\\ \not \equi
 
 We have,
 
-$(\prod_{j \neq i} a_j) \bmod a_i \in U(a_i)$ $\rightarrow c_i \text{ s.t. } c_i(\prod_{j \neq i}a_j) \equiv 1 \bmod a_i$
+$(\prod_{j \neq i} a_j) \bmod a_i \in U(a_i)$ (as they are relatively prime) $\rightarrow \exists c_i \text{ s.t. } c_i(\prod_{j \neq i}a_j) \equiv 1 \bmod a_i$
 
 $\rightarrow a = \sum b_i (c_i \prod_{j \neq i}a_j)$
 
