@@ -263,11 +263,3 @@ other hand, for each even permutation $\alpha$ , the permutation $(12) \alpha$ i
 $(12) \alpha \neq(12) \beta$ when $\alpha \neq \beta .$ Thus, there at least as many odd permutations as there are even ones. It follows that there are equal numbers of even and odd permutations. since $\left|S_{n}\right|=n !,$ we have $\left|A_{n}\right|=n ! / 2$
 
 ---
-
-$ x^2 = 3 $
-
-$ x^2 = 4 ] $
-
-$ x^2 = 4 ] . $
-
-[ $x^2 = 4 ] .$

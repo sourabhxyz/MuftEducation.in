@@ -67,7 +67,7 @@ matrices over $F .$
   a reflection across the horizontal line of the figure. Then, every member
   of the group is of the form $x_{1} x_{2} \cdots x_{n},$ where each $x_{i} \in$ $\left\\{T, T^{-1}, H\right\\} .$ In this case, we say that $T, T^{-1},$ and $H$ generate the group.
   
-  ![image](assets/upsc/mathematics_optional/algebra/groups_arrow.png)
+  ![image](../../../assets/upsc/mathematics_optional/algebra/groups_arrow.png)
   
 ## Properties
 

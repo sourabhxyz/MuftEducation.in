@@ -5,7 +5,8 @@ python:
 
 before_install:
 - sudo apt-get update -qq
-- sudo apt-get install -y pandoc
+- sudo wget https://github.com/jgm/pandoc/releases/download/2.7.3/pandoc-2.7.3-1-amd64.deb
+- sudo dpkg -i pandoc-2.7.3-1-amd64.deb
 - sudo apt-get install -y texlive-full
 - sudo apt-get install -y texlive-xetex
 

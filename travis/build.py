@@ -62,7 +62,7 @@ for i in range(len(sidebars)):
       inFile = fileToConvert + ".md.tmp"
       outFile = fileToConvert + ".pdf"
       # --------- To use built pypandoc ----------
-      output = pypandoc.convert_file(inFile, format = 'md', to = 'pdf', outputfile = outFile, extra_args = ['--latex-engine', 'xelatex'])
+      output = pypandoc.convert_file(inFile, format = 'md', to = 'pdf', outputfile = outFile, extra_args = ['--pdf-engine', 'xelatex'])
       print("------ Output Begin -------\n")
       print(output)
       print("------ Output End ------\n")
