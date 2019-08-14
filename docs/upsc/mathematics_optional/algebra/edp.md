@@ -65,8 +65,7 @@ $m$ and $n$ are relatively prime. Suppose that gcd $(m, n)=d$ and $(g, h)$ is a
 generator of $G \oplus H .$ since $(g, h)^{m n / d}=\left(\left(g^{m}\right)^{n / d},\left(h^{n}\right)^{m / d}\right)=(e, e),$ we
 have $m n=|(g, h)| \leq m n / d .$ Thus, $d=1$ 
 
-To prove the other half of the theorem, let $G=\langle g\rangle$ and $H=\langle h\rangle$ and $\sup ^{-}$
-pose $\operatorname{gcd}(m, n)=1 .$ Then $,|(g, h)|=\operatorname{lcm}(m, n)=m n=|G \oplus H|,$ so that $(g, h)$ is a generator of $G \oplus H$.
+To prove the other half of the theorem, let $G=\langle g\rangle$ and $H=\langle h\rangle$ and suppose $\operatorname{gcd}(m, n)=1 .$ Then $,|(g, h)|=\operatorname{lcm}(m, n)=m n=|G \oplus H|,$ so that $(g, h)$ is a generator of $G \oplus H$.
 
 **Corollary 1:** An external direct product $G_{1} \oplus G_{2} \oplus \cdots \oplus G_{n}$ of a finite number
 of finite cyclic groups is cyclic if and only if $\left|G_{i}\right|$ and $\left|G_{j}\right|$ are relatively
@@ -84,7 +83,7 @@ $Z_{2} \oplus Z_{2} \oplus Z_{3} \oplus Z_{5} \approx Z_{2} \oplus Z_{6} \oplus 
 
 Similarly,
 
-$\begin{aligned} z_{2} \oplus Z_{2} \oplus Z_{3} \oplus Z_{5} & \approx Z_{2} \oplus Z_{6} \oplus Z_{5} \\\ & \approx Z_{2} \oplus Z_{3} \oplus Z_{2} \oplus Z_{5} \approx Z_{6} \oplus Z_{10} \end{aligned}$
+$\begin{aligned} Z_{2} \oplus Z_{2} \oplus Z_{3} \oplus Z_{5} & \approx Z_{2} \oplus Z_{6} \oplus Z_{5} \\\ & \approx Z_{2} \oplus Z_{3} \oplus Z_{2} \oplus Z_{5} \approx Z_{6} \oplus Z_{10} \end{aligned}$
 
 Thus, $Z_{2} \oplus Z_{30} \approx Z_{6} \oplus Z_{10}$.
 

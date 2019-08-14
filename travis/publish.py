@@ -16,23 +16,23 @@ os.chdir('pdfs/')
 
 travisBuildDir = os.environ["TRAVIS_BUILD_DIR"]
 pasteInfoLines = open(travisBuildDir + "/pasteInfo.txt", "r").readlines()
-
+print("---- Files In Directory --------\n")
+print(os.listdir(travisBuildDir))
+print("------------\n")
 i = 0
 while i < len(pasteInfoLines):
   dir = pasteInfoLines[i]
+  dir = dir[ : len(dir) - 1] # Need to remove newline char at the end
   if (i + 1 >= len(pasteInfoLines)):
     break
   fileName = pasteInfoLines[i + 1]
-  fileName = escapeSpace(fileName)
-  print("Copying filename: ", fileName, " to the directory: ", dir, "\n")
-
+  fileName = escapeSpace(fileName[ : len(fileName) - 1])  # Need to remove newline char at the end
+  print("Copying filename:", fileName, " to the directory:", dir, "\n")
+  
   os.system("mkdir -p " + dir)
-  print("------------\n")
-  print(os.listdir(travisBuildDir))
-  print("------------\n")
   if (os.path.exists(travisBuildDir + "/" + fileName)):
-    print("Executing: ", "cp $TRAVIS_BUILD_DIR/" + fileName + " ./" + dir + "/" + fileName)
-    os.system("cp $TRAVIS_BUILD_DIR/" + fileName + " ./" + dir + "/" + fileName)
+    print("Executing: ", "cp $TRAVIS_BUILD_DIR/" + fileName + " ./" + dir)
+    os.system("cp $TRAVIS_BUILD_DIR/" + fileName + " ./" + dir)
   i += 2
 
 
