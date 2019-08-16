@@ -1,7 +1,7 @@
 ---
 id: ring
 title: Introduction to Rings 
-sidebar_label: Introductino to Rings
+sidebar_label: Introduction to Rings
 ---
 
 ---
@@ -17,12 +17,10 @@ A ring $R$ is a set with two binary operations, addition (denoted by $a + b$) an
 
 ---
 
-So, a ring is an Abelian group under addition, also having an asso-
-ciative multiplication that is left and right distributive over addition.
+So, a ring is an Abelian group under addition, also having an associative multiplication that is left and right distributive over addition.
 Note that multiplication need not be commutative. When it is, we say
 that the ring is commutative. Also, a ring need not have an identity under multiplication. A unity (or identity) in a ring is a nonzero element
-that is an identity under multiplication. A nonzero element of a com-
-mutative ring with unity need not have a multiplicative inverse. When it
+that is an identity under multiplication. A nonzero element of a commutative ring with unity need not have a multiplicative inverse. When it
 does, we say that it is a unit of the ring. Thus, $a$ is a unit if $a^{-1}$ exists.
 
 The following terminology and notation are convenient. If $a$ and $b$ belong to a commutative ring $R$ and $a$ is nonzero, we say that $a$ divides $b$ (or that $a$ is a factor of $b$) and write $a | b$, if there exists an element $c$ in $R$ such that $b = ac$. If a does not divide $b$, we write $a \not | b$.
@@ -36,6 +34,7 @@ We use $b - c$ to denote $b + (-c)$.
 
 If $a, b$, and $c$ belong to a ring, $a \neq 0$ and $ab = ac$, we cannot
 conclude that $b = c$. Similarly, if $a^2 = a$, we cannot conclude that $a = 0 \text{ or } 1$
+
 
 ## Subrings
 
@@ -71,7 +70,7 @@ This ring is called the direct sum of $R_1, R_2, . . . , R_n$.
 
 **Theorem 11.1:** Let $a$, $b$, and $c$ belong to a ring $R$. Then
 1. $a0 = 0a = 0$. (easy)
-2. $a(2b) 5 (2a)b 5 2(ab)$. (easy)
+2. $a(-b) = (-a)b = -(ab)$. (easy)
 3. $(-a)(-b) = ab.$ (easy, simply from above)
 4. $a(b - c) = ab - ac$ and $(b - c)a = ba - ca$. (easy...)
 Furthermore, if $R$ has a unity element 1, then

@@ -1,0 +1,73 @@
+---
+id: integral_domain
+title: Integral Domains
+sidebar_label: Integral Domains
+---
+
+## Zero-Divisors
+
+A zero-divisor is a nonzero element $a$ of a commutative ring $R$ such that there is a nonzero element $b \in R$ with $ab = 0$.
+
+## Integral Domain
+
+An integral domain is a commutative ring with unity and no zero-divisors.
+
+**Examples:**
+
+* The ring $Z_n$ of integers modulo $n$ is not an integral domain when $n$ is not prime.
+
+* The ring of integers is an integral domain.
+
+* $Z \oplus Z$ is not an integral domain.
+
+## Theorem 12.1
+
+Let $a, b$, and $c$ belong to an integral domain. If $a \neq 0$ and $ab = ac$, then $b = c$.
+
+**Proof:** From $ab = ac$, we have $a(b - c) = 0$. Since $a \neq 0$, we must have $b - c = 0$. $\blacksquare$
+
+Many authors prefer to define integral domains by the cancellation
+property—that is, as commutative rings with unity in which the cancellation property holds. This definition is equivalent to ours.
+
+## Fields
+
+A field is a commutative ring with unity in which every nonzero
+element is a unit.
+
+
+To verify that every field is an integral domain, observe that if $a$ and
+$b$ belong to a field with $a \neq 0$ and $ab = 0$, we can multiply both sides
+of the last expression by $a^{-1}$ to obtain $b = 0$.
+
+## Theorem 12.2
+
+A finite integral domain is a field. (proof as in groups)
+
+### Corollary 
+
+$Z_n$ is a field if and only if $n$ is prime.
+
+## Characteristic of a Ring
+
+The characteristic of a ring $R$ is the least positive integer $n$ such that
+$nx = 0$ (Remember that this is adding $x$, $n$ times for all $x$ in $R$. If no such integer exists, we say that $R$ has characteristic 0. The characteristic of $R$ is denoted by $\operatorname{char} R$.
+
+
+* Thus, the ring of integers has characteristic 0, and $Z_n$ has characternistic $n$.
+* An infinite ring can have a nonzero characteristic. Indeed, the ring $Z_2[x]$ of all polynomials with coefficients in $Z_2$ has characteristic 2. (Addition and multiplication are done as for polynomials with ordinary integer coefficients except that the coefficients are reduced modulo 2.)
+
+## Theorem 12.3
+
+Let $R$ be a ring with unity 1. If 1 has infinite order under addition, then the characteristic of $R$ is 0. If 1 has order $n$ under addition, then the characteristic of R is $n$. 
+
+**Proof:** Suppose that 1 has additive order n (as other case is straight forward). Then $n \cdot 1 = 0$, and $n$ is the least positive integer with this property. So, for any $x$ in $R$, we have $n \cdot x = x + x + \cdots + x$ ($n$ summands) = $1x + 1x + \cdots + 1x$ ($n$ summands) = $(1 + 1 + \cdots + 1)x$ ($n$ summands)$ = (n \cdot 1)x = 0x = 0.$ Thus, $R$ has characteristic $n$.
+
+## Theorem 12.4
+
+The characteristic of an integral domain is 0 or prime.
+
+
+
+
+
+
