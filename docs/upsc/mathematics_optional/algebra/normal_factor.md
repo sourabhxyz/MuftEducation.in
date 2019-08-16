@@ -116,7 +116,7 @@ $Z(G)$, then $G$ is Abelian. Second, in practice, it is the contrapositive of
 the theorem that is most often used—that is, if $G$ is non-Abelian, then
 $G/Z(G)$ is not cyclic. For example, it follows immediately from this
 statement and Lagrange’s Theorem that a non-Abelian group of order
-$pq$, where $p$ and $q$ are primes, must have a trivial center (suppose center is not trivial, that implies its order is either $p \text{ or} q$. Say it is $p \rightarrow$ order of $G / Z(G) = q$ and hence it must be cyclic. Third, if $G/Z(G)$ is cyclic, it must be trivial.
+$pq$, where $p$ and $q$ are primes, must have a trivial center (suppose center is not trivial, that implies its order is either $p \text{ or } q$. Say it is $p \rightarrow$ order of $G / Z(G) = q$ and hence it must be cyclic. Third, if $G/Z(G)$ is cyclic, it must be trivial.
 
 ---
 
@@ -141,7 +141,7 @@ for all Abelian groups with fewer elements than $G$ and use this assumption to s
 elements of prime order, for if $|x| = m$ and $m = qn$, where $q$ is prime,
 then $|x^n| = q$. So let $x$ be an element of $G$ of some prime order $q$, say. If
 $q = p$, we are finished; so assume that $q \neq p$. Since every subgroup of
-an Abelian group is normal, we may construct the factor group $\overline{G} = G/< x >$. Then $G$ is Abelian and $p$ divides $|G|$, since $|\overline{G}| = |G|/q$. By
+an Abelian group is normal, we may construct the factor group $\overline{G} = G/< x >$. Then $\overline{G}$ is Abelian and $p$ divides $|\overline{G}|$, since $|\overline{G}| = |G|/q$. By
 induction, then, $\overline{G}$ has an element—call it $y < x >$—of order $p$.
 Then, $(y < x >)^p = y^p < x > = < x >$ and therefore $y^p \in < x >$. If $y^p = e$, we are
 done. If not, then $y^p$ has order $q$ and $y^q$ has order $p$.

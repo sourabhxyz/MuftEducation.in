@@ -28,6 +28,32 @@ some pair of elements $a$ and $b$ for which $ab \neq ba$.
 **Examples:**
 
 - In a group if each element is equal to its inverse then it is abelian. (easy to show)
+- Any group of order 5 or less is abelian.
+  
+  **Proof:** Any group of order 4 can only be written in a way $G = \\{e, a, b, ab\\}$ as any other way will fail one or more group axioms. Clearly this is abelian.
+
+  For order 5, let $G = \\{e, a, b, c, d\\}$. Now we need to assign a element for each of $2 \times {4 \choose 2} = 12$ combinations, but since we are only interested in abelian property, we need to consider only 6 combinations.
+
+  Let,
+    $ab = e \rightarrow (ab)c = c = a(bc) \rightarrow bc = a^{-1}c$
+
+    thus $bc \neq b, c, a^{-1} = b$ nor can it be $e$ as then $bc = ab \rightarrow (ab)c = c = a(bc) = a$. Thus choices available are $a, d$.
+
+    Also in general if $k_1k_2 = e \rightarrow k_2k_1 = e$
+
+    If $bc = a \rightarrow \because a^{-1} = b \rightarrow a = a^2b = cb$
+
+    Similarly $acb = a(cb) = a^2 \rightarrow ac = a^2b^{-1} = ca$
+
+    Similarly choices for $bd$ are $c, a$ but if $bc = a \rightarrow bd \neq a$ as then $bc = bd \rightarrow c = d$ and thus $bd = c$
+
+    Now using associativity of $cbd$ we get $d = ac = ca$ (can be worked out) 
+    thus $db = cab = c = bd$ and $da = caa = c^2$, $ad = aac = c^2$
+
+    $dc = ac^2 = a^5$, $cd = cca = c^2a = a^5$ hence if it forms the group, it is abelian.
+
+  Similarly one can try for other cases as they are symmetric because if we would have started with $bc = a$ which is equivalent to starting with $ab = c, d, etc..$ we would arrive at $ab = e \text{ or } d$...
+
 - The set of integers under ordinary multiplication is not a
   group. Since property 3 fails (number 1 is the identity).
 - The set $A(S)$ of all one to one mappings of a non empty set $S$ onto itself is a group wrt the product of mappings (i.e. function compositions).

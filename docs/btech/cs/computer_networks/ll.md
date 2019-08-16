@@ -102,8 +102,7 @@ However, if either the frame or the acknowledgement is lost, the timer will go
 off, alerting the sender to a potential problem. The obvious solution is to just
 transmit the frame again. However, when frames may be transmitted multiple
 times there is a danger that the receiver will accept the same frame two or more
-times and pass it to the network layer more than once. To prevent this from hap-
-pening, it is generally necessary to assign sequence numbers to outgoing frames,
+times and pass it to the network layer more than once. To prevent this from happening, it is generally necessary to assign sequence numbers to outgoing frames,
 so that the receiver can distinguish retransmissions from originals.
 
 ## Flow Control
@@ -149,3 +148,108 @@ senders may transmit data, without using feedback from the receiver.
 * We get the requirement that $2^m(n + 1) \leq 2^n \rightarrow (m + r + 1) \leq 2^r$. 
 * To correct 2 bit errors $\rightarrow 2^m({n \choose 2} + 1) \leq 2^n$
 * (For 1 bit error correction, consider $|m_i| = 7$) Place check bits at index power of two because then $d(C(m_1), C(m_2)) \geq 3$ whenever $d(m_1, m_2) \geq 1$ as index of bit difference will not be a power of 2.
+
+## Convolutional Code
+
+* Not a block code.
+* In a convolutional code, an encoder processes a sequence of input bits and generates a sequence of output bits. There is no natural message size or encoding boundary as in a block code.
+*  The output depends on the current and previous input bits. That is, the encoder has memory. The number of previous bits on which the output depends is called the **constraint length** (includes current bit) of the code. 
+* Convolutional codes are specified in terms of their rate ($\frac{\text{\# Input bits}}{\text{\# Output Bits produced}}$) and constraint length.
+
+![convolutional Code](../../../assets/btech/cs/computer_networks/ll4.png)
+*Figure: [Tanenbaum] The NASA binary convolutional code used in 802.11.*
+
+In figure, each input bit on the left-hand side produces two output bits on the
+right-hand side that are XOR sums of the input and internal state. Since it deals
+with bits and performs linear operations, this is a binary, linear convolutional
+code. Since 1 input bit produces 2 output bits, the code rate is 1/2. It is not systematic since none of the output bits is simply the input bit.
+
+The internal state is kept in six memory registers. Each time another bit is input the values in the registers are shifted to the right. For example, if 111 is input
+and the initial state is all zeros, the internal state, written left to right, will become
+100000, 110000, and 111000 after the first, second, and third bits have been input.
+The output bits will be 11, followed by 10, and then 01. It takes seven shifts to
+flush an input completely so that it does not affect the output. The constraint
+length of this code is thus k = 7.
+
+A convolutional code is decoded by finding the sequence of input bits that is
+most likely to have produced the observed sequence of output bits (which includes
+any errors). For small values of k, this is done with a widely used algorithm developed by Viterbi (Forney, 1973). The algorithm walks the observed sequence,
+keeping for each step and for each possible internal state the input sequence that
+would have produced the observed sequence with the fewest errors. The input sequence requiring the fewest errors at the end is the most likely message.
+Convolutional codes have been popular in practice because it is easy to factor
+the uncertainty of a bit being a 0 or a 1 into the decoding.
+
+## Reed-Solomon Code
+
+* Are linear block codes, and they are often systematic too. 
+* Unlike Hamming codes, which operate on individual bits, Reed-Solomon codes operate on m bit symbols.
+* Reed-Solomon codes are based on the fact that every n degree polynomial is uniquely determined by n + 1 points. For example, a line having the form ax + b is determined by two points. Extra points on the same line are redundant, which is helpful for error correction. Imagine that we have two data points that represent a line and we send those two data points plus two check points chosen to lie on the same line. If one of the points is received in error, we can still recover the data points by fitting a line to the received points. Three of the points will lie on the line, and one point, the one in error, will not. By finding the line we have corrected the error.
+* Reed-Solomon codes are actually defined as polynomials that operate over finite fields, but they work in a similar manner. For m bit symbols, the codewords are $2^m −1$ symbols long. A popular choice is to make m = 8 so that symbols are bytes. A codeword is then 255 bytes long. The (255, 233) code is widely used; it adds 32 redundant symbols to 233 data symbols. Decoding with error correction is done with an algorithm developed by Berlekamp and Massey that can efficiently perform the fitting task for moderate-length codes 
+* Reed-Solomon codes are widely used in practice because of their strong error-correction properties, particularly for burst errors. Because they are based on m bit symbols, a single-bit error and an m-bit burst error are both treated simply as one symbol error.
+* When $2t$ redundant symbols are added, a Reed-Solomon code is able to correct up to $t$ errors in any of the transmitted symbols. This means, for example, that the (255, 233) code, which has 32 redundant symbols, can correct up to 16 symbol errors. Since the symbols may be consecutive and they are each 8 bits, an error burst of up to 128 bits can be corrected. 
+
+## Error Detecting Codes
+
+We will examine three different error-detecting codes. They are all linear, systematic block codes.
+
+To see how they can be more efficient than error-correcting codes, consider:-
+
+### Parity
+
+* Consider a case where a single parity bit is appended to the data.
+* The parity bit is chosen so that the number of 1 bits in the codeword is even (or odd). For example, when 1011010 is sent in even parity, a bit is added to the end to make it 10110100. With odd parity 1011010 becomes 10110101.
+* A code with a single parity bit has a distance of 2, since any single-bit error produces a codeword with the wrong parity. This means that it can detect single-bit errors.
+* One difficulty with this scheme is that a single parity bit can only reliably detect a single-bit error in the block. If the block is badly garbled by a long burst error, the probability that the error will be detected is only 0.5. 
+* The odds can be improved considerably if each block to be sent is regarded as a rectangular matrix $n$ bits wide and $k$ bits high. Now, if we compute and send one parity bit for each row, up to $k$ bit errors will be reliably detected as long as there is at most one error per row. However, there is something else we can do that provides better protection against burst errors: we can compute the parity bits over the data in a different order than the order in which the data bits are transmitted. Doing so is called interleaving. In this case, we will compute a parity bit for each of the n columns and send all the data bits as k rows, sending the rows from top to bottom and the bits in each row from left to right in the usual manner. At the last row, we send the n parity bits. This transmission order is shown in below Fig for n = 7 and k = 7.
+
+![parity matrix](../../../assets/btech/cs/computer_networks/ll5.png)
+*Figure: [Tanenbaum] Interleaving of parity bits to detect a burst error.* 
+(A burst error does not imply that all the bits are wrong; it just implies that at least the first and last are wrong.)
+
+Interleaving is a general technique to convert a code that detects (or corrects)
+isolated errors into a code that detects (or corrects) burst errors. 
+This method uses $n$ parity bits on blocks of kn data bits to detect a single burst error of length n or less.
+
+A burst of length $n + 1$ will pass undetected, however, if the first bit is
+inverted, the last bit is inverted, and all the other bits are correct. If the block is
+badly garbled by a long burst or by multiple shorter bursts, the probability that any
+of the n columns will have the correct parity by accident is 0.5, so the probability
+of a bad block being accepted when it should not be is $2^{−n}$ .
+
+### Checksum
+
+Checksums are usually based on a running sum of the data bits of the message. The checksum
+is usually placed at the end of the message, as the complement of the sum function. This way, errors may be detected by summing the entire received codeword,
+both data bits and checksum. If the result comes out to be zero, no error has been
+detected.
+
+One example of a checksum is the 16-bit Internet checksum used on all Inter-
+net packets as part of the IP protocol (Braden et al., 1988). This checksum is a
+sum of the message bits divided into 16-bit words. Because this method operates
+on words rather than on bits, as in parity, errors that leave the parity unchanged
+can still alter the sum and be detected. For example, if the lowest order bit in two
+different words is flipped from a 0 to a 1, a parity check across these bits would
+fail to detect an error. However, two 1s will be added to the 16-bit checksum to
+produce a different result. The error can then be detected.
+
+### Cyclic Redundancy Check (CRC)
+
+* Aka Polynomial codes are based upon treating bit strings as representations of polynomials with coefficients of 0 and 1 only. A $k$-bit frame is regarded as the coefficient list for a polynomial with $k$ terms, ranging from $x^{k - 1}$ to $x^0$. The high-order (leftmost) bit is the coefficient of $x^{k - 1}$ and so on.
+
+* Polynomial arithmetic is done modulo 2, according to the rules of algebraic field theory. It does not have carries for addition or borrows for subtraction. Both addition and subtraction are identical to exclusive OR.
+
+* Long division is carried out in exactly the same way as it is in binary except that the subtraction is again done modulo 2. 
+
+* When the polynomial code method is employed, the sender and receiver must agree upon a generator polynomial, $G(x)$, in advance. Both the high- and low- order bits of the generator must be 1. To compute the CRC for some frame with $m$ bits corresponding to the polynomial $M(x)$, the frame must be longer than the generator polynomial. The idea is to append a CRC to the end of the frame in such a way that the polynomial represented by the checksummed frame is divisible by $G(x)$. When the receiver gets the checksummed frame, it tries dividing it by $G(x)$. If there is a remainder, there has been a transmission error.
+
+* The algorithm for computing the CRC is as follows:
+
+  1. Let $r$ be the degree of $G(x)$. Append $r$ zero bits to the low-order end of the frame so it now contains $m + r$ bits and corresponds to the polynomial $x^r M(x)$.
+
+  2. Divide the bit string corresponding to $G(x)$ into the bit string corresrponding to $x^rM(x)$, using modulo 2 division.
+
+  3. Subtract the remainder (which is always $r$ or fewer bits) from the bit string corresponding to $x^rM(x)$ using modulo 2 subtraction. The result is the checksummed frame to be transmitted. Call its polynomial $T(x)$.
+
+![CRC Calculation](../../../assets/btech/cs/computer_networks/ll6.png)
+*Figure: [Tanenbaum] Example Calculation of CRC*
+

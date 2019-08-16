@@ -26,6 +26,8 @@ have by properties of sets that $\left|G_{1} \oplus G_{2} \oplus \cdots \oplus G
 It is easy to see that external direct product of
 groups is itself a group. And external direct product of abelian groups is an abelion group.
 
+If $A \approx_{\phi} C$, then $A \oplus B \approx C \oplus B$ (easy to see, define $\Phi(a, b) = (\phi(a), b)$)
+
 **Examples:**
 
 - A group of order 4 is isomorphic to $Z_{4}$ or $Z_{2} \oplus Z_{2} .$ To verify this, let $G=$

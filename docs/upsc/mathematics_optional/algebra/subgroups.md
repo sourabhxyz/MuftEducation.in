@@ -32,6 +32,8 @@ To apply the above theorem, follow these steps:-
 :::
 **Example (easy):** Let $G$ be an Abelian group under multiplication with identity $e$. Then $H = \\{x^2 \mid x \in G\\}$ is a subgroup of $G$. Since $e^2 = e$, the identity has the correct form. Next, we write two elements of $H$ in the correct form, say, $a^2$ and $b^2$. We must show that $a^2(b^2)^{-1}$ also has the correct form; that is, $a^2(b^2)^{-1}$ is the square of some element. Since $G$ is Abelian, we may write it as $(ab^{-1})^2$, which is the correct form. Thus, $H$ is a subgroup of $G$.
 
+* Let $H$ be a subgroup of $G$. For any fixed $x$ in $G$, define $xHx^{-1} = \\{xhx^{-1} \mid h \in H\\}$. Easy to prove that $xHx^{-1}$ is a subgroup of $G$. 
+
 **Theorem 2: (Two-Step Subgroup Test)**
 Let $G$ be a group and let $H$ be a nonempty subset of $G$. If $ab$ is in $H$ whenever $a$ and $b$ are in $H$ ($H$ is closed under the operation), and $a^{-1}$ is in $H$ whenever $a$ is in $H$ ($H$ is closed under taking inverses), then $H$ is a subgroup of $G$.
 
