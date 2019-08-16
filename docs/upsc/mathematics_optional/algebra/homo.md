@@ -73,7 +73,7 @@ from $G/\operatorname{Ker} \phi$ to $\phi(G)$, given by $g\operatorname{Ker} \ph
 
 **Examples:**
 
--  ~~If $G$ is a group of order 60 and $G$ has a homomorphic image of order 12 that is cyclic (as it is cyclic, it is normal and thus its inverse will also be normal subgroup, also since it is cyclic, it has normal subgroups of order 1, 2, 3, 4, 6, 12), then $G$ has normal subgroups of orders 5, 10, 15, 20, 30, and 60 (property 10).~~
+-  If $G$ is a group of order 60 and $G$ has a homomorphic image of order 12 that is cyclic (as it is cyclic, it is normal and thus its inverse will also be normal subgroup, also since it is cyclic, it has normal subgroups of order 1, 2, 3, 4, 6, 12), then $G$ has normal subgroups of orders 5, 10, 15, 20, 30, and 60 (property 10).
 - Suppose we are asked to find an infinite group that is the union of three proper subgroups. Instead of attempting to do this directly, we first make the problem easier by finding a finite group that is the union of three proper subgroups. Observing that $Z_2 \oplus Z_2$ is the union of $H_1 = \langle 1, 0\rangle, H_2 = \langle 0, 1\rangle$, and $H_3 = \langle 1, 1\rangle$, we have found our finite group. Now all we need do is think of an infinite group that has $Z_2 \oplus Z_2$ as a homomorphic image and pull back $H_1, H_2,$ and $H_3,$ and our original problem is solved. Clearly, the mapping from $Z_2 \oplus Z_2 \oplus Z$ onto $Z_2 \oplus Z_2$ given by $\phi(a, b, c) = (a, b)$ is such a mapping, and therefore $Z_2 \oplus Z_2 \oplus Z$ is the union of $\phi^{-1}(H_1) = \\{(a, 0, c,) \mid a \in Z_2, c \in Z\\}, \phi^{-1}(H_2) = \\{(0, b, c) \mid b \in Z_2, c \in Z\\}, \text{ and } \\\ \phi^{-1}(H_3) = \\{(a, a, c) \mid a \in Z_2, c \in Z\\}$.
 
 
