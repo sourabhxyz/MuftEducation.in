@@ -50,7 +50,7 @@ $Z_n$ is a field if and only if $n$ is prime.
 ## Characteristic of a Ring
 
 The characteristic of a ring $R$ is the least positive integer $n$ such that
-$nx = 0$ (Remember that this is adding $x$, $n$ times for all $x$ in $R$. If no such integer exists, we say that $R$ has characteristic 0. The characteristic of $R$ is denoted by $\operatorname{char} R$.
+$nx = 0$ (Remember that this is adding $x$, $n$ times) for all $x$ in $R$. If no such integer exists, we say that $R$ has characteristic 0. The characteristic of $R$ is denoted by $\operatorname{char} R$.
 
 
 * Thus, the ring of integers has characteristic 0, and $Z_n$ has characternistic $n$.
@@ -58,13 +58,17 @@ $nx = 0$ (Remember that this is adding $x$, $n$ times for all $x$ in $R$. If no 
 
 ## Theorem 12.3
 
-Let $R$ be a ring with unity 1. If 1 has infinite order under addition, then the characteristic of $R$ is 0. If 1 has order $n$ under addition, then the characteristic of R is $n$. 
+Let $R$ be a ring with unity 1. If 1 has infinite order under addition, then the characteristic of $R$ is 0. If 1 has order $n$ under addition, then the characteristic of $R$ is $n$. 
 
 **Proof:** Suppose that 1 has additive order n (as other case is straight forward). Then $n \cdot 1 = 0$, and $n$ is the least positive integer with this property. So, for any $x$ in $R$, we have $n \cdot x = x + x + \cdots + x$ ($n$ summands) = $1x + 1x + \cdots + 1x$ ($n$ summands) = $(1 + 1 + \cdots + 1)x$ ($n$ summands)$ = (n \cdot 1)x = 0x = 0.$ Thus, $R$ has characteristic $n$.
 
 ## Theorem 12.4
 
 The characteristic of an integral domain is 0 or prime.
+
+**Proof:** By Theorem 12.3, it suffices to show that if the additive order of 1 is finite, it must be prime. Suppose that 1 has order $n$ and that $n = st$, where $1 \leq s, t \leq n.$ Then, as we know, $0 = n \cdot 1 = (st) \cdot 1 = (s \cdot 1)(t \cdot 1).$ 
+
+So, $s \cdot 1 = 0 \text{ or } t \cdot 1 = 0.$ Since $n$ is the least positive integer with the property that $n \cdot 1 = 0$, we must have $s = n$ or $t = n$. Thus, $n$ is prime. $\blacksquare$
 
 
 

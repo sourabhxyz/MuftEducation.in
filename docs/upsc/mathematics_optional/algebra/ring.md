@@ -35,6 +35,7 @@ We use $b - c$ to denote $b + (-c)$.
 If $a, b$, and $c$ belong to a ring, $a \neq 0$ and $ab = ac$, we cannot
 conclude that $b = c$. Similarly, if $a^2 = a$, we cannot conclude that $a = 0 \text{ or } 1$
 
+* Show that if $m$ and $n$ are integers and $a$ and $b$ are elements from ring, then $(m \cdot a)(n \cdot b) = (mn) \cdot (ab).$ **Sol:** $(m \cdot a)(n \cdot b) = (a + a + \cdots + a)(b + b + \cdots + b) = (ab + ab + \cdots + ab)$, where the last term has $mn$ summands. 
 
 ## Subrings
 
@@ -50,7 +51,7 @@ A subset $S$ of a ring $R$ is a subring of $R$ if $S$ is itself a ring with the 
 
 * $\\{0\\}$ and $R$ are subrings of any ring $R$. $\\{0\\}$ is called the trivial subring of $R$.
 * $\\{0, 2, 4\\}$ is a subring of the ring $Z_6$, the integers modulo 6. Note that although 1 is the unity in $Z_6$, 4 is the unity in $\\{0, 2, 4\\}$. 
-* The set of Gaussian integers $Z[i] = \\{a + bi \mid a, b \in Z\\}$ is a subring of the complex numbers C.
+* The set of Gaussian integers $Z[i] = \\{a + bi \mid a, b \in Z\\}$ is a subring of the complex numbers $\mathbb{C}$.
 * For each positive integer $n$, the set $nZ = \\{0, \pm n, \pm 2n, \pm 3n, . . .\\}$ is a subring of the integers $Z$.
 
 
