@@ -7,8 +7,8 @@ sidebar_label: Cosets and Lagrange's Theorem
 ## Coset of $H$ in $G$
 
 Let $G$ be a group and let $H$ be a nonempty subset of $G .$ For any $a \in G,$
-the set $\\{a h | h \in H\\}$ is denoted by $a H .$ Analogisly, $H a=\\{h a | h \in H\\}$
-and $a H a^{-1}=\left \\{a h a^{-1} | h \in H\right \\} .$ When $H$ is a subgroup of $G,$ the set $a H$ (in additie notation $a + H$) is called the left coset of $H$ in $G$ containing $a,$ whereas $H a$ is called the right
+the set $\\{a h | h \in H\\}$ is denoted by $a H .$ Analogously, $H a=\\{h a | h \in H\\}$
+and $a H a^{-1}=\left \\{a h a^{-1} | h \in H\right \\} .$ When $H$ is a subgroup of $G,$ the set $a H$ (in additive notation $a + H$) is called the left coset of $H$ in $G$ containing $a,$ whereas $H a$ is called the right
 coset of $H$ in G containing a. In this case, the element $a$ is called the coset representative of $a H$ (or $H a ) .$ We use $|a H|$ to denote the number of elements in the set $a H,$ and $|H a|$ to denote the number of elements in $H a$.
 
 ### Properties of Cosets
@@ -20,12 +20,11 @@ Let $H$ be a subgroup of $G,$ and let $a$ and $b$ belong to $G$. Then,
 4. $a H=b H$ if and only if $a \in b H .$ (easy to prove and thus, any element of a left coset can be used to represent the coset.)
 5. $a H=b H$ or $a H \cap b H=\varnothing$ (follows from 4, $ah_1 = bh_2 \rightarrow a = bh_2h_1^{-1}$ $\rightarrow a \in bH$ or alternatively let $c \in aH \cap bH \rightarrow cH = aH = bH$ (from 4))
 6. $a H=b H$ if and only if $b^{-1} a \in H .$ (alternate form of 4)
-7. $|a H|=|b H|$ (Prove: To prove that $|a H|=|b H|,$ it suffices to define a one-to-one map-
-  ping from $a H$ onto $b H .$ Obviously, the correspondence $a h \rightarrow b h$
+7. $|a H|=|b H|$ (Prove: To prove that $|a H|=|b H|,$ it suffices to define a one-to-one map  ping from $a H$ onto $b H .$ Obviously, the correspondence $a h \rightarrow b h$
   maps $a H$ onto $b H .$ That it is one-to-one follows directly from the
   cancellation property.)
 
-  **Corollory:** Thus $|aH| = |H|$ as take $b$ to be an element of $H$.
+  **Corollary:** Thus $|aH| = |H|$ as take $b$ to be an element of $H$.
 
 8. $a H=H a$ if and only if $H=a H a^{-1}$ . (easy to prove)
 9. $a H$ is a subgroup of $G$ if and only if $a \in H$. (easy to prove and thus, $H$ itself is the only coset of $H$ that is a subgroup of $G$)
@@ -46,8 +45,7 @@ the cosets until we have accounted for every element of $U(32) .$ We then have t
 
 **Theorem 7.1:** If $G$ is a finite group and $H$ is a subgroup of $G,$ then $|H|$ divides $|G|$. Moreover, the number of distinct left (right) cosets of $H$ in $G$ is $|G| / |H|$ .
 
-**Proof:** Let $a_{1} H, a_{2} H, \ldots, a_{r} H$ denote the distinct left cosets of $H$ in G. Then, for each $a$ in $G,$ we have $a H=a_{i} H$ for some $i$ . Also, by prop-
-erty 1 of the lemma, $a \in a H .$ Thus, each member of $G$ belongs to one
+**Proof:** Let $a_{1} H, a_{2} H, \ldots, a_{r} H$ denote the distinct left cosets of $H$ in G. Then, for each $a$ in $G,$ we have $a H=a_{i} H$ for some $i$ . Also, by property 1 of the lemma, $a \in a H .$ Thus, each member of $G$ belongs to one
 of the cosets $a_{i} H .$ In symbols,
 
 $$
@@ -83,7 +81,7 @@ is denoted by $|G : H| .$
 
 **Corollary 5:** Fermat's Little Theorem, For every integer a and every prime $p, a^{p} \bmod p=a \bmod p$ By the division algorithm, $a=p m+r,$ where $0 \leq r<p$ Thus, $a$ mod $p=r,$ and it suffices to prove that $r^{p}$ mod $p=r .$ If $r=0$
 the result is trivial, so we may assume that $r \in U(p) .$ [Recall that
-$U(p)=\\{1,2, \ldots, p-1\\}$ under multiplication modulo $p . ]$ Then, by the preceding corollary, $r^{p-1} \bmod p=1$ and, therefore, $r^{p} \bmod p=r$
+$U(p)=\\{1,2, \ldots, p-1\\}$ under multiplication modulo $p]$ Then, by the preceding corollary, $r^{p-1} \bmod p=1$ and, therefore, $r^{p} \bmod p=r$
 
 :::note Note
 1. It is relatively easy to prove that if $a, m$ are relatively prime then $a \bmod m (= r), m$ are relatively prime and by similar procedure, we arrive at $r^{\phi(m)} \bmod m = 1$.
@@ -119,7 +117,7 @@ $|H \cap K|$ products in $HK$. But $hk = h'k'$ implies $t = h^{-1}h' = kk'^{-1} 
 **Proof:** We assume that $G$ does not have an element of order $2p$ and
 show that $G \approx D_p$. We begin by first showing that $G$ must have an
 element of order $p$. By our assumption and Lagrange’s Theorem, any
-nonidentity element of $G$ must have order $2$ or $p$. Thus, to verify our assertion, we may assume that every nonidentity element of $G$ has order $2$. And thus each element is equal to its inverse. Then, for any nonidentity elements $a, b \in G$ with $a \neq b$, the set $\\{e, a, b, ab\\}$ is closed and therefore is a subgroup of $G$ of order 4. Since this contradicts Lagrange’s Theorem, we have proved that $G$ must have an element of order $p$; call it $a$.
+nonidentity element of $G$ must have order $2$ or $p$. Thus, to verify our assertion, we may assume that every nonidentity element of $G$ has order $2$ (and thus group is abelian). And thus each element is equal to its inverse. Then, for any nonidentity elements $a, b \in G$ with $a \neq b$, the set $\\{e, a, b, ab\\}$ is closed and therefore is a subgroup of $G$ of order 4. Since this contradicts Lagrange’s Theorem, we have proved that $G$ must have an element of order $p$; call it $a$.
 
 Now let $b$ be any element not in $\langle a\rangle .$ Then by Lagrange's Theorem
 and our assumption that $G$ does not have an element of order $2 p,$ we

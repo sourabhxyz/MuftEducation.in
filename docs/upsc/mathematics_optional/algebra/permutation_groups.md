@@ -48,8 +48,7 @@ $=\left[\begin{array}{lllll}{1} & {2} & {3} & {4} & {5} \\\ {4} & {2} & {1} & {3
   are exactly $n-2$ possibilities for $\alpha(3)$ . Continuing along in this fashion,
   we see that $S_{n} \operatorname{has} n(n-1) \cdot \cdot 3 \cdot 2 \cdot 1=n !$ elements.
 
-- **Symmetries of a Square**, we associate each motion in D with the permutation of the locations of each
-  4of the four corners of a square. For example, if we label the four corner
+- **Symmetries of a Square**, we associate each motion in D with the permutation of the locations of each 4 of the four corners of a square. For example, if we label the four corner
   positions as in the figure below and keep these labels fixed for reference,
   we may describe a 90° counterclockwise rotation by the permutation
 
@@ -114,7 +113,7 @@ have no entries in common, then $\alpha \beta=\beta \alpha .$ (easy to prove)
 **Theorem 5.3:** The order of a permutation of a finite set written in disjoint cycle
 form is the least common multiple of the lengths of the cycles.
 
-**Proof:** First, observe that a cycle of length $n$ has order $n .$ . (easy to see) Next, suppose that $\alpha$ and $\beta$ are disjoint cycles of lengths $m$
+**Proof:** First, observe that a cycle of length $n$ has order $n$. (easy to see) Next, suppose that $\alpha$ and $\beta$ are disjoint cycles of lengths $m$
 and $n,$ and let $k$ be the least common multiple of $m$ and $n .$ It follows from
 Theorem 4.1 that both $\alpha^{k}$ and $\beta^{k}$ are the identity permutation $\varepsilon$ and, since
 $\alpha$ and $\beta$ commute, $(\alpha \beta)^{k}=\alpha^{k} \beta^{k}$ is also the identity. Thus, we know by Corollary 2 to Theorem 4.1$\left(a^{k}=e \text { implies that }|a| \text { divides } k\right)$ that the
@@ -215,7 +214,7 @@ Mathematical Induction, $r-2$ is even. In the other three cases, we
 replace the form of $\beta_{r-1} \beta_{r}$ on the right by its counterpart on the left to obtain a new product of $r $ 2-cycles that is still the identity, but where
 the rightmost occurrence of the integer $a$ is in the second-from-the-
 rightmost 2 -cycle of the product instead of the rightmost 2 -cycle. We now
-repeat the procedure just described with $\beta_{r-2} \beta_{r-1},$ and, as before, we obtain a product of $(r-2) 2$ -cycles equal to the identity or a new product
+repeat the procedure just described with $\beta_{r-2} \beta_{r-1},$ and, as before, we obtain a product of $(r-2)$ $2$ -cycles equal to the identity or a new product
 of $r $ 2-cycles, where the rightmost occurrence of $a$ is in the third 2 -cycle
 from the right. Continuing this process, we must obtain a product of
 $(r-2)$ - -cycles equal to the identity, because otherwise we have a product equal to the identity in which the only occurrence of the integer $a$ is in the
