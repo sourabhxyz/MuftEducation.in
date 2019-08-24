@@ -27,6 +27,7 @@ some pair of elements $a$ and $b$ for which $ab \neq ba$.
 
 **Examples:**
 
+
 - In a group if each element is equal to its inverse then it is abelian. (easy to show)
 - Any group of order 5 or less is abelian.
   
@@ -167,6 +168,43 @@ _Note:_ $a^{2}\left(b c d b^{2}\right)=a^{2} b(c d) b^{2}=\left(a^{2} b\right)(c
 
 ---
 
+**Examples:** 
+
+- Let $G$ be a set with an operation $*$ such that 
+  - $G$ is close under $*$.
+  - '$*$' is associative.
+  - $\exists \\; e \in G$ s.t. $e * x = x \\; \forall x \in G$
+  - Given $x \in G, \exists \\; y$ s.t. $y * x = e$.
+  Show that $G$ is a group.
+
+  **Sol:**  Let $x * e = z \rightarrow y * x * e = y * z = e $$\rightarrow y * x = y * z \rightarrow x = z$
+
+  Let $x * y = z \rightarrow y * x * y = y * z $$\rightarrow y * e = y * z \rightarrow e = z$
+
+- Let $G$ be a **finite** nonempty set with an operation $*$ such that:
+  - $G$ is closed under $*$.
+  - $*$ is associative.
+  - Given $a, b, c, \in G$ with $a * b = a * c$, then $b = c$.
+  - Given $a, b, c, in G$ with $b * a = c * a$, then $b = c$.
+  Show that $G$ is a group.
+
+  **Sol:** Note that in case of set $\mathbb{N}$ with operation of addition, these properties are satisfied but we know that it doesn't form a group.
+
+  Idea: Reduce this problem to the previous one.
+
+  **Existence of Identity**, consider the mapping $\Psi_a : G \rightarrow G, \Psi_a(b) = b * a$. Since $G$ is finite and the map is one one, it is onto as well. $\rightarrow \exists \\; e_a \in G$ s.t. $e_a * a = a$. (from this it follows that $e_a * e_a * a = e_a * a \rightarrow e_a * e_a = e_a$ and therefore if $a * e_a = z \rightarrow a * e_a * e_a = z * e_a $$\rightarrow a * e_a = z * e_a \rightarrow a = z$)
+
+  Claim: $\forall \\; c \in G, c * e = c$ 
+
+  As let $c * e = z \rightarrow c * e * a = z * a = c * a$ $\rightarrow z = c$
+
+  Similarly $e * c = c$ and thus uniqueness of identity follows.
+
+  And from map it follows that $\exists \\; k, ka = e$ thus inverse of $a = k$, similarly for each element of $G$.
+
+  Rest is easy from above example.
+  <!-- For finite such set, $a^i = a^j$ for $i > j$, therefore $a^{i - j + 1}a^{j - 1} = aa^{j - 1} \rightarrow a^{i - j + 1} = a$ and thus $a^{i - j} = e$. -->
+
 ## Dihedral Group
 
 Suppose we remove a square region from a plane, move it in some way,
@@ -183,8 +221,8 @@ have different effects.
 
 The eight motions $R_0, R_{90}, R_{180}, R_{270}, H, V, D,$ and $D'$,
 together with the operation composition, form a mathematical system
-called the dihedral group of order 8. _Note: Inverse of $R_\alpha$, L is
-$R_{360 - \alpha}$, L resp. (L is a reflection)_
+called the dihedral group of order 8. Note: Inverse of $R_{\alpha}, L$ is $R_{360 - \alpha}, L$ resp. ($L$ is a reflection)
+
 
 To be sure that $D_4$ is indeed a group, we should check this equation
 for each of the $8^3$ = 512 possible choices of a, b, and c in $D_4$. In
