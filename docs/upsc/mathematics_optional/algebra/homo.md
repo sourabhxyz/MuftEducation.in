@@ -42,7 +42,7 @@ Relation with linear algebra: Every linear transformation is a group homomorphis
 **Examples:** 
 
 - Let $G$ be a finite abelian group, define $\phi_m : G \rightarrow G, \phi_m(g) = g^m$, when is $\phi_m$ an automorphism?
-  **Sol:** Since we are interested in automorphism, just checking whether map is one - one, is enough. Now map is one - one iff $\operatorname{Ker}(\phi) = \\{e\\}$, sufficient condition for that is $(m, |G|) = 1$. As suppose $\operatorname{Ker} (\phi) \neq \\{e\\}$, $\rightarrow \exists \\; g \in G$ s.t. $g^m = e \rightarrow o(g) | m \rightarrow (o(g), |G|) = 1$ $\Rightarrow \Leftarrow$.
+  **Sol:** Since we are interested in automorphism, just checking whether map is one - one, is enough. Now map is one - one iff $\operatorname{Ker}(\phi) = \\{e\\}$, sufficient condition for that is $(m, |G|) = 1$. As suppose $\operatorname{Ker} (\phi) \neq \\{e\\}$, $\rightarrow \exists \\; g \in G$ s.t. $g^m = e \rightarrow o(g) | m \text{ but } (o(g), |G|) = 1$ $\Rightarrow \Leftarrow$.
 
 - Consider the mapping $\phi$ from $\mathbb{C}^{\*}$ to $\mathbb{C}^{\*}$ given by $\phi(x) = x^4$. Since $(xy)^4 = x^4y^4$ , $\phi$ is a homomorphism. Clearly, $\operatorname{Ker} \phi = \\{x \mid x^4 = 1\\} = \\{1, -1, i, -i\\}$. So, we know that $\phi$ is a 4-to-1 mapping. Now let's find all elements that map to, say, 2. Certainly, $\phi(\sqrt[4]{2}) = 2$. Then, the set of all elements that map to 2 is $\\{\sqrt[4]{2}, -\sqrt[4]{2}, \sqrt[4]{2}i, -\sqrt[4]{2}i\\}$
 
