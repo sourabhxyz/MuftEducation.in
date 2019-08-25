@@ -78,3 +78,8 @@ If $G$ is a group and $S$ is a set of objects, we say that $G$ acts on $S$ if th
 
 - If $G$ is a non abelian group of order 6 then show that $G \approx S_3$.
 
+  We know that it has an element of order 3 and 2. Let $H = \langle a \rangle$ be of order 3 (Thus as it's index is 2, it is normal subgroup). Let $K = \langle b \rangle$ be of order 2. Consider $L : G \rightarrow A(G/K)$, Now as $\operatorname{Ker} (L) \trianglelefteq K$ and either $\operatorname{Ker}(L) = e \text{ or } \operatorname{Ker}(L) = K$.
+
+  If $\operatorname{Ker} L = K \rightarrow K \triangleleft G$ and $HK = G = \langle ab \rangle$, thus $G$ is cyclic $\Rightarrow \Leftarrow$.
+
+  And therefore $\operatorname{Ker} L = \\{e\\}$, and therefore $L$ is an isomorphism.

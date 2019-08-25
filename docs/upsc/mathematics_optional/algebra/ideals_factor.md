@@ -68,7 +68,7 @@ well-defined and the set of cosets is not a ring.
 
 *  Let $R[x]$ denote the ring of polynomials with real coefficients. Since, $\langle x^2 + 1\rangle = \\{f(x)(x^2 + 1) \mid f(x) \in R[x]\\}$. Then $R[x]/\langle x^2 + 1\rangle$ = $\\{g(x) + \langle x^2 + 1\rangle \mid g(x) \in R[x]\\}$ = $\\{ax + b + \langle x^2 + 1 \rangle \mid a, b \in R\\}$. To see this last equality, note that if $g(x)$ is any member of $R[x]$, then we may write $g(x)$ in the form $q(x)(x^2 + 1) + r(x)$ 
 
-How is multiplication done? Since $x^2 + 1 + \langle x^2 + 1\rangle = 0 + \langle x^2 + 1\rangle$, one should think of $x^2 + 1$ as 0 or, equivalently, as $x^2 = -1$. So, for example, $(x + 3 + \langle x^2 + 1\rangle)(2x + 5 + \langle x^2 + 1 \rangle)$ = $2x^2 + 11x + 15 + \langle x^2 + 1\rangle$ = $11x + 13 + \langle x^2 + 1\rangle$ . In view of the fact that the elements of this ring have the form $ax + b + \langle x^2 + 1\rangle $, where $x^2 + \langle x^2 + 1\rangle = -1 + \langle x^2 + 1\rangle$, it is perhaps not surprising that this ring turns out to be algebraically the same ring as the ring of complex numbers.
+How is multiplication done? Since $x^2 + 1 + \langle x^2 + 1\rangle = 0 + \langle x^2 + 1\rangle$, one should think of $x^2 + 1$ as 0 or, equivalently, as $x^2 = -1$. So, for example, $(x + 3 + \langle x^2 + 1\rangle)(2x + 5 + \langle x^2 + 1 \rangle)$ = $2x^2 + 11x + 15 + \langle x^2 + 1\rangle$ = $11x + 13 + \langle x^2 + 1\rangle$ . In view of the fact that the elements of this ring have the form $ax + b + \langle x^2 + 1\rangle$, where $x^2 + \langle x^2 + 1\rangle = -1 + \langle x^2 + 1\rangle$, it is perhaps not surprising that this ring turns out to be algebraically the same ring as the ring of complex numbers.
 
 ## Prime Ideals and Maximal Ideals
 
