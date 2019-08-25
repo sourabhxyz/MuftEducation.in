@@ -185,7 +185,7 @@ _Note:_ $a^{2}\left(b c d b^{2}\right)=a^{2} b(c d) b^{2}=\left(a^{2} b\right)(c
   - $G$ is closed under $*$.
   - $*$ is associative.
   - Given $a, b, c, \in G$ with $a * b = a * c$, then $b = c$.
-  - Given $a, b, c, in G$ with $b * a = c * a$, then $b = c$.
+  - Given $a, b, c, \in G$ with $b * a = c * a$, then $b = c$.
   Show that $G$ is a group.
 
   **Sol:** Note that in case of set $\mathbb{N}$ with operation of addition, these properties are satisfied but we know that it doesn't form a group.

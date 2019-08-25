@@ -54,7 +54,27 @@ $\\{\overline{\lambda_1}, \dots, \overline{\lambda_r}\\} \subset U(m)$ where $\o
 
 Therefore $U(m)$ is not cyclic.
 
+## Group Action
 
+If $G$ is a group and $S$ is a set of objects, we say that $G$ acts on $S$ if there is a homomorphism $\psi$ from $G$ to $sym(S)$ (or also denoted as $A(S)$), the group of all permutations on $S$.
 
+**Examples:**
 
+- Let $S$ be a finite set of $n$ elements, choose an enumeration of $S = \\{s_1, s_2, \dots, s_n\\}$ then we get an action of $S_n$ on $S$, $\psi : S_n \rightarrow A(S), \psi(\sigma)(s_i) = s_{\sigma(i)}$.
+
+## Problems
+
+- Let $H$ be a subgroup of $G$. Define $L : G \rightarrow A(G / H), L(g)(aH) = gaH$. Clearly this is an homomorphism. What is $\operatorname{Ker}(L)$? 
+
+  **Sol:** $gaH = aH \rightarrow$ $ga \in aH \rightarrow g \in aHa^{-1}$. So answer is intersection fo all conjugates, i.e. $\operatorname{Ker}(L) = \cap_{a \in G}aHa^{-1}$.
+
+- $G$ is a finite group, $H \subset G$ is a subgroup. Assume $|G| \not | i_G(H)!$. Show that $\exists$ a normal subgroup $N \triangleleft H$ and $N \neq \\{e\\}$.
+
+  **Sol:** Consider the homomorphism of above example, $L : G \rightarrow A(G / H) \approx S_{\frac{|G|}{|H|}}$, now since $n \not | \\; |A(G/H)|$ therefore $L$ cannot be injective and hence $\operatorname{Ker}(L) \neq \\{e\\}$, which is our required normal subgroup.
+
+- Prove that a group of order $p^2$ (where $p$ is prime) has a normal subgroup of order $p$.
+  
+  **Sol:** Let $H \subset G$ be any subgroup of order $p$. Since $p^2 \not | p!$, $\therefore \operatorname{Ker}(L) \neq \\{e\\}$ and since $\operatorname{Ker}(L) \subseteq H$ but as $|H| = p \rightarrow \operatorname{Ker}(L) = H$, $\therefore H$ is normal in $G$.
+
+- If $G$ is a non abelian group of order 6 then show that $G \approx S_3$.
 

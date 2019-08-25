@@ -25,6 +25,8 @@ A group is called Hamiltonian if it is non-abelian and all its subgroups are nor
 
 *Unless proof is given, assume it was easy*
 
+- If every left coset is a right coset, then $H \triangleleft G$.   
+  **Proof:** $aH = Hb \rightarrow a \in Hb$ $\rightarrow ab^{-1} \in H$ $\rightarrow Ha = Hb$.
 - Every subgroup of an Abelian group is normal.
   - But the converse is not true as consider for example Quaternion group $Q_8 = \langle \overline{e}, i, j, k \mid \overline{e}^2 = e, i^2 = j^2 = k^2 = ijk = \overline{e}\rangle$ where $e$ is the identity element and $\overline{e}$ commutes with the other elements of the group (can be derived). All its subgroups are $\\{e\\}, \\{e, \overline{e}\\}, \\{e, \overline{e}, i, \overline{e}i\\}, \\{e, \overline{e}, j, \overline{e}j\\}, \\{e, \overline{e}, k, \overline{e}k\\}, Q_8$ all of which are normal (easy to verify).
 - The center $Z(G)$ of a group is always normal.
@@ -33,7 +35,7 @@ A group is called Hamiltonian if it is non-abelian and all its subgroups are nor
 - Let $H$ be a normal subgroup of a group $G$ and $K$ be any subgroup of $G .$ Then $H K=\\{h k | h \in H, k \in K\\}$ is a subgroup of $G$.
 - If a group $G$ has a unique subgroup $H$ of some finite
   order, then $H$ is normal in $G$. To see that this is so, observe that for any $g \in G, g H g^{-1}$ is a subgroup of $G$ and $|g H g^{-1}|=| H |$.
-- Let $G$ be a finite group, $|G| = pm$ where $p$ is a prime and $p \not | m$ and $H \triangleleft G$ of order $p$. Show that for any autmorphism $\phi:G \rightarrow G, \phi(H) = H$ (easy, if $\phi(H) \neq H \rightarrow \because \phi(H) \cap H = \\{e\\}$ $, H\phi(H)$ is a subgroup of order $p^2 \Rightarrow \Leftarrow$
+- Let $G$ be a finite group, $|G| = pm$ where $p$ is a prime and $p \not | m$ and $H \triangleleft G$ of order $p$. Show that for any autmorphism $\phi:G \rightarrow G, \phi(H) = H$ (easy, if $\phi(H) \neq H \rightarrow \because \phi(H) \cap H = \\{e\\}$ $, H\phi(H)$ is a subgroup of order $p^2 \Rightarrow \Leftarrow$)
 
 ## Factor Groups or Quotient Groups
 

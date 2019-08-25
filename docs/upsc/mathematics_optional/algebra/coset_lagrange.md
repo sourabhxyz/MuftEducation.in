@@ -31,13 +31,12 @@ Let $H$ be a subgroup of $G,$ and let $a$ and $b$ belong to $G$. Then,
 
 Note that properties $1,5,$ and $7$ of the lemma guarantee that the left cosets of a subgroup $H$ of $G$ partition $G$ into blocks of equal size. Indeed, we may view the cosets of $H$ as a partitioning of $G$ into equivalence classes under the equivalence relation defined by $a \sim b$ if $a H=b H.$ (basically if they are in same partition then by 4 we have this)
 
-**Example:** (Use case of property 5) To find the cosets of $H=\\{1,15\\}$ in $G=U(32)=$ $\\{1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31\\},$ we begin with
-$H=\\{1,15\\} .$ We can find a second coset by choosing any element not
-in $H,$ say $3,$ as a coset representative. This gives the coset $3 H=\\{3,13\\} .$
-We find our next coset by choosing a representative not already appearing in the two previously chosen cosets, say $5 .$ This gives us the coset $5 H=$
-$\\{5,11\\} .$ We continue to form cosets by picking elements from $U(32)$
-that have not yet appeared in the previous cosets as representatives of
-the cosets until we have accounted for every element of $U(32) .$ We then have the complete list of all distinct cosets of $H$
+**Examples:** 
+- (Use case of property 5) To find the cosets of $H=\\{1,15\\}$ in $G=U(32)=$ $\\{1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31\\},$ we begin with $H=\\{1,15\\} .$ We can find a second coset by choosing any element not in $H,$ say $3,$ as a coset representative. This gives the coset $3 H=\\{3,13\\} .$ We find our next coset by choosing a representative not already appearing in the two previously chosen cosets, say $5 .$ This gives us the coset $5 H=$ $\\{5,11\\} .$ We continue to form cosets by picking elements from $U(32)$ that have not yet appeared in the previous cosets as representatives of the cosets until we have accounted for every element of $U(32) .$ We then have the complete list of all distinct cosets of $H$
+
+- Some authors denote left coset with $H \setminus G$, and right coset with $G / H$. Find a bijection from left coset to right coset.
+  **Sol:** Ans is $\psi(aH) = Ha^{-1}$ as $aH = bH \rightarrow b^{-1}a \in H$ $\rightarrow b^{-1} \in Ha^{-1}$ $\rightarrow Hb^{-1} = Ha^{-1}$.
+
 
 ## Lagrange's Theorem
 
