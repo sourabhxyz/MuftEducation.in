@@ -253,3 +253,178 @@ produce a different result. The error can then be detected.
 ![CRC Calculation](../../../assets/btech/cs/computer_networks/ll6.png)
 *Figure: [Tanenbaum] Example Calculation of CRC*
 
+* Note that we require that lower order bit is 1 as o/w $x^rM(x)$ is already divisible by $G(x)$.
+* $x^rM(x)$ instead of $M(x)$ as o/w we will be modifying the message itself.
+* Interestingly, no polynomial with an odd number of terms has x + 1 as a factor in the modulo 2 system. 
+* What about burst errors? A burst error of length $k$ can be represented by $x^i (x^{k−1} + · · · + 1)$. Can detect burst errors of length $≤ r$ , where $r$ is the degree of $G (x)$.
+
+## Link layer protocols
+
+* A seq_nr is a small integer used to number the frames so that we can tell them apart. These sequence numbers run from 0 up to and including MAX_SEQ, which is defined in each protocol needing it.
+* See slides.
+
+### Sliding Window Protocols
+
+In the previous protocols, data frames were transmitted in one direction only.
+In most practical situations, there is a need to transmit data in both directions.
+One way of achieving full-duplex data transmission is to run two instances of one
+of the previous protocols, each using a separate link for simplex data traffic (in
+different directions). Each link is then comprised of a ‘‘forward’’ channel (for
+data) and a ‘‘reverse’’ channel (for acknowledgements). In both cases the capacity of the reverse channel is almost entirely wasted.
+A better idea is to use the same link for data in both directions. After all, in
+protocols 2 and 3 it was already being used to transmit frames both ways, and the
+reverse channel normally has the same capacity as the forward channel. In this
+model the data frames from A to B are intermixed with the acknowledgement
+frames from A to B. By looking at the kind field in the header of an incoming
+frame, the receiver can tell whether the frame is data or an acknowledgement.
+Although interleaving data and control frames on the same link is a big im-
+provement over having two separate physical links, yet another improvement is
+possible. When a data frame arrives, instead of immediately sending a separate
+control frame, the receiver restrains itself and waits until the network layer passes
+it the next packet. The acknowledgement is attached to the outgoing data frame
+(using the ack field in the frame header). In effect, the acknowledgement gets a
+free ride on the next outgoing data frame. The technique of temporarily delaying
+outgoing acknowledgements so that they can be hooked onto the next outgoing
+data frame is known as piggybacking.
+ If
+a new packet arrives quickly, the acknowledgement is piggybacked onto it.
+Otherwise, if no new packet has arrived by the end of this time period, the data
+link layer just sends a separate acknowledgement frame.
+The next three protocols are bidirectional protocols that belong to a class cal-
+led sliding window protocols.  In these, as in
+all sliding window protocols, each outbound frame contains a sequence number,
+ranging from 0 up to some maximum. The maximum is usually 2n − 1 so the se-
+quence number fits exactly in an n-bit field.
+The essence of all sliding window protocols is that at any instant of time, the
+sender maintains a set of sequence numbers corresponding to frames it is permit-
+ted to send. These frames are said to fall within the sending window. Similarly,
+the receiver also maintains a receiving window corresponding to the set of frames
+it is permitted to accept. The sender’s window and the receiver’s window need
+not have the same lower and upper limits or even have the same size. In some
+protocols they are fixed in size, but in others they can grow or shrink over the
+course of time as frames are sent and received.
+
+* The sequence numbers within the sender’s window represent frames that have
+been sent or can be sent but are as yet not acknowledged. Whenever a new packet
+arrives from the network layer, it is given the next highest sequence number, and
+the upper edge of the window is advanced by one. When an acknowledgement
+comes in, the lower edge is advanced by one. In this way the window continuously maintains a list of unacknowledged frames.
+
+* Since frames currently within the sender’s window may ultimately be lost or
+damaged in transit, the sender must keep all of these frames in its memory for
+possible retransmission. Thus, if the maximum window size is n, the sender needs
+n buffers to hold the unacknowledged frames. If the window ever grows to its maximum size, the sending data link layer must forcibly shut off the network
+layer until another buffer becomes free.
+
+* The receiving data link layer’s window corresponds to the frames it may ac-
+cept. Any frame falling within the window is put in the receiver’s buffer. When a
+frame whose sequence number is equal to the lower edge of the window is re-
+ceived, it is passed to the network layer and the window is rotated by one. Any
+frame falling outside the window is discarded. In all of these cases, a subsequent
+acknowledgement is generated so that the sender may work out how to proceed.
+
+![](../../../assets/btech/cs/computer_networks/ll7.png)
+*1 bit sliding window protocol*
+
+Under normal circumstances, one of the two data link layers goes first and
+transmits the first frame. In other words, only one of the data link layer programs
+should contain the to physical layer and start timer procedure calls outside the
+main loop. The starting machine fetches the first packet from its network layer,
+builds a frame from it, and sends it. When this (or any) frame arrives, the receiv-
+ing data link layer checks to see if it is a duplicate, just as in protocol 3. If the
+frame is the one expected, it is passed to the network layer and the receiver’s win-
+dow is slid up.
+
+* consider a 50-kbps satellite channel with a 500-msec round-trip propagation delay. Let us imagine trying to use protocol 4 to send 1000-bit frames via the satellite. At t = 0 the sender starts sending the first frame. At t = 20 msec the frame has been com- pletely sent. Not until t = 270 msec has the frame fully arrived at the receiver, and not until t = 520 msec has the acknowledgement arrived back at the sender, under the best of circumstances (of no waiting in the receiver and a short ac- knowledgement frame). This means that the sender was blocked 500/520 or 96% of the time. In other words, only 4% of the available bandwidth was used. Clearly, the combination of a long transit time, high bandwidth, and short frame length is disastrous in terms of efficiency.  Basically, the
+solution lies in allowing the sender to transmit up to w frames before blocking, instead of just 1.
+
+To find an appropriate value for w we need to know how many frames can fit
+inside the channel as they propagate from sender to receiver. This capacity is de-
+termined by the bandwidth in bits/sec multiplied by the one-way transit time, or
+the bandwidth-delay product of the link. We can divide this quantity by the
+number of bits in a frame to express it as a number of frames. Call this quantity
+BD. Then w should be set to 2BD + 1. Twice the bandwidth-delay is the number
+of frames that can be outstanding if the sender continuously sends frames when
+the round-trip time to receive an acknowledgement is considered. The ‘‘+1’’ is
+because an acknowledgement frame will not be sent until after a complete frame
+is received.
+For the example link with a bandwidth of 50 kbps and a one-way transit time
+of 250 msec, the bandwidth-delay product is 12.5 kbit or 12.5 frames of 1000 bits
+each. 2BD + 1 is then 26 frames. Assume the sender begins sending frame 0 as
+before and sends a new frame every 20 msec. By the time it has finished sending
+26 frames, at t = 520 msec, the acknowledgement for frame 0 will have just arri-
+ved. Thereafter, acknowledgements will arrive every 20 msec, so the sender will
+always get permission to continue just when it needs it. From then onwards, 25 or
+26 unacknowledged frames will always be outstanding. Put in other terms, the
+sender’s maximum window size is 26.
+For smaller window sizes, the utilization of the link will be less than 100%
+since the sender will be blocked sometimes. We can write the utilization as the
+fraction of time that the sender is not blocked:
+
+link utilization $\leq \frac{w}{1 + 2BD}$ 
+
+This value is an upper bound because it does not allow for any frame processing
+time and treats the acknowledgement frame as having zero length, since it is
+usually short.
+
+This technique of keeping multiple frames in flight is an example of pipelining.
+
+Pipelining frames over an unreliable communication channel raises some
+serious issues. First, what happens if a frame in the middle of a long stream is
+damaged or lost? Large numbers of succeeding frames will arrive at the receiver
+before the sender even finds out that anything is wrong. When a damaged frame
+arrives at the receiver, it obviously should be discarded, but what should the re-
+ceiver do with all the correct frames following it? Remember that the receiving
+data link layer is obligated to hand packets to the network layer in sequence.
+
+Two basic approaches are available for dealing with errors in the presence of
+pipelining, both of which are shown in below fig.
+
+![](../../../assets/btech/cs/computer_networks/ll8.png)
+
+*Pipelining and error recovery. Effect of an error when (a) receiver’s window size is 1 and (b) receiver’s window size is large.*
+
+One option, called go-back-n, is for the receiver simply to discard all subsequent
+frames, sending no acknowledgements for the discarded frames. This strategy
+corresponds to a receive window of size 1. In other words, the data link layer
+refuses to accept any frame except the next one it must give to the network layer.
+If the sender’s window fills up before the timer runs out, the pipeline will begin to
+empty. Eventually, the sender will time out and retransmit all unacknowledged
+frames in order, starting with the damaged or lost one. This approach can waste a
+lot of bandwidth if the error rate is high.
+
+
+In Fig. 3-18(b) we see go-back-n for the case in which the receiver’s window
+is large. Frames 0 and 1 are correctly received and acknowledged. Frame 2,
+however, is damaged or lost. The sender, unaware of this problem, continues to
+send frames until the timer for frame 2 expires. Then it backs up to frame 2 and
+starts over with it, sending 2, 3, 4, etc. all over again.
+The other general strategy for handling errors when frames are pipelined is
+called selective repeat. When it is used, a bad frame that is received is discarded,
+but any good frames received after it are accepted and buffered. When the sender
+times out, only the oldest unacknowledged frame is retransmitted. If that frame
+arrives correctly, the receiver can deliver to the network layer, in sequence, all the
+frames it has buffered. Selective repeat corresponds to a receiver window larger
+than 1. This approach can require large amounts of data link layer memory if the
+window is large.
+Selective repeat is often combined with having the receiver send a negative
+acknowledgement (NAK) when it detects an error, for example, when it receives a
+checksum error or a frame out of sequence. NAKs stimulate retransmission be-
+fore the corresponding timer expires and thus improve performance.
+In Fig. 3-18(b), frames 0 and 1 are again correctly received and acknowledged
+and frame 2 is lost. When frame 3 arrives at the receiver, the data link layer there
+notices that it has missed a frame, so it sends back a NAK for 2 but buffers 3.
+When frames 4 and 5 arrive, they, too, are buffered by the data link layer instead
+of being passed to the network layer. Eventually, the NAK 2 gets back to the
+sender, which immediately resends frame 2. When that arrives, the data link layer
+now has 2, 3, 4, and 5 and can pass all of them to the network layer in the correct
+order. It can also acknowledge all frames up to and including 5, as shown in the
+figure. If the NAK should get lost, eventually the sender will time out for frame 2
+and send it (and only it) of its own accord, but that may be a quite a while later.
+
+
+
+
+
+
+
