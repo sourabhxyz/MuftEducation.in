@@ -230,7 +230,7 @@ produce a different result. The error can then be detected.
 
 * Note that we require that lower order bit is 1 as o/w $x^rM(x)$ is already divisible by $G(x)$.
 * $x^rM(x)$ instead of $M(x)$ as o/w we will be modifying the message itself.
-* Interestingly, no polynomial with an odd number of terms has x + 1 as a factor in the modulo 2 system. 
+* Interestingly, no polynomial with an odd number of terms has x + 1 as a factor in the modulo 2 system. Proof [here](https://www.computing.dcu.ie/~humphrys/Notes/Networks/data.polynomial.html).
 * What about burst errors? A burst error of length $k$ can be represented by $x^i (x^{k−1} + · · · + 1)$. Can detect burst errors of length $≤ r$ , where $r$ is the degree of $G (x)$.
 
 ## Link layer protocols
