@@ -78,32 +78,7 @@ Having solved the problem of marking the start and end of each frame, we
 come to the next problem: how to make sure all frames are eventually delivered to
 the network layer at the destination and in the proper order.
 
-The usual way to ensure reliable delivery is to provide the sender with some
-feedback about what is happening at the other end of the line. Typically, the protocol calls for the receiver to send back special control frames bearing positive or
-negative acknowledgements about the incoming frames. If the sender receives a
-positive acknowledgement about a frame, it knows the frame has arrived safely.
-On the other hand, a negative acknowledgement means that something has gone
-wrong and the frame must be transmitted again.
-
-An additional complication comes from the possibility that hardware troubles
-may cause a frame to vanish completely (e.g., in a noise burst). In this case, the
-receiver will not react at all, since it has no reason to react. Similarly, if the acknowledgement frame is lost, the sender will not know how to proceed. It should
-be clear that a protocol in which the sender transmits a frame and then waits for
-an acknowledgement, positive or negative, will hang forever if a frame is ever lost
-due to, for example, malfunctioning hardware or a faulty communication channel.
-This possibility is dealt with by introducing timers into the data link layer.
-When the sender transmits a frame, it generally also starts a timer. The timer is
-set to expire after an interval long enough for the frame to reach the destination,
-be processed there, and have the acknowledgement propagate back to the sender.
-Normally, the frame will be correctly received and the acknowledgement will get
-back before the timer runs out, in which case the timer will be canceled.
-
-However, if either the frame or the acknowledgement is lost, the timer will go
-off, alerting the sender to a potential problem. The obvious solution is to just
-transmit the frame again. However, when frames may be transmitted multiple
-times there is a danger that the receiver will accept the same frame two or more
-times and pass it to the network layer more than once. To prevent this from happening, it is generally necessary to assign sequence numbers to outgoing frames,
-so that the receiver can distinguish retransmissions from originals.
+For which we have seen, acknowledgements, timer, etc.
 
 ## Flow Control
 
@@ -261,7 +236,7 @@ produce a different result. The error can then be detected.
 ## Link layer protocols
 
 * A seq_nr is a small integer used to number the frames so that we can tell them apart. These sequence numbers run from 0 up to and including MAX_SEQ, which is defined in each protocol needing it.
-* See slides.
+* See slides (Lec 10).
 
 ### Sliding Window Protocols
 

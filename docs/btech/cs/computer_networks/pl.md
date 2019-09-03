@@ -193,10 +193,6 @@ between adjacent channels. The overlap is there because real filters do not have
 ideal sharp edges. This means that a strong spike at the edge of one channel will
 be felt in the adjacent one as nonthermal noise.
 
-This scheme has been used to multiplex calls in the telephone system for
-many years, but multiplexing in time is now preferred instead. However, FDM
-continues to be used in telephone networks, as well as cellular, terrestrial wireless,
-and satellite networks at a higher level of granularity.
 
 ![FDM](../../../assets/btech/cs/computer_networks/p4.png)
 *Figure 2-5: [Tanenbaum] Frequency division multiplexing. (a) The original bandwidths. (b) The bandwidths raised in frequency. (c) The multiplexed channel.*
@@ -257,7 +253,7 @@ $$
 Y=\sum_{i} b_{i} \cdot S_{i}+\left(1-b_{i}\right) \cdot \overline{S}_{i}
 $$
 
-where $b_{i} \in\{0,1\} .$ To recover station $j^{\prime}$ s signal, the receiver will just take
+where $b_{i} \in \\{0,1\\} .$ To recover station $j^{\prime}$ s signal, the receiver will just take
 the inner product of $Y$ with $S_{j}$ . i.e.,
 
 $$

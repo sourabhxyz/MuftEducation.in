@@ -429,3 +429,102 @@ Hearing the CTS tips it off that it is close to a station that is about to recei
 frame, so it defers sending anything until that frame is expected to be finished.
 Station E hears both control messages and, like D, must be silent until the data
 frame is complete.
+
+## 802.11 MAC Sublayer Protocol
+
+A station that has a frame to send starts with a ran-
+dom backoff (except in the case that it has not used the channel recently and the
+channel is idle). It does not wait for a collision. The number of slots to backoff is
+chosen in the range 0 to, say, 15 in the case of the OFDM physical layer. The sta-
+tion waits until the channel is idle, by sensing that there is no signal for a short
+period of time (called the DIFS, as we explain below), and counts down idle slots,
+pausing when frames are sent. It sends its frame when the counter reaches 0. If
+the frame gets through, the destination immediately sends a short acknowledge-
+ment. Lack of an acknowledgement is inferred to indicate an error, whether a col-
+lision or otherwise. In this case, the sender doubles the backoff period and tries
+again, continuing with exponential backoff as in Ethernet until the frame has been
+successfully transmitted or the maximum number of retransmissions has been
+reached.
+
+This mode of operation is called DCF (Distributed Coordination Function)
+because each station acts independently, without any kind of central control. The
+standard also includes an optional mode of operation called PCF (Point Coordi-
+nation Function) in which the access point controls all activity in its cell, just
+like a cellular base station.
+
+To reduce ambiguities about which station is sending, 802.11 defines channel
+sensing to consist of both physical sensing and virtual sensing. Physical sensing
+simply checks the medium to see if there is a valid signal. With virtual sensing,
+each station keeps a logical record of when the channel is in use by tracking the
+NAV (Network Allocation Vector). Each frame carries a NAV field that says
+how long the sequence of which this frame is part will take to complete. Stations
+that overhear this frame know that the channel will be busy for the period indi-
+cated by the NAV , regardless of whether they can sense a physical signal. For ex-
+ample, the NAV of a data frame includes the time needed to send an acknowledge-
+ment. All stations that hear the data frame will defer during the acknowledgement
+period, whether or not they can hear the acknowledgement.
+An optional RTS/CTS mechanism uses the NAV to prevent terminals from
+sending frames at the same time as hidden terminals. It is shown in Fig. 4-27. In
+this example, A wants to send to B. C is a station within range of A (and possibly
+within range of B, but that does not matter). D is a station within range of B but
+not within range of A.
+The protocol starts when A decides it wants to send data to B. A begins by
+sending an RTS frame to B to request permission to send it a frame. If B receives
+this request, it answers with a CTS frame to indicate that the channel is clear to
+send. Upon receipt of the CTS , A sends its frame and starts an ACK timer. Upon
+correct receipt of the data frame, B responds with an ACK frame, completing the
+exchange. If A’s ACK timer expires before the ACK gets back to it, it is treated as
+a collision and the whole protocol is run again after a backoff.
+
+Now let us consider this exchange from the viewpoints of C and D. C is with-
+in range of A, so it may receive the RTS frame. If it does, it realizes that someone
+is going to send data soon. From the information provided in the RTS request, it
+can estimate how long the sequence will take, including the final ACK. So, for the
+good of all, it desists from transmitting anything until the exchange is completed.
+It does so by updating its record of the NAV to indicate that the channel is busy, as
+shown in Fig. 4-27. D does not hear the RTS, but it does hear the CTS, so it also
+updates its NAV. Note that the NAV signals are not transmitted; they are just in-
+ternal reminders to keep quiet for a certain period of time.
+
+![](../../../assets/btech/cs/computer_networks/nl.png)
+
+RTS/CTS in 802.11 is a little different than in the
+MACA protocol we saw in Sec 4.2 because everyone hearing the RTS or CTS
+remains quiet for the duration to allow the ACK to get through without collision.
+Because of this, it does not help with exposed terminals as MACA did, only with
+hidden terminals. 
+
+---
+
+After a
+frame has been sent, a certain amount of idle time is required before any station
+may send a frame to check that the channel is no longer in use. The trick is to
+define different time intervals for different kinds of frames.
+
+Five intervals are depicted in Fig. 4-28. The interval between regular data
+frames is called the DIFS (DCF InterFrame Spacing). Any station may attempt
+to acquire the channel to send a new frame after the medium has been idle for
+DIFS. The usual contention rules apply, and binary exponential backoff may be
+needed if a collision occurs. The shortest interval is SIFS (Short InterFrame
+Spacing). It is used to allow the parties in a single dialog the chance to go first.
+Examples include letting the receiver send an ACK , other control frame sequences
+like RTS and CTS, or letting a sender transmit a burst of fragments. Sending the
+next fragment after waiting only SIFS is what prevents another station from jump-
+ing in with a frame in the middle of the exchange.
+
+![](../../../assets/btech/cs/computer_networks/nl2.png)
+
+The two AIFS (Arbitration InterFrame Space) intervals show examples of
+two different priority levels. The short interval, AIFS1 , is smaller than DIFS but
+longer than SIFS. It can be used by the AP to move voice or other high-priority
+traffic to the head of the line. The AP will wait for a shorter interval before it
+sends the voice traffic, and thus send it before regular traffic. The long interval,
+AIFS 4 , is larger than DIFS. It is used for background traffic that can be deferred
+until after regular traffic. The AP will wait for a longer interval before it sends
+this traffic, giving regular traffic the opportunity to transmit first. The complete
+quality of service mechanism defines four different priority levels that have dif-
+ferent backoff parameters as well as different idle parameters.
+The last time interval, EIFS (Extended InterFrame Spacing), is used only
+by a station that has just received a bad or unknown frame, to report the problem.
+The idea is that since the receiver may have no idea of what is going on, it should
+wait a while to avoid interfering with an ongoing dialog between two stations.
