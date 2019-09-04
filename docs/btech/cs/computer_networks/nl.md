@@ -528,3 +528,7 @@ The last time interval, EIFS (Extended InterFrame Spacing), is used only
 by a station that has just received a bad or unknown frame, to report the problem.
 The idea is that since the receiver may have no idea of what is going on, it should
 wait a while to avoid interfering with an ongoing dialog between two stations.
+
+See [Lec 15](../../../assets/btech/cs/computer_networks/lec15.pdf).
+
+See [Lec 16](../../../assets/btech/cs/computer_networks/lec15.pdf).
