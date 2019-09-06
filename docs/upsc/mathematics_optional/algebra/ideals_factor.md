@@ -39,7 +39,7 @@ A nonempty subset $A$ of a ring $R$ is an ideal of $R$ if
 
 * Since R is a group under addition, therefore, A is a normal subgroup of R as $rA(-r) = ra(-r) = a'(-r) \in A$
 
-## Theorem 13.2
+## Theorem 13.2 (Existence of Factor Rings)
 
 Let $R$ be a ring and let $A$ be a subring of $R$. The set of cosets $\\{r + A \mid r \in R\\}$ is a ring under the operations $(s + A) + (t + A) = s + t + A$ and $(s + A)(t + A) = st + A$ if and only if $A$ is an ideal of $R$.
 
@@ -73,23 +73,67 @@ How is multiplication done? Since $x^2 + 1 + \langle x^2 + 1\rangle = 0 + \langl
 ## Prime Ideals and Maximal Ideals
 
 A prime ideal $A$ of a commutative ring $R$ is a proper ideal of $R$ such
-that $a, b \in R$ and $ab \in A$ imply $a \in A$ or $b \in A$. A maximal ideal of a commutative ring $R$ is a proper ideal of $R$ such that, whenever $B$ is an
+that $a, b \in R$ and $ab \in A$ imply $a \in A$ or $b \in A$. A maximal ideal of a commutative ring $R$ is a proper ideal $A$ of $R$ such that, whenever $B$ is an
 ideal of $R$ and $A \subseteq B \subseteq R$, then $B = A$ or $B = R$.
 
 **Examples:**
 
 * Let $n$ be an integer greater than 1. Then, in the ring of integers, the ideal $nZ$ is prime if and only if $n$ is prime. ($\\{0\\}$ is also a prime ideal of $Z$.)
 
-* The ideal $\langle x^2 + 1\rangle$ is maximal in $R[x]$. To see this, assume that $A$ is an ideal of $R[x]$ that properly contains $\langle x^2 + 1\rangle$. We will prove that $A = R[x]$ by showing that $A$ contains some nonzero real number $c$. Then $1 = (1/c)c \in A$ and therefore, $A = R[x]$. To this end, let $f(x) \in A,$ but $f(x) \not \in \langle x^2 + 1\rangle.$ Then $f(x) = q(x)(x^2 + 1) + r(x),$ where $r(x) \neq 0$ and the degree of r(x) is less than 2. It follows that $r(x) = ax + b,$ where a and b are not both 0, and $ax + b = r(x) = f(x) - q(x)(x^2 + 1) \in A$. Thus, $a^2x^2 - b^2 = (ax + b)(ax - b) \in A$  and  $a^2(x^2 + 1) \in A.$ So, $0 \neq a^2 + b^2 = (a^2x^2 + a^2) - (a^2x^2 - b^2) \in A$.
+* The ideal $\langle x^2 + 1\rangle$ is maximal in $R[x]$. To see this, assume that $A$ is an ideal of $R[x]$ that properly contains $\langle x^2 + 1\rangle$. We will prove that $A = R[x]$ by showing that $A$ contains some nonzero real number $c$. Then $1 = (1/c)c \in A$ and therefore, $A = R[x]$. To this end, let $f(x) \in A,$ but $f(x) \not \in \langle x^2 + 1\rangle.$ Then $f(x) = q(x)(x^2 + 1) + r(x),$ where $r(x) \neq 0$ and the degree of $r(x)$ is less than 2. It follows that $r(x) = ax + b,$ where $a$ and $b$ are not both 0, and $ax + b = r(x) = f(x) - q(x)(x^2 + 1) \in A$. Thus, $a^2x^2 - b^2 = (ax + b)(ax - b) \in A$  and  $a^2(x^2 + 1) \in A.$ So, $0 \neq a^2 + b^2 = (a^2x^2 + a^2) - (a^2x^2 - b^2) \in A$.
 
 * The ideal $\langle x^2 + 1\rangle$ is not prime in $Z_2[x]$, since it contains $(x + 1)^2 = x^2 + 2x + 1 = x^2 + 1$ but does not contain $x + 1$.
 
 ### Theorem 13.3
 
 Let $R$ be a commutative ring with unity and let $A$ be an ideal of $R$.
-Then $R/A$ is an integral domain if and only if $A$ is prime.
+Then $R/A$ is an integral domain if and only if $A$ is prime. (easy to prove)
 
 **Proof:** 
+
+Suppose that $R/A$ is an integral domain and $ab \in A$. Then
+$(a + A)(b + A) = ab + A = A$, the zero element of the ring $R/A$. So,
+either $a + A = A$ or $b + A = A$; that is, either $a \in A$ or $b \in A$. Hence,
+$A$ is prime.
+
+To prove the other half of the theorem, we first observe that $R/A$ is a
+commutative ring with unity for any proper ideal $A$. Thus, our task is
+simply to show that when $A$ is prime, $R/A$ has no zero-divisors. So, suppose that $A$ is prime and $(a + A)(b + A) = 0 + A = A$. Then $ab \in A$ and, therefore, $a \in A$ or $b \in A$. Thus, one of $a + A$ or $b + A$ is the zero coset in $R/A$.
+
+### Theorem 13.4
+
+Let $R$ be a commutative ring with unity and let $A$ be an ideal of $R$.
+Then $R/A$ is a field if and only if $A$ is maximal.
+
+**Proof:** 
+
+Suppose that $R/A$ is a field and $B$ is an ideal of $R$ that properly
+contains $A$. Let $b \in B$ but $b \not \in A$. Then $b + A$ is a nonzero element
+of $R/A$ and, therefore, there exists an element $c + A$ such that
+$(b + A)(c + A) = 1 + A$, the multiplicative identity of $R/A$. Since
+$b \in B$, we have $bc \in B$. Because $1 + A = (b + A)(c + A) = bc + A$,
+
+we have $1 - bc \in A \subset B$. So, $1 = (1 - bc) + bc \in B$. Thus,
+$B = R$. This proves that $A$ is maximal.
+
+Now suppose that $A$ is maximal and let $b \in R$ but $b \not \in A$. It suffices
+to show that $b + A$ has a multiplicative inverse. (All other properties
+for a field follow trivially.) Consider $B = \\{br + a \mid r \in R, a \in A\\}$. This
+is an ideal of $R$ that properly contains $A$ (easy to see). Since $A$ is maximal, we must have $B = R$. Thus, $1 \in B$, say, $1 = bc + a'$, where $a' \in A$. Then $1 + A = bc + a' + A = bc + A = (b + A)(c + A)$.
+
+---
+
+When a commutative ring has a unity, it follows from Theorems
+13.3 and 13.4 that a maximal ideal is a prime ideal. The next example
+shows that a prime ideal need not be maximal.
+
+**Examples:** 
+
+* The ideal $\langle x \rangle$ is a prime ideal in $Z[x]$ but not a maximal ideal in $Z[x]$. To verify this, we begin with the observation that $\langle x\rangle = \\{f(x) \in Z[x] \mid f(0) = 0\\}$ . Thus, if $g(x)h(x) \in \langle x\rangle$, then $g(0)h(0) = 0.$ And since $g(0)$ and $h(0)$ are integers, we have $g(0) = 0$ or $h(0) = 0$. To see that $\langle x\rangle$ is not maximal, we simply note that $\langle x\rangle \subset \langle x, 2\rangle \subset Z[x]$ 
+
+
+
+
 
 
 

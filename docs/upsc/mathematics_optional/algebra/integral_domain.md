@@ -62,6 +62,8 @@ Let $R$ be a ring with unity 1. If 1 has infinite order under addition, then the
 
 **Proof:** Suppose that 1 has additive order n (as other case is straight forward). Then $n \cdot 1 = 0$, and $n$ is the least positive integer with this property. So, for any $x$ in $R$, we have $n \cdot x = x + x + \cdots + x$ ($n$ summands) = $1x + 1x + \cdots + 1x$ ($n$ summands) = $(1 + 1 + \cdots + 1)x$ ($n$ summands)$ = (n \cdot 1)x = 0x = 0.$ Thus, $R$ has characteristic $n$.
 
+**Corollary:** Characteristic of a subfield is same as that of field.
+
 ## Theorem 12.4
 
 The characteristic of an integral domain is 0 or prime.
@@ -70,7 +72,7 @@ The characteristic of an integral domain is 0 or prime.
 
 So, $s \cdot 1 = 0 \text{ or } t \cdot 1 = 0.$ Since $n$ is the least positive integer with the property that $n \cdot 1 = 0$, we must have $s = n$ or $t = n$. Thus, $n$ is prime. $\blacksquare$
 
-
+Thus characteristic of a field is 0 or prime.
 
 
 

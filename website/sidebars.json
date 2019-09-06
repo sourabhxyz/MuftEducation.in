@@ -29,6 +29,8 @@
       "upsc/mathematics_optional/algebra/ring",
       "upsc/mathematics_optional/algebra/integral_domain",
       "upsc/mathematics_optional/algebra/ideals_factor",
+      "upsc/mathematics_optional/algebra/ring_homo",
+      "upsc/mathematics_optional/algebra/poly_ring",
       "upsc/mathematics_optional/algebra/advance_groups"
     ]
   },
