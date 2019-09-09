@@ -28,6 +28,8 @@ groups is itself a group. And external direct product of abelian groups is an ab
 
 If $A \approx_{\phi} C$, then $A \oplus B \approx C \oplus B$ (easy to see, define $\Phi(a, b) = (\phi(a), b)$)
 
+And $G_1 \oplus G_2 \approx G_2 \oplus G_1$, define $\phi(g_1, g_2) = (g_2, g_1)$.
+
 **Examples:**
 
 - A group of order 4 is isomorphic to $Z_{4}$ or $Z_{2} \oplus Z_{2} .$ To verify this, let $G=$
@@ -104,7 +106,7 @@ $U(s t) \approx U(s) \oplus U(t)$
 
 Moreover, $U_{s}(s t)$ is isomorphic to $U(t)$ and $U_{t}(s t)$ is isomorphic to $U(s)$
 
-**Proof:**  An isomorphism from $U(st)$ to $U(s) \oplus U(t)$ is $x \rightarrow (x \bmod s, x \bmod t)$ (one-one and onto follows from [Chinese Remainder Theorem](mufteducation.in/docs/upsc/mathematics_optional/algebra/advance_groups#chinese-remainder-theorem), operation preserving is clear; an isomorphism from $U_s(st)$ to $U(t)$ is $x \rightarrow x \bmod t$; an isomorphism from $U_t (st)$ to $U(s)$ is $x \rightarrow x \bmod s$. We leave the verification that
+**Proof:**  An isomorphism from $U(st)$ to $U(s) \oplus U(t)$ is $x \rightarrow (x \bmod s, x \bmod t)$ (one-one and onto follows from [Chinese Remainder Theorem](upsc/mathematics_optional/algebra/advance_groups.md), operation preserving is clear; an isomorphism from $U_s(st)$ to $U(t)$ is $x \rightarrow x \bmod t$; an isomorphism from $U_t (st)$ to $U(s)$ is $x \rightarrow x \bmod s$. We leave the verification that
 these mappings are operation-preserving, one-to-one, and onto to the
 reader.
 

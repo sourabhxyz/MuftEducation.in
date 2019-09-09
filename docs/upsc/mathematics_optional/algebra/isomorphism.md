@@ -22,9 +22,7 @@ Easy to prove that $\phi^{-1}$ is as well an isomorphism.
 
 * Any infinite cyclic group is isomorphic to $Z$. Indeed, if $a$ is a generator of the cyclic group, the mapping $a^{k} \rightarrow k$ is an
   isomorphism. Any finite cyclic group $\langle a\rangle$ of order $n$ is isomorphic to $Z_{n}$ under the mapping $a^{k} \rightarrow k \bmod n .$ That these correspondences are functions and are one-to-one is the essence of Theorem 4.1. Obviously,
-  the mappings are onto. That the mappings are operation-preserving
-  follows from Exercise 9 in Chapter 0 in the finite case and from the
-  definitions in the infinite case.
+  the mappings are onto and can be verified to be operation preserving.
 * $U(10) \not \approx U(12) .$ This is a bit trickier to prove. First, note that $x^{2}=1$ for all $x$ in $U(12) .$ Now, suppose that $\phi$ is an isomorphism from $U(10)$ onto $U(12) .$ Then
 
   $$
