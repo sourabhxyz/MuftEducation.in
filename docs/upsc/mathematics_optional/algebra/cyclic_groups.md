@@ -8,7 +8,7 @@ sidebar_label: Cyclic Groups
 
 **Example** $Z\_8 = <1> = <3> = <5> = <7>$.
 
-**Theorem 4.1:** Let $G$ be a group, and let $a$ belong to $G$. If $a$ has infinite order, then $a\_i = a\_j$ if and only if $i = j$. If $a$ has finite order, say, $n$, then $< a > = \\{e, a, a^2, . . . , a^{n-1}\\}$ and $a\_i = a\_j$ if and only if $n$ divides $i - j$. (Easy to prove)
+**Theorem 4.1:** Let $G$ be a group, and let $a$ belong to $G$. If $a$ has infinite order, then $a^i = a^j$ if and only if $i = j$. If $a$ has finite order, say, $n$, then $\langle a\rangle = \\{e, a, a^2, . . . , a^{n-1}\\}$ and $a^i = a^j$ if and only if $n$ divides $i - j$. (Easy to prove)
 
 **Corollary** For any group element $a$, $|a| = |< a >|$.
 
