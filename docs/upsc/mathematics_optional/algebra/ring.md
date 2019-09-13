@@ -37,6 +37,8 @@ conclude that $b = c$. Similarly, if $a^2 = a$, we cannot conclude that $a = 0 \
 
 * Show that if $m$ and $n$ are integers and $a$ and $b$ are elements from ring, then $(m \cdot a)(n \cdot b) = (mn) \cdot (ab).$ **Sol:** $(m \cdot a)(n \cdot b) = (a + a + \cdots + a)(b + b + \cdots + b) = (ab + ab + \cdots + ab)$, where the last term has $mn$ summands. 
 
+* Note that since $R$ is an abelian group under addition, every subgroup of it is normal.
+
 ## Subrings
 
 A subset $S$ of a ring $R$ is a subring of $R$ if $S$ is itself a ring with the operations of $R$.
