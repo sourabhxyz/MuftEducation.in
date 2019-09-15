@@ -5,7 +5,7 @@ sidebar_label: Polynomial Rings
 ---
 
 
-Let $R$ be a commutative ring. The set of formal symbols $R[x] = \\{a_nx_n + a_{n-1}x_{n-1} + \cdots + a_1x_1 + a_0 \mid a_i \in R, n$ is a nonnegative integer $\\}$ is called the ring of polynomials over $R$ in the indeterminate $x$. Two elements $a_nx_n + a_{n-1}x_{n-1} + \cdots + a_1x_1 + a_0$ and $b_mx_m + b_{m-1}x_{m-1} + \dots + b_1x_1 + b_0$ of $R[x]$ are considered equal if and only if $a_i = b_i$ for all nonnegative integers $i$. (Define $a_i = 0$ when $i > n$ and $b_i = 0$ when $i > m$.)
+Let $R$ be a commutative ring. The set of formal symbols $R[x] = \\{a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x^1 + a_0 \mid a_i \in R, n$ is a nonnegative integer $\\}$ is called the ring of polynomials over $R$ in the indeterminate $x$. Two elements $a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x^1 + a_0$ and $b_mx^m + b_{m-1}x^{m-1} + \dots + b_1x^1 + b_0$ of $R[x]$ are considered equal if and only if $a_i = b_i$ for all nonnegative integers $i$. (Define $a_i = 0$ when $i > n$ and $b_i = 0$ when $i > m$.)
 
 one must be careful not to confuse a polynomial with the function determined by a polynomial. For example, in $Z_3[x]$, the polynomials $f (x) = x$ and $g(x) = x^3$ determine the same function from $Z_3$ to $Z_3$, since $f(a) = g(a)$ for all $a$ in $Z_3$. But $f(x)$ and $g(x)$ are different elements of $Z_3[x]$. 
 
@@ -36,16 +36,16 @@ Let $D$ be an integral domain. If $f(x)$ and $g(x)$ $\in D[x]$, we say that $g(x
 
 When $F$ is a field, $a \in F$, and $f(x) \in F[x]$, we say that $a$ is a zero of multiplicity $k$ ($k \geq 1)$ if $(x - a)^k$ is a factor of $f(x)$ but $(x - a)^{k+1}$ is not a factor of $f(x)$.
 
-**Corollary 1:** Let $F$ be a field, $a \in F$, and $f(x) \in F[x]$. Then $f(a)$ is the remainder in
+**Corollary 1: (Remainder Theorem)** Let $F$ be a field, $a \in F$, and $f(x) \in F[x]$. Then $f(a)$ is the remainder in
 the division of $f(x)$ by $x - a$.
 
-**Corollary 2:** Let $F$ be a field, $a \in F$, and $f(x) \in F[x]$. Then $a$ is a zero of $f(x)$ if
+**Corollary 2: (Factor Theorem)** Let $F$ be a field, $a \in F$, and $f(x) \in F[x]$. Then $a$ is a zero of $f(x)$ if
 and only if $x - a$ is a factor of $f(x)$.
 
 **Corollary 3:** A polynomial of degree $n$ over a field has at most $n$ zeros, counting
 multiplicity.
 
-**Proof:** We proceed by induction on $n$. Clearly, a polynomial of degree 0 over a field has no zeros. Now suppose that $f(x)$ is a polynomial of degree $n$ over a field and $a$ is a zero of $f(x)$ of multiplicity $k$. Then, $f(x) = (x - a)^kq(x)$ and $q(a) \neq 0$; and, since $n = deg f(x) = deg (x - a)^k q(x) = k + deg q(x)$, we have $k \leq n$ (As o/w...). If $f(x)$ has no zeros other than $a$, we are done. On the other hand, if $b \neq a$ and $b$ is a zero of $f(x)$, then $0 = f(b) = (b - a)^kq(b)$, so that $b$ is also a zero of $q(x)$ with the same multiplicity as it has for $f(x)$. By the Second Principle of Mathematical Induction, we know that $q(x)$ has at most $\operatorname{deg} q(x) = n - k$ zeros, counting multiplicity. Thus, $f(x)$ has at most $k + n - k = n$ zeros, counting multiplicity.
+**Proof:** We proceed by induction on $n$. Clearly, a polynomial of degree 0 over a field has no zeros. Now suppose that $f(x)$ is a polynomial of degree $n$ over a field and $a$ is a zero of $f(x)$ of multiplicity $k$. Then, $f(x) = (x - a)^kq(x)$ and $q(a) \neq 0$; and, since $n = \operatorname{deg} f(x) = \operatorname{deg} (x - a)^k q(x) = k + \operatorname{deg} q(x)$, we have $k \leq n$ (As o/w...). If $f(x)$ has no zeros other than $a$, we are done. On the other hand, if $b \neq a$ and $b$ is a zero of $f(x)$, then $0 = f(b) = (b - a)^kq(b)$, so that $b$ is also a zero of $q(x)$ with the same multiplicity as it has for $f(x)$. By the Second Principle of Mathematical Induction, we know that $q(x)$ has at most $\operatorname{deg} q(x) = n - k$ zeros, counting multiplicity. Thus, $f(x)$ has at most $k + n - k = n$ zeros, counting multiplicity.
 
 ---
 
@@ -56,7 +56,7 @@ has the form $\langle a\rangle = \\{ra \mid r \in R\\}$ for some $a$ in $R$.
 
 Let $F$ be a field. Then $F[x]$ is a principal ideal domain.
 
-**Proof:** By Theorem 15.1, we know that $F[x]$ is an integral domain. Now, let $I$ be an ideal in $F[x]$. If $I = \\{0\\}$, then $I = \langle 0\rangle$. If $I = \\{0\\}$, then among all the elements of $I$, let $g(x)$ be one of minimum degree. We will show that $I = \langle g(x)\rangle$. Since $g(x) \in I$, we have $\langle g(x)\rangle \subseteq I$. Now let $f(x) \in I$. Then, by the division algorithm, we may write $f(x) = g(x)q(x) + r(x)$, where $r(x) = 0$ or $\operatorname{deg} r(x) < \operatorname{deg} g(x)$. Since $r(x) = f(x) - g(x)q(x) \in I$, the minimality of $\operatorname{deg} g(x)$ implies that the latter condition cannot hold. So, $r(x) = 0$ and, therefore, $f(x) \in \langle g(x)\rangle$. This shows that $I \subseteq \langle g(x)\rangle$.
+**Proof:** By Theorem 15.1, we know that $F[x]$ is an integral domain. Now, let $I$ be an ideal in $F[x]$. If $I = \\{0\\}$, then $I = \langle 0\rangle$. If $I \neq \\{0\\}$, then among all the elements of $I$, let $g(x)$ be one of minimum degree. We will show that $I = \langle g(x)\rangle$. Since $g(x) \in I$, we have $\langle g(x)\rangle \subseteq I$. Now let $f(x) \in I$. Then, by the division algorithm, we may write $f(x) = g(x)q(x) + r(x)$, where $r(x) = 0$ or $\operatorname{deg} r(x) < \operatorname{deg} g(x)$. Since $r(x) = f(x) - g(x)q(x) \in I$, the minimality of $\operatorname{deg} g(x)$ implies that the latter condition cannot hold. So, $r(x) = 0$ and, therefore, $f(x) \in \langle g(x)\rangle$. This shows that $I \subseteq \langle g(x)\rangle$.
 
 **Examples:**
 
