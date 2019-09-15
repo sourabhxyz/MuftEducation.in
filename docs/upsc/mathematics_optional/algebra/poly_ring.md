@@ -5,7 +5,7 @@ sidebar_label: Polynomial Rings
 ---
 
 
-Let $R$ be a commutative ring. The set of formal symbols $R[x] = \\{a_nx_n + a_{n-1}x_{n-1} + \cdots + a_1x_1 + a0 \mid a_i \in R, n$ is a nonnegative integer $\\}$ is called the ring of polynomials over $R$ in the indeterminate $x$. Two elements $a_nx_n + a_{n-1}x_{n-1} + \cdots + a_1x_1 + a_0$ and $b_mx_m + b_{m-1}x_{m-1} + \dots + b_1x_1 + b_0$ of $R[x]$ are considered equal if and only if $a_i = b_i$ for all nonnegative integers $i$. (Define $a_i = 0$ when $i > n$ and $b_i = 0$ when $i > m$.)
+Let $R$ be a commutative ring. The set of formal symbols $R[x] = \\{a_nx_n + a_{n-1}x_{n-1} + \cdots + a_1x_1 + a_0 \mid a_i \in R, n$ is a nonnegative integer $\\}$ is called the ring of polynomials over $R$ in the indeterminate $x$. Two elements $a_nx_n + a_{n-1}x_{n-1} + \cdots + a_1x_1 + a_0$ and $b_mx_m + b_{m-1}x_{m-1} + \dots + b_1x_1 + b_0$ of $R[x]$ are considered equal if and only if $a_i = b_i$ for all nonnegative integers $i$. (Define $a_i = 0$ when $i > n$ and $b_i = 0$ when $i > m$.)
 
 one must be careful not to confuse a polynomial with the function determined by a polynomial. For example, in $Z_3[x]$, the polynomials $f (x) = x$ and $g(x) = x^3$ determine the same function from $Z_3$ to $Z_3$, since $f(a) = g(a)$ for all $a$ in $Z_3$. But $f(x)$ and $g(x)$ are different elements of $Z_3[x]$. 
 

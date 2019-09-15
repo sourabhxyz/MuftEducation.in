@@ -52,7 +52,7 @@ A subset $S$ of a ring $R$ is a subring of $R$ if $S$ is itself a ring with the 
 **Examples:** 
 
 * $\\{0\\}$ and $R$ are subrings of any ring $R$. $\\{0\\}$ is called the trivial subring of $R$.
-* $\\{0, 2, 4\\}$ is a subring of the ring $Z_6$, the integers modulo 6. Note that although 1 is the unity in $Z_6$, 4 is the unity in $\\{0, 2, 4\\}$. 
+* $\\{0, 2, 4\\}$ is a subring of the ring $Z_6$, the integers modulo 6. Note that although 1 is the unity in $Z_6$, 4 is the unity in $\\{0, 2, 4\\}$ and can be verified that it is a field (defined later). 
 * The set of Gaussian integers $Z[i] = \\{a + bi \mid a, b \in Z\\}$ is a subring of the complex numbers $\mathbb{C}$.
 * For each positive integer $n$, the set $nZ = \\{0, \pm n, \pm 2n, \pm 3n, . . .\\}$ is a subring of the integers $Z$.
 

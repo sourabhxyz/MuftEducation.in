@@ -22,7 +22,7 @@ ring isomorphism.
 
 * We determine all ring homomorphisms from $Z_{12}$ to $Z_{30}$. By Example in Chapter 10, the only group homomorphisms from $Z_{12}$ to $Z_{30}$ are $x \rightarrow ax$, where $a =$ 0, 15, 10, 20, 5, or 25. But, since $1 \cdot 1 = 1$ in $Z_{12}$, we must have $a \cdot a = a$ in $Z_{30}$. This requirement rules out 20 and 5 as possibilities for $a$. Finally, simple calculations show that each of the remaining four choices does yield a ring homomorphism.
 
-* An integer $n$ with decimal representation $a_ka_{k-1} \cdots a_0$ is divisible by 9 if and only if $a_k + a_{k-1} + \cdots + a0$ is divisible by 9. To verify this, observe that $n = a_k10^k + a_{k-1}10^{k-1} + \cdots + a_0$. Then, letting $\alpha$ denote the natural homomorphism from $Z$ to $Z_9$ ($z \rightarrow z \bmod 9$) [in particular, $\alpha(10) = 1$], we note that $n$ is divisible by $9$ if and only if $0 = \alpha(n) = \alpha(a_k)(\alpha(10))^k + \alpha(a_{k-1})(\alpha(10))^{k-1} + \cdots + \alpha(a_0)$ $= \alpha(a_k) + \alpha(a_{k-1}) + \cdots + \alpha(a_0) = \alpha(a_k + a_{k - 1} + \cdots + a_0)$. But $\alpha(a_k + a_{k - 1} + \cdots + a_0) = 0$ is equivalent to $a_k + a_{k - 1} + \cdots + a_0$ being divisible by 9.
+* An integer $n$ with decimal representation $a_ka_{k-1} \cdots a_0$ is divisible by 9 if and only if $a_k + a_{k-1} + \cdots + a_0$ is divisible by 9. To verify this, observe that $n = a_k10^k + a_{k-1}10^{k-1} + \cdots + a_0$. Then, letting $\alpha$ denote the natural homomorphism from $Z$ to $Z_9$ ($z \rightarrow z \bmod 9$) [in particular, $\alpha(10) = 1$], we note that $n$ is divisible by $9$ if and only if $0 = \alpha(n) = \alpha(a_k)(\alpha(10))^k + \alpha(a_{k-1})(\alpha(10))^{k-1} + \cdots + \alpha(a_0)$ $= \alpha(a_k) + \alpha(a_{k-1}) + \cdots + \alpha(a_0) = \alpha(a_k + a_{k - 1} + \cdots + a_0)$. But $\alpha(a_k + a_{k - 1} + \cdots + a_0) = 0$ is equivalent to $a_k + a_{k - 1} + \cdots + a_0$ being divisible by 9.
 
 
 ## Theorem 14.1
@@ -70,10 +70,10 @@ then $R$ contains a subring isomorphic to $Z$.
 shows that the mapping $\phi$ from $Z$ to $S$ given by $\phi(k) = k \cdot 1$ is a homomorphism, and by the First Isomorphism Theorem for rings, we have
 $Z/\operatorname{Ker} \phi \approx S$. But, clearly, $\operatorname{Ker} \phi = \langle n\rangle$, where $n$ is the additive order of 1 and, by Theorem 12.3, $n$ is also the characteristic of $R$. So, when $R$ has characteristic $n$, $S \approx Z/\langle n\rangle \approx Z_n.$ When $R$ has characteristic 0, $S \approx Z/\langle 0\rangle \approx Z.$ 
 
-**Corollary 2:** For any positive integer $m$, the mapping of $\phi: Z \rightarrow Z_m$ given by $x \rightarrow x mod m$ is a ring homomorphism.
+**Corollary 2:** For any positive integer $m$, the mapping of $\phi: Z \rightarrow Z_m$ given by $x \rightarrow x \bmod m$ is a ring homomorphism.
 
 **Proof:** This follows directly from the statement of Theorem 14.4,
-since in the ring $Z_m$, the integer $x mod m$ is $x \cdot 1$.
+since in the ring $Z_m$, the integer $x \bmod m$ is $x \cdot 1$.
 
 **Corollary 3:** If $F$ is a field of characteristic $p$, then $F$ contains a subfield
 isomorphic to $Z_p$ . If $F$ is a field of characteristic 0, then $F$ contains
@@ -96,13 +96,13 @@ $x/y$. We define addition and multiplication on $F$ by
 $a/b + c/d = (ad + bc)/(bd)$ and $a/b \cdot c/d = (ac)/(bd)$.
 (Notice that here we need the fact that $D$ is an integral domain to ensure
 that multiplication is closed; that is, $bd \neq 0$ whenever $b \neq 0$ and $d \neq 0$.)
-Since there are many representations of any particular element of $F$ ( just as in the rationals, we have 1/2 = 3/6 = 4/8), we must show that these two operations are well-defined. To do this, suppose that $a/b = a'/b'$ and $c/d = c'/d'$, so that $ab' = a'b$ and $cd' 5 c'd$. It then follows that $(ad + bc)b'd' = adb'd' + bcb'd'$ $= (ab')dd' + (cd')bb' = (a'b)dd' + (c'd)bb'$ $= a'd'bd + b'c'bd = (a'd' + b'c')bd$. Thus, by definition, we have $(ad + bc)/(bd) = (a'd' + b'c')/(b'd')$, and, therefore, addition is well-defined. Similarly, multiplication is well-defined. That $F$ is a field is straightforward. Let 1 denote the unity of $D$. Then $0/1$ is the additive identity of $F$. The additive inverse of $a/b$ is $-a/b;$ the multiplicative inverse of a nonzero element $a/b$ is $b/a$. The remaining field properties can be checked easily. Finally, the mapping $\phi: D \rightarrow F$ given by $x \rightarrow x/1$ is a ring isomorphism from $D$ to $\phi(D)$ 
+Since there are many representations of any particular element of $F$ ( just as in the rationals, we have 1/2 = 3/6 = 4/8), we must show that these two operations are well-defined. To do this, suppose that $a/b = a'/b'$ and $c/d = c'/d'$, so that $ab' = a'b$ and $cd' = c'd$. It then follows that $(ad + bc)b'd' = adb'd' + bcb'd'$ $= (ab')dd' + (cd')bb' = (a'b)dd' + (c'd)bb'$ $= a'd'bd + b'c'bd = (a'd' + b'c')bd$. Thus, by definition, we have $(ad + bc)/(bd) = (a'd' + b'c')/(b'd')$, and, therefore, addition is well-defined. Similarly, multiplication is well-defined. That $F$ is a field is straightforward. Let 1 denote the unity of $D$. Then $0/1$ is the additive identity of $F$. The additive inverse of $a/b$ is $-a/b;$ the multiplicative inverse of a nonzero element $a/b$ is $b/a$. The remaining field properties can be checked easily. Finally, the mapping $\phi: D \rightarrow F$ given by $x \rightarrow x/1$ is a ring isomorphism from $D$ to $\phi(D)$ 
 
 ---
 
 When $F$ is a field, the field of quotients of $F[x]$ is traditionally denoted by $F(x)$.
 
-Let $p$ be a prime. Then $Z_p(x) = \\{f(x)/g(x) \mid f(x), g(x) [ Z_p[x], g(x) \neq 0\\}$ is an infinite field of characteristic $p$.
+Let $p$ be a prime. Then $Z_p(x) = \\{f(x)/g(x) \mid f(x), g(x) \in Z_p[x], g(x) \neq 0\\}$ is an infinite field of characteristic $p$.
 
 
 

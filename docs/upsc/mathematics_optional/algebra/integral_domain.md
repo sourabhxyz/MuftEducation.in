@@ -62,7 +62,11 @@ Let $R$ be a ring with unity 1. If 1 has infinite order under addition, then the
 
 **Proof:** Suppose that 1 has additive order n (as other case is straight forward). Then $n \cdot 1 = 0$, and $n$ is the least positive integer with this property. So, for any $x$ in $R$, we have $n \cdot x = x + x + \cdots + x$ ($n$ summands) = $1x + 1x + \cdots + 1x$ ($n$ summands) = $(1 + 1 + \cdots + 1)x$ ($n$ summands)$ = (n \cdot 1)x = 0x = 0.$ Thus, $R$ has characteristic $n$.
 
-**Corollary:** Characteristic of a subfield is same as that of field.
+**Corollary:** Characteristic of a subfield is same as that of field as unity of subfield is same as that of unity of field.
+
+**Proof:** If $u$ is any element of $F$ satisfying $u^2 = u$, then either $u=0 or u=1$.
+
+If $K$ is a subring of $F$ having unity $e$, possibly different from $1 \in F$, then $e^2 = ee = e$ by definition of unity. So either $e=0 or e=1$, because $e \in F$. The case $e = 0$ is disallowed if $K$ is a subfield, because in a field it is required that the unity is nonzero.
 
 ## Theorem 12.4
 
