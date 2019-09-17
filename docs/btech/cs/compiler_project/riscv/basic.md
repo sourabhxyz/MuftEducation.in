@@ -21,6 +21,8 @@ sidebar_label: Tutorial On RISC V
 
 ## Examples
 
+* Note that dont use `$reg`, instead simply use `reg`.
+* Always have two sections, one for data and another for text.
 
 ### Hello Word
 
@@ -121,4 +123,116 @@ finish:
   # ends the program with status code 0
   li a7, 10
   ecall
+```
+
+### Saving callee save registers 
+
+```asm
+.data
+
+  bef: .string "Before modification, value is: "
+  dur: .string "\nInside function, value is: "
+  aft: .string "\nAfter function call, value is: "
+
+.text 
+
+main:
+  addi s0, zero, 1
+  # Print bef
+  la a0, bef
+  li a7, 4
+  ecall
+  # Print int
+  li a7, 1
+  mv a0, s0
+  ecall
+  jal increment
+  # Print aft
+  la a0, aft
+  li a7, 4
+  ecall
+  # Print int
+  li a7, 1
+  mv a0, s0
+  ecall
+  # Exit
+  li a7, 10
+  ecall
+
+
+
+increment:
+  addi sp, sp, -4
+  sw s0, 0(sp) # '0' denotes the offset
+  addi s0, s0, 1
+  # Print string
+  la a0, dur
+  li a7, 4
+  ecall
+  # Print the incremented integer
+  mv a0, s0
+  li a7, 1
+  ecall
+  lw s0, 0(sp)
+  addi sp, sp, 4
+  jr ra
+```
+
+### String comparison
+
+```asm
+.data 
+
+  str1: .string "sourabh"
+  str2: .string "saurabh"
+  str3: .string "sourabz"
+  str4: .string "sourabh"
+  
+.text 
+
+main: 
+  la a0, str1 
+  la a1, str2 
+  jal strcmp
+  # Print int
+  li a7, 1
+  ecall
+  la a0, str1 
+  la a1, str3 
+  jal strcmp 
+  # Print int
+  li a7, 1
+  ecall
+  la a0, str1 
+  la a1, str4 
+  jal strcmp 
+  # Print int
+  li a7, 1
+  ecall
+  # Exit
+  li a7, 10
+  ecall
+
+strcmp:
+  strcmptest:
+    lb a2 (a0)
+    lb a3 (a1)
+    beq a2, zero, strcmpend
+    beq a3, zero, strcmpend
+    bgt a2, a3  strcmpgreat
+    blt a2, a3  strcmpless
+    addi a0, a0, 1
+    addi a1, a1, 1
+    j strcmptest
+  strcmpgreat:
+    li a0, 1
+    jr ra
+  strcmpless:
+    li a0, -1
+    jr ra
+  strcmpend:
+    bne a2 zero strcmpgreat
+    bne a3 zero strcmpless
+    li a0, 0
+    jr ra
 ```

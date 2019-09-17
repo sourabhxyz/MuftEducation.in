@@ -5,12 +5,19 @@ sidebar_label: Polynomial Rings
 ---
 
 
-Let $R$ be a commutative ring. The set of formal symbols $R[x] = \\{a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x^1 + a_0 \mid a_i \in R, n$ is a nonnegative integer $\\}$ is called the ring of polynomials over $R$ in the indeterminate $x$. Two elements $a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x^1 + a_0$ and $b_mx^m + b_{m-1}x^{m-1} + \dots + b_1x^1 + b_0$ of $R[x]$ are considered equal if and only if $a_i = b_i$ for all nonnegative integers $i$. (Define $a_i = 0$ when $i > n$ and $b_i = 0$ when $i > m$.)
+Let $R$ be a **commutative ring**. The set of formal symbols $R[x] = \\{a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x^1 + a_0 \mid a_i \in R, n$ is a nonnegative integer $\\}$ is called the ring of polynomials over $R$ in the indeterminate $x$. Two elements $a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x^1 + a_0$ and $b_mx^m + b_{m-1}x^{m-1} + \dots + b_1x^1 + b_0$ of $R[x]$ are considered equal if and only if $a_i = b_i$ for all nonnegative integers $i$. (Define $a_i = 0$ when $i > n$ and $b_i = 0$ when $i > m$.)
 
 one must be careful not to confuse a polynomial with the function determined by a polynomial. For example, in $Z_3[x]$, the polynomials $f (x) = x$ and $g(x) = x^3$ determine the same function from $Z_3$ to $Z_3$, since $f(a) = g(a)$ for all $a$ in $Z_3$. But $f(x)$ and $g(x)$ are different elements of $Z_3[x]$. 
 
 To make $R[x]$ into a ring, we define addition and multiplication in
 the usual way.
+
+Let
+$f(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x^1 + a_0$
+and
+$g(x) = b_mx^m + b_{m-1}x^{m-1} + \cdots + b_1x^1 + b_0$
+belong to $R[x]$. Then $f(x) + g(x) = (a_s + b_s)x^s + (a_{s-1} + b_{s-1})x^{s-1} + \cdots + (a_1 + b_1)x + a_0 + b_0$, where $s$ is the maximum of $m$ and $n$. Also, $f(x)g(x) = c_{m+n}x^{m+n} + c_{m+n-1}x^{m+n-1} + \cdots 1 c_1x + c_0$, where $c_k = a_kb_0 + a_{k-1}b_1 + \cdots + a_1b_{k-1} + a_0b_k$ for $k = 0, . . . , m + n$.
+
 
 ## Theorem 15.1 
 
