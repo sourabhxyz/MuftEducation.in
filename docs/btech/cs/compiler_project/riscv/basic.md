@@ -23,6 +23,7 @@ sidebar_label: Tutorial On RISC V
 
 * Note that dont use `$reg`, instead simply use `reg`.
 * Always have two sections, one for data and another for text.
+* During `ecall` all registers besides the output are guaranteed not to change.
 
 ### Hello Word
 
