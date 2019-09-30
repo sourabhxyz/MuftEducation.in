@@ -52,5 +52,10 @@
       "upsc/mathematics_optional/ode/linear_eqns_variable_coeff",
       "upsc/mathematics_optional/ode/first_order_not_first_degree"
     ]
+  },
+  "upsc_polity": {
+    "Polity": [
+      "upsc/polity/intro"
+    ]
   }
 }

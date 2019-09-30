@@ -532,3 +532,13 @@ wait a while to avoid interfering with an ongoing dialog between two stations.
 See [Lec 15](../../../assets/btech/cs/computer_networks/lec15.pdf).
 
 See [Lec 16](../../../assets/btech/cs/computer_networks/lec16.pdf).
+
+See [Lec 17](../../../assets/btech/cs/computer_networks/lec17.pdf).
+
+See [Lec 18](../../../assets/btech/cs/computer_networks/lec18.pdf).
+
+See [Lec 19](../../../assets/btech/cs/computer_networks/lec19.pdf).
+
+See [Lec 20](../../../assets/btech/cs/computer_networks/lec20.pdf).
+
+See [Lec 21](../../../assets/btech/cs/computer_networks/lec21.pdf).
