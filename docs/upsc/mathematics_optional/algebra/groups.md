@@ -194,7 +194,7 @@ _Note:_ $a^{2}\left(b c d b^{2}\right)=a^{2} b(c d) b^{2}=\left(a^{2} b\right)(c
 
   **Existence of Identity**, consider the mapping $\Psi_a : G \rightarrow G, \Psi_a(b) = b * a$. Since $G$ is finite and the map is one one, it is onto as well. $\rightarrow \exists \\; e_a \in G$ s.t. $e_a * a = a$. (from this it follows that $e_a * e_a * a = e_a * a \rightarrow e_a * e_a = e_a$ and therefore if $a * e_a = z \rightarrow a * e_a * e_a = z * e_a $$\rightarrow a * e_a = z * e_a \rightarrow a = z$)
 
-  Claim: $\forall \\; c \in G, c * e = c$ 
+  Claim: $\forall \\; c \in G, c * e = c$ (Where $e = e_a$)
 
   As let $c * e = z \rightarrow c * e * a = z * a = c * a$ $\rightarrow z = c$
 

@@ -97,7 +97,7 @@ Let $\phi(1)=1,$ and for any integer $n>1,$ let $\phi(n)$ denote the number of p
 
 ---
 
-**Theorem 4.4:** If $d$ is a positive divisor of $n,$ the number of elements of order $d$ in $a$ cyclic group of order $n$ is $\phi(d)$. (Easy to see by above example)
+**Theorem 4.4:** If $d$ is a positive divisor of $n,$ the number of elements of order $d$ in a cyclic group of order $n$ is $\phi(d)$. (Easy to see by above example)
 
 ---
 

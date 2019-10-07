@@ -52,8 +52,7 @@ Converse of
 Theorem 9.2 is also true; that is, if the correspondence $aHbH = abH$ defines a group operation on the set of left cosets of $H$ in $G$, then $H$ is
 normal in $G$.
 
-It is crucial to understand that when we factor out by a normal subgroup H, what we are essentially doing is defining every element in H
-to be the identity.
+It is crucial to understand that when we factor out by a normal subgroup $H$, what we are essentially doing is defining every element in $H$ to be the identity.
 
 Also remember that the order of the factor group is $|G|/|H|$
 
@@ -76,9 +75,9 @@ Also remember that the order of the factor group is $|G|/|H|$
 
   Clearly, then, $Z / 4 Z \approx Z_{4} .$ More generally, if for any $n>0$ we let $n Z=$ $\\{0, \pm n, \pm 2 n, \pm 3 n, \ldots\\},$ then $Z / n Z$ is isomorphic to $Z_{n}$
   
-- We will prove that every finite Abelian group is
+- It can be shown that every finite Abelian group is
   isomorphic to a direct product of cyclic groups. In particular, an
-  Abelian group of order 8 is isomorphic to one of $Z_8, Z_4 \oplus Z_2, or Z_2 \oplus Z_2 \oplus Z_2$ . In the next two examples, we examine Abelian factor groups
+  Abelian group of order 8 is isomorphic to one of $Z_8, Z_4 \oplus Z_2, \text{ or } Z_2 \oplus Z_2 \oplus Z_2$ . In the next two examples, we examine Abelian factor groups
   of order 8 and determine the isomorphism type of each.
 
   - Let $G = U(32) = \\{1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31\\}$ and $H = U_{16}(32) = \\{1, 17\\}$. Then $G/H$ is an Abelian

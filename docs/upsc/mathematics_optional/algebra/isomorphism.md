@@ -32,8 +32,7 @@ Easy to prove that $\phi^{-1}$ is as well an isomorphism.
   $\phi(1)=\phi(1 \cdot 1)=\phi(1) \phi(1)=1$ Thus, $\phi(9)=\phi(1),$ but $9 \neq 1,$ which contradicts the assumption that $\phi$ is one-to-one.
 
 * There is no isomorphism from $Q$, the group of rational numbers under addition, to $Q^{*},$ the group of nonzero rational numbers
-  under multiplication. If $\phi$ were such a mapping, there would be a ra-
-  tional number $a$ such that $\phi(a)=-1 .$ But then $-1=\phi(a)=\phi\left(\frac{1}{2} a+\frac{1}{2} a\right)=\phi\left(\frac{1}{2} a\right) \phi\left(\frac{1}{2} a\right)=\left[\phi\left(\frac{1}{2} a\right)\right]^{2}$ However, no rational number squared is $-1$
+  under multiplication. If $\phi$ were such a mapping, there would be a rational number $a$ such that $\phi(a)=-1 .$ But then $-1=\phi(a)=\phi\left(\frac{1}{2} a+\frac{1}{2} a\right)=\phi\left(\frac{1}{2} a\right) \phi\left(\frac{1}{2} a\right)=\left[\phi\left(\frac{1}{2} a\right)\right]^{2}$ However, no rational number squared is $-1$
   
 * Any two cyclic group of order $m$ are isomorphic. (easy)
 
@@ -69,8 +68,7 @@ $\phi$ is operation-preserving. To this end, let $a$ and $b$ belong to $G .$ The
 
 **Corollary:** Another way to say Cayley's theorem is that, for finite group $G$, $n = |G|$, there exist a homomorphism $\phi: G \rightarrow S_n$ which is injective.
 
-The group $\overline{G}$ constructed previously is called the left regular repre-
-sentation of $G$.
+The group $\overline{G}$ constructed previously is called the left regular representation of $G$.
 
 ## Properties of Isomorphisms
 
@@ -101,8 +99,7 @@ When the group operation is addition, property 2 of Theorem 6.2 is
 $\phi(n a)=n \phi(a) ;$ property 4 says that an isomorphism between two
 cyclic groups takes a generator to a generator.
 
-Property 6 is quite useful for showing that two groups are not iso-
-morphic. Often $b$ is picked to be the identity. For example, consider $\mathbf{C}^{\*}$
+Property 6 is quite useful for showing that two groups are not isomorphic. Often $b$ is picked to be the identity. For example, consider $\mathbf{C}^{\*}$
 and $\mathbf{R}^{\*} .$ Because the equation $x^{4}=1$ has four solutions in $\mathbf{C}^{\*}$ but only
 two in $\mathbf{R}^{\*},$ no matter how one attempts to define an isomorphism from
 $\mathbf{C}^{\*}$ to $\mathbf{R}^{\*},$ property 6 cannot hold.
@@ -121,9 +118,7 @@ $a x a^{-1}$ for all $x$ in $G$ is called the inner automorphism of $G$ induced 
 
 ---
 
-When $G$ is a group, we use $Aut(G)$ to denote the set of all auto-
-morphisms of $G$ and $Inn(G)$ to denote the set of all inner automor-
-phisms of $G$. 
+When $G$ is a group, we use $Aut(G)$ to denote the set of all automorphisms of $G$ and $Inn(G)$ to denote the set of all inner automorphisms of $G$. 
 
 ---
 
@@ -151,8 +146,7 @@ $\alpha(1)=1, \quad \alpha(1)=3, \quad \alpha(1)=7, \quad \alpha(1)=9$
 
 Now $\alpha_{3}(a+b)=3(a+b)=3 a+3 b=\alpha_{3}(a)+\alpha_{3}(b)$, we see that $\alpha_3$ is operation preserving and hence is an automorphism, similarly $\alpha_7$ and $\alpha_9$ are also automorphisms.
 
-This gives us the elements of $\operatorname{Aut}\left(Z_{10}\right)$ but not the structure. For in-
-stance, what is $\alpha_{3} \alpha_{3} ?$ Well, $\left(\alpha_{3} \alpha_{3}\right)(1)=\alpha_{3}(3)=3 \cdot 3=9=\alpha_{9}(1),$ so $\alpha_{3} \alpha_{3}=\alpha_{9} .$ Similar calculations show that $\alpha_{3}^{3}=\alpha_{7}$ and $\alpha_{3}^{4}=\alpha_{1},$ so
+This gives us the elements of $\operatorname{Aut}\left(Z_{10}\right)$ but not the structure. For instance, what is $\alpha_{3} \alpha_{3} ?$ Well, $\left(\alpha_{3} \alpha_{3}\right)(1)=\alpha_{3}(3)=3 \cdot 3=9=\alpha_{9}(1),$ so $\alpha_{3} \alpha_{3}=\alpha_{9} .$ Similar calculations show that $\alpha_{3}^{3}=\alpha_{7}$ and $\alpha_{3}^{4}=\alpha_{1},$ so
 that $\left|\alpha_{3}\right|=4 .$ Thus, Aut $\left(Z_{10}\right)$ is cyclic. Actually, the following Cayley tables reveal that Aut $\left(Z_{10}\right)$ is isomorphic to $U(10)$
 
 $\begin{array}{c|cccc}{U(10)} & {1} & {3} & {7} & {9} \\\ \hline 1 & {1} & {3} & {7} & {9} \\\ {3} & {3} & {9} & {1} & {7} \\\ {7} & {7} & {1} & {9} & {3} \\\ {9} & {9} & {7} & {3} & {1}\end{array}$

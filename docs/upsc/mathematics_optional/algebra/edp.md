@@ -52,7 +52,7 @@ $\left|\left(g_{1}, g_{2}, \ldots, g_{n}\right)\right|=\operatorname{lcm}\left(\
 
 - We determine the number of cyclic subgroups of order
   10 in $Z_{100} \oplus Z_{25}$. 
-  We begin by counting the number of elements (a, b) of
+  We begin by counting the number of elements $(a, b)$ of
   order 10. Possible cases to get LCM 10; (10, 1), ~~(10, 2)~~, (10, 5), ~~(10, 10)~~, ~~(2, 10)~~, ~~(5, 10)~~, (2, 5), ~~(5, 2)~~. That implies answer is $\phi(10) \times 1 + \phi(10) \times \phi(5) + \phi(2) \times \phi(5)$ = $4 + 4 * 4 + 4 = 24$. Because each cyclic
   subgroup of order 10 has four elements of order 10 and no two of the
   cyclic subgroups can have an element of order 10 in common, there
@@ -96,7 +96,7 @@ Thus, $Z_{2} \oplus Z_{30} \approx Z_{6} \oplus Z_{10}$.
 If $k$ is a divisor of $n$, let
 $U_{k}(n)=\\{x \in U(n) | x \bmod k=1\\}$
 
-It can be readily shown that $U_k(n)$ is indeed a subgroup of U(n).
+It can be readily shown that $U_k(n)$ is indeed a subgroup of $U(n)$.
 
 ---
 

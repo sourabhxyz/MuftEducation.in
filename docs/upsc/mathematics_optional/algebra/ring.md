@@ -23,7 +23,7 @@ that the ring is commutative. Also, a ring need not have an identity under multi
 that is an identity under multiplication. A nonzero element of a commutative ring with unity need not have a multiplicative inverse. When it
 does, we say that it is a unit of the ring. Thus, $a$ is a unit if $a^{-1}$ exists.
 
-The following terminology and notation are convenient. If $a$ and $b$ belong to a commutative ring $R$ and $a$ is nonzero, we say that $a$ divides $b$ (or that $a$ is a factor of $b$) and write $a | b$, if there exists an element $c$ in $R$ such that $b = ac$. If a does not divide $b$, we write $a \not | b$.
+The following terminology and notation are convenient. If $a$ and $b$ belong to a commutative ring $R$ and $a$ is nonzero, we say that $a$ divides $b$ (or that $a$ is a factor of $b$) and write $a | b$, if there exists an element $c$ in $R$ such that $b = ac$. If $a$ does not divide $b$, we write $a \not | b$.
 
 Recall that if $a$ is an element from a group under the operation of
 addition and $n$ is a positive integer, $na$ means $a + a + \cdots + a$, where
@@ -76,6 +76,7 @@ This ring is called the direct sum of $R_1, R_2, . . . , R_n$.
 2. $a(-b) = (-a)b = -(ab)$. (easy)
 3. $(-a)(-b) = ab.$ (easy, simply from above)
 4. $a(b - c) = ab - ac$ and $(b - c)a = ba - ca$. (easy...)
+
 Furthermore, if $R$ has a unity element 1, then
 5. $(-1)a = -a$. (from above)
 6. $(-1)(-1) = 1$. (from above...)

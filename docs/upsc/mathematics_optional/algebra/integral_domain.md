@@ -64,9 +64,9 @@ Let $R$ be a ring with unity 1. If 1 has infinite order under addition, then the
 
 **Corollary:** Characteristic of a subfield is same as that of field as unity of subfield is same as that of unity of field.
 
-**Proof:** If $u$ is any element of $F$ satisfying $u^2 = u$, then either $u=0 or u=1$.
+**Proof:** If $u$ is any element of $F$ satisfying $u^2 = u$, then either $u=0 \text{ or } u=1$.
 
-If $K$ is a subring of $F$ having unity $e$, possibly different from $1 \in F$, then $e^2 = ee = e$ by definition of unity. So either $e=0 or e=1$, because $e \in F$. The case $e = 0$ is disallowed if $K$ is a subfield, because in a field it is required that the unity is nonzero.
+If $K$ is a subring of $F$ having unity $e$, possibly different from $1 \in F$, then $e^2 = ee = e$ by definition of unity. So either $e=0 \text{ or } e=1$, because $e \in F$. The case $e = 0$ is disallowed if $K$ is a subfield, because in a field it is required that the unity is nonzero.
 
 ## Theorem 12.4
 
