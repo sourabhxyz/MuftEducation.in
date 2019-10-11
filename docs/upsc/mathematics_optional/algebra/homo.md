@@ -1,7 +1,7 @@
 ---
 id: homo
-title: Group Homomorphisms
-sidebar_label: Group Homomorphisms
+title: Group Homomorphisms and Class Equation
+sidebar_label: Group Homomorphisms and Class Equation
 ---
 
 When defining a homomorphism from a group in which there are
@@ -61,7 +61,7 @@ from $G/\operatorname{Ker} \phi$ to $\phi(G)$, given by $g\operatorname{Ker} \ph
 
 - $Z/\langle n \rangle \approx Z_n$ 
 
-- (**$N/C$ Theorem**) Let $H$ be a subgroup of a group $G$. Normalizer of $H$ in $G$ is $N(H) = \\{x \in G \mid xHx^{-1} = H\\}$ and the centralizer of $H$ in $G$ is $C(H) = \\{x \in G \mid xhx^{-1} = h \\; \forall h \in H\\}$. Consider the mapping from $N(H)$ to $Aut(H)$ given by $g \rightarrow \phi_g$, where $\phi_g$ is the inner automorphism of $H$ induced by $g$. This mapping is a homomorphism with kernel $C(H)$. So, by Theorem 10.3, $N(H)/C(H)$ is isomorphic to a subgroup of $Aut(H)$.
+- (**$N/C$ Theorem**) Let $H$ be a subgroup of a group $G$. Normalizer of $H$ in $G$ is $N(H) = \\{x \in G \mid xHx^{-1} = H\\}$ and the centralizer of $H$ in $G$ is $C(H) = \\{x \in G \mid xhx^{-1} = h \\; \forall h \in H\\}$. Consider the mapping from $N(H)$ to $Aut(H)$ given by $g \rightarrow \phi_g$, where $\phi_g$ is the inner automorphism of $H$ induced by $g$. This mapping is a homomorphism with kernel $C(H)$. So, by Theorem 10.2, $N(H)/C(H)$ is isomorphic to a subgroup of $Aut(H)$.
 
 - Let $G$ be a group of order 35, we will show that it is cyclic. By Lagrange's Theorem, every nonidentity element of $G$ has order 5, 7, or 35. If some element has order 35, $G$ is cyclic. So we may assume that all nonidentity elements have order 5 or 7. However, not all such elements can have order 5, since elements of order 5 come 4 at a time
 (if $|x| = 5$, then $|x^2| = |x^3| = |x^4| = 5$) and 4 does not divide 34. Similarly, since 6 does not divide 34, not all nonidentity elements can have order 7. So, G has elements of order 7 and order 5. Since $G$ has an element of order 7, it has a subgroup of order 7. Let us call it $H$. In fact, $H$ is the only subgroup of $G$ of order 7, for if $K$ is another subgroup of G of order 7, we have by Theorem 7.2 that $|HK| = |H||K|/|H \cap K| = 7 \cdot 7/1 = 49$ (Intersection is $\\{e\\}$ because each element is a generator). But, of course, this is impossible in a group of order 35. Since for every $a$ in $G$, $aHa^{-1}$ is also a subgroup of $G$ of order 7 (easy to prove), we must have $aHa^{-1} = H.$ So, $N(H) = G.$ Since $H$ has prime order, it is cyclic and therefore Abelian. In particular, $C(H)$ contains $H$. So, 7 divides $|C(H)|$ and $|C(H)|$ divides 35. It follows, then, that $C(H) = G$ or $C(H) = H.$ If $C(H) = G$, then we may obtain an element $x$ of order 35 by letting $x = hk$ (since order of $h, k$ is relatively prime and they commute, therefore order of $x = |h||k|$), where $h$ is a nonidentity element of $H$ and $k$ has order 5. On the other hand, if $C(H) = H$, then $|C(H)| = 7$ and $|N(H)/C(H)| = 35/7 = 5$. However, 5 does not divide $|Aut(H)| = |Aut(Z_7)| = 6$. This contradiction shows that $G$ is cyclic.
@@ -79,7 +79,32 @@ from $G/\operatorname{Ker} \phi$ to $\phi(G)$, given by $g\operatorname{Ker} \ph
 -  If $G$ is a group of order 60 and $G$ has a homomorphic image of order 12 that is cyclic (as it is cyclic, it is normal and thus its inverse will also be normal subgroup, also since it is cyclic, it has normal subgroups of order 1, 2, 3, 4, 6, 12), then $G$ has normal subgroups of orders 5, 10, 15, 20, 30, and 60 (property 10).
 - Suppose we are asked to find an infinite group that is the union of three proper subgroups. Instead of attempting to do this directly, we first make the problem easier by finding a finite group that is the union of three proper subgroups. Observing that $Z_2 \oplus Z_2$ is the union of $H_1 = \langle 1, 0\rangle, H_2 = \langle 0, 1\rangle$, and $H_3 = \langle 1, 1\rangle$, we have found our finite group. Now all we need do is think of an infinite group that has $Z_2 \oplus Z_2$ as a homomorphic image and pull back $H_1, H_2,$ and $H_3,$ and our original problem is solved. Clearly, the mapping from $Z_2 \oplus Z_2 \oplus Z$ onto $Z_2 \oplus Z_2$ given by $\phi(a, b, c) = (a, b)$ is such a mapping, and therefore $Z_2 \oplus Z_2 \oplus Z$ is the union of $\phi^{-1}(H_1) = \\{(a, 0, c,) \mid a \in Z_2, c \in Z\\}, \phi^{-1}(H_2) = \\{(0, b, c) \mid b \in Z_2, c \in Z\\}, \text{ and } \\\ \phi^{-1}(H_3) = \\{(a, a, c) \mid a \in Z_2, c \in Z\\}$.
 
+## Class Equation
 
+---
+
+**CE for $D_n$**:
+
+$D_n = \\{r^i\rho^j \mid i \in \\{0, 1\\}, j \in \\{0, 1, ..., n - 1\\}\\}$
+
+Consider any rotation $\rho^i$, we have:-
+* $\rho^j\rho^i\rho^{-j} = \rho^i$ 
+* $r\rho^j\rho^i\rho^{-j}r = \rho^{-i}$ ($r\rho = \rho^{-1}r \rightarrow r\rho^kr = \rho^{-k}$)
+
+Thus conjugacy classes containing $\rho^i$ are of the form $\\{\rho^i, \rho^{-i}\\}$. 
+
+* If $n$ is odd, we have $|\\{e, \rho, \rho^2, ..., \rho^{n - 1}\\}| = 1 + \underbrace{2 + 2 + ... + 2}_{(n - 1)/2 \text{ times}}$.
+* o/w we have $1 + 1 + \underbrace{2 + ... + 2}_{(n - 2)/2 \text{ times}}$.
+
+Now consider any reflection $r\rho^i$.
+* $\rho^jr\rho^i\rho^{-j} = r\rho^{i - 2j} = r\rho^{i}\rho^{-2j}$. Now $\langle\rho^{-2j}\rangle = \langle\rho^{2j}\rangle = \langle\rho^{2}\rangle = \langle\rho^{gcd(2, n)}\rangle$ 
+  * In case $n$ is odd, this is equal to $\langle\rho\rangle$, thus all remaining elements belong to this conjugacy class.
+* $r\rho^jr\rho^i\rho^{-j}r = r\rho^{2j - i} = r\rho^{-i}\rho^{2j}$. 
+  * In case $n$ is even, $gcd(2, n) = 2$ and notice that $r\rho^i\langle\rho^2\rangle = r\rho^{-i}\langle\rho^2\rangle$.
+    * As if $i$ is odd, $\rho^{-i} = \rho^{n - i} = \rho^{odd}$, similarly for other case.
+  * Thus for even $n$ we have two conjugacy classes, $\\{r\rho^{odd}\\}$ and $\\{r\rho^{even}\\}$ each of size $n/2$.
+
+---
 
 
 
