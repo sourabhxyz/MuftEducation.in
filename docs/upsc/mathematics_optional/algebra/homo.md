@@ -1,7 +1,7 @@
 ---
 id: homo
-title: Group Homomorphisms and Class Equation
-sidebar_label: Group Homomorphisms and Class Equation
+title: Group Homomorphisms and Sylow's Theorems
+sidebar_label: Group Homomorphisms and Sylow's Theorems
 ---
 
 When defining a homomorphism from a group in which there are
@@ -106,6 +106,10 @@ Now consider any reflection $r\rho^i$.
 
 ---
 
+---
 
+Let $p$ be a prime, if $p | |G|$ then there is an element of order $p$, i.e. there is a cyclic subgroup of order $p$.
 
+**Proof:** 
 
+---
