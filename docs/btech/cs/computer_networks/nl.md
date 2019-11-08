@@ -748,3 +748,28 @@ The actual steps in making an RPC are shown in Fig. 6-29. Step 1 is the client c
 * Arguments type and number can be any.
 * Global variables.
 * Operation may not be idempotent (i.e., safe to repeat). (In case packet is to be resent)
+
+## DTN 
+
+In DTN terminology, a message is called a bundle. DTN nodes are equipped
+with storage, typically persistent storage such as a disk or flash memory.  
+They
+store bundles until links become available and then forward the bundles. The links
+work intermittently. Fig. 6-56 shows five intermittent links that are not currently
+working, and two links that are working. A working link is called a contact.
+Fig. 6-56 also shows bundles stored at two DTN nodes awaiting contacts to send
+the bundles onward. In this way, the bundles are relayed via contacts from the
+source to their destination.
+Note that while these bundles are stored, nodes can as well move.
+
+### Bundle Protocol
+
+Bundle protocol runs above the level of TCP/IP. Since the Bundle protocol is fixed, yet it is intended to run over a variety of
+transports, there is must be a gap in functionality between the protocols. That gap
+is the reason for the inclusion of a convergence layer.
+
+Bundle = primary block (Header) + payload block (Data)
+
+DTNs deal with this problem using the
+notion of custody transfer, in which another node, closer to the destination, can
+assume responsibility for seeing the data safely delivered.
