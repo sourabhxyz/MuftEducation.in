@@ -2,6 +2,23 @@
 id: homo
 title: Group Homomorphisms and Sylow's Theorems
 sidebar_label: Group Homomorphisms and Sylow's Theorems
+documentclass: extarticle
+classoption:
+  - 8pt
+  - a4paper
+  - oneside
+  - twocolumn
+header-includes:
+  - \usepackage{enumitem}
+  - \setlist{nolistsep}
+  - \usepackage[export]{adjustbox}
+  - \usepackage[compact]{titlesec}
+  - \titlespacing*{\section}{0pt}{0px plus 1px minus 0px}{-2px plus 0px minus 0px}
+  - \titlespacing*{\subsection}{0pt}{0px plus 1px minus 0px}{0px plus 3px minus 3px}
+  - \titlespacing*{\subsubsection}{0pt}{0px plus 1px minus 0px}{0px plus 3px minus 3px}
+  - \usepackage[left=0.8cm, right=0.8cm, top=2cm, bottom=0.3cm, a4paper]{geometry}
+  - \setlength{\columnseprule}{0.4pt}
+subparagraph: yes
 ---
 
 When defining a homomorphism from a group in which there are
@@ -22,6 +39,7 @@ Relation with linear algebra: Every linear transformation is a group homomorphis
 ---
 
 **Theorem 10.1:** Let $\phi$ be a homomorphism from a group $G$ to a group $\overline{G}$ and let $g$ be an element of $G$ and let $H$ be a subgroup of $G$. Then
+
 1. $\phi$ carries the identity of $G$ to the identity of $\overline{G}$.
 2. $\phi(g^n) = (\phi(g))^n$ for all $n$ in $Z$.
 3. If $|g|$ is finite, then $|\phi(g)|$ divides $|g|$. (easy)

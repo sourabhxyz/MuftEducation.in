@@ -2,6 +2,23 @@
 id: cyclic_groups
 title: Cyclic Groups
 sidebar_label: Cyclic Groups
+documentclass: extarticle
+classoption:
+  - 8pt
+  - a4paper
+  - oneside
+  - twocolumn
+header-includes:
+  - \usepackage{enumitem}
+  - \setlist{nolistsep}
+  - \usepackage[export]{adjustbox}
+  - \usepackage[compact]{titlesec}
+  - \titlespacing*{\section}{0pt}{0px plus 1px minus 0px}{-2px plus 0px minus 0px}
+  - \titlespacing*{\subsection}{0pt}{0px plus 1px minus 0px}{0px plus 3px minus 3px}
+  - \titlespacing*{\subsubsection}{0pt}{0px plus 1px minus 0px}{0px plus 3px minus 3px}
+  - \usepackage[left=0.8cm, right=0.8cm, top=2cm, bottom=0.3cm, a4paper]{geometry}
+  - \setlength{\columnseprule}{0.4pt}
+subparagraph: yes
 ---
 
 **Example** The set $Z\_n = \\{0, 1, . . . , n - 1\\}$ for $n \geq 1$ is a cyclic group under addition modulo $n$. As it is in the case for group $Z$, 1 and -1 = n - 1 are generators.
