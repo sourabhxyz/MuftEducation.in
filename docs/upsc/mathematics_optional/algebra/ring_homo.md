@@ -41,7 +41,7 @@ ring isomorphism.
 
 * An integer $n$ with decimal representation $a_ka_{k-1} \cdots a_0$ is divisible by 9 if and only if $a_k + a_{k-1} + \cdots + a_0$ is divisible by 9. To verify this, observe that $n = a_k10^k + a_{k-1}10^{k-1} + \cdots + a_0$. Then, letting $\alpha$ denote the natural homomorphism from $Z$ to $Z_9$ ($z \rightarrow z \bmod 9$) [in particular, $\alpha(10) = 1$], we note that $n$ is divisible by $9$ if and only if $0 = \alpha(n) = \alpha(a_k)(\alpha(10))^k + \alpha(a_{k-1})(\alpha(10))^{k-1} + \cdots + \alpha(a_0)$ $= \alpha(a_k) + \alpha(a_{k-1}) + \cdots + \alpha(a_0) = \alpha(a_k + a_{k - 1} + \cdots + a_0)$. But $\alpha(a_k + a_{k - 1} + \cdots + a_0) = 0$ is equivalent to $a_k + a_{k - 1} + \cdots + a_0$ being divisible by 9.
 
-* Let $m$ be a fixed positive integer. For any integer $a$, let $\overline{a}$ denote $a \bmod m$. It is easy to see that the mapping $\phi: Z[x] \rightarrow Zm[x]$ given by $\phi(a_nx^n + a_{n-1}x^{n-1} + \cdots + a_0$) $= \overline{a_n}x^n + \overline{a_{n-1}}x^{n-1} + \cdots + \overline{a_0}$ is a ring homomorphism.
+* Let $m$ be a fixed positive integer. For any integer $a$, let $\overline{a}$ denote $a \bmod m$. It is easy to see that the mapping $\phi: Z[x] \rightarrow Z_m[x]$ given by $\phi(a_nx^n + a_{n-1}x^{n-1} + \cdots + a_0$) $= \overline{a_n}x^n + \overline{a_{n-1}}x^{n-1} + \cdots + \overline{a_0}$ is a ring homomorphism.
 
 ## Theorem 14.1
 
@@ -123,5 +123,10 @@ When $F$ is a field, the field of quotients of $F[x]$ is traditionally denoted b
 Let $p$ be a prime. Then $Z_p(x) = \\{f(x)/g(x) \mid f(x), g(x) \in Z_p[x], g(x) \neq 0\\}$ is an infinite field of characteristic $p$.
 
 
+| D            | Field of fractions (F)                                                |
+| ------------ | --------------------------------------------------------------------- |
+| $\mathbb{Z}$ | $\mathbb{Q}$                                                          |
+| K[X]         | K(X)                                                                  |
+| F            | F (as that map will become  surjective as $\frac{a}{b} \sim ab^{-1}$) |
 
 

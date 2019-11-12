@@ -54,6 +54,8 @@ A nonempty subset $A$ of a ring $R$ is an ideal of $R$ if
 
 * Let $Z[x]$ denote the ring of all polynomials with integer coefficients and let $I$ be the subset of $Z[x]$ of all polynomials with even constant terms. Then $I$ is an ideal of $Z[x]$ and $I = \langle x, 2 \rangle$.
 
+* Let $R$ be a commutative ring with unity, then $R$ is a field iff the only ideals are (0) and $R$.
+
 ## Theorem 13.2 (Existence of Factor Rings)
 
 Let $R$ be a ring and let $A$ be a subring of $R$. The set of cosets $\\{r + A \mid r \in R\\}$ is a ring under the operations $(s + A) + (t + A) = s + t + A$ and $(s + A)(t + A) = st + A$ if and only if $A$ is an ideal of $R$.
