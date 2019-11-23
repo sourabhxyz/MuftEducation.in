@@ -146,8 +146,9 @@ shows that a prime ideal need not be maximal.
 
 **Examples:** 
 
-* The ideal $\langle x \rangle$ is a prime ideal in $Z[x]$ but not a maximal ideal in $Z[x]$. To verify this, we begin with the observation that $\langle x\rangle = \\{f(x) \in Z[x] \mid f(0) = 0\\}$ . Thus, if $g(x)h(x) \in \langle x\rangle$, then $g(0)h(0) = 0.$ And since $g(0)$ and $h(0)$ are integers, we have $g(0) = 0$ or $h(0) = 0$. To see that $\langle x\rangle$ is not maximal, we simply note that $\langle x\rangle \subset \langle x, 2\rangle \subset Z[x]$ 
+* The ideal $\langle x \rangle$ is a prime ideal in $Z[x]$ but not a maximal ideal in $Z[x]$. To verify this, we begin with the observation that $\langle x\rangle = \\{f(x) \in Z[x] \mid f(0) = 0\\}$ . Thus, if $g(x)h(x) \in \langle x\rangle$, then $g(0)h(0) = 0.$ And since $g(0)$ and $h(0)$ are integers, we have $g(0) = 0$ or $h(0) = 0$. To see that $\langle x\rangle$ is not maximal, we simply note that $\langle x\rangle \subset \langle x, 2\rangle \subset Z[x]$.
 
+* Similarly the ideal $\langle 2\rangle$ is prime and not maximal as $\langle 2\rangle\subset \langle x, 2 \rangle$.
 
 
 
